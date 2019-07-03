@@ -1,5 +1,6 @@
 package jo.gov.ltrc.authserver.confg;
 
+import jo.gov.ltrc.authserver.outside.CookieUtil;
 import jo.gov.ltrc.authserver.repositories.UserDBService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -16,8 +16,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -41,6 +44,8 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
     @Value("${ldap.base.dn}")
     private String rootDn;
 
+    private static final String jwtTokenCookieName = "JWT-TOKEN";
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
@@ -50,9 +55,12 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
             .formLogin()
                 //.loginPage("/login")
                 .permitAll()
-                .successHandler(myAuthenticationSuccessHandler());
-//            .and()
-//                .logout()
+                .successHandler(myAuthenticationSuccessHandler())
+            .and()
+                .logout()
+                .invalidateHttpSession(true)
+                .permitAll()
+                .addLogoutHandler((httpServletRequest, httpServletResponse, authentication) -> CookieUtil.clear(httpServletResponse, jwtTokenCookieName));
 //                .logoutUrl("/logout")
 //                .logoutSuccessUrl("/login");
     }
@@ -64,7 +72,7 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
     }
 
     @Bean
-    public AuthenticationSuccessHandler myAuthenticationSuccessHandler(){
+    public AuthenticationSuccessHandler myAuthenticationSuccessHandler() {
         return new CustomUrlAuthenticationSuccessHandler();
     }
 
