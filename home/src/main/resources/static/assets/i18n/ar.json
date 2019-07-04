@@ -1,0 +1,266 @@
+{
+    "Title": " تجربة ",
+    "userName": " اسم المستخدم ",
+    "fullName": " اسم الموظف ",
+    "userID": " رقم الموظف ",
+    "mobile": " موبايل ",
+    "email": " البريد الألكتروني ",
+    "extension": " فرعي ",
+    "password": " كلمة المرور ",
+    "confirmPassword": " تأكيد كلمة المرور ",
+    "userStatus": " حالة المستخدم ",
+    "roles": " الادوار للمستخدم ",
+    "userRole": "الدور",
+    "unit": " المديرية ",
+    "section": " القسم ",
+    "disk": " المكتب ",
+    "usersManagement": " إدارة المستخدمين ",
+    "addUser": " إضافة مستخدم جديد ",
+    "editUser": " تعديل مستخدم ",
+    "viewUser": " عرض مستخدم ",
+    "deleteUser" : " حذف مستخدم ",
+    "users": " المستخدمين ",
+    "searchUsers": "البحث في المستخدمين",
+    "showFilters": "إظهار الفلاتر المتقدمة",
+    "hiddenFilters": "إخفاء الفلاتر المتقدمة",
+    "listUsers": "قائمة المستخدمين ",
+    "listUsersSelected" : " قائمة المستخدمين المختارين ",
+    "activateUser": " تفعيل المستخدم ",
+    "deactivateUser": " إلغاء تفعيل المستخدم ",
+    "printUsersList": " طباعة قائمة المستخدمين ",
+    "printUsersRoles": " طباعة أدوار المستخدمين ",
+    "exportUsers": " إسترجاع المستخدمين من الدليل النشط ",
+
+
+
+    "rightsManagement" : " إدارة الصلاحيات " ,
+    "rightSearch": " البحث في الصلاحيات ",
+    "rightCode" : " رمز الصلاحية ",
+    "rightName" : " إسم الصلاحية ",
+    "rightDesc" : " وصف الصلاحية ",
+    "rightStatus" : "حالة الصلاحية ",
+    "listOfRights": " قائمة الصلاحيات " ,
+    "rightAdd"  : " إضافة صلاحية جديدة " ,
+    "rightEdit" : " تعديل الصلاحية ",
+    "rightView" : " عرض الصلاحية " ,
+    "activateright": " تفعيل الصلاحية ",
+    "deactivateright": " إلغاء تفعيل الصلاحية ",
+    "printRightsList" : " طباعة قائمة الصلاحيات ",
+    "rightsFor" : " الصلاحيات الممنوحة لـ ",
+    "system" : " النظام ",
+    "page" : " الصفحة ",
+    "rightUnit" : " الوحدة ",
+    "process" : " العمليات ",
+    "fields" : " الحقول ",
+    "systemName" : " إسم النظام ",
+    "processInPage" : " العمليات في الصفحة ",
+
+
+
+    "rolemanagement" : " إدارة الأدوار ",
+    "searchRols" : " البحث في الأدوار ",
+    "roleCode" : " رمز الدور ",
+    "roleName" : " إسم الدور ",
+    "roleDesc" : " وصف الدور ",
+    "roleStatus" : "حالة الدور ",
+    "roleList" : " قائمة الأدوار ",
+    "roleAdd"  : " إضافة دور جديد " ,
+    "roleEdit" : " تعديل الدور ",
+    "roleView" : " عرض الدور " ,
+    "activaterole": " تفعيل الدور ",
+    "deactivaterole": " إلغاء تفعيل الدور ",
+    "printRolesList": " طباعة قائمة الأدوار ",
+
+
+
+    "lookupManagement" : " إدارة رموز النظام ",
+    "searchLookup" : "",
+    "lookupID" : " رمز التصنيف ",
+    "lookupName" : " إسم التصنيف ",
+    "lookupDesc" : " وصف التصنيف ",
+    "listOfLookups" : " قائمة التصنيفات ",
+    "lookupAdd" : " اضافة تصنيف جديد ",
+    "lookupEdit" : " تعديل التصنيف ",
+    "lookupView" : " عرض التصنيف ",
+    "lookupStatus" : " حالة التصنيف ",
+    "activateLookup" : " تفعيل التصنيف ",
+    "deactivateLookup" : " إلغاء تفعيل النصنيف ",
+    "printLookupList" : " طباعة قائمة التصنيفات ",
+
+    "searchCode" : "",
+    "codeID" : " رقم الرمز ",
+    "codeName" : " إسم الرمز ",
+    "codeDesc" : " وصف الرمز ",
+    "listOfcodes" : " قائمة الرموز ",
+    "codeAdd" : " اضافة رمز جديد ",
+    "codeEdit" : " تعديل الرمز ",
+    "codeView" : " عرض الرمز ",
+    "codeDelete" : " حذف الرمز ",
+    "codeStatus" : " حالة الرمز ",
+    "activatecode" : " تفعيل الرمز ",
+    "deactivatecode" : " إلغاء تفعيل الرمز ",
+    "printcodeList" : " طباعة قائمة الرموز ",
+
+
+
+
+    "groupManagement" : " إدارة المجموعات ",
+    "searchGroup" : " البحث في المجموعات " ,
+    "groupName" : " إسم المجموعة ",
+    "groupDesc" : " وصف المجموعة ",
+    "groupStatus" : " حالة المجموعة ",
+    "listOfGroup" : " قائمة المجموعات ",
+    "groupCode" : " رمز المجموعة ",
+    "groupView" : " عرض المجموعة ",
+    "groupEdit" : " تعديل المجموعة ",
+    "groupDelete" : " حذف المجموعة ",
+    "groupAdd" : " إضافة مجموعة جديدة ",
+    "activateGroup" : " تفعيل المجموعة ",
+    "deactivateGroup" : " إلغاء تفعيل المجموعة ",
+    "printGroupList" : " طباعة قائمة المجموعات ",
+    "printGroupUsersList" : " طباعة قائمة مستخدمين المجموعات ",
+    "addUsersForGroup" : " إضافة أعضاء للمجموعة ",
+    "groupMember" : " أعضاء المجموعة ",
+
+
+
+    "zoneManagementMenu" : " إدارة الأقاليم والمناطق ",
+    "zoneManagement" : " إدارة الأقاليم ",
+    "searchZone" : " البحث في الأقاليم ",
+    "zoneName" : "إسم الإقليم ",
+    "zoneCode" : " رمز الإقليم ",
+    "zoneDesc" : " وصف الإقليم ",
+    "zoneStatus" : " حالة الإقليم ",
+    "listOfZone" : " قائمة الأقاليم ",
+    "addZone" : " إضافة إقليم جديد ",
+    "editZone" : " تعديل الإقليم ",
+    "viewZone" : " عرض الإقليم ",
+    "activateZone" : " تفعيل الإقليم ",
+    "deactivateZone" : " إلغاء تفعيل الإقليم ",
+    "printZoneList" : " طباعة قائمة الأقاليم ",
+          
+    
+    
+    "governorateManagement" : " إدارة المحافظات ",
+    "searchGovernorate" : " البحث في المحافظات ",
+    "governorateName" : " إسم المحافظة  ",
+    "governorateCode" : " رمز المحافظة ",
+    "governorateDesc" : " وصف المحافظة ",
+    "governorateStatus" : " حالة المحافظة ",
+    "listOfGovernorates" : " قائمة المحافظات ",
+    "addGovernorate" : " إضافة محافظة جديدة ",
+    "editGovernorate" : " تعديل المحافظة ",
+    "viewGovernorate" : " عرض المحافظة ",
+    "deleteGovernorate" : " حذف المحافظة ",
+    "activateGovernorate" : " تفعيل المحافظة ",
+    "deactivateGovernorate" : " إلغاء تفعيل المحافظة ",
+    "printGovernorateList" : " طباعة قائمة المحافظات ",
+
+
+
+    "municipalitiesManagement" : " إدارة البلديات ",
+    "searchMunicipalities" : " البحث في البلديات ",
+    "municipalityName" : " إسم البلدية  ",
+    "municipalityCode" : " رمز البلدية ",
+    "municipalityeDesc" : " وصف البلدية ",
+    "municipalityStatus" : " حالة البلدية ",
+    "listOfMunicipalities" : " قائمة البلديات ",
+    "addMunicipality" : " إضافة بلدية جديدة ",
+    "editMunicipality" : " تعديل البلدية ",
+    "viewMunicipality" : " عرض البلدية ",
+    "deleteMunicipality" : " حذف البلدية ",
+    "activateMunicipality" : " تفعيل البلدية ",
+    "deactivateMunicipality" : " إلغاء تفعيل البلدية ",
+    "printMunicipalitiesList" : " طباعة قائمة البلديات ",
+
+     
+     
+    "areasManagement" : " إدارة المناطق ",
+    "searchAreas" : " البحث في المناطق ",
+    "areaName" : " إسم المنطقة ",
+    "areaCode" : " رمز المنطقة",
+    "areaeDesc" : " وصف المنطقة ",
+    "areaStatus" : " حالة المنطقة ",
+    "listOfAreas" : " قائمة المناطق ",
+    "addArea" : " إضافة منطقة جديدة ",
+    "editArea" : " تعديل المنطقة ",
+    "viewArea" : " عرض المنطقة ",
+    "deleteArea" : " حذف المنطقة ",
+    "activateArea" : " تفعيل منطقة ",
+    "deactivateArea" : " إلغاء تفعيل المنطقة ",
+    "printAreasList" : " طباعة قائمة المناطق ",
+
+
+
+    "passwordManagement" : " إدارة كلمة المرور " ,
+    "passwordPolicy" : " إدارة سياسة كلمة المرور ",
+    "passwordExpired" : " عدد أيام إنتهاء صلاحية كلمة المرور " ,
+    "passwordLength" : " الحد الأدنى لكلمة المرور " ,
+    "passwordSympol" : " رموز خاصة ",
+    "passwordNumber" : " أرقام ",
+    "passwordUpperCase" : " أحرف كبيرة " ,
+    "lastUpdate" : " التعديلات السابقة على كلمة المرور ",
+
+
+
+    "InfoLog" : " سجل التدقيق ",
+    "searchInfoLog" : " البحث في سجل التدقيق ",
+    "fromDate" : " من تاريخ ",
+    "toDate" : " إلى تاريخ ",
+    "fromTime":" من الساعة ",
+    "toTime":" إلى الساعة ",
+    "searchInIP":" البحث في الـ IP ",
+    "processType":" نوع الإجراء ",
+    "oldValue":" القيمة القديمة ",
+    "newValue":" القيمة الجديدة ",
+    "processDate":" تاريخ ووقت الإجراء ",
+    "windowName" :" إسم الشاشة ",
+    "IPAddress":"عنوان الـ IP ",
+
+
+
+    "systemConfig" : " تكوين النظام ",
+    "systems" : " الأنظمة ",
+
+
+    "noData" : " لا توجد بيانات ",
+    "active" : " فعال ",
+    "deActive" : " غير فعال ",
+    "editBy" : " عدلت بواسطة ",
+    "thorughIP" : " عن طريق جهاز ",
+    "data" : " بتاريخ " ,
+    "reportDate" : " التاريخ " ,
+    "searchResult" : " نتيجة البحث ",
+
+
+    "new" : " جديد ",
+    "save" : " حفظ ",
+    "delete" : " حذف ",
+    "print" : " طباعة ",
+    "search": " بحث ",
+    "reset": " تفريغ ",
+    "add": " إضافة ",
+    "edit": " تعديل ",
+    "cancel" : " إلغاء ",
+    "back": " رجوع ",
+    "Error":" خطأ ", 
+    "defalutValue" : " القيمة الإفتراضية ",
+
+    "Login":{
+
+        
+        "title":"الدخول الى حسابك",
+        "Password":"كلمة المرور"
+        ,
+        "UserName":"الاسم"
+       , "Password":{
+            "Required":"الرجاء تعبئة الحقل"
+        }, "Password":{
+            "Required":"الرجاء تعبئة الحقل"
+        }
+
+
+
+}
+}
+

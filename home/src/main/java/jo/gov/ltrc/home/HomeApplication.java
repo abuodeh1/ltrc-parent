@@ -3,8 +3,14 @@ package jo.gov.ltrc.home;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.filter.OrderedHiddenHttpMethodFilter;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.Collections;
 
@@ -15,7 +21,7 @@ public class HomeApplication {
         SpringApplication.run(HomeApplication.class, args);
     }
 
-    @Value("${services.auth}")
+/*    @Value("${services.auth}")
     private String authService;
 
     @Bean
@@ -23,9 +29,9 @@ public class HomeApplication {
         final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new JwtFilter());
         registrationBean.setInitParameters(Collections.singletonMap("services.auth", authService));
-        registrationBean.addUrlPatterns("/home");
+        registrationBean.addUrlPatterns("/home", "/", "/index.html");
 
         return registrationBean;
-    }
+    }*/
 
 }

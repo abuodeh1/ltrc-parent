@@ -1,7 +1,7 @@
 package jo.gov.ltrc.authserver.confg;
 
-import jo.gov.ltrc.authserver.outside.CookieUtil;
 import jo.gov.ltrc.authserver.repositories.UserDBService;
+import jo.gov.ltrc.authserver.util.CookieUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -16,16 +16,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-import org.springframework.security.web.authentication.logout.LogoutHandler;
 
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//@EnableWebSecurity
 @Configuration
 public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAdapter {
 

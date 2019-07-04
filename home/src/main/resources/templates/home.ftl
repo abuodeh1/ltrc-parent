@@ -4,7 +4,7 @@
     <title>Authentication Service</title>
 </head>
 <link>
-<a href="/logout">Logout </a>
+<a href="http://192.168.60.243:8080/logout">Logout </a>
 
 <h2>Camunda System</h2><br/>
 <div>
