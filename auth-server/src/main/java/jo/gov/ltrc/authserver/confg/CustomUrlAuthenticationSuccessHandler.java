@@ -25,7 +25,7 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
     private static final String jwtTokenCookieName = "JWT-TOKEN";
     private static final String signingKey = "signingKey";
 
-    @Value("${ltrc.gateway-url}")
+    @Value("${server.gateway.url}")
     private String gatewayURI;
 
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
@@ -56,7 +56,7 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
         CookieUtil.create(response, jwtTokenCookieName, token, false, -1, "192.168.60.243");
 
 
-        redirectStrategy.sendRedirect(request, response, gatewayURI+(targetUrl==null?"":targetUrl));
+        redirectStrategy.sendRedirect(request, response, gatewayURI+(targetUrl==null? "": targetUrl));
     }
 
     protected String determineTargetUrl(Authentication authentication) {

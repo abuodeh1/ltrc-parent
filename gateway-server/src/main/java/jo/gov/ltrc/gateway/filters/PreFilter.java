@@ -59,7 +59,10 @@ public class PreFilter extends ZuulFilter {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }catch (Exception e) {
+           // e.printStackTrace();
         }
+
         return null;
     }
 

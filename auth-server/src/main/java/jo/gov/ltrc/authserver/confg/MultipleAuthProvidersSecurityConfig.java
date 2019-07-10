@@ -2,6 +2,7 @@ package jo.gov.ltrc.authserver.confg;
 
 import jo.gov.ltrc.authserver.repositories.UserDBService;
 import jo.gov.ltrc.authserver.util.CookieUtil;
+import jo.gov.ltrc.authserver.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -55,9 +56,13 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
                 .logout()
                 .invalidateHttpSession(true)
                 .permitAll()
-                .addLogoutHandler((httpServletRequest, httpServletResponse, authentication) -> CookieUtil.clear(httpServletResponse, jwtTokenCookieName));
+                .addLogoutHandler((httpServletRequest, httpServletResponse, authentication) -> {
+                    CookieUtil.clear(httpServletResponse, jwtTokenCookieName);
+//                    JwtUtil.invalidateRelatedTokens(httpServletRequest);
+                });
 //                .logoutUrl("/logout")
-//                .logoutSuccessUrl("/login");
+//                .deleteCookies(jwtTokenCookieName)
+//                .logoutUrl("http://192.168.60.243:8889/login");
     }
 
     @Override

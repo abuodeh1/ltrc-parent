@@ -1,6 +1,10 @@
 package jo.gov.ltrc.gateway.filters;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class RouteFilter extends ZuulFilter {
 
