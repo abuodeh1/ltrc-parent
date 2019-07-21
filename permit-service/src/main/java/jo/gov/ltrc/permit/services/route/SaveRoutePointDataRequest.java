@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.route;
+package jo.gov.ltrc.permit.services.route;
 
 
 

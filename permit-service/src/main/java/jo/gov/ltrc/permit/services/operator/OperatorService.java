@@ -1,10 +1,16 @@
-package com.etech.ltrc.permits.operator;
+package jo.gov.ltrc.permit.services.operator;
 
-import io.swagger.annotations.*;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.StoredProcedureQuery;
 import java.util.ArrayList;
 import java.util.List;
 

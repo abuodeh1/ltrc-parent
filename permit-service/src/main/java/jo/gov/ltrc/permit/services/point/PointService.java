@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.point;
+package jo.gov.ltrc.permit.services.point;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

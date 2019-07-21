@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.violation;
+package jo.gov.ltrc.permit.services.violation;
 
 import io.swagger.annotations.ApiModelProperty;
 

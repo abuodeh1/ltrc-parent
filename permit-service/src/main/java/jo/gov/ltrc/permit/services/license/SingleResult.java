@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.license;
+package jo.gov.ltrc.permit.services.license;
 
 
 

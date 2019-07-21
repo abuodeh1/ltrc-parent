@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.tariffa;
+package jo.gov.ltrc.permit.services.tariffa;
 
 import javax.persistence.*;
 import java.io.Serializable;

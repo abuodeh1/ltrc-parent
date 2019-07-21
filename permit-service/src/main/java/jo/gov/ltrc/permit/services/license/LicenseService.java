@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.license;
+package jo.gov.ltrc.permit.services.license;
 
 
 import io.swagger.annotations.ApiOperation;
@@ -64,7 +64,7 @@ public class LicenseService {
     })
     @ApiOperation("Add or Edit Operator License ")
     @PostMapping
-    public String addOperatorLicense(@ApiParam("\t") @RequestBody SaveOperatorLicenseDataRequest saveOperatorLicenseDataRequest){
+    public String addOperatorLicense(@ApiParam("\t") @RequestBody jo.gov.ltrc.permit.services.license.SaveOperatorLicenseDataRequest saveOperatorLicenseDataRequest){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveOperatorLicenseData");
         storedProcedureQuery.setParameter(1, saveOperatorLicenseDataRequest.getOperatorlicenseidparm());
@@ -89,7 +89,7 @@ public class LicenseService {
 
     @ApiOperation("Retrieve Operator License Information ")
     @PostMapping("/find")
-    public List<ReturnOperatorLicenseInformationResponse> getOperatorLicenseInformation(@ApiParam("\t") @RequestBody ReturnOperatorLicenseInformationRequest returnOperatorLicenseInformationRequest){
+    public List<jo.gov.ltrc.permit.services.license.ReturnOperatorLicenseInformationResponse> getOperatorLicenseInformation(@ApiParam("\t") @RequestBody jo.gov.ltrc.permit.services.license.ReturnOperatorLicenseInformationRequest returnOperatorLicenseInformationRequest){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnOperatorLicenseInformation");
         storedProcedureQuery.setParameter(1, returnOperatorLicenseInformationRequest.getMinoperatorlicenseidparm());
@@ -115,7 +115,7 @@ public class LicenseService {
         storedProcedureQuery.setParameter(21 , returnOperatorLicenseInformationRequest.getSortby());
 
 
-        List<ReturnOperatorLicenseInformationResponse> result = storedProcedureQuery.getResultList();
+        List<jo.gov.ltrc.permit.services.license.ReturnOperatorLicenseInformationResponse> result = storedProcedureQuery.getResultList();
 
         return result ;
     }

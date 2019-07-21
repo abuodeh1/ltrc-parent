@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.point;
+package jo.gov.ltrc.permit.services.point;
 
 import javax.persistence.*;
 import java.io.Serializable;

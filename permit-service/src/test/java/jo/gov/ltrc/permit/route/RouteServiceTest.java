@@ -1,6 +1,7 @@
-package com.etech.ltrc.permits.route;
+package jo.gov.ltrc.permit.route;
 
-import com.etech.ltrc.permits.route.ReturnRouteResponse;
+import jo.gov.ltrc.permit.services.route.ReturnLineByRouteDataResponse;
+import jo.gov.ltrc.permit.services.route.ReturnRouteResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -20,7 +21,8 @@ import java.util.Random;
 
 import static org.hamcrest.Matchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
 @ActiveProfiles("test")

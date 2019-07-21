@@ -1,5 +1,9 @@
-package com.etech.ltrc.permits.violation;
+package jo.gov.ltrc.permit.violation;
 
+import jo.gov.ltrc.permit.services.violation.ReturnViolationPenaltyResponse;
+import jo.gov.ltrc.permit.services.violation.ReturnViolationResponse;
+import jo.gov.ltrc.permit.services.violation.ReturnViolationSubjectResponse;
+import jo.gov.ltrc.permit.services.violation.ReturnViolationTypeResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,9 +19,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.Matchers.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ActiveProfiles("test")
 @RunWith(SpringRunner.class)

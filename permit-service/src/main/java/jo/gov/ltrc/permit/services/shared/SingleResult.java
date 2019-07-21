@@ -1,4 +1,4 @@
-package com.etech.ltrc.permits.shared;
+package jo.gov.ltrc.permit.services.shared;
 
 import javax.persistence.*;
 import java.io.Serializable;
