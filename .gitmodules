@@ -1,4 +1,4 @@
-[submodule "ltrc"]
-	path = ltrc
-	url = http://mabuodeh@192.168.60.12:7990/scm/ltrc/ltrc.git
+[submodule "permit-service"]
+	path = permit-service
+	url = http://mabuodeh@192.168.60.12:7990/scm/ltrc/permit-service.git
 	branch = master
