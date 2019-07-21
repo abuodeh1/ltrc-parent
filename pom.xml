@@ -15,11 +15,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>shared-lib</module>
         <module>auth-server</module>
         <module>registry-server</module>
         <module>config-server</module>
         <module>gateway-server</module>
+        <module>permit-service</module>
+        <module>workflow-service</module>
     </modules>
 
     <properties>

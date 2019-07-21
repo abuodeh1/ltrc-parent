@@ -15,10 +15,10 @@ public class HomeController {
         return "forward:/index.html";
     }
 
-//    @RequestMapping("/home")
-//    public String protectedResource() {
-//        return "index.html";
-//    }
+    @RequestMapping("/home")
+    public String protectedResource() {
+        return "home";
+    }
 
 //    @RequestMapping("/logout")
 //    public String logout(HttpServletResponse httpServletResponse) {
