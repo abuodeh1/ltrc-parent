@@ -7,7 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.etech</groupId>
+    <groupId>jo.gov.ltrc</groupId>
     <artifactId>workflow-service</artifactId>
     <version>0.0.20-SNAPSHOT</version>
     <name>workflow-service</name>
