@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="row">
+        <div class="col-sm-2">
+            <img src="../../../assets/img/ltrc.png" height="60" width="240"/>
+        </div>
+
+        <div class="col-sm-2"><h2></h2></div>
+        <div class="col-sm-9"></div>
+        <div class="col-sm-1">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                        <li><a translate href="http://192.168.60.243:8090/logout" (click)="logOut()"><i
+                                class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="sidebar-search">
+                    <!-- <div class="input-group custom-search-form">
+                      <input type="text" class="form-control" placeholder="Search...">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" (click)="showSuccess()" type="button">
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </span>
+                    </div> -->
+                    <!-- /input-group -->
+                </li>
+                <li>
+                    <!--
+                    <a translate class="nav-link "  routerLink="camundaTap" >
+                      <i class="fa fa-cogs  fa-fw"></i>كاموندا<span class="fa arrow"></span></a>
+                      -->
+                </li>
+                <app-menu-tab></app-menu-tab>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
