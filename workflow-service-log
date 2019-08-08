@@ -194,3 +194,16 @@
 2019-08-08 15:55:46.090  INFO 16552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-08-08 16:00:46.092  INFO 16552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-08-08 16:05:46.094  INFO 16552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-08 16:10:46.096  INFO 16552 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-08 16:13:35.929  INFO 16552 --- [Thread-58] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WORKFLOW-SERVICE with eureka with status DOWN
+2019-08-08 16:13:35.931  WARN 16552 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1565270015930, current=DOWN, previous=UP]
+2019-08-08 16:13:35.932  INFO 16552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:3d95ee4cd180d4dff592ab86c3ad7416: registering service...
+2019-08-08 16:13:35.951  INFO 16552 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:3d95ee4cd180d4dff592ab86c3ad7416 - registration status: 204
+2019-08-08 16:13:35.966  INFO 16552 --- [Thread-58] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 16:13:35.976  INFO 16552 --- [Thread-58] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 16:13:36.029  INFO 16552 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-08-08 16:13:39.031  INFO 16552 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-08-08 16:13:39.034  INFO 16552 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:3d95ee4cd180d4dff592ab86c3ad7416 - deregister  status: 200
+2019-08-08 16:13:39.045  INFO 16552 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-08-08 16:13:39.046  INFO 16552 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-08-08 16:13:39.051  INFO 16552 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
