@@ -21,6 +21,7 @@
         <module>gateway-server</module>
         <module>permit-service</module>
         <module>workflow-service</module>
+        <module>ltrc-helper</module>
     </modules>
 
     <properties>
