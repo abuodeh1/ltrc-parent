@@ -1,0 +1,14 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "LTRC Management REST API",
+    "version": "1.0.0",
+    "title": "Spring Boot REST API",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "192.168.60.243:9872",
+  "basePath": "/"
+}

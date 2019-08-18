@@ -19,8 +19,16 @@ public class DatabaseHelper {
             PropertyDescriptor pd = new PropertyDescriptor(parameter.getName(), requestObject.getClass());
             Object value = pd.getReadMethod().invoke(requestObject);
 
-            if (value != null) {
-                storedProcedureQuery.setParameter(parameter.getName(), pd.getPropertyType().cast(pd.getValue(parameter.getName())));
+            if(value == null && pd.getPropertyType().isAssignableFrom(Long.class)){
+                storedProcedureQuery.setParameter(parameter.getName(), 0L );
+            } else if(value == null && pd.getPropertyType().isAssignableFrom(Integer.class)){
+                storedProcedureQuery.setParameter(parameter.getName(), 0 );
+            } else if(value == null && pd.getPropertyType().isAssignableFrom(Boolean.class)){
+                storedProcedureQuery.setParameter(parameter.getName(), false );
+            } else if(value == null && pd.getPropertyType().isAssignableFrom(Double.class)){
+                storedProcedureQuery.setParameter(parameter.getName(), 0.0 );
+            } else if (value != null) {
+                storedProcedureQuery.setParameter(parameter.getName(), pd.getPropertyType().cast(value));
             }
 
         }
