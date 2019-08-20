@@ -7,55 +7,55 @@ import java.sql.Date;
 
 public class SaveTariffEquationDataRequest {
 
-    @ApiModelProperty("Tariff Equation ID Parameter ") private long tariffequationidparm ;
-    @ApiModelProperty("Vehicle Category Parameter ") private long vehiclecategoryparm ;
-    @ApiModelProperty("Added Value Parameter ") private double adeddvalueparm ;
-    @ApiModelProperty("Operation Parameter ") private int operationparm ;
-    @ApiModelProperty("Route coefficient Multiplication Parameter ") private double routecoefficientmultiplicationparm ;
+    @ApiModelProperty("Tariff Equation ID Parameter ") private Long tariffequationidparm ;
+    @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
+    @ApiModelProperty("Added Value Parameter ") private  Double adeddvalueparm ;
+    @ApiModelProperty("Operation Parameter ") private Integer operationparm ;
+    @ApiModelProperty("Route coefficient Multiplication Parameter ") private  Double routecoefficientmultiplicationparm ;
     @ApiModelProperty("Start Date Parameter ") private Date startdateparm ;
     @ApiModelProperty("End Date Parameter ") private Date enddateparm ;
     @ApiModelProperty("Equation Text Parameter ") private String equationtextparm ;
-    @ApiModelProperty("Line Type Parameter ") private long linetypeparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepal ;
+    @ApiModelProperty("Line Type Parameter ") private Long linetypeparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepal ;
 
-    public long getTariffequationidparm() {
+    public Long getTariffequationidparm() {
         return tariffequationidparm;
     }
 
-    public void setTariffequationidparm(long tariffequationidparm) {
+    public void setTariffequationidparm(Long tariffequationidparm) {
         this.tariffequationidparm = tariffequationidparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public double getAdeddvalueparm() {
+    public Double getAdeddvalueparm() {
         return adeddvalueparm;
     }
 
-    public void setAdeddvalueparm(double adeddvalueparm) {
+    public void setAdeddvalueparm(Double adeddvalueparm) {
         this.adeddvalueparm = adeddvalueparm;
     }
 
-    public int getOperationparm() {
+    public Integer getOperationparm() {
         return operationparm;
     }
 
-    public void setOperationparm(int operationparm) {
+    public void setOperationparm(Integer operationparm) {
         this.operationparm = operationparm;
     }
 
-    public double getRoutecoefficientmultiplicationparm() {
+    public Double getRoutecoefficientmultiplicationparm() {
         return routecoefficientmultiplicationparm;
     }
 
-    public void setRoutecoefficientmultiplicationparm(double routecoefficientmultiplicationparm) {
+    public void setRoutecoefficientmultiplicationparm(Double routecoefficientmultiplicationparm) {
         this.routecoefficientmultiplicationparm = routecoefficientmultiplicationparm;
     }
 
@@ -83,28 +83,45 @@ public class SaveTariffEquationDataRequest {
         this.equationtextparm = equationtextparm;
     }
 
-    public long getLinetypeparm() {
+    public Long getLinetypeparm() {
         return linetypeparm;
     }
 
-    public void setLinetypeparm(long linetypeparm) {
+    public void setLinetypeparm(Long linetypeparm) {
         this.linetypeparm = linetypeparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public long getPrincepal() {
+    public Long getPrincepal() {
         return princepal;
     }
 
-    public void setPrincepal(long princepal) {
+    public void setPrincepal(Long princepal) {
         this.princepal = princepal;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveTariffEquationDataRequest{" +
+                "tariffequationidparm=" + tariffequationidparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", adeddvalueparm=" + adeddvalueparm +
+                ", operationparm=" + operationparm +
+                ", routecoefficientmultiplicationparm=" + routecoefficientmultiplicationparm +
+                ", startdateparm=" + startdateparm +
+                ", enddateparm=" + enddateparm +
+                ", equationtextparm=" + equationtextparm +
+                ", linetypeparm=" + linetypeparm +
+                ", statusparm=" + statusparm +
+                ", princepal=" + princepal +
+                '}';
     }
 }
 

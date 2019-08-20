@@ -11,8 +11,8 @@ import java.io.Serializable;
         parameters = {
 
 
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
 
 
         }
@@ -33,22 +33,30 @@ import java.io.Serializable;
 public class CalculateTariffValueDataResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Tariffa Value ") private double tariffValue ;
-    @ApiModelProperty("Tariffa Equation ID ") private long tariffequationid;
+    @ApiModelProperty("Tariffa Value ") private  Double tariffValue ;
+    @ApiModelProperty("Tariffa Equation ID ") private Long tariffequationid;
 
-    public double getTariffValue() {
+    public Double getTariffValue() {
         return tariffValue;
     }
 
-    public void setTariffValue(double tariffValue) {
+    public void setTariffValue(Double tariffValue) {
         this.tariffValue = tariffValue;
     }
 
-    public long getTariffequationid() {
+    public Long getTariffequationid() {
         return tariffequationid;
     }
 
-    public void setTariffequationid(long tariffequationid) {
+    public void setTariffequationid(Long tariffequationid) {
         this.tariffequationid = tariffequationid;
+    }
+
+    @Override
+    public String toString() {
+        return "CalculateTariffValueDataResponse{" +
+                "tariffValue=" + tariffValue +
+                ", tariffequationid=" + tariffequationid +
+                '}';
     }
 }

@@ -6,48 +6,55 @@ import java.sql.Date;
 
 public class SaveApplicationTariffFareDataRequest {
 
-    @ApiModelProperty("Application Tariff Fare ID Parameter ") private long applicationtarifffareidparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Application Tariff Fare ID Parameter ") private Long applicationtarifffareidparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Applicant Name Parameter ") private String applicantnameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
-    @ApiModelProperty("Route ID Parameter ") private long routeidparm ;
-    @ApiModelProperty("Vehicle Category Parameter ") private long vehiclecategoryparm ;
-    @ApiModelProperty("Fule Type Parameter ") private long fuletypeparm ;
-    @ApiModelProperty("Suggested Fare Parameter ") private double suggestedfareparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
+    @ApiModelProperty("Route ID Parameter ") private Long routeidparm ;
+    @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
+    @ApiModelProperty("Fule Type Parameter ") private Long fuletypeparm ;
+    @ApiModelProperty("Suggested Fare Parameter ") private Double suggestedfareparm ;
     @ApiModelProperty("Reason Parameter ") private String reasonparm ;
-    @ApiModelProperty("Disclosure Committee New Distance Parameter ") private double disclosurecommitteenewdistanceparm ;
+    @ApiModelProperty("Disclosure Committee New Distance Parameter ") private Double disclosurecommitteenewdistanceparm ;
     @ApiModelProperty("Disclosure Committee Explanation Parameter ") private String disclosurecommitteeexplanationparm ;
-    @ApiModelProperty("New Tariff Parameter ") private double newtariffparm ;
+    @ApiModelProperty("New Tariff Parameter ") private Double newtariffparm ;
     @ApiModelProperty("Tariff Calculator Explanation Parameter ") private String tariffcalculatorexplanationparm ;
-    @ApiModelProperty("Study Reference Parameter ") private int studyreferenceparm ;
+    @ApiModelProperty("Study Reference Parameter ") private Integer studyreferenceparm ;
     @ApiModelProperty("Study Path Parameter ") private String studypathparm ;
-    @ApiModelProperty("Tariff Calculator Decision Parameter ") private int tariffcalculatordecisionparm ;
+    @ApiModelProperty("Tariff Calculator Decision Parameter ") private Integer tariffcalculatordecisionparm ;
     @ApiModelProperty("Director Directorate Passenger Transport Explanation Parameter ") private String directordirectoratepassengertransportexplanationparm ;
-    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private int directordirectoratepassengertransportdecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
+    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private Integer directordirectoratepassengertransportdecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Current Tariff Parameter") private Double currenttariffparm ;
+    @ApiModelProperty("Difficult Terrain Parameter") private Boolean difficultterrainparm ;
+    @ApiModelProperty("Number of Working Days Parameter") private Double numberofworkingdaysparm ;
+    @ApiModelProperty("Route Has Been Modified Parameter") private Boolean routhasbeenmodifiedparm ;
+    @ApiModelProperty("Route Length Parameter") private Double routelengthparm ;
+    @ApiModelProperty("Others Parameter") private String othersparm ;
+    @ApiModelProperty("GIS Distance Parameter") private Double gisdistanceparm ;
 
-    public long getApplicationtarifffareidparm() {
+    public Long getApplicationtarifffareidparm() {
         return applicationtarifffareidparm;
     }
 
-    public void setApplicationtarifffareidparm(long applicationtarifffareidparm) {
+    public void setApplicationtarifffareidparm(Long applicationtarifffareidparm) {
         this.applicationtarifffareidparm = applicationtarifffareidparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -83,67 +90,67 @@ public class SaveApplicationTariffFareDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public long getFuletypeparm() {
+    public Long getFuletypeparm() {
         return fuletypeparm;
     }
 
-    public void setFuletypeparm(long fuletypeparm) {
+    public void setFuletypeparm(Long fuletypeparm) {
         this.fuletypeparm = fuletypeparm;
     }
 
-    public double getSuggestedfareparm() {
+    public Double getSuggestedfareparm() {
         return suggestedfareparm;
     }
 
-    public void setSuggestedfareparm(double suggestedfareparm) {
+    public void setSuggestedfareparm(Double suggestedfareparm) {
         this.suggestedfareparm = suggestedfareparm;
     }
 
@@ -155,11 +162,11 @@ public class SaveApplicationTariffFareDataRequest {
         this.reasonparm = reasonparm;
     }
 
-    public double getDisclosurecommitteenewdistanceparm() {
+    public Double getDisclosurecommitteenewdistanceparm() {
         return disclosurecommitteenewdistanceparm;
     }
 
-    public void setDisclosurecommitteenewdistanceparm(double disclosurecommitteenewdistanceparm) {
+    public void setDisclosurecommitteenewdistanceparm(Double disclosurecommitteenewdistanceparm) {
         this.disclosurecommitteenewdistanceparm = disclosurecommitteenewdistanceparm;
     }
 
@@ -171,11 +178,11 @@ public class SaveApplicationTariffFareDataRequest {
         this.disclosurecommitteeexplanationparm = disclosurecommitteeexplanationparm;
     }
 
-    public double getNewtariffparm() {
+    public Double getNewtariffparm() {
         return newtariffparm;
     }
 
-    public void setNewtariffparm(double newtariffparm) {
+    public void setNewtariffparm(Double newtariffparm) {
         this.newtariffparm = newtariffparm;
     }
 
@@ -187,11 +194,11 @@ public class SaveApplicationTariffFareDataRequest {
         this.tariffcalculatorexplanationparm = tariffcalculatorexplanationparm;
     }
 
-    public int getStudyreferenceparm() {
+    public Integer getStudyreferenceparm() {
         return studyreferenceparm;
     }
 
-    public void setStudyreferenceparm(int studyreferenceparm) {
+    public void setStudyreferenceparm(Integer studyreferenceparm) {
         this.studyreferenceparm = studyreferenceparm;
     }
 
@@ -203,11 +210,11 @@ public class SaveApplicationTariffFareDataRequest {
         this.studypathparm = studypathparm;
     }
 
-    public int getTariffcalculatordecisionparm() {
+    public Integer getTariffcalculatordecisionparm() {
         return tariffcalculatordecisionparm;
     }
 
-    public void setTariffcalculatordecisionparm(int tariffcalculatordecisionparm) {
+    public void setTariffcalculatordecisionparm(Integer tariffcalculatordecisionparm) {
         this.tariffcalculatordecisionparm = tariffcalculatordecisionparm;
     }
 
@@ -219,19 +226,19 @@ public class SaveApplicationTariffFareDataRequest {
         this.directordirectoratepassengertransportexplanationparm = directordirectoratepassengertransportexplanationparm;
     }
 
-    public int getDirectordirectoratepassengertransportdecisionparm() {
+    public Integer getDirectordirectoratepassengertransportdecisionparm() {
         return directordirectoratepassengertransportdecisionparm;
     }
 
-    public void setDirectordirectoratepassengertransportdecisionparm(int directordirectoratepassengertransportdecisionparm) {
+    public void setDirectordirectoratepassengertransportdecisionparm(Integer directordirectoratepassengertransportdecisionparm) {
         this.directordirectoratepassengertransportdecisionparm = directordirectoratepassengertransportdecisionparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
@@ -243,20 +250,117 @@ public class SaveApplicationTariffFareDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public Double getCurrenttariffparm() {
+        return currenttariffparm;
+    }
+
+    public void setCurrenttariffparm(Double currenttariffparm) {
+        this.currenttariffparm = currenttariffparm;
+    }
+
+    public Boolean getDifficultterrainparm() {
+        return difficultterrainparm;
+    }
+
+    public void setDifficultterrainparm(Boolean difficultterrainparm) {
+        this.difficultterrainparm = difficultterrainparm;
+    }
+
+    public Double getNumberofworkingdaysparm() {
+        return numberofworkingdaysparm;
+    }
+
+    public void setNumberofworkingdaysparm(Double numberofworkingdaysparm) {
+        this.numberofworkingdaysparm = numberofworkingdaysparm;
+    }
+
+    public Boolean getRouthasbeenmodifiedparm() {
+        return routhasbeenmodifiedparm;
+    }
+
+    public void setRouthasbeenmodifiedparm(Boolean routhasbeenmodifiedparm) {
+        this.routhasbeenmodifiedparm = routhasbeenmodifiedparm;
+    }
+
+    public Double getRoutelengthparm() {
+        return routelengthparm;
+    }
+
+    public void setRoutelengthparm(Double routelengthparm) {
+        this.routelengthparm = routelengthparm;
+    }
+
+    public String getOthersparm() {
+        return othersparm;
+    }
+
+    public void setOthersparm(String othersparm) {
+        this.othersparm = othersparm;
+    }
+
+    public Double getGisdistanceparm() {
+        return gisdistanceparm;
+    }
+
+    public void setGisdistanceparm(Double gisdistanceparm) {
+        this.gisdistanceparm = gisdistanceparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationTariffFareDataRequest{" +
+                "applicationtarifffareidparm=" + applicationtarifffareidparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm= " + operatornameparm + 
+                ", applicantnameparm= " + applicantnameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", routeidparm=" + routeidparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", fuletypeparm=" + fuletypeparm +
+                ", suggestedfareparm=" + suggestedfareparm +
+                ", reasonparm= " + reasonparm + 
+                ", disclosurecommitteenewdistanceparm=" + disclosurecommitteenewdistanceparm +
+                ", disclosurecommitteeexplanationparm= " + disclosurecommitteeexplanationparm + 
+                ", newtariffparm=" + newtariffparm +
+                ", tariffcalculatorexplanationparm= " + tariffcalculatorexplanationparm + 
+                ", studyreferenceparm=" + studyreferenceparm +
+                ", studypathparm= " + studypathparm + 
+                ", tariffcalculatordecisionparm=" + tariffcalculatordecisionparm +
+                ", directordirectoratepassengertransportexplanationparm= " + directordirectoratepassengertransportexplanationparm + 
+                ", directordirectoratepassengertransportdecisionparm=" + directordirectoratepassengertransportdecisionparm +
+                ", prencipal=" + prencipal +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                ", statusparm=" + statusparm +
+                ", currenttariffparm=" + currenttariffparm +
+                ", difficultterrainparm=" + difficultterrainparm +
+                ", numberofworkingdaysparm=" + numberofworkingdaysparm +
+                ", routhasbeenmodifiedparm=" + routhasbeenmodifiedparm +
+                ", routelengthparm=" + routelengthparm +
+                ", othersparm= " + othersparm + 
+                ", gisdistanceparm=" + gisdistanceparm +
+                '}';
     }
 }
 

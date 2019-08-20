@@ -10,14 +10,14 @@ import java.io.Serializable;
         procedureName = "\"ReturnLineByRouteData\"",
         parameters = {
 
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minrouteidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxrouteidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minroutedailypassengersparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxroutedailypassengersparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minroutelengthparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxroutelengthparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minroutelengthviagisparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxroutelengthviagisparm"),
 
         },
         resultSetMappings = {
@@ -39,30 +39,29 @@ import java.io.Serializable;
 public class ReturnLineByRouteDataResponse implements Serializable {
 
     @Id
-   @ApiModelProperty("Line ID ") private long lineid ;
+   @ApiModelProperty("Line ID ") private Long lineid ;
    @ApiModelProperty("Line Name ") private String linename ;
-   @ApiModelProperty("Province ID ") private long provinceid ;
+   @ApiModelProperty("Province ID ") private Long provinceid ;
    @ApiModelProperty("Province Arabic Name ") private String provincearabicname ;
-   @ApiModelProperty("Governorate ID ") private long governorateid ;
+   @ApiModelProperty("Governorate ID ") private Long governorateid ;
    @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname ;
-   @ApiModelProperty("Start Point ") private long startpoint ;
+   @ApiModelProperty("Start Point ") private Long startpoint ;
    @ApiModelProperty("Start Point Arabic Name ") private String startpointarabicname ;
-   @ApiModelProperty("End Point ") private long endpoint ;
+   @ApiModelProperty("End Point ") private Long endpoint ;
    @ApiModelProperty("End Point Arabic Name ") private String endpointarabicname ;
-   @ApiModelProperty("Route Count ") private int routecount ;
+   @ApiModelProperty("Route Count ") private Integer routecount ;
 // @ApiModelProperty("Point Arabic Name")  private String pointarabicname ;
-   @ApiModelProperty("Line Type ") private long linetype ;
+   @ApiModelProperty("Line Type ") private Long linetype ;
    @ApiModelProperty("Line Type Name ") private String linetypename ;
-   @ApiModelProperty("Line Status ") private int linestatus ;
+   @ApiModelProperty("Line Status ") private Integer linestatus ;
    @ApiModelProperty("Remarks ") private String remarks ;
-   @ApiModelProperty("Allow Temporary Permit ") private boolean allowtemporarypermit  ;
+   @ApiModelProperty("Allow Temporary Permit ") private   Boolean allowtemporarypermit  ;
 
-
-    public long getLineid() {
+    public Long getLineid() {
         return lineid;
     }
 
-    public void setLineid(long lineid) {
+    public void setLineid(Long lineid) {
         this.lineid = lineid;
     }
 
@@ -74,11 +73,11 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.linename = linename;
     }
 
-    public long getProvinceid() {
+    public Long getProvinceid() {
         return provinceid;
     }
 
-    public void setProvinceid(long provinceid) {
+    public void setProvinceid(Long provinceid) {
         this.provinceid = provinceid;
     }
 
@@ -90,11 +89,11 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorateid() {
+    public Long getGovernorateid() {
         return governorateid;
     }
 
-    public void setGovernorateid(long governorateid) {
+    public void setGovernorateid(Long governorateid) {
         this.governorateid = governorateid;
     }
 
@@ -106,11 +105,11 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getStartpoint() {
+    public Long getStartpoint() {
         return startpoint;
     }
 
-    public void setStartpoint(long startpoint) {
+    public void setStartpoint(Long startpoint) {
         this.startpoint = startpoint;
     }
 
@@ -122,27 +121,35 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.startpointarabicname = startpointarabicname;
     }
 
-    public long getEndpoint() {
+    public Long getEndpoint() {
         return endpoint;
     }
 
-    public void setEndpoint(long endpoint) {
+    public void setEndpoint(Long endpoint) {
         this.endpoint = endpoint;
     }
 
-//    public String getPointarabicname() {
-//        return pointarabicname;
-//    }
-//
-//    public void setPointarabicname(String pointarabicname) {
-//        this.pointarabicname = pointarabicname;
-//    }
+    public String getEndpointarabicname() {
+        return endpointarabicname;
+    }
 
-    public long getLinetype() {
+    public void setEndpointarabicname(String endpointarabicname) {
+        this.endpointarabicname = endpointarabicname;
+    }
+
+    public Integer getRoutecount() {
+        return routecount;
+    }
+
+    public void setRoutecount(Integer routecount) {
+        this.routecount = routecount;
+    }
+
+    public Long getLinetype() {
         return linetype;
     }
 
-    public void setLinetype(long linetype) {
+    public void setLinetype(Long linetype) {
         this.linetype = linetype;
     }
 
@@ -154,28 +161,12 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.linetypename = linetypename;
     }
 
-    public int getLinestatus() {
+    public Integer getLinestatus() {
         return linestatus;
     }
 
-    public void setLinestatus(int linestatus) {
+    public void setLinestatus(Integer linestatus) {
         this.linestatus = linestatus;
-    }
-
-    public String getEndpointarabicname() {
-        return endpointarabicname;
-    }
-
-    public void setEndpointarabicname(String endpointarabicname) {
-        this.endpointarabicname = endpointarabicname;
-    }
-
-    public int getRoutecount() {
-        return routecount;
-    }
-
-    public void setRoutecount(int routecount) {
-        this.routecount = routecount;
     }
 
     public String getRemarks() {
@@ -186,11 +177,33 @@ public class ReturnLineByRouteDataResponse implements Serializable {
         this.remarks = remarks;
     }
 
-    public boolean isAllowtemporarypermit() {
+    public Boolean getAllowtemporarypermit() {
         return allowtemporarypermit;
     }
 
-    public void setAllowtemporarypermit(boolean allowtemporarypermit) {
+    public void setAllowtemporarypermit(Boolean allowtemporarypermit) {
         this.allowtemporarypermit = allowtemporarypermit;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnLineByRouteDataResponse{" +
+                "lineid=" + lineid +
+                ", linename=" + linename +
+                ", provinceid=" + provinceid +
+                ", provincearabicname=" + provincearabicname +
+                ", governorateid=" + governorateid +
+                ", governoratearabicname=" + governoratearabicname +
+                ", startpoint=" + startpoint +
+                ", startpointarabicname=" + startpointarabicname +
+                ", endpoint=" + endpoint +
+                ", endpointarabicname=" + endpointarabicname +
+                ", routecount=" + routecount +
+                ", linetype=" + linetype +
+                ", linetypename=" + linetypename +
+                ", linestatus=" + linestatus +
+                ", remarks=" + remarks +
+                ", allowtemporarypermit=" + allowtemporarypermit +
+                '}';
     }
 }

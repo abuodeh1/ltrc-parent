@@ -2,11 +2,14 @@ package jo.gov.ltrc.permit.services.line;
 
 
 import io.swagger.annotations.*;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -25,6 +28,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/api/line")
+@Log4j2
 public class LineService {
 
     @PersistenceContext
@@ -46,7 +50,7 @@ public class LineService {
 
     @ApiOperation("Retrieve Line Start Point By Line Id")
     @GetMapping("/{id}/start-point")
-    public long getStartPoints(@ApiParam("Line ID") @PathVariable(value = "id") long id) {
+    public Long getStartPoints(@ApiParam("Line ID") @PathVariable(value = "id") Long id) {
 
         ReturnLineByLineDataResponse returnLineByLineDataResponse = getLineByLineID(id);
 
@@ -55,7 +59,7 @@ public class LineService {
 
     @ApiOperation("Retrieve Line End Point By Line ID")
     @GetMapping("/{id}/end-point")
-    public long getLineEndPoints(@ApiParam("Line ID ") @PathVariable(value = "id") long id) {
+    public Long getLineEndPoints(@ApiParam("Line ID ") @PathVariable(value = "id") Long id) {
 
         ReturnLineByLineDataResponse returnLineByLineDataResponse = getLineByLineID(id);
 
@@ -65,7 +69,7 @@ public class LineService {
 
     @ApiOperation("Retrieve Line Status By Line ID")
     @GetMapping("/{id}/line-status")
-    public long getLineStatuses(@ApiParam("Line ID ") @PathVariable(value = "id") long id) {
+    public Long getLineStatuses(@ApiParam("Line ID ") @PathVariable(value = "id") Long id) {
 
         ReturnLineByLineDataResponse returnLineByLineDataResponse = getLineByLineID(id);
 
@@ -85,7 +89,7 @@ public class LineService {
 
     @ApiOperation("Retrieve Route Tariffa By Line ID")
     @GetMapping("/{id}/tariff")
-    public List<ReturnRouteTariffByLineIDResponse> getRouteTariffByLineID(@ApiParam("Line ID") @PathVariable(value = "id") long id){
+    public List<ReturnRouteTariffByLineIDResponse> getRouteTariffByLineID(@ApiParam("Line ID") @PathVariable(value = "id") Long id){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnRouteTariffByLineID");
         storedProcedureQuery.setParameter(1, id);
@@ -97,7 +101,7 @@ public class LineService {
 
     @ApiOperation("Retrieve Line By Line ID")
     @GetMapping("/{id}")
-    public ReturnLineByLineDataResponse getLineByLineID(@ApiParam("Line ID ") @PathVariable(value = "id") long id){
+    public ReturnLineByLineDataResponse getLineByLineID(@ApiParam("Line ID ") @PathVariable(value = "id") Long id){
 
         if (id == 0){
             return null;
@@ -145,20 +149,23 @@ public class LineService {
 })
     @ApiOperation("Add or Edit Line")
     @PostMapping
-    public String addLine(@ApiParam(value = "\t") @RequestBody SaveLineDataRequest saveLineDataRequest){
+    public String addLine(@ApiParam(value = "\t") @RequestBody SaveLineDataRequest saveLineDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveLineData");
-        storedProcedureQuery.setParameter(1, saveLineDataRequest.getLinenameparm());
-        storedProcedureQuery.setParameter(2, saveLineDataRequest.isAllowtemporarypermitparm());
-        storedProcedureQuery.setParameter(3, saveLineDataRequest.getLineidparm());
-        storedProcedureQuery.setParameter(4, saveLineDataRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(5, saveLineDataRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(6, saveLineDataRequest.getLinetypeparm());
-        storedProcedureQuery.setParameter(7, saveLineDataRequest.getStratpointparm());
-        storedProcedureQuery.setParameter(8, saveLineDataRequest.getEndpointparm());
-        storedProcedureQuery.setParameter(9, saveLineDataRequest.getRemarksparm());
-        storedProcedureQuery.setParameter(10, saveLineDataRequest.getLinestatusparm());
-        storedProcedureQuery.setParameter(11, saveLineDataRequest.getPrincepel());
+        log.debug("SaveLineDataRequest : " + saveLineDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveLineDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveLineData", saveLineDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult();
     }
@@ -183,7 +190,7 @@ public class LineService {
     })
     @ApiOperation(value = "Change Line Status")
     @DeleteMapping("/{id}")
-    public String deleteLine(@ApiParam("Line ID ") @PathVariable(value = "id") long id){
+    public String deleteLine(@ApiParam("Line ID ") @PathVariable(value = "id") Long id){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangeLineStatus");
         storedProcedureQuery.setParameter(1, 3);
@@ -195,16 +202,19 @@ public class LineService {
 
     private List<ReturnLineByLineDataResponse> findLineByLineData(@ApiParam(value = "\t") ReturnLineByLineDataRequest returnLineByLineDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnLineByLineData");
-        storedProcedureQuery.setParameter(1, returnLineByLineDataRequest.getMinlineidparm());
-        storedProcedureQuery.setParameter(2, returnLineByLineDataRequest.getMaxlineidparm());
-        storedProcedureQuery.setParameter(3, returnLineByLineDataRequest.getLinenameparm());
-        storedProcedureQuery.setParameter(4, returnLineByLineDataRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(5, returnLineByLineDataRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(6, returnLineByLineDataRequest.getLinetypeparm());
-        storedProcedureQuery.setParameter(7, returnLineByLineDataRequest.getLinestatusparm());
-        storedProcedureQuery.setParameter(8, returnLineByLineDataRequest.getLinestartpoint());
-        storedProcedureQuery.setParameter(9, returnLineByLineDataRequest.getLineendpont());
+
+        log.debug("ReturnLineByLineDataRequest : " + returnLineByLineDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnLineByLineData", returnLineByLineDataRequest);
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnLineByLineDataResponse> result = storedProcedureQuery.getResultList();
 

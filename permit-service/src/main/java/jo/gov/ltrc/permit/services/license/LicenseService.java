@@ -1,23 +1,18 @@
 package jo.gov.ltrc.permit.services.license;
 
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.*;
 import jo.gov.ltrc.helper.DatabaseHelper;
 import lombok.extern.log4j.Log4j2;
-import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Parameter;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Iterator;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -73,11 +68,14 @@ public class LicenseService {
     })
     @ApiOperation("Add or Edit Operator License ")
     @PostMapping
-    public String addOperatorLicense(@ApiParam("\t") @RequestBody SaveOperatorLicenseDataRequest saveOperatorLicenseDataRequest) {
+    public String addOperatorLicense(@ApiParam("\t") @RequestBody SaveOperatorLicenseDataRequest saveOperatorLicenseDataRequest, HttpServletRequest request) {
 
         log.debug("SaveOperatorLicenseDataRequest : " + saveOperatorLicenseDataRequest.toString());
 
+
         StoredProcedureQuery storedProcedureQuery = null;
+
+//        saveOperatorLicenseDataRequest.setIP = request.getRemoteAddr();
 
         try {
 

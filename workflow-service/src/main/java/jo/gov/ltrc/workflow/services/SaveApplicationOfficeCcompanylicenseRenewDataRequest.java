@@ -6,51 +6,50 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationOfficeCcompanylicenseRenewDataRequest {
 
-    @ApiModelProperty("Office Company License Renew ID Parameter ") private long officeccompanylicenserenewidparm ;
-    @ApiModelProperty("Opeator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Office Company License Renew ID Parameter ") private Long officeccompanylicenserenewidparm ;
+    @ApiModelProperty("Opeator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Applicant Name Parameter ") private String applicantnameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
     @ApiModelProperty("Vehicle List Parameter ") private String vehiclelistparm ;
     @ApiModelProperty("Permit List Parameter ") private String permitlistparm ;
-    @ApiModelProperty("Certificate of No Criminal Record Confirmation Parameter ") private int certificateofnocriminalrecordconfirmationparm ;
-    @ApiModelProperty("Career License for The Previous Year Confirmation Parameter ") private int careerlicenseforthepreviousyearconfirmationparm ;
-    @ApiModelProperty("Commercial Record Confirmation Parameter ") private int commercialrecordconfirmationparm ;
-    @ApiModelProperty("Vehicle List Confirmation Parameter ") private int vehiclelistconfirmationparm ;
-    @ApiModelProperty("Patent From Directorate Of Finance Confirmation Parameter ") private int patentfromdirectorateoffinanceconfirmationparm ;
-    @ApiModelProperty("Parking Lot Renting Contract Confirmation Parameter ") private int parkinglotrentingcontractconfirmationparm ;
-    @ApiModelProperty("Site Ownership Confirmation Parameter ") private int siteownershipconfirmationparm ;
-    @ApiModelProperty("Disclosure Committee Request Number Parameter ") private long disclosurecommitteerequestnumberparm ;
-    @ApiModelProperty("Disclosure Committee Operator ID Parameter ") private long disclosurecommitteeoperatoridparm ;
+    @ApiModelProperty("Certificate of No Criminal Record Confirmation Parameter ") private Integer certificateofnocriminalrecordconfirmationparm ;
+    @ApiModelProperty("Career License for The Previous Year Confirmation Parameter ") private Integer careerlicenseforthepreviousyearconfirmationparm ;
+    @ApiModelProperty("Commercial Record Confirmation Parameter ") private Integer commercialrecordconfirmationparm ;
+    @ApiModelProperty("Vehicle List Confirmation Parameter ") private Integer vehiclelistconfirmationparm ;
+    @ApiModelProperty("Patent From Directorate Of Finance Confirmation Parameter ") private Integer patentfromdirectorateoffinanceconfirmationparm ;
+    @ApiModelProperty("Parking Lot Renting Contract Confirmation Parameter ") private Integer parkinglotrentingcontractconfirmationparm ;
+    @ApiModelProperty("Site Ownership Confirmation Parameter ") private Integer siteownershipconfirmationparm ;
+    @ApiModelProperty("Disclosure Committee Request Number Parameter ") private Long disclosurecommitteerequestnumberparm ;
+    @ApiModelProperty("Disclosure Committee Operator ID Parameter ") private Long disclosurecommitteeoperatoridparm ;
     @ApiModelProperty("Disclosure Committee Phone Number Parameter ") private String disclosurecommitteephonenumberparm ;
     @ApiModelProperty("Disclosure Committee E-Mail Parameter ") private String disclosurecommitteeemailparm ;
-    @ApiModelProperty("Disclosure Committee Province Parameter ") private long disclosurecommitteeprovinceparm ;
-    @ApiModelProperty("Disclosure Committee Governorate Parameter ") private long disclosurecommitteegovernorateparm ;
-    @ApiModelProperty("Disclosure Committee Municipality Parameter ") private long disclosurecommitteemunicipalityparm ;
-    @ApiModelProperty("Disclosure Committee Territory Parameter ") private long disclosurecommitteeterritoryparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Disclosure Committee Province Parameter ") private Long disclosurecommitteeprovinceparm ;
+    @ApiModelProperty("Disclosure Committee Governorate Parameter ") private Long disclosurecommitteegovernorateparm ;
+    @ApiModelProperty("Disclosure Committee Municipality Parameter ") private Long disclosurecommitteemunicipalityparm ;
+    @ApiModelProperty("Disclosure Committee Territory Parameter ") private Long disclosurecommitteeterritoryparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-
-    public long getOfficeccompanylicenserenewidparm() {
+    public Long getOfficeccompanylicenserenewidparm() {
         return officeccompanylicenserenewidparm;
     }
 
-    public void setOfficeccompanylicenserenewidparm(long officeccompanylicenserenewidparm) {
+    public void setOfficeccompanylicenserenewidparm(Long officeccompanylicenserenewidparm) {
         this.officeccompanylicenserenewidparm = officeccompanylicenserenewidparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -78,35 +77,35 @@ public class SaveApplicationOfficeCcompanylicenseRenewDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
@@ -126,75 +125,75 @@ public class SaveApplicationOfficeCcompanylicenseRenewDataRequest {
         this.permitlistparm = permitlistparm;
     }
 
-    public int getCertificateofnocriminalrecordconfirmationparm() {
+    public Integer getCertificateofnocriminalrecordconfirmationparm() {
         return certificateofnocriminalrecordconfirmationparm;
     }
 
-    public void setCertificateofnocriminalrecordconfirmationparm(int certificateofnocriminalrecordconfirmationparm) {
+    public void setCertificateofnocriminalrecordconfirmationparm(Integer certificateofnocriminalrecordconfirmationparm) {
         this.certificateofnocriminalrecordconfirmationparm = certificateofnocriminalrecordconfirmationparm;
     }
 
-    public int getCareerlicenseforthepreviousyearconfirmationparm() {
+    public Integer getCareerlicenseforthepreviousyearconfirmationparm() {
         return careerlicenseforthepreviousyearconfirmationparm;
     }
 
-    public void setCareerlicenseforthepreviousyearconfirmationparm(int careerlicenseforthepreviousyearconfirmationparm) {
+    public void setCareerlicenseforthepreviousyearconfirmationparm(Integer careerlicenseforthepreviousyearconfirmationparm) {
         this.careerlicenseforthepreviousyearconfirmationparm = careerlicenseforthepreviousyearconfirmationparm;
     }
 
-    public int getCommercialrecordconfirmationparm() {
+    public Integer getCommercialrecordconfirmationparm() {
         return commercialrecordconfirmationparm;
     }
 
-    public void setCommercialrecordconfirmationparm(int commercialrecordconfirmationparm) {
+    public void setCommercialrecordconfirmationparm(Integer commercialrecordconfirmationparm) {
         this.commercialrecordconfirmationparm = commercialrecordconfirmationparm;
     }
 
-    public int getVehiclelistconfirmationparm() {
+    public Integer getVehiclelistconfirmationparm() {
         return vehiclelistconfirmationparm;
     }
 
-    public void setVehiclelistconfirmationparm(int vehiclelistconfirmationparm) {
+    public void setVehiclelistconfirmationparm(Integer vehiclelistconfirmationparm) {
         this.vehiclelistconfirmationparm = vehiclelistconfirmationparm;
     }
 
-    public int getPatentfromdirectorateoffinanceconfirmationparm() {
+    public Integer getPatentfromdirectorateoffinanceconfirmationparm() {
         return patentfromdirectorateoffinanceconfirmationparm;
     }
 
-    public void setPatentfromdirectorateoffinanceconfirmationparm(int patentfromdirectorateoffinanceconfirmationparm) {
+    public void setPatentfromdirectorateoffinanceconfirmationparm(Integer patentfromdirectorateoffinanceconfirmationparm) {
         this.patentfromdirectorateoffinanceconfirmationparm = patentfromdirectorateoffinanceconfirmationparm;
     }
 
-    public int getParkinglotrentingcontractconfirmationparm() {
+    public Integer getParkinglotrentingcontractconfirmationparm() {
         return parkinglotrentingcontractconfirmationparm;
     }
 
-    public void setParkinglotrentingcontractconfirmationparm(int parkinglotrentingcontractconfirmationparm) {
+    public void setParkinglotrentingcontractconfirmationparm(Integer parkinglotrentingcontractconfirmationparm) {
         this.parkinglotrentingcontractconfirmationparm = parkinglotrentingcontractconfirmationparm;
     }
 
-    public int getSiteownershipconfirmationparm() {
+    public Integer getSiteownershipconfirmationparm() {
         return siteownershipconfirmationparm;
     }
 
-    public void setSiteownershipconfirmationparm(int siteownershipconfirmationparm) {
+    public void setSiteownershipconfirmationparm(Integer siteownershipconfirmationparm) {
         this.siteownershipconfirmationparm = siteownershipconfirmationparm;
     }
 
-    public long getDisclosurecommitteerequestnumberparm() {
+    public Long getDisclosurecommitteerequestnumberparm() {
         return disclosurecommitteerequestnumberparm;
     }
 
-    public void setDisclosurecommitteerequestnumberparm(long disclosurecommitteerequestnumberparm) {
+    public void setDisclosurecommitteerequestnumberparm(Long disclosurecommitteerequestnumberparm) {
         this.disclosurecommitteerequestnumberparm = disclosurecommitteerequestnumberparm;
     }
 
-    public long getDisclosurecommitteeoperatoridparm() {
+    public Long getDisclosurecommitteeoperatoridparm() {
         return disclosurecommitteeoperatoridparm;
     }
 
-    public void setDisclosurecommitteeoperatoridparm(long disclosurecommitteeoperatoridparm) {
+    public void setDisclosurecommitteeoperatoridparm(Long disclosurecommitteeoperatoridparm) {
         this.disclosurecommitteeoperatoridparm = disclosurecommitteeoperatoridparm;
     }
 
@@ -214,51 +213,51 @@ public class SaveApplicationOfficeCcompanylicenseRenewDataRequest {
         this.disclosurecommitteeemailparm = disclosurecommitteeemailparm;
     }
 
-    public long getDisclosurecommitteeprovinceparm() {
+    public Long getDisclosurecommitteeprovinceparm() {
         return disclosurecommitteeprovinceparm;
     }
 
-    public void setDisclosurecommitteeprovinceparm(long disclosurecommitteeprovinceparm) {
+    public void setDisclosurecommitteeprovinceparm(Long disclosurecommitteeprovinceparm) {
         this.disclosurecommitteeprovinceparm = disclosurecommitteeprovinceparm;
     }
 
-    public long getDisclosurecommitteegovernorateparm() {
+    public Long getDisclosurecommitteegovernorateparm() {
         return disclosurecommitteegovernorateparm;
     }
 
-    public void setDisclosurecommitteegovernorateparm(long disclosurecommitteegovernorateparm) {
+    public void setDisclosurecommitteegovernorateparm(Long disclosurecommitteegovernorateparm) {
         this.disclosurecommitteegovernorateparm = disclosurecommitteegovernorateparm;
     }
 
-    public long getDisclosurecommitteemunicipalityparm() {
+    public Long getDisclosurecommitteemunicipalityparm() {
         return disclosurecommitteemunicipalityparm;
     }
 
-    public void setDisclosurecommitteemunicipalityparm(long disclosurecommitteemunicipalityparm) {
+    public void setDisclosurecommitteemunicipalityparm(Long disclosurecommitteemunicipalityparm) {
         this.disclosurecommitteemunicipalityparm = disclosurecommitteemunicipalityparm;
     }
 
-    public long getDisclosurecommitteeterritoryparm() {
+    public Long getDisclosurecommitteeterritoryparm() {
         return disclosurecommitteeterritoryparm;
     }
 
-    public void setDisclosurecommitteeterritoryparm(long disclosurecommitteeterritoryparm) {
+    public void setDisclosurecommitteeterritoryparm(Long disclosurecommitteeterritoryparm) {
         this.disclosurecommitteeterritoryparm = disclosurecommitteeterritoryparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -270,12 +269,48 @@ public class SaveApplicationOfficeCcompanylicenseRenewDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationOfficeCcompanylicenseRenewDataRequest{" +
+                "officeccompanylicenserenewidparm=" + officeccompanylicenserenewidparm +
+                ", operatoridparm=" + operatoridparm +
+                ", applicantnameparm= " + applicantnameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", vehiclelistparm= " + vehiclelistparm + 
+                ", permitlistparm= " + permitlistparm + 
+                ", certificateofnocriminalrecordconfirmationparm=" + certificateofnocriminalrecordconfirmationparm +
+                ", careerlicenseforthepreviousyearconfirmationparm=" + careerlicenseforthepreviousyearconfirmationparm +
+                ", commercialrecordconfirmationparm=" + commercialrecordconfirmationparm +
+                ", vehiclelistconfirmationparm=" + vehiclelistconfirmationparm +
+                ", patentfromdirectorateoffinanceconfirmationparm=" + patentfromdirectorateoffinanceconfirmationparm +
+                ", parkinglotrentingcontractconfirmationparm=" + parkinglotrentingcontractconfirmationparm +
+                ", siteownershipconfirmationparm=" + siteownershipconfirmationparm +
+                ", disclosurecommitteerequestnumberparm=" + disclosurecommitteerequestnumberparm +
+                ", disclosurecommitteeoperatoridparm=" + disclosurecommitteeoperatoridparm +
+                ", disclosurecommitteephonenumberparm= " + disclosurecommitteephonenumberparm + 
+                ", disclosurecommitteeemailparm= " + disclosurecommitteeemailparm + 
+                ", disclosurecommitteeprovinceparm=" + disclosurecommitteeprovinceparm +
+                ", disclosurecommitteegovernorateparm=" + disclosurecommitteegovernorateparm +
+                ", disclosurecommitteemunicipalityparm=" + disclosurecommitteemunicipalityparm +
+                ", disclosurecommitteeterritoryparm=" + disclosurecommitteeterritoryparm +
+                ", prencipal=" + prencipal +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

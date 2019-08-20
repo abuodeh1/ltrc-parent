@@ -31,9 +31,9 @@ import java.sql.Date;
 public class SingleResult implements Serializable {
 
     @Id
-    private long id;
+    private Long id;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

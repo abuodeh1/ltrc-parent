@@ -9,12 +9,12 @@ import java.io.Serializable;
         name = "ReturnGovernorate",
         procedureName = "\"ReturnGovernorate\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class)
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governorateenglishnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratecodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "countryidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceidparm"),
         },
         resultSetMappings = {
                 "GovernorateResultSetMapping"
@@ -32,16 +32,16 @@ import java.io.Serializable;
 public class ReturnGovernerateResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Governorate ID ") private long governorateID;
+    @ApiModelProperty("Governorate ID ") private Long governorateID;
     @ApiModelProperty("Governorate Arabic Name ") private String governorateArbicName;
     @ApiModelProperty("Governorate English Name ") private String governorateEnglishName;
     @ApiModelProperty("Governorate Code ") private String governorateCode;
 
-    public long getGovernorateID() {
+    public Long getGovernorateID() {
         return governorateID;
     }
 
-    public void setGovernorateID(long governorateID) {
+    public void setGovernorateID(Long governorateID) {
         this.governorateID = governorateID;
     }
 
@@ -67,5 +67,15 @@ public class ReturnGovernerateResponse implements Serializable {
 
     public void setGovernorateCode(String governorateCode) {
         this.governorateCode = governorateCode;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnGovernerateResponse{" +
+                "governorateID=" + governorateID +
+                ", governorateArbicName=" + governorateArbicName +
+                ", governorateEnglishName=" + governorateEnglishName +
+                ", governorateCode=" + governorateCode +
+                '}';
     }
 }

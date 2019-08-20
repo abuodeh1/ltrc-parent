@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnServiceDepartmentDataRequest {
 
-    @ApiModelProperty("Service Department ID Parameter") private long servicedepartmentidparm ;
+    @ApiModelProperty("Service Department ID Parameter") private Long servicedepartmentidparm ;
     @ApiModelProperty("Service Department Name Parameter") private String servicedepartmentnameparm ;
 
-    public long getServicedepartmentidparm() {
+    public Long getServicedepartmentidparm() {
         return servicedepartmentidparm;
     }
 
-    public void setServicedepartmentidparm(long servicedepartmentidparm) {
+    public void setServicedepartmentidparm(Long servicedepartmentidparm) {
         this.servicedepartmentidparm = servicedepartmentidparm;
     }
 
@@ -22,6 +22,14 @@ public class ReturnServiceDepartmentDataRequest {
 
     public void setServicedepartmentnameparm(String servicedepartmentnameparm) {
         this.servicedepartmentnameparm = servicedepartmentnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnServiceDepartmentDataRequest{" +
+                "servicedepartmentidparm=" + servicedepartmentidparm +
+                ", servicedepartmentnameparm=" + servicedepartmentnameparm +
+                '}';
     }
 }
 

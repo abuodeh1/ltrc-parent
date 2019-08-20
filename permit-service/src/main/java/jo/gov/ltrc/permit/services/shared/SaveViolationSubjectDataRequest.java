@@ -5,13 +5,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveViolationSubjectDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long violationsubjectidparm;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long violationsubjectidparm;
     @ApiModelProperty("Violation Type Name Parameter ") private String violationsubjectnameparm;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
 
-    public long getViolationsubjectidparm() {
+    public Long getViolationsubjectidparm() {
         return violationsubjectidparm;
     }
 
@@ -27,7 +27,7 @@ public class SaveViolationSubjectDataRequest {
         this.violationsubjectnameparm = violationsubjectnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -35,7 +35,7 @@ public class SaveViolationSubjectDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

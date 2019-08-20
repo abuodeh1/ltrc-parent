@@ -9,11 +9,11 @@ import java.io.Serializable;
                 name = "SaveCharacteristicData",
                 procedureName = "\"SaveCharacteristicData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "characteristicidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "characteristicarabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "characteristicenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
 
                 }
         ),
@@ -22,12 +22,12 @@ import java.io.Serializable;
                 name = "SaveCountryData",
                 procedureName = "\"SaveCountryData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "countryidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countryarabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countryenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countrycodeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -48,14 +48,14 @@ import java.io.Serializable;
                 name = "SaveGovernorateData",
                 procedureName = "\"SaveGovernorateData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratearabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governorateenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratecodeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "countryidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -63,13 +63,13 @@ import java.io.Serializable;
                 name = "SaveMunicipalityData",
                 procedureName = "\"SaveMunicipalityData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalityarabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalityenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalitycodeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -77,13 +77,13 @@ import java.io.Serializable;
                 name = "SaveTerritoryData",
                 procedureName = "\"SaveTerritoryData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territoryidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "territoryarabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "territoryenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "territorycodeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -91,11 +91,11 @@ import java.io.Serializable;
                 name = "SaveParkingTypeData",
                 procedureName = "\"SaveParkingTypeData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "parkingtypeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "parkingtypearabicnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "parkingtypeenglishnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -103,10 +103,10 @@ import java.io.Serializable;
                 name = "SaveLineTypeData",
                 procedureName = "\"SaveLineTypeData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "linetypeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "linetypenameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -125,10 +125,10 @@ import java.io.Serializable;
                 name = "SaveFuelTypeData",
                 procedureName = "\"SaveFuelTypeData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "fueltypeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "fueltypenameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -191,10 +191,10 @@ import java.io.Serializable;
                 name = "SavePlateClassificationData",
                 procedureName = "\"SavePlateClassificationData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "plateclassificationidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "plateclassificationnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -213,10 +213,10 @@ import java.io.Serializable;
                 name = "SaveTransportationClassData",
                 procedureName = "\"SaveTransportationClassData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "transportationclassidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "transportationclassnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -224,10 +224,10 @@ import java.io.Serializable;
                 name = "SavePeriodCalssData",
                 procedureName = "\"SavePeriodCalssData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "periodidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "periodnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -235,10 +235,10 @@ import java.io.Serializable;
                 name = "SaveOperatorClassificationData",
                 procedureName = "\"SaveOperatorClassificationData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorclassificationidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorclassificationnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 }
         ),
 
@@ -249,13 +249,17 @@ import java.io.Serializable;
 public class SingleResult implements Serializable {
 
     @Id
-    private int id;
+    private Integer id;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
     }
+
+        public void setId(Integer id) {
+                this.id = id;
+        }
 }

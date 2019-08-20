@@ -9,13 +9,13 @@ import java.util.List;
 public class SaveRouteDataRequest {
 
     @ApiModelProperty("Route Name Parameter") private String routenameparm ;
-    @ApiModelProperty("Route Length Parameter") private double routelengthparm  ;
-    @ApiModelProperty("Route Length Viagis Parameter") private double routelengthviagisparm  ;
-    @ApiModelProperty("Route daily Passengers Parameter") private double routedailypassengersparm ;
-    @ApiModelProperty("Principal Parameter") private long princepal ;
-    @ApiModelProperty("Bus Line ID Parameter") private long buslineidparm  ;
-    @ApiModelProperty("Status ID Parameter") private int statusparm ;
-    @ApiModelProperty("Route ID Parameter") private long routeidparm  ;
+    @ApiModelProperty("Route Length Parameter") private  Double routelengthparm  ;
+    @ApiModelProperty("Route Length Viagis Parameter") private  Double routelengthviagisparm  ;
+    @ApiModelProperty("Route daily Passengers Parameter") private  Double routedailypassengersparm ;
+    @ApiModelProperty("Principal Parameter") private Long princepal ;
+    @ApiModelProperty("Bus Line ID Parameter") private Long buslineidparm  ;
+    @ApiModelProperty("Status ID Parameter") private Integer statusparm ;
+    @ApiModelProperty("Route ID Parameter") private Long routeidparm  ;
     @ApiModelProperty("Going Parameter") private String goingparm ;
     @ApiModelProperty("Return Ing Parameter") private String returningparm ;
     @ApiModelProperty("List of Points Object") private List<SaveRoutePointDataRequest> points ;
@@ -28,60 +28,59 @@ public class SaveRouteDataRequest {
         this.routenameparm = routenameparm;
     }
 
-    public double getRoutelengthparm() {
+    public Double getRoutelengthparm() {
         return routelengthparm;
     }
 
-    public void setRoutelengthparm(double routelengthparm) {
+    public void setRoutelengthparm(Double routelengthparm) {
         this.routelengthparm = routelengthparm;
     }
 
-    public double getRoutelengthviagisparm() {
+    public Double getRoutelengthviagisparm() {
         return routelengthviagisparm;
     }
 
-    public void setRoutelengthviagisparm(double routelengthviagisparm) {
+    public void setRoutelengthviagisparm(Double routelengthviagisparm) {
         this.routelengthviagisparm = routelengthviagisparm;
     }
 
-    public double getRoutedailypassengersparm() {
+    public Double getRoutedailypassengersparm() {
         return routedailypassengersparm;
     }
 
-    public void setRoutedailypassengersparm(double routedailypassengersparm) {
+    public void setRoutedailypassengersparm(Double routedailypassengersparm) {
         this.routedailypassengersparm = routedailypassengersparm;
     }
 
-    public long getPrincepal() {
+    public Long getPrincepal() {
         return princepal;
     }
 
-    public void setPrincepal(long princepal) {
+    public void setPrincepal(Long princepal) {
         this.princepal = princepal;
     }
 
-    public long getBuslineidparm() {
+    public Long getBuslineidparm() {
         return buslineidparm;
     }
 
-    public void setBuslineidparm(long buslineidparm) {
+    public void setBuslineidparm(Long buslineidparm) {
         this.buslineidparm = buslineidparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
@@ -107,6 +106,23 @@ public class SaveRouteDataRequest {
 
     public void setPoints(List<SaveRoutePointDataRequest> points) {
         this.points = points;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveRouteDataRequest{" +
+                "routenameparm=" + routenameparm +
+                ", routelengthparm=" + routelengthparm +
+                ", routelengthviagisparm=" + routelengthviagisparm +
+                ", routedailypassengersparm=" + routedailypassengersparm +
+                ", princepal=" + princepal +
+                ", buslineidparm=" + buslineidparm +
+                ", statusparm=" + statusparm +
+                ", routeidparm=" + routeidparm +
+                ", goingparm=" + goingparm +
+                ", returningparm=" + returningparm +
+                ", points=" + points +
+                '}';
     }
 }
 

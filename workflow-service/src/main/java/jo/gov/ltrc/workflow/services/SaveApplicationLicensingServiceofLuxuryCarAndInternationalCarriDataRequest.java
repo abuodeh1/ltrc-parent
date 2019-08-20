@@ -6,41 +6,40 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriDataRequest {
 
-    @ApiModelProperty("Application ID Parameter ") private long applicationlicensingserviceofluxurycarandinternationalcarrierid ;
+    @ApiModelProperty("Application ID Parameter ") private Long applicationlicensingserviceofluxurycarandinternationalcarrierid ;
     @ApiModelProperty("Applicant National ID Parameter ") private String applicantnationalidparm ;
     @ApiModelProperty("Applicant Name Parameter ") private String applicantnameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
     @ApiModelProperty("Study Reference Parameter ") private String studyreferenceparm ;
     @ApiModelProperty("Evaluation Committee Explanation Parameter ") private String evaluationcommitteeexplanationparm ;
-    @ApiModelProperty("Evaluation Committee Decision Parameter ") private int evaluationcommitteedecisionparm ;
+    @ApiModelProperty("Evaluation Committee Decision Parameter ") private Integer evaluationcommitteedecisionparm ;
     @ApiModelProperty("General Director Explanation Parameter ") private String generaldirectorexplanationparm ;
-    @ApiModelProperty("General Director Decision Parameter ") private int generaldirectordecisionparm ;
-    @ApiModelProperty("Initial Approval Reference for Site Detection Parameter ") private long initialapprovalreferenceforsitedetectionparm ;
+    @ApiModelProperty("General Director Decision Parameter ") private Integer generaldirectordecisionparm ;
+    @ApiModelProperty("Initial Approval Reference for Site Detection Parameter ") private Long initialapprovalreferenceforsitedetectionparm ;
     @ApiModelProperty("Initial Approval Applicant National ID for Site Detection Parameter ") private String initialapprovalapplicantnationalidforsitedetectionparm ;
     @ApiModelProperty("Initial Approval Applicant Name for Site Detection Parameter ") private String initialapprovalapplicantnameforsitedetectionparm ;
     @ApiModelProperty("Initial Approval Phone Number for Site Detection Parameter ") private String initialapprovalphonenumberforsitedetectionparm ;
     @ApiModelProperty("Initial Approval E-Mail for Site Detection Parameter ") private String initialapprovalemailforsitedetectionparm ;
-    @ApiModelProperty("Initial Approval Province for Site Detection Parameter ") private long initialapprovalprovinceforsitedetectionparm ;
-    @ApiModelProperty("Initial Approval Governorate for Site Detection Parameter ") private long initialapprovagovernorateforsitedetectionparm ;
-    @ApiModelProperty("Initial Approval Municipality for Site Detection Parameter ") private long initialapprovamunicipalityforsitedetectionparm ;
-    @ApiModelProperty("Initial Approval Territory for Site Detection Parameter ") private long initialapprovaterritoryforsitedetectionparm ;
+    @ApiModelProperty("Initial Approval Province for Site Detection Parameter ") private Long initialapprovalprovinceforsitedetectionparm ;
+    @ApiModelProperty("Initial Approval Governorate for Site Detection Parameter ") private Long initialapprovagovernorateforsitedetectionparm ;
+    @ApiModelProperty("Initial Approval Municipality for Site Detection Parameter ") private Long initialapprovamunicipalityforsitedetectionparm ;
+    @ApiModelProperty("Initial Approval Territory for Site Detection Parameter ") private Long initialapprovaterritoryforsitedetectionparm ;
     @ApiModelProperty("Initial Approval Address for Site Detection Parameter ") private String initialapprovaaddressforsitedetectionparm ;
     @ApiModelProperty("Head od Service Department Explanation Parameter ") private String headofservicedepartmentexplanationparm ;
-    @ApiModelProperty("Head od Service Department Decision Parameter ") private int headofservicedepartmentdecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Head od Service Department Decision Parameter ") private Integer headofservicedepartmentdecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-
-    public long getApplicationlicensingserviceofluxurycarandinternationalcarrierid() {
+    public Long getApplicationlicensingserviceofluxurycarandinternationalcarrierid() {
         return applicationlicensingserviceofluxurycarandinternationalcarrierid;
     }
 
-    public void setApplicationlicensingserviceofluxurycarandinternationalcarrierid(long applicationlicensingserviceofluxurycarandinternationalcarrierid) {
+    public void setApplicationlicensingserviceofluxurycarandinternationalcarrierid(Long applicationlicensingserviceofluxurycarandinternationalcarrierid) {
         this.applicationlicensingserviceofluxurycarandinternationalcarrierid = applicationlicensingserviceofluxurycarandinternationalcarrierid;
     }
 
@@ -76,19 +75,19 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
@@ -108,11 +107,11 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.evaluationcommitteeexplanationparm = evaluationcommitteeexplanationparm;
     }
 
-    public int getEvaluationcommitteedecisionparm() {
+    public Integer getEvaluationcommitteedecisionparm() {
         return evaluationcommitteedecisionparm;
     }
 
-    public void setEvaluationcommitteedecisionparm(int evaluationcommitteedecisionparm) {
+    public void setEvaluationcommitteedecisionparm(Integer evaluationcommitteedecisionparm) {
         this.evaluationcommitteedecisionparm = evaluationcommitteedecisionparm;
     }
 
@@ -124,19 +123,19 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.generaldirectorexplanationparm = generaldirectorexplanationparm;
     }
 
-    public int getGeneraldirectordecisionparm() {
+    public Integer getGeneraldirectordecisionparm() {
         return generaldirectordecisionparm;
     }
 
-    public void setGeneraldirectordecisionparm(int generaldirectordecisionparm) {
+    public void setGeneraldirectordecisionparm(Integer generaldirectordecisionparm) {
         this.generaldirectordecisionparm = generaldirectordecisionparm;
     }
 
-    public long getInitialapprovalreferenceforsitedetectionparm() {
+    public Long getInitialapprovalreferenceforsitedetectionparm() {
         return initialapprovalreferenceforsitedetectionparm;
     }
 
-    public void setInitialapprovalreferenceforsitedetectionparm(long initialapprovalreferenceforsitedetectionparm) {
+    public void setInitialapprovalreferenceforsitedetectionparm(Long initialapprovalreferenceforsitedetectionparm) {
         this.initialapprovalreferenceforsitedetectionparm = initialapprovalreferenceforsitedetectionparm;
     }
 
@@ -172,35 +171,35 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.initialapprovalemailforsitedetectionparm = initialapprovalemailforsitedetectionparm;
     }
 
-    public long getInitialapprovalprovinceforsitedetectionparm() {
+    public Long getInitialapprovalprovinceforsitedetectionparm() {
         return initialapprovalprovinceforsitedetectionparm;
     }
 
-    public void setInitialapprovalprovinceforsitedetectionparm(long initialapprovalprovinceforsitedetectionparm) {
+    public void setInitialapprovalprovinceforsitedetectionparm(Long initialapprovalprovinceforsitedetectionparm) {
         this.initialapprovalprovinceforsitedetectionparm = initialapprovalprovinceforsitedetectionparm;
     }
 
-    public long getInitialapprovagovernorateforsitedetectionparm() {
+    public Long getInitialapprovagovernorateforsitedetectionparm() {
         return initialapprovagovernorateforsitedetectionparm;
     }
 
-    public void setInitialapprovagovernorateforsitedetectionparm(long initialapprovagovernorateforsitedetectionparm) {
+    public void setInitialapprovagovernorateforsitedetectionparm(Long initialapprovagovernorateforsitedetectionparm) {
         this.initialapprovagovernorateforsitedetectionparm = initialapprovagovernorateforsitedetectionparm;
     }
 
-    public long getInitialapprovamunicipalityforsitedetectionparm() {
+    public Long getInitialapprovamunicipalityforsitedetectionparm() {
         return initialapprovamunicipalityforsitedetectionparm;
     }
 
-    public void setInitialapprovamunicipalityforsitedetectionparm(long initialapprovamunicipalityforsitedetectionparm) {
+    public void setInitialapprovamunicipalityforsitedetectionparm(Long initialapprovamunicipalityforsitedetectionparm) {
         this.initialapprovamunicipalityforsitedetectionparm = initialapprovamunicipalityforsitedetectionparm;
     }
 
-    public long getInitialapprovaterritoryforsitedetectionparm() {
+    public Long getInitialapprovaterritoryforsitedetectionparm() {
         return initialapprovaterritoryforsitedetectionparm;
     }
 
-    public void setInitialapprovaterritoryforsitedetectionparm(long initialapprovaterritoryforsitedetectionparm) {
+    public void setInitialapprovaterritoryforsitedetectionparm(Long initialapprovaterritoryforsitedetectionparm) {
         this.initialapprovaterritoryforsitedetectionparm = initialapprovaterritoryforsitedetectionparm;
     }
 
@@ -220,27 +219,27 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.headofservicedepartmentexplanationparm = headofservicedepartmentexplanationparm;
     }
 
-    public int getHeadofservicedepartmentdecisionparm() {
+    public Integer getHeadofservicedepartmentdecisionparm() {
         return headofservicedepartmentdecisionparm;
     }
 
-    public void setHeadofservicedepartmentdecisionparm(int headofservicedepartmentdecisionparm) {
+    public void setHeadofservicedepartmentdecisionparm(Integer headofservicedepartmentdecisionparm) {
         this.headofservicedepartmentdecisionparm = headofservicedepartmentdecisionparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -252,12 +251,46 @@ public class SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriData
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationLicensingServiceofLuxuryCarAndInternationalCarriDataRequest{" +
+                "applicationlicensingserviceofluxurycarandinternationalcarrierid=" + applicationlicensingserviceofluxurycarandinternationalcarrierid +
+                ", applicantnationalidparm= " + applicantnationalidparm + 
+                ", applicantnameparm= " + applicantnameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", studyreferenceparm= " + studyreferenceparm + 
+                ", evaluationcommitteeexplanationparm= " + evaluationcommitteeexplanationparm + 
+                ", evaluationcommitteedecisionparm=" + evaluationcommitteedecisionparm +
+                ", generaldirectorexplanationparm= " + generaldirectorexplanationparm + 
+                ", generaldirectordecisionparm=" + generaldirectordecisionparm +
+                ", initialapprovalreferenceforsitedetectionparm=" + initialapprovalreferenceforsitedetectionparm +
+                ", initialapprovalapplicantnationalidforsitedetectionparm= " + initialapprovalapplicantnationalidforsitedetectionparm + 
+                ", initialapprovalapplicantnameforsitedetectionparm= " + initialapprovalapplicantnameforsitedetectionparm + 
+                ", initialapprovalphonenumberforsitedetectionparm= " + initialapprovalphonenumberforsitedetectionparm + 
+                ", initialapprovalemailforsitedetectionparm= " + initialapprovalemailforsitedetectionparm + 
+                ", initialapprovalprovinceforsitedetectionparm=" + initialapprovalprovinceforsitedetectionparm +
+                ", initialapprovagovernorateforsitedetectionparm=" + initialapprovagovernorateforsitedetectionparm +
+                ", initialapprovamunicipalityforsitedetectionparm=" + initialapprovamunicipalityforsitedetectionparm +
+                ", initialapprovaterritoryforsitedetectionparm=" + initialapprovaterritoryforsitedetectionparm +
+                ", initialapprovaaddressforsitedetectionparm= " + initialapprovaaddressforsitedetectionparm + 
+                ", headofservicedepartmentexplanationparm= " + headofservicedepartmentexplanationparm + 
+                ", headofservicedepartmentdecisionparm=" + headofservicedepartmentdecisionparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

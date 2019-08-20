@@ -5,16 +5,16 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnCountryRequest {
 
-    @ApiModelProperty("Country ID Parameter") private long countryidparm ;
+    @ApiModelProperty("Country ID Parameter") private Long countryidparm ;
     @ApiModelProperty("Country Arabic Name Parameter") private String countryarabicnameparm ;
     @ApiModelProperty("Country English Name Parameter") private String countryenglishnameparm ;
     @ApiModelProperty("Country Code Parameter") private String countrycodeparm ;
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
     }
 
@@ -40,6 +40,16 @@ public class ReturnCountryRequest {
 
     public void setCountrycodeparm(String countrycodeparm) {
         this.countrycodeparm = countrycodeparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnCountryRequest{" +
+                "countryidparm=" + countryidparm +
+                ", countryarabicnameparm=" + countryarabicnameparm +
+                ", countryenglishnameparm=" + countryenglishnameparm +
+                ", countrycodeparm=" + countrycodeparm +
+                '}';
     }
 }
 

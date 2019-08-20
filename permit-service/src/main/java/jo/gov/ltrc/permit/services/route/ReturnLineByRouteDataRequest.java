@@ -5,77 +5,91 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnLineByRouteDataRequest {
 
-    @ApiModelProperty("Minimum Route ID Parameter")private long minrouteidparm;
-    @ApiModelProperty("Maximum Route ID Parameter") private long maxrouteidparm;
-    @ApiModelProperty("Minimum Route Daily Passengers Parameter") private long minroutedailypassengersparm ;
-    @ApiModelProperty("Maximum Route Daily Passengers Parameter") private long maxroutedailypassengersparm;
-    @ApiModelProperty("Minimum Route Length Parameter") private long minroutelengthparm;
-    @ApiModelProperty("Maximum Route Length Parameter") private long maxroutelengthparm;
-    @ApiModelProperty("Minimum Route Length Viagis Parameter") private long minroutelengthviagisparm;
-    @ApiModelProperty("Maximum Route Length Viagis Parameter") private long maxroutelengthviagisparm;
+    @ApiModelProperty("Minimum Route ID Parameter")private Long minrouteidparm;
+    @ApiModelProperty("Maximum Route ID Parameter") private Long maxrouteidparm;
+    @ApiModelProperty("Minimum Route Daily Passengers Parameter") private Long minroutedailypassengersparm ;
+    @ApiModelProperty("Maximum Route Daily Passengers Parameter") private Long maxroutedailypassengersparm;
+    @ApiModelProperty("Minimum Route Length Parameter") private Long minroutelengthparm;
+    @ApiModelProperty("Maximum Route Length Parameter") private Long maxroutelengthparm;
+    @ApiModelProperty("Minimum Route Length Viagis Parameter") private Long minroutelengthviagisparm;
+    @ApiModelProperty("Maximum Route Length Viagis Parameter") private Long maxroutelengthviagisparm;
 
-    public long getMinrouteidparm() {
+    public Long getMinrouteidparm() {
         return minrouteidparm;
     }
 
-    public void setMinrouteidparm(long minrouteidparm) {
+    public void setMinrouteidparm(Long minrouteidparm) {
         this.minrouteidparm = minrouteidparm;
     }
 
-    public long getMaxrouteidparm() {
+    public Long getMaxrouteidparm() {
         return maxrouteidparm;
     }
 
-    public void setMaxrouteidparm(long maxrouteidparm) {
+    public void setMaxrouteidparm(Long maxrouteidparm) {
         this.maxrouteidparm = maxrouteidparm;
     }
 
-    public long getMinroutedailypassengersparm() {
+    public Long getMinroutedailypassengersparm() {
         return minroutedailypassengersparm;
     }
 
-    public void setMinroutedailypassengersparm(long minroutedailypassengersparm) {
+    public void setMinroutedailypassengersparm(Long minroutedailypassengersparm) {
         this.minroutedailypassengersparm = minroutedailypassengersparm;
     }
 
-    public long getMaxroutedailypassengersparm() {
+    public Long getMaxroutedailypassengersparm() {
         return maxroutedailypassengersparm;
     }
 
-    public void setMaxroutedailypassengersparm(long maxroutedailypassengersparm) {
+    public void setMaxroutedailypassengersparm(Long maxroutedailypassengersparm) {
         this.maxroutedailypassengersparm = maxroutedailypassengersparm;
     }
 
-    public long getMinroutelengthparm() {
+    public Long getMinroutelengthparm() {
         return minroutelengthparm;
     }
 
-    public void setMinroutelengthparm(long minroutelengthparm) {
+    public void setMinroutelengthparm(Long minroutelengthparm) {
         this.minroutelengthparm = minroutelengthparm;
     }
 
-    public long getMaxroutelengthparm() {
+    public Long getMaxroutelengthparm() {
         return maxroutelengthparm;
     }
 
-    public void setMaxroutelengthparm(long maxroutelengthparm) {
+    public void setMaxroutelengthparm(Long maxroutelengthparm) {
         this.maxroutelengthparm = maxroutelengthparm;
     }
 
-    public long getMinroutelengthviagisparm() {
+    public Long getMinroutelengthviagisparm() {
         return minroutelengthviagisparm;
     }
 
-    public void setMinroutelengthviagisparm(long minroutelengthviagisparm) {
+    public void setMinroutelengthviagisparm(Long minroutelengthviagisparm) {
         this.minroutelengthviagisparm = minroutelengthviagisparm;
     }
 
-    public long getMaxroutelengthviagisparm() {
+    public Long getMaxroutelengthviagisparm() {
         return maxroutelengthviagisparm;
     }
 
-    public void setMaxroutelengthviagisparm(long maxroutelengthviagisparm) {
+    public void setMaxroutelengthviagisparm(Long maxroutelengthviagisparm) {
         this.maxroutelengthviagisparm = maxroutelengthviagisparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnLineByRouteDataRequest{" +
+                "minrouteidparm=" + minrouteidparm +
+                ", maxrouteidparm=" + maxrouteidparm +
+                ", minroutedailypassengersparm=" + minroutedailypassengersparm +
+                ", maxroutedailypassengersparm=" + maxroutedailypassengersparm +
+                ", minroutelengthparm=" + minroutelengthparm +
+                ", maxroutelengthparm=" + maxroutelengthparm +
+                ", minroutelengthviagisparm=" + minroutelengthviagisparm +
+                ", maxroutelengthviagisparm=" + maxroutelengthviagisparm +
+                '}';
     }
 }
 

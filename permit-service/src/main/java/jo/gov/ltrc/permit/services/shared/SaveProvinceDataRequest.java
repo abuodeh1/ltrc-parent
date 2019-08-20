@@ -5,16 +5,16 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveProvinceDataRequest {
 
-    @ApiModelProperty("Province ID Parameter ") private long provinceidparm ;
+    @ApiModelProperty("Province ID Parameter ") private Long provinceidparm ;
     @ApiModelProperty("Province Arabic Name Parameter ") private String provincearabicnameparm ;
     @ApiModelProperty("Province English Name Parameter ") private String provinceenglishnameparm ;
     @ApiModelProperty("Province Code Parameter ") private String provincecodeparm ;
-    @ApiModelProperty("Country ID Parameter ") private long countryidparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Country ID Parameter ") private Long countryidparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
 
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
@@ -46,7 +46,7 @@ public class SaveProvinceDataRequest {
         this.provincecodeparm = provincecodeparm;
     }
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
@@ -54,7 +54,7 @@ public class SaveProvinceDataRequest {
         this.countryidparm = countryidparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -62,7 +62,7 @@ public class SaveProvinceDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

@@ -7,12 +7,12 @@ import java.util.List;
 
 public class ReturnPermitTypeDTO {
 
-    @ApiModelProperty("Permit Type ID Parameter ") private long permittypeid;
+    @ApiModelProperty("Permit Type ID Parameter ") private Long permittypeid;
     @ApiModelProperty("Permit Type Name Parameter ") private String permittypename;
     @ApiModelProperty("Permit Type English Name  Parameter ") private String permittypeenglishname;
     private List<ReturnPermitTypeFieldSettingResponse> field ;
 
-    public long getPermittypeid() {
+    public Long getPermittypeid() {
         return permittypeid;
     }
 

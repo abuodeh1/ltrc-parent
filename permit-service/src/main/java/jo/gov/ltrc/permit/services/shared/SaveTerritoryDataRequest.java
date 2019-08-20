@@ -5,19 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveTerritoryDataRequest {
 
-    @ApiModelProperty("Territory ID Parameter ") private long territoryidparm ;
+    @ApiModelProperty("Territory ID Parameter ") private Long territoryidparm ;
     @ApiModelProperty("Territory Arabic Name Parameter ") private String territoryarabicnameparm ;
     @ApiModelProperty("Territory English Name Parameter ") private String territoryenglishnameparm ;
     @ApiModelProperty("Territory Code Parameter ") private String territorycodeparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getTerritoryidparm() {
+    public Long getTerritoryidparm() {
         return territoryidparm;
     }
 
-    public void setTerritoryidparm(long territoryidparm) {
+    public void setTerritoryidparm(Long territoryidparm) {
         this.territoryidparm = territoryidparm;
     }
 
@@ -45,28 +45,41 @@ public class SaveTerritoryDataRequest {
         this.territorycodeparm = territorycodeparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveTerritoryDataRequest{" +
+                "territoryidparm=" + territoryidparm +
+                ", territoryarabicnameparm=" + territoryarabicnameparm +
+                ", territoryenglishnameparm=" + territoryenglishnameparm +
+                ", territorycodeparm=" + territorycodeparm +
+                ", municipalityparm=" + municipalityparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                '}';
     }
 }
 

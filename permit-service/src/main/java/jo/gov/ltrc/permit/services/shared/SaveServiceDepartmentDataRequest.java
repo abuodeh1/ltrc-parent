@@ -5,13 +5,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveServiceDepartmentDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long servicedepartmentidparm;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long servicedepartmentidparm;
     @ApiModelProperty("Violation Type Name Parameter ") private String servicedepartmentnameparm;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
 
-    public long getServicedepartmentidparm() {
+    public Long getServicedepartmentidparm() {
         return servicedepartmentidparm;
     }
 
@@ -27,7 +27,7 @@ public class SaveServiceDepartmentDataRequest {
         this.servicedepartmentnameparm = servicedepartmentnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -35,7 +35,7 @@ public class SaveServiceDepartmentDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

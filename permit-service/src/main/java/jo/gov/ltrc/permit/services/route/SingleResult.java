@@ -9,11 +9,11 @@ import java.io.Serializable;
                 name = "SaveRoutePointData",
                 procedureName = "\"SaveRoutePointData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "pointidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "principal"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pointorderparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "pointdirectionparm"),
                 }
         ),
 
@@ -21,16 +21,16 @@ import java.io.Serializable;
                 name = "SaveRouteData",
                 procedureName = "\"SaveRouteData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class)
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "routenameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routelengthparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routelengthviagisparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routedailypassengersparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepal"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "buslineidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "goingparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "returningparm"),
 
                 }
         ),
@@ -64,13 +64,13 @@ import java.io.Serializable;
 public class SingleResult implements Serializable {
 
     @Id
-    private int id;
+    private Integer id;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

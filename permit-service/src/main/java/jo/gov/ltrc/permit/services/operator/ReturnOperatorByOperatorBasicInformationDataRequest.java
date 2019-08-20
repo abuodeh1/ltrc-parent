@@ -7,19 +7,19 @@ import java.sql.Date;
 
 public class ReturnOperatorByOperatorBasicInformationDataRequest {
 
-    @ApiModelProperty("Minimum Operator ID Parameter") private long minoperatoridparm ;
-    @ApiModelProperty("Maximum Operator ID Parameter") private long maxoperatoridparm ;
+    @ApiModelProperty("Minimum Operator ID Parameter") private Long minoperatoridparm ;
+    @ApiModelProperty("Maximum Operator ID Parameter") private Long maxoperatoridparm ;
     @ApiModelProperty("License Issue Date Parameter") private Date licenseissuedateparm ;
     @ApiModelProperty("License Expiration Date Parameter") private Date licenseexpiredateparm ;
-    @ApiModelProperty("Operator Classification Parameter") private long operatorclassificationparm ;
-    @ApiModelProperty("Operator Category Parameter") private long operatorcategoryparm ;
+    @ApiModelProperty("Operator Classification Parameter") private Long operatorclassificationparm ;
+    @ApiModelProperty("Operator Category Parameter") private Long operatorcategoryparm ;
     @ApiModelProperty("Operator National ID Parameter") private String operatornationalidparm ;
     @ApiModelProperty("Operator Name Parameter") private String operatornameparm ;
     @ApiModelProperty("Operator Commercial Name Parameter") private String operatorcomercialnameparm ;
-    @ApiModelProperty("Province Parameter") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter") private long territoryparm ;
+    @ApiModelProperty("Province Parameter") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter") private Long territoryparm ;
     @ApiModelProperty("Street Parameter") private String streetparm ;
     @ApiModelProperty("Neighborhood Parameter") private String neighborhoodparm ;
     @ApiModelProperty("E-Mail Parameter") private String emaiparml ;
@@ -27,23 +27,23 @@ public class ReturnOperatorByOperatorBasicInformationDataRequest {
     @ApiModelProperty("Phone Number Parameter") private String phonenumberparm ;
     @ApiModelProperty("Mobile Phone Number Parameter") private String mobilephonenumberparm ;
     @ApiModelProperty("Fax Number Parameter") private String faxnumberparm ;
-    @ApiModelProperty("License Purpose Parameter") private long licensepurposeparm ;
-    @ApiModelProperty("Status Parameter") private int statusparm ;
-    @ApiModelProperty("Fees Status Parameter") private int feesstatusparm ;
+    @ApiModelProperty("License Purpose Parameter") private Long licensepurposeparm ;
+    @ApiModelProperty("Status Parameter") private Integer statusparm ;
+    @ApiModelProperty("Fees Status Parameter") private Integer feesstatusparm ;
 
-    public long getMinoperatoridparm() {
+    public Long getMinoperatoridparm() {
         return minoperatoridparm;
     }
 
-    public void setMinoperatoridparm(long minoperatoridparm) {
+    public void setMinoperatoridparm(Long minoperatoridparm) {
         this.minoperatoridparm = minoperatoridparm;
     }
 
-    public long getMaxoperatoridparm() {
+    public Long getMaxoperatoridparm() {
         return maxoperatoridparm;
     }
 
-    public void setMaxoperatoridparm(long maxoperatoridparm) {
+    public void setMaxoperatoridparm(Long maxoperatoridparm) {
         this.maxoperatoridparm = maxoperatoridparm;
     }
 
@@ -63,19 +63,19 @@ public class ReturnOperatorByOperatorBasicInformationDataRequest {
         this.licenseexpiredateparm = licenseexpiredateparm;
     }
 
-    public long getOperatorclassificationparm() {
+    public Long getOperatorclassificationparm() {
         return operatorclassificationparm;
     }
 
-    public void setOperatorclassificationparm(long operatorclassificationparm) {
+    public void setOperatorclassificationparm(Long operatorclassificationparm) {
         this.operatorclassificationparm = operatorclassificationparm;
     }
 
-    public long getOperatorcategoryparm() {
+    public Long getOperatorcategoryparm() {
         return operatorcategoryparm;
     }
 
-    public void setOperatorcategoryparm(long operatorcategoryparm) {
+    public void setOperatorcategoryparm(Long operatorcategoryparm) {
         this.operatorcategoryparm = operatorcategoryparm;
     }
 
@@ -103,35 +103,35 @@ public class ReturnOperatorByOperatorBasicInformationDataRequest {
         this.operatorcomercialnameparm = operatorcomercialnameparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
@@ -191,27 +191,56 @@ public class ReturnOperatorByOperatorBasicInformationDataRequest {
         this.faxnumberparm = faxnumberparm;
     }
 
-    public long getLicensepurposeparm() {
+    public Long getLicensepurposeparm() {
         return licensepurposeparm;
     }
 
-    public void setLicensepurposeparm(long licensepurposeparm) {
+    public void setLicensepurposeparm(Long licensepurposeparm) {
         this.licensepurposeparm = licensepurposeparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public int getFeesstatusparm() {
+    public Integer getFeesstatusparm() {
         return feesstatusparm;
     }
 
-    public void setFeesstatusparm(int feesstatusparm) {
+    public void setFeesstatusparm(Integer feesstatusparm) {
         this.feesstatusparm = feesstatusparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorByOperatorBasicInformationDataRequest{" +
+                "minoperatoridparm=" + minoperatoridparm +
+                ", maxoperatoridparm=" + maxoperatoridparm +
+                ", licenseissuedateparm=" + licenseissuedateparm +
+                ", licenseexpiredateparm=" + licenseexpiredateparm +
+                ", operatorclassificationparm=" + operatorclassificationparm +
+                ", operatorcategoryparm=" + operatorcategoryparm +
+                ", operatornationalidparm=" + operatornationalidparm +
+                ", operatornameparm=" + operatornameparm +
+                ", operatorcomercialnameparm=" + operatorcomercialnameparm +
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", streetparm=" + streetparm +
+                ", neighborhoodparm=" + neighborhoodparm +
+                ", emaiparml=" + emaiparml +
+                ", poboxparm=" + poboxparm +
+                ", phonenumberparm=" + phonenumberparm +
+                ", mobilephonenumberparm=" + mobilephonenumberparm +
+                ", faxnumberparm=" + faxnumberparm +
+                ", licensepurposeparm=" + licensepurposeparm +
+                ", statusparm=" + statusparm +
+                ", feesstatusparm=" + feesstatusparm +
+                '}';
     }
 }

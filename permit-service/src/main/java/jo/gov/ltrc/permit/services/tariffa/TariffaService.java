@@ -4,11 +4,14 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -27,6 +30,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/api/tariff")
+@Log4j2
 public class TariffaService {
 
     @PersistenceContext
@@ -61,24 +65,23 @@ public class TariffaService {
     })
     @ApiOperation("Add or Edit Tariffa")
     @PostMapping
-    public String  saveTariff(@ApiParam("\t") @RequestBody SaveRouteTariffDataRequest saveRouteTariffDataRequest){
+    public String  saveTariff(@ApiParam("\t") @RequestBody SaveRouteTariffDataRequest saveRouteTariffDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveRouteTariffData");
-        storedProcedureQuery.setParameter(1, saveRouteTariffDataRequest.getRoutetariffidparm());
-        storedProcedureQuery.setParameter(2, saveRouteTariffDataRequest.getRouteidparm());
-        storedProcedureQuery.setParameter(3, saveRouteTariffDataRequest.getTariffequtionparm());
-        storedProcedureQuery.setParameter(4, saveRouteTariffDataRequest.getTariffstudyparm());
-        storedProcedureQuery.setParameter(5, saveRouteTariffDataRequest.getFueltypeparm());
-        storedProcedureQuery.setParameter(6, saveRouteTariffDataRequest.getVehiclecategoryparm());
-        storedProcedureQuery.setParameter(7, saveRouteTariffDataRequest.getInflationparm());
-        storedProcedureQuery.setParameter(8, saveRouteTariffDataRequest.getValueparm1());
-        storedProcedureQuery.setParameter(9, saveRouteTariffDataRequest.getValueparm2());
-        storedProcedureQuery.setParameter(10, saveRouteTariffDataRequest.getStartdateparm());
-        storedProcedureQuery.setParameter(11, saveRouteTariffDataRequest.getEnddateparm());
-        storedProcedureQuery.setParameter(12, saveRouteTariffDataRequest.getPrencipal());
-        storedProcedureQuery.setParameter(13, saveRouteTariffDataRequest.getTariffunitparm());
-        storedProcedureQuery.setParameter(14, saveRouteTariffDataRequest.getBasedonparm());
-        storedProcedureQuery.setParameter(15, saveRouteTariffDataRequest.getStatusparm());
+        log.debug(" SaveRouteTariffDataRequest : " + saveRouteTariffDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveRouteTariffDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveRouteTariffData", saveRouteTariffDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult();
     }
@@ -109,17 +112,23 @@ public class TariffaService {
     })
     @ApiOperation("Add or Edit Inflation Referance")
     @PostMapping("/inflation-referance")
-    public String addInflationReferance(@ApiParam("\t") @RequestBody SaveInflationReferanceDataRequest saveInflationReferanceDataRequest){
+    public String addInflationReferance(@ApiParam("\t") @RequestBody SaveInflationReferanceDataRequest saveInflationReferanceDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveInflationReferanceData");
-        storedProcedureQuery.setParameter(1, saveInflationReferanceDataRequest.getInflationreferanceidparm());
-        storedProcedureQuery.setParameter(2, saveInflationReferanceDataRequest.isInflationdirectionparm());
-        storedProcedureQuery.setParameter(3, saveInflationReferanceDataRequest.getGasolineratioparm());
-        storedProcedureQuery.setParameter(4, saveInflationReferanceDataRequest.getDieselratioparm());
-        storedProcedureQuery.setParameter(5, saveInflationReferanceDataRequest.getGeneralrationparm());
-        storedProcedureQuery.setParameter(6, saveInflationReferanceDataRequest.getStartdateparm());
-        storedProcedureQuery.setParameter(7, saveInflationReferanceDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(8, saveInflationReferanceDataRequest.getStatusparm());
+        log.debug(" SaveInflationReferanceDataRequest : " + saveInflationReferanceDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveInflationReferanceDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveInflationReferanceData", saveInflationReferanceDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -150,20 +159,23 @@ public class TariffaService {
     })
     @ApiOperation("Add or EditTariff Equation ")
     @PostMapping("/equation")
-    public String addTariffEquationData(@ApiParam("\t") @RequestBody SaveTariffEquationDataRequest saveTariffEquationDataRequest){
+    public String addTariffEquationData(@ApiParam("\t") @RequestBody SaveTariffEquationDataRequest saveTariffEquationDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveTariffEquationData");
-        storedProcedureQuery.setParameter(1, saveTariffEquationDataRequest.getTariffequationidparm());
-        storedProcedureQuery.setParameter(2, saveTariffEquationDataRequest.getVehiclecategoryparm());
-        storedProcedureQuery.setParameter(3, saveTariffEquationDataRequest.getAdeddvalueparm());
-        storedProcedureQuery.setParameter(4, saveTariffEquationDataRequest.getOperationparm());
-        storedProcedureQuery.setParameter(5, saveTariffEquationDataRequest.getRoutecoefficientmultiplicationparm());
-        storedProcedureQuery.setParameter(6, saveTariffEquationDataRequest.getStartdateparm());
-        storedProcedureQuery.setParameter(7, saveTariffEquationDataRequest.getEnddateparm());
-        storedProcedureQuery.setParameter(8, saveTariffEquationDataRequest.getEquationtextparm());
-        storedProcedureQuery.setParameter(9, saveTariffEquationDataRequest.getLinetypeparm());
-        storedProcedureQuery.setParameter(10, saveTariffEquationDataRequest.getStatusparm());
-        storedProcedureQuery.setParameter(11, saveTariffEquationDataRequest.getPrincepal());
+        log.debug(" SaveTariffEquationDataRequest : " + saveTariffEquationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveTariffEquationDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveTariffEquationData", saveTariffEquationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -178,7 +190,7 @@ public class TariffaService {
 
     @ApiOperation("Retrieve Route Tariff Data By Tariff ID ")
     @GetMapping("/{id}/route-tariff")
-    public ReturnRouteTariffByTariffIdDataResponse getRouteTariffByTariffData (@ApiParam("Tariffa ID ") @PathVariable(value = "id") long id) {
+    public ReturnRouteTariffByTariffIdDataResponse getRouteTariffByTariffData (@ApiParam("Tariffa ID ") @PathVariable(value = "id") Long id) {
 
         if (id != 0) {
             StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnRouteTariffByTariffaID");
@@ -199,16 +211,19 @@ public class TariffaService {
     @PostMapping("/find-line")
     public List<ReturnLineByTariffDataResponse> getLineByTariffData(@ApiParam("\t") @RequestBody ReturnLineByTariffDataRequest returnLineByTariffDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnLineByTariffData");
-        storedProcedureQuery.setParameter(1, returnLineByTariffDataRequest.getRouteidparm());
-        storedProcedureQuery.setParameter(2, returnLineByTariffDataRequest.getFueltypeparm());
-        storedProcedureQuery.setParameter(3, returnLineByTariffDataRequest.getVehiclecategoryparm());
-        storedProcedureQuery.setParameter(4, returnLineByTariffDataRequest.getTariffunitparm());
-        storedProcedureQuery.setParameter(5, returnLineByTariffDataRequest.getTariffmethedologyparm());
-        storedProcedureQuery.setParameter(6, returnLineByTariffDataRequest.getMinmumtariffvalueparm());
-        storedProcedureQuery.setParameter(7, returnLineByTariffDataRequest.getMaximumtariffvalueparm());
-        storedProcedureQuery.setParameter(8, returnLineByTariffDataRequest.getMintariffmaxvalueparm());
-        storedProcedureQuery.setParameter(9, returnLineByTariffDataRequest.getMaxtariffmaxvalueparm());
+        log.debug(" ReturnLineByTariffDataRequest : " + returnLineByTariffDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnLineByTariffData", returnLineByTariffDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnLineByTariffDataResponse> result = storedProcedureQuery.getResultList();
 
@@ -219,17 +234,19 @@ public class TariffaService {
     @PostMapping("/find/equation")
     public List<ReturnTariffEquationDataResponse> getTariffEquation(@ApiParam("\t") @RequestBody ReturnTariffEquationDataRequest returnTariffEquationDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnTariffEquation");
-        storedProcedureQuery.setParameter(1, returnTariffEquationDataRequest.getTariffequationidparm());
-        storedProcedureQuery.setParameter(2, returnTariffEquationDataRequest.getVehiclecategoryparm());
-        storedProcedureQuery.setParameter(3, returnTariffEquationDataRequest.getAdeddvalueparm());
-        storedProcedureQuery.setParameter(4, returnTariffEquationDataRequest.getStartdateparm());
-        storedProcedureQuery.setParameter(5, returnTariffEquationDataRequest.getEnddateparm());
-        storedProcedureQuery.setParameter(6, returnTariffEquationDataRequest.getEquationtextparm());
-        storedProcedureQuery.setParameter(7, returnTariffEquationDataRequest.getOperationparm());
-        storedProcedureQuery.setParameter(8, returnTariffEquationDataRequest.getLinetypeparm());
-        storedProcedureQuery.setParameter(9, returnTariffEquationDataRequest.getRoutecoefficientmultiplicationparm());
-        storedProcedureQuery.setParameter(10, returnTariffEquationDataRequest.getStatusparm());
+        log.debug(" ReturnTariffEquationDataRequest : " + returnTariffEquationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnTariffEquation", returnTariffEquationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         List<ReturnTariffEquationDataResponse> result = storedProcedureQuery.getResultList() ;
@@ -242,14 +259,19 @@ public class TariffaService {
     @PostMapping("/find/inflation")
     public List<ReturnInflationResponse> getInflation(@ApiParam("\t") @RequestBody ReturnInflationDataRequest returnInflationDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnInflation");
-        storedProcedureQuery.setParameter(1, returnInflationDataRequest.getInflationreferanceidparm());
-        storedProcedureQuery.setParameter(2, returnInflationDataRequest.isInflationdirectionparm());
-        storedProcedureQuery.setParameter(3, returnInflationDataRequest.getGasolineratioparm());
-        storedProcedureQuery.setParameter(4, returnInflationDataRequest.getDieselratioparm());
-        storedProcedureQuery.setParameter(5, returnInflationDataRequest.getGeneralrationparm());
-        storedProcedureQuery.setParameter(6, returnInflationDataRequest.getStartdateparm());
-        storedProcedureQuery.setParameter(7, returnInflationDataRequest.getStatusparm());
+        log.debug(" ReturnInflationDataRequest : " + returnInflationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnInflation", returnInflationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnInflationResponse> result = storedProcedureQuery.getResultList() ;
 
@@ -263,9 +285,19 @@ public class TariffaService {
     @PostMapping("/find-value")
     public CalculateTariffValueDataResponse calculateTariffaValue(@ApiParam("\t") @RequestBody CalculateTariffValueDataRequest calculateTariffValueDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnTariffVaLue");
-        storedProcedureQuery.setParameter(1, calculateTariffValueDataRequest.getRouteidparm());
-        storedProcedureQuery.setParameter(2, calculateTariffValueDataRequest.getVehiclecategoryparm());
+        log.debug(" CalculateTariffValueDataRequest : " + calculateTariffValueDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnTariffVaLue", calculateTariffValueDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<CalculateTariffValueDataResponse> result = storedProcedureQuery.getResultList();
 
@@ -298,25 +330,24 @@ public class TariffaService {
     })
     @ApiOperation("Change Tariff Status")
     @DeleteMapping("/{id}")
-    public String deleteTariffByTariffID(@ApiParam("Tarrifa ID ") @PathVariable(value = "id") long id){
+    public String deleteTariffByTariffID(@ApiParam("Tarrifa ID ") @PathVariable(value = "id") Long id){
 
          SaveRouteTariffDataRequest saveRouteTariffDataRequest = new SaveRouteTariffDataRequest();
-         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveRouteTariffData");
-         storedProcedureQuery.setParameter(1, id);
-         storedProcedureQuery.setParameter(2, saveRouteTariffDataRequest.getRouteidparm());
-         storedProcedureQuery.setParameter(3, saveRouteTariffDataRequest.getTariffequtionparm());
-         storedProcedureQuery.setParameter(4, saveRouteTariffDataRequest.getTariffstudyparm());
-         storedProcedureQuery.setParameter(5, saveRouteTariffDataRequest.getFueltypeparm());
-         storedProcedureQuery.setParameter(6, saveRouteTariffDataRequest.getVehiclecategoryparm());
-         storedProcedureQuery.setParameter(7, saveRouteTariffDataRequest.getInflationparm());
-         storedProcedureQuery.setParameter(8, saveRouteTariffDataRequest.getValueparm1());
-         storedProcedureQuery.setParameter(9, saveRouteTariffDataRequest.getValueparm2());
-         storedProcedureQuery.setParameter(10, saveRouteTariffDataRequest.getStartdateparm());
-         storedProcedureQuery.setParameter(11, saveRouteTariffDataRequest.getEnddateparm());
-         storedProcedureQuery.setParameter(12, saveRouteTariffDataRequest.getPrencipal());
-         storedProcedureQuery.setParameter(13, saveRouteTariffDataRequest.getTariffunitparm());
-         storedProcedureQuery.setParameter(14, saveRouteTariffDataRequest.getBasedonparm());
-         storedProcedureQuery.setParameter(15, 3);
+        log.debug(" SaveRouteTariffDataRequest : " + saveRouteTariffDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+        saveRouteTariffDataRequest.setRoutetariffidparm(id);
+        saveRouteTariffDataRequest.setStatusparm(3);
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveRouteTariffData", saveRouteTariffDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
 
          return (String) storedProcedureQuery.getSingleResult();
      }

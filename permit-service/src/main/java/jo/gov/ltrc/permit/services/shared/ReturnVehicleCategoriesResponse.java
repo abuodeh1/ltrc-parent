@@ -27,14 +27,14 @@ import java.io.Serializable;
 public class ReturnVehicleCategoriesResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Vehicle Category ID ") private long vehiclecategoryid ;
+    @ApiModelProperty("Vehicle Category ID ") private Long vehiclecategoryid ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
 
-    public long getVehiclecategoryid() {
+    public Long getVehiclecategoryid() {
         return vehiclecategoryid;
     }
 
-    public void setVehiclecategoryid(long vehiclecategoryid) {
+    public void setVehiclecategoryid(Long vehiclecategoryid) {
         this.vehiclecategoryid = vehiclecategoryid;
     }
 
@@ -44,5 +44,13 @@ public class ReturnVehicleCategoriesResponse implements Serializable {
 
     public void setVehiclecategoryname(String vehiclecategoryname) {
         this.vehiclecategoryname = vehiclecategoryname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleCategoriesResponse{" +
+                "vehiclecategoryid=" + vehiclecategoryid +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                '}';
     }
 }

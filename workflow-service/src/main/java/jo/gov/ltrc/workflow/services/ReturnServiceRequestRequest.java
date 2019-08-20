@@ -4,55 +4,55 @@ import java.sql.Date;
 
 public class ReturnServiceRequestRequest {
 
-    private long minServiceRequestIDParm;
-    private long maxServiceRequestIDParm;
-    private long ServiceTypeParm;
-    private long RequestedByParm;
+    private Long minServiceRequestIDParm;
+    private Long maxServiceRequestIDParm;
+    private Long ServiceTypeParm;
+    private Long RequestedByParm;
     private Date minRequestDateParm;
     private Date maxRequestDateParm;
     private String ApplicantPhoneNumberParm;
     private String ApplicantEmailParm;
-    private long ProvinceParm    ;
-    private long GovernorateParm ;
-    private long MunicipalityParm;
-    private long TerritoryParm   ;
-    private int StatusParm ;
+    private Long ProvinceParm    ;
+    private Long GovernorateParm ;
+    private Long MunicipalityParm;
+    private Long TerritoryParm   ;
+    private Integer StatusParm ;
     private Date minCreatedDateParm ;
     private Date maxCreatedDateParm ;
     private Date minModifiedDateParm;
     private Date maxModifiedDateParm;
-    private long CreatedByParm ;
-    private long ModifiedByParm;
+    private Long CreatedByParm ;
+    private Long ModifiedByParm;
 
-    public long getMinServiceRequestIDParm() {
+    public Long getMinServiceRequestIDParm() {
         return minServiceRequestIDParm;
     }
 
-    public void setMinServiceRequestIDParm(long minServiceRequestIDParm) {
+    public void setMinServiceRequestIDParm(Long minServiceRequestIDParm) {
         this.minServiceRequestIDParm = minServiceRequestIDParm;
     }
 
-    public long getMaxServiceRequestIDParm() {
+    public Long getMaxServiceRequestIDParm() {
         return maxServiceRequestIDParm;
     }
 
-    public void setMaxServiceRequestIDParm(long maxServiceRequestIDParm) {
+    public void setMaxServiceRequestIDParm(Long maxServiceRequestIDParm) {
         this.maxServiceRequestIDParm = maxServiceRequestIDParm;
     }
 
-    public long getServiceTypeParm() {
+    public Long getServiceTypeParm() {
         return ServiceTypeParm;
     }
 
-    public void setServiceTypeParm(long serviceTypeParm) {
+    public void setServiceTypeParm(Long serviceTypeParm) {
         ServiceTypeParm = serviceTypeParm;
     }
 
-    public long getRequestedByParm() {
+    public Long getRequestedByParm() {
         return RequestedByParm;
     }
 
-    public void setRequestedByParm(long requestedByParm) {
+    public void setRequestedByParm(Long requestedByParm) {
         RequestedByParm = requestedByParm;
     }
 
@@ -88,43 +88,43 @@ public class ReturnServiceRequestRequest {
         ApplicantEmailParm = applicantEmailParm;
     }
 
-    public long getProvinceParm() {
+    public Long getProvinceParm() {
         return ProvinceParm;
     }
 
-    public void setProvinceParm(long provinceParm) {
+    public void setProvinceParm(Long provinceParm) {
         ProvinceParm = provinceParm;
     }
 
-    public long getGovernorateParm() {
+    public Long getGovernorateParm() {
         return GovernorateParm;
     }
 
-    public void setGovernorateParm(long governorateParm) {
+    public void setGovernorateParm(Long governorateParm) {
         GovernorateParm = governorateParm;
     }
 
-    public long getMunicipalityParm() {
+    public Long getMunicipalityParm() {
         return MunicipalityParm;
     }
 
-    public void setMunicipalityParm(long municipalityParm) {
+    public void setMunicipalityParm(Long municipalityParm) {
         MunicipalityParm = municipalityParm;
     }
 
-    public long getTerritoryParm() {
+    public Long getTerritoryParm() {
         return TerritoryParm;
     }
 
-    public void setTerritoryParm(long territoryParm) {
+    public void setTerritoryParm(Long territoryParm) {
         TerritoryParm = territoryParm;
     }
 
-    public int getStatusParm() {
+    public Integer getStatusParm() {
         return StatusParm;
     }
 
-    public void setStatusParm(int statusParm) {
+    public void setStatusParm(Integer statusParm) {
         StatusParm = statusParm;
     }
 
@@ -160,20 +160,46 @@ public class ReturnServiceRequestRequest {
         this.maxModifiedDateParm = maxModifiedDateParm;
     }
 
-    public long getCreatedByParm() {
+    public Long getCreatedByParm() {
         return CreatedByParm;
     }
 
-    public void setCreatedByParm(long createdByParm) {
+    public void setCreatedByParm(Long createdByParm) {
         CreatedByParm = createdByParm;
     }
 
-    public long getModifiedByParm() {
+    public Long getModifiedByParm() {
         return ModifiedByParm;
     }
 
-    public void setModifiedByParm(long modifiedByParm) {
+    public void setModifiedByParm(Long modifiedByParm) {
         ModifiedByParm = modifiedByParm;
+    }
+
+
+    @Override
+    public String toString() {
+        return "ReturnServiceRequestRequest{" +
+                "minServiceRequestIDParm=" + minServiceRequestIDParm +
+                ", maxServiceRequestIDParm=" + maxServiceRequestIDParm +
+                ", ServiceTypeParm=" + ServiceTypeParm +
+                ", RequestedByParm=" + RequestedByParm +
+                ", minRequestDateParm=" + minRequestDateParm +
+                ", maxRequestDateParm=" + maxRequestDateParm +
+                ", ApplicantPhoneNumberParm= " + ApplicantPhoneNumberParm + 
+                ", ApplicantEmailParm= " + ApplicantEmailParm + 
+                ", ProvinceParm=" + ProvinceParm +
+                ", GovernorateParm=" + GovernorateParm +
+                ", MunicipalityParm=" + MunicipalityParm +
+                ", TerritoryParm=" + TerritoryParm +
+                ", StatusParm=" + StatusParm +
+                ", minCreatedDateParm=" + minCreatedDateParm +
+                ", maxCreatedDateParm=" + maxCreatedDateParm +
+                ", minModifiedDateParm=" + minModifiedDateParm +
+                ", maxModifiedDateParm=" + maxModifiedDateParm +
+                ", CreatedByParm=" + CreatedByParm +
+                ", ModifiedByParm=" + ModifiedByParm +
+                '}';
     }
 }
 

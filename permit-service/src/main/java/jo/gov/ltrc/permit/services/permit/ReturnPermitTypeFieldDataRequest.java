@@ -5,16 +5,16 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnPermitTypeFieldDataRequest {
 
-    @ApiModelProperty("Permit Field ID Parameter ") private long permitfieldidparm ;
+    @ApiModelProperty("Permit Field ID Parameter ") private Long permitfieldidparm ;
     @ApiModelProperty("Permit Field Name Parameter ") private String permitfieldnameparm ;
-    @ApiModelProperty("Permit Field Section Parameter ") private int permitfieldsectionparm ;
+    @ApiModelProperty("Permit Field Section Parameter ") private Integer permitfieldsectionparm ;
     @ApiModelProperty("Permit Field Section Name Parameter ") private String permitfieldsectionnameparm ;
 
-    public long getPermitfieldidparm() {
+    public Long getPermitfieldidparm() {
         return permitfieldidparm;
     }
 
-    public void setPermitfieldidparm(long permitfieldidparm) {
+    public void setPermitfieldidparm(Long permitfieldidparm) {
         this.permitfieldidparm = permitfieldidparm;
     }
 
@@ -26,11 +26,11 @@ public class ReturnPermitTypeFieldDataRequest {
         this.permitfieldnameparm = permitfieldnameparm;
     }
 
-    public int getPermitfieldsectionparm() {
+    public Integer getPermitfieldsectionparm() {
         return permitfieldsectionparm;
     }
 
-    public void setPermitfieldsectionparm(int permitfieldsectionparm) {
+    public void setPermitfieldsectionparm(Integer permitfieldsectionparm) {
         this.permitfieldsectionparm = permitfieldsectionparm;
     }
 
@@ -40,5 +40,15 @@ public class ReturnPermitTypeFieldDataRequest {
 
     public void setPermitfieldsectionnameparm(String permitfieldsectionnameparm) {
         this.permitfieldsectionnameparm = permitfieldsectionnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitTypeFieldDataRequest{" +
+                "permitfieldidparm=" + permitfieldidparm +
+                ", permitfieldnameparm=" + permitfieldnameparm +
+                ", permitfieldsectionparm=" + permitfieldsectionparm +
+                ", permitfieldsectionnameparm=" + permitfieldsectionnameparm +
+                '}';
     }
 }

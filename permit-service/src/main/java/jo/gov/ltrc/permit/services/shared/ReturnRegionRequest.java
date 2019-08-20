@@ -5,18 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnRegionRequest {
 
-    @ApiModelProperty("Province ID Parameter") private long provinceidparm ;
+    @ApiModelProperty("Province ID Parameter") private Long provinceidparm ;
     @ApiModelProperty("Province Arabic Name Parameter") private String provincearabicnameparm ;
     @ApiModelProperty("Province English Name Parameter") private String provinceenglishnameparm ;
     @ApiModelProperty("Province Code Parameter") private String provincecodeparm ;
-    @ApiModelProperty("Country ID Parameter") private long countryidparm ;
+    @ApiModelProperty("Country ID Parameter") private Long countryidparm ;
 
-
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
     }
 
@@ -44,11 +43,22 @@ public class ReturnRegionRequest {
         this.provincecodeparm = provincecodeparm;
     }
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnRegionRequest{" +
+                "provinceidparm=" + provinceidparm +
+                ", provincearabicnameparm=" + provincearabicnameparm +
+                ", provinceenglishnameparm=" + provinceenglishnameparm +
+                ", provincecodeparm=" + provincecodeparm +
+                ", countryidparm=" + countryidparm +
+                '}';
     }
 }

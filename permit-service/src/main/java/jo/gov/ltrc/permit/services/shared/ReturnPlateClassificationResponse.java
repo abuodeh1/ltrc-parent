@@ -9,8 +9,8 @@ import java.io.Serializable;
         name = "ReturnPlateClassification",
         procedureName = "\"ReturnPlateClassification\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "plateclassificationidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "plateclassificationnameparm"),
                 
         },
         resultSetMappings = {
@@ -29,14 +29,14 @@ import java.io.Serializable;
 public class ReturnPlateClassificationResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Plate Classification ID ") private long plateclassificationid ;
+    @ApiModelProperty("Plate Classification ID ") private Long plateclassificationid ;
     @ApiModelProperty("Plate Classification Name ") private String plateclassificationname ;
 
-    public long getPlateclassificationid() {
+    public Long getPlateclassificationid() {
         return plateclassificationid;
     }
 
-    public void setPlateclassificationid(long plateclassificationid) {
+    public void setPlateclassificationid(Long plateclassificationid) {
         this.plateclassificationid = plateclassificationid;
     }
 
@@ -46,5 +46,13 @@ public class ReturnPlateClassificationResponse implements Serializable {
 
     public void setPlateclassificationname(String plateclassificationname) {
         this.plateclassificationname = plateclassificationname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPlateClassificationResponse{" +
+                "plateclassificationid=" + plateclassificationid +
+                ", plateclassificationname=" + plateclassificationname +
+                '}';
     }
 }

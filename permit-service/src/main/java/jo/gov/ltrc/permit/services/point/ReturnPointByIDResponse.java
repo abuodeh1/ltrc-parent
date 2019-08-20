@@ -28,42 +28,42 @@ import java.io.Serializable;
 public class ReturnPointByIDResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Point ID ") private long pointid                    ;
+    @ApiModelProperty("Point ID ") private Long pointid                    ;
     @ApiModelProperty("Point Arabic Name ") private String pointarabicname          ;
-    @ApiModelProperty("Province ID ") private long provinceid                 ;
+    @ApiModelProperty("Province ID ") private Long provinceid                 ;
     @ApiModelProperty("Province Arabic Name ") private String provincearabicname       ;
-    @ApiModelProperty("Governorate ID ") private long governorateid              ;
+    @ApiModelProperty("Governorate ID ") private Long governorateid              ;
     @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname    ;
-    @ApiModelProperty("Municipality ID ") private long municipalityid             ;
+    @ApiModelProperty("Municipality ID ") private Long municipalityid             ;
     @ApiModelProperty("Municipality Arabic Name ") private String municipalityarabicname   ;
-    @ApiModelProperty("Territory ID ") private long territoryid                ;
+    @ApiModelProperty("Territory ID ") private Long territoryid                ;
     @ApiModelProperty("Territory Arabic Name ") private String territoryarabicname      ;
     @ApiModelProperty("Point Neighborhood") private String pointneighborhood        ;
     @ApiModelProperty("Point Street ") private String pointstreet              ;
-    @ApiModelProperty("Point Characteristic ") private long pointcharacteristic        ;
+    @ApiModelProperty("Point Characteristic ") private Long pointcharacteristic        ;
     @ApiModelProperty("Characteristic Arabic Name ") private String characteristicarabicname ;
-    @ApiModelProperty("Point Parking Type ") private long pointparkingtype           ;
+    @ApiModelProperty("Point Parking Type ") private Long pointparkingtype           ;
     @ApiModelProperty("Parking Type Arabic Name ") private String parkingtypearabicname    ;
-    @ApiModelProperty("Point Status ") private int pointstatus                 ;
+    @ApiModelProperty("Point Status ") private Integer pointstatus                 ;
     @ApiModelProperty("Office Name ") private String officename               ;
     @ApiModelProperty("Office Phone Number ") private String officephonenumber        ;
     @ApiModelProperty("Liaison Office Name ") private String liaisonofficername       ;
-    @ApiModelProperty("Sun Shades ") private boolean sunshades               ;
-    @ApiModelProperty("Health Care Facilities ") private boolean healthcarefacilities    ;
-    @ApiModelProperty("Public Telephones") private boolean publictelephones        ;
-    @ApiModelProperty("Seat ") private boolean seat                    ;
-    @ApiModelProperty("Terminal Area ") private double terminalarea             ;
-    @ApiModelProperty("Count of Sun Shades ") private double countofsunshades         ;
-    @ApiModelProperty("Count of Seats ") private double countofseats             ;
-    @ApiModelProperty("Count of Lanes ") private double countoflanes             ;
-    @ApiModelProperty("Count of Seats and Sun Shades ") private double countofseatsandsunshades ;
+    @ApiModelProperty("Sun Shades ") private   Boolean sunshades               ;
+    @ApiModelProperty("Health Care Facilities ") private   Boolean healthcarefacilities    ;
+    @ApiModelProperty("Public Telephones") private   Boolean publictelephones        ;
+    @ApiModelProperty("Seat ") private   Boolean seat                    ;
+    @ApiModelProperty("Terminal Area ") private  Double terminalarea             ;
+    @ApiModelProperty("Count of Sun Shades ") private  Double countofsunshades         ;
+    @ApiModelProperty("Count of Seats ") private  Double countofseats             ;
+    @ApiModelProperty("Count of Lanes ") private  Double countoflanes             ;
+    @ApiModelProperty("Count of Seats and Sun Shades ") private  Double countofseatsandsunshades ;
     @ApiModelProperty("Terminal Remarks ") private String terminalremarks          ;
 
-    public long getPointid() {
+    public Long getPointid() {
         return pointid;
     }
 
-    public void setPointid(long pointid) {
+    public void setPointid(Long pointid) {
         this.pointid = pointid;
     }
 
@@ -75,11 +75,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.pointarabicname = pointarabicname;
     }
 
-    public long getProvinceid() {
+    public Long getProvinceid() {
         return provinceid;
     }
 
-    public void setProvinceid(long provinceid) {
+    public void setProvinceid(Long provinceid) {
         this.provinceid = provinceid;
     }
 
@@ -91,11 +91,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorateid() {
+    public Long getGovernorateid() {
         return governorateid;
     }
 
-    public void setGovernorateid(long governorateid) {
+    public void setGovernorateid(Long governorateid) {
         this.governorateid = governorateid;
     }
 
@@ -107,11 +107,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipalityid() {
+    public Long getMunicipalityid() {
         return municipalityid;
     }
 
-    public void setMunicipalityid(long municipalityid) {
+    public void setMunicipalityid(Long municipalityid) {
         this.municipalityid = municipalityid;
     }
 
@@ -123,11 +123,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getTerritoryid() {
+    public Long getTerritoryid() {
         return territoryid;
     }
 
-    public void setTerritoryid(long territoryid) {
+    public void setTerritoryid(Long territoryid) {
         this.territoryid = territoryid;
     }
 
@@ -155,11 +155,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.pointstreet = pointstreet;
     }
 
-    public long getPointcharacteristic() {
+    public Long getPointcharacteristic() {
         return pointcharacteristic;
     }
 
-    public void setPointcharacteristic(long pointcharacteristic) {
+    public void setPointcharacteristic(Long pointcharacteristic) {
         this.pointcharacteristic = pointcharacteristic;
     }
 
@@ -171,11 +171,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.characteristicarabicname = characteristicarabicname;
     }
 
-    public long getPointparkingtype() {
+    public Long getPointparkingtype() {
         return pointparkingtype;
     }
 
-    public void setPointparkingtype(long pointparkingtype) {
+    public void setPointparkingtype(Long pointparkingtype) {
         this.pointparkingtype = pointparkingtype;
     }
 
@@ -187,11 +187,11 @@ public class ReturnPointByIDResponse implements Serializable {
         this.parkingtypearabicname = parkingtypearabicname;
     }
 
-    public int getPointstatus() {
+    public Integer getPointstatus() {
         return pointstatus;
     }
 
-    public void setPointstatus(int pointstatus) {
+    public void setPointstatus(Integer pointstatus) {
         this.pointstatus = pointstatus;
     }
 
@@ -219,75 +219,75 @@ public class ReturnPointByIDResponse implements Serializable {
         this.liaisonofficername = liaisonofficername;
     }
 
-    public boolean isSunshades() {
+    public Boolean getSunshades() {
         return sunshades;
     }
 
-    public void setSunshades(boolean sunshades) {
+    public void setSunshades(Boolean sunshades) {
         this.sunshades = sunshades;
     }
 
-    public boolean isHealthcarefacilities() {
+    public Boolean getHealthcarefacilities() {
         return healthcarefacilities;
     }
 
-    public void setHealthcarefacilities(boolean healthcarefacilities) {
+    public void setHealthcarefacilities(Boolean healthcarefacilities) {
         this.healthcarefacilities = healthcarefacilities;
     }
 
-    public boolean isPublictelephones() {
+    public Boolean getPublictelephones() {
         return publictelephones;
     }
 
-    public void setPublictelephones(boolean publictelephones) {
+    public void setPublictelephones(Boolean publictelephones) {
         this.publictelephones = publictelephones;
     }
 
-    public boolean isSeat() {
+    public Boolean getSeat() {
         return seat;
     }
 
-    public void setSeat(boolean seat) {
+    public void setSeat(Boolean seat) {
         this.seat = seat;
     }
 
-    public double getTerminalarea() {
+    public Double getTerminalarea() {
         return terminalarea;
     }
 
-    public void setTerminalarea(double terminalarea) {
+    public void setTerminalarea(Double terminalarea) {
         this.terminalarea = terminalarea;
     }
 
-    public double getCountofsunshades() {
+    public Double getCountofsunshades() {
         return countofsunshades;
     }
 
-    public void setCountofsunshades(double countofsunshades) {
+    public void setCountofsunshades(Double countofsunshades) {
         this.countofsunshades = countofsunshades;
     }
 
-    public double getCountofseats() {
+    public Double getCountofseats() {
         return countofseats;
     }
 
-    public void setCountofseats(double countofseats) {
+    public void setCountofseats(Double countofseats) {
         this.countofseats = countofseats;
     }
 
-    public double getCountoflanes() {
+    public Double getCountoflanes() {
         return countoflanes;
     }
 
-    public void setCountoflanes(double countoflanes) {
+    public void setCountoflanes(Double countoflanes) {
         this.countoflanes = countoflanes;
     }
 
-    public double getCountofseatsandsunshades() {
+    public Double getCountofseatsandsunshades() {
         return countofseatsandsunshades;
     }
 
-    public void setCountofseatsandsunshades(double countofseatsandsunshades) {
+    public void setCountofseatsandsunshades(Double countofseatsandsunshades) {
         this.countofseatsandsunshades = countofseatsandsunshades;
     }
 
@@ -297,5 +297,41 @@ public class ReturnPointByIDResponse implements Serializable {
 
     public void setTerminalremarks(String terminalremarks) {
         this.terminalremarks = terminalremarks;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPointByIDResponse{" +
+                "pointid=" + pointid +
+                ", pointarabicname=" + pointarabicname +
+                ", provinceid=" + provinceid +
+                ", provincearabicname=" + provincearabicname +
+                ", governorateid=" + governorateid +
+                ", governoratearabicname=" + governoratearabicname +
+                ", municipalityid=" + municipalityid +
+                ", municipalityarabicname=" + municipalityarabicname +
+                ", territoryid=" + territoryid +
+                ", territoryarabicname=" + territoryarabicname +
+                ", pointneighborhood=" + pointneighborhood +
+                ", pointstreet=" + pointstreet +
+                ", pointcharacteristic=" + pointcharacteristic +
+                ", characteristicarabicname=" + characteristicarabicname +
+                ", pointparkingtype=" + pointparkingtype +
+                ", parkingtypearabicname=" + parkingtypearabicname +
+                ", pointstatus=" + pointstatus +
+                ", officename=" + officename +
+                ", officephonenumber=" + officephonenumber +
+                ", liaisonofficername=" + liaisonofficername +
+                ", sunshades=" + sunshades +
+                ", healthcarefacilities=" + healthcarefacilities +
+                ", publictelephones=" + publictelephones +
+                ", seat=" + seat +
+                ", terminalarea=" + terminalarea +
+                ", countofsunshades=" + countofsunshades +
+                ", countofseats=" + countofseats +
+                ", countoflanes=" + countoflanes +
+                ", countofseatsandsunshades=" + countofseatsandsunshades +
+                ", terminalremarks=" + terminalremarks +
+                '}';
     }
 }

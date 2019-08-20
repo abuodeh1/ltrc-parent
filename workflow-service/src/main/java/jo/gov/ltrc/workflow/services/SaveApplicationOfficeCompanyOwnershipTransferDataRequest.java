@@ -5,42 +5,41 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
 
-    @ApiModelProperty("Parameter ") private long applicationofficecompanyownershiptransferidparm ;
-    @ApiModelProperty("Parameter ") private long _1stoperatoridparm ;
+    @ApiModelProperty("Parameter ") private Long applicationofficecompanyownershiptransferidparm ;
+    @ApiModelProperty("Parameter ") private Long _1stoperatoridparm ;
     @ApiModelProperty("Parameter ") private String _1stoperatornameparm ;
     @ApiModelProperty("Parameter ") private String phonenumberparm ;
     @ApiModelProperty("Parameter ") private String emailparm ;
-    @ApiModelProperty("Parameter ") private long _2ndoperatoridparm ;
+    @ApiModelProperty("Parameter ") private Long _2ndoperatoridparm ;
     @ApiModelProperty("Parameter ") private String _2ndoperatornameparm ;
     @ApiModelProperty("Parameter ") private String newownernationalidparm ;
     @ApiModelProperty("Parameter ") private String newownernameparm ;
     @ApiModelProperty("Parameter ") private String commercialrecordparm ;
     @ApiModelProperty("Parameter ") private String financialcommitmentparm ;
-    @ApiModelProperty("Parameter ") private int rentingcontractparm ;
-    @ApiModelProperty("Parameter ") private int siteownershipparm ;
+    @ApiModelProperty("Parameter ") private Integer  rentingcontractparm ;
+    @ApiModelProperty("Parameter ") private Integer  siteownershipparm ;
     @ApiModelProperty("Parameter ") private String headofservicedpartmentexplanationparm ;
-    @ApiModelProperty("Parameter ") private int headofservicedpartmentdecisionparm ;
+    @ApiModelProperty("Parameter ") private Integer  headofservicedpartmentdecisionparm ;
     @ApiModelProperty("Parameter ") private String directordirectorateexplanationparm ;
-    @ApiModelProperty("Parameter ") private int directordirectoratedecisionparm ;
-    @ApiModelProperty("Parameter ") private long princepel ;
-    @ApiModelProperty("Parameter ") private int statusparm ;
+    @ApiModelProperty("Parameter ") private Integer  directordirectoratedecisionparm ;
+    @ApiModelProperty("Parameter ") private Long princepel ;
+    @ApiModelProperty("Parameter ") private Integer  statusparm ;
     @ApiModelProperty("Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Parameter ") private long servicedpartmentparm ;
+    @ApiModelProperty("Parameter ") private Long servicedpartmentparm ;
 
-
-    public long getApplicationofficecompanyownershiptransferidparm() {
+    public Long getApplicationofficecompanyownershiptransferidparm() {
         return applicationofficecompanyownershiptransferidparm;
     }
 
-    public void setApplicationofficecompanyownershiptransferidparm(long applicationofficecompanyownershiptransferidparm) {
+    public void setApplicationofficecompanyownershiptransferidparm(Long applicationofficecompanyownershiptransferidparm) {
         this.applicationofficecompanyownershiptransferidparm = applicationofficecompanyownershiptransferidparm;
     }
 
-    public long get_1stoperatoridparm() {
+    public Long get_1stoperatoridparm() {
         return _1stoperatoridparm;
     }
 
-    public void set_1stoperatoridparm(long _1stoperatoridparm) {
+    public void set_1stoperatoridparm(Long _1stoperatoridparm) {
         this._1stoperatoridparm = _1stoperatoridparm;
     }
 
@@ -68,11 +67,11 @@ public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long get_2ndoperatoridparm() {
+    public Long get_2ndoperatoridparm() {
         return _2ndoperatoridparm;
     }
 
-    public void set_2ndoperatoridparm(long _2ndoperatoridparm) {
+    public void set_2ndoperatoridparm(Long _2ndoperatoridparm) {
         this._2ndoperatoridparm = _2ndoperatoridparm;
     }
 
@@ -116,19 +115,19 @@ public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
         this.financialcommitmentparm = financialcommitmentparm;
     }
 
-    public int getRentingcontractparm() {
+    public Integer getRentingcontractparm() {
         return rentingcontractparm;
     }
 
-    public void setRentingcontractparm(int rentingcontractparm) {
+    public void setRentingcontractparm(Integer rentingcontractparm) {
         this.rentingcontractparm = rentingcontractparm;
     }
 
-    public int getSiteownershipparm() {
+    public Integer getSiteownershipparm() {
         return siteownershipparm;
     }
 
-    public void setSiteownershipparm(int siteownershipparm) {
+    public void setSiteownershipparm(Integer siteownershipparm) {
         this.siteownershipparm = siteownershipparm;
     }
 
@@ -140,11 +139,11 @@ public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
         this.headofservicedpartmentexplanationparm = headofservicedpartmentexplanationparm;
     }
 
-    public int getHeadofservicedpartmentdecisionparm() {
+    public Integer getHeadofservicedpartmentdecisionparm() {
         return headofservicedpartmentdecisionparm;
     }
 
-    public void setHeadofservicedpartmentdecisionparm(int headofservicedpartmentdecisionparm) {
+    public void setHeadofservicedpartmentdecisionparm(Integer headofservicedpartmentdecisionparm) {
         this.headofservicedpartmentdecisionparm = headofservicedpartmentdecisionparm;
     }
 
@@ -156,27 +155,27 @@ public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
         this.directordirectorateexplanationparm = directordirectorateexplanationparm;
     }
 
-    public int getDirectordirectoratedecisionparm() {
+    public Integer getDirectordirectoratedecisionparm() {
         return directordirectoratedecisionparm;
     }
 
-    public void setDirectordirectoratedecisionparm(int directordirectoratedecisionparm) {
+    public void setDirectordirectoratedecisionparm(Integer directordirectoratedecisionparm) {
         this.directordirectoratedecisionparm = directordirectoratedecisionparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -188,12 +187,39 @@ public class SaveApplicationOfficeCompanyOwnershipTransferDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedpartmentparm() {
+    public Long getServicedpartmentparm() {
         return servicedpartmentparm;
     }
 
-    public void setServicedpartmentparm(long servicedpartmentparm) {
+    public void setServicedpartmentparm(Long servicedpartmentparm) {
         this.servicedpartmentparm = servicedpartmentparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationOfficeCompanyOwnershipTransferDataRequest{" +
+                "applicationofficecompanyownershiptransferidparm=" + applicationofficecompanyownershiptransferidparm +
+                ", _1stoperatoridparm=" + _1stoperatoridparm +
+                ", _1stoperatornameparm= " + _1stoperatornameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", _2ndoperatoridparm=" + _2ndoperatoridparm +
+                ", _2ndoperatornameparm= " + _2ndoperatornameparm + 
+                ", newownernationalidparm= " + newownernationalidparm + 
+                ", newownernameparm= " + newownernameparm + 
+                ", commercialrecordparm= " + commercialrecordparm + 
+                ", financialcommitmentparm= " + financialcommitmentparm + 
+                ", rentingcontractparm=" + rentingcontractparm +
+                ", siteownershipparm=" + siteownershipparm +
+                ", headofservicedpartmentexplanationparm= " + headofservicedpartmentexplanationparm + 
+                ", headofservicedpartmentdecisionparm=" + headofservicedpartmentdecisionparm +
+                ", directordirectorateexplanationparm= " + directordirectorateexplanationparm + 
+                ", directordirectoratedecisionparm=" + directordirectoratedecisionparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedpartmentparm=" + servicedpartmentparm +
+                '}';
     }
 }
 

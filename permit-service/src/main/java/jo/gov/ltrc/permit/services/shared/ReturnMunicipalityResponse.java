@@ -9,11 +9,11 @@ import java.io.Serializable;
         name = "ReturnMunicipality",
         procedureName = "\"ReturnMunicipality\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class)
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalityarabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalityenglishnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalitycodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm")
         },
         resultSetMappings = {
                 "MunicipalityResultSetMapping"
@@ -66,5 +66,15 @@ public class ReturnMunicipalityResponse implements Serializable {
 
     public void setMunicipalityCode(String municipalityCode) {
         this.municipalityCode = municipalityCode;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnMunicipalityResponse{" +
+                "municipalityID=" + municipalityID +
+                ", municipalityArabicName=" + municipalityArabicName +
+                ", municipalityEnglishName=" + municipalityEnglishName +
+                ", municipalityCode=" + municipalityCode +
+                '}';
     }
 }

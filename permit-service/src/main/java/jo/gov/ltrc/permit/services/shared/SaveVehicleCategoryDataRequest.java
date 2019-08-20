@@ -5,12 +5,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveVehicleCategoryDataRequest {
 
-    @ApiModelProperty("Vehicle Category ID Parameter") private long vehiclecategoryidparm ;
+    @ApiModelProperty("Vehicle Category ID Parameter") private Long vehiclecategoryidparm ;
     @ApiModelProperty("Vehicle Category Name Parameter") private String vehiclecategorynameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getVehiclecategoryidparm() {
+    public Long getVehiclecategoryidparm() {
         return vehiclecategoryidparm;
     }
 
@@ -26,7 +26,7 @@ public class SaveVehicleCategoryDataRequest {
         this.vehiclecategorynameparm = vehiclecategorynameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -34,7 +34,7 @@ public class SaveVehicleCategoryDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

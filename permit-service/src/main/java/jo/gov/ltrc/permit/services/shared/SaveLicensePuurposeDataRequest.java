@@ -5,12 +5,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveLicensePuurposeDataRequest {
 
-    @ApiModelProperty("License Purpose ID Parameter ") private long licensepurposeidparm ;
+    @ApiModelProperty("License Purpose ID Parameter ") private Long licensepurposeidparm ;
     @ApiModelProperty("License Purpose Name Parameter ") private String licensepurposenameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getLicensepurposeidparm() {
+    public Long getLicensepurposeidparm() {
         return licensepurposeidparm;
     }
 
@@ -26,7 +26,7 @@ public class SaveLicensePuurposeDataRequest {
         this.licensepurposenameparm = licensepurposenameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -34,7 +34,7 @@ public class SaveLicensePuurposeDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

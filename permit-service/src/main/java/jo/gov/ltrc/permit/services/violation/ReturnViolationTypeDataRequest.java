@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnViolationTypeDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long violationtypeidparm ;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long violationtypeidparm ;
     @ApiModelProperty("Violation Type Name Parameter ") private String violationtypenameparm ;
 
-    public long getViolationtypeidparm() {
+    public Long getViolationtypeidparm() {
         return violationtypeidparm;
     }
 
-    public void setViolationtypeidparm(long violationtypeidparm) {
+    public void setViolationtypeidparm(Long violationtypeidparm) {
         this.violationtypeidparm = violationtypeidparm;
     }
 
@@ -22,5 +22,13 @@ public class ReturnViolationTypeDataRequest {
 
     public void setViolationtypenameparm(String violationtypenameparm) {
         this.violationtypenameparm = violationtypenameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnViolationTypeDataRequest{" +
+                "violationtypeidparm=" + violationtypeidparm +
+                ", violationtypenameparm=" + violationtypenameparm +
+                '}';
     }
 }

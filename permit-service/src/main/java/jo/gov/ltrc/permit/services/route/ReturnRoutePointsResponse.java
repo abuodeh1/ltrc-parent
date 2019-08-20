@@ -33,28 +33,27 @@ import java.io.Serializable;
 public class ReturnRoutePointsResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Route Point ID ") private long routepointid ;
-    @ApiModelProperty("Route ID ") private long routeid ;
+    @ApiModelProperty("Route Point ID ") private Long routepointid ;
+    @ApiModelProperty("Route ID ") private Long routeid ;
     @ApiModelProperty("Route Name ") private String routename ;
-    @ApiModelProperty("Point ID ") private long pointid ;
+    @ApiModelProperty("Point ID ") private Long pointid ;
     @ApiModelProperty("Point Arabic Name ") private String pointarabicname ;
-    @ApiModelProperty("Point Order ") private int pointorder ;
-    @ApiModelProperty("Point Direction ") private boolean pointdirection  ;
+    @ApiModelProperty("Point Order ") private Integer pointorder ;
+    @ApiModelProperty("Point Direction ") private   Boolean pointdirection  ;
 
-
-    public long getRoutepointid() {
+    public Long getRoutepointid() {
         return routepointid;
     }
 
-    public void setRoutepointid(long routepointid) {
+    public void setRoutepointid(Long routepointid) {
         this.routepointid = routepointid;
     }
 
-    public long getRouteid() {
+    public Long getRouteid() {
         return routeid;
     }
 
-    public void setRouteid(long routeid) {
+    public void setRouteid(Long routeid) {
         this.routeid = routeid;
     }
 
@@ -66,11 +65,11 @@ public class ReturnRoutePointsResponse implements Serializable {
         this.routename = routename;
     }
 
-    public long getPointid() {
+    public Long getPointid() {
         return pointid;
     }
 
-    public void setPointid(long pointid) {
+    public void setPointid(Long pointid) {
         this.pointid = pointid;
     }
 
@@ -82,19 +81,32 @@ public class ReturnRoutePointsResponse implements Serializable {
         this.pointarabicname = pointarabicname;
     }
 
-    public int getPointorder() {
+    public Integer getPointorder() {
         return pointorder;
     }
 
-    public void setPointorder(int pointorder) {
+    public void setPointorder(Integer pointorder) {
         this.pointorder = pointorder;
     }
 
-    public boolean isPointdirection() {
+    public Boolean getPointdirection() {
         return pointdirection;
     }
 
-    public void setPointdirection(boolean pointdirection) {
+    public void setPointdirection(Boolean pointdirection) {
         this.pointdirection = pointdirection;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnRoutePointsResponse{" +
+                "routepointid=" + routepointid +
+                ", routeid=" + routeid +
+                ", routename=" + routename +
+                ", pointid=" + pointid +
+                ", pointarabicname=" + pointarabicname +
+                ", pointorder=" + pointorder +
+                ", pointdirection=" + pointdirection +
+                '}';
     }
 }

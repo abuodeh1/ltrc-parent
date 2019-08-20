@@ -9,11 +9,11 @@ import java.io.Serializable;
         name = "ReturnProvince",
         procedureName = "\"ReturnProvince\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class)
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "provincearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "provinceenglishnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "provincecodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "countryidparm")
         },
         resultSetMappings = {
                 "RegionResultSetMapping"
@@ -66,5 +66,15 @@ public class ReturnRegionResponse implements Serializable {
 
     public void setProvinceCode(String provinceCode) {
         this.provinceCode = provinceCode;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnRegionResponse{" +
+                "provinceID=" + provinceID +
+                ", provinceArabicName=" + provinceArabicName +
+                ", provinceEnglishName=" + provinceEnglishName +
+                ", provinceCode=" + provinceCode +
+                '}';
     }
 }

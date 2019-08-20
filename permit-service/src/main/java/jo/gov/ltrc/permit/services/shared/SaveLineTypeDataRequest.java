@@ -5,16 +5,16 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveLineTypeDataRequest {
 
-    @ApiModelProperty("Line Type ID Parameter ") private long linetypeidparm ;
+    @ApiModelProperty("Line Type ID Parameter ") private Long linetypeidparm ;
     @ApiModelProperty("Line Type Name Parameter ") private String linetypenameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getLinetypeidparm() {
+    public Long getLinetypeidparm() {
         return linetypeidparm;
     }
 
-    public void setLinetypeidparm(long linetypeidparm) {
+    public void setLinetypeidparm(Long linetypeidparm) {
         this.linetypeidparm = linetypeidparm;
     }
 
@@ -26,20 +26,30 @@ public class SaveLineTypeDataRequest {
         this.linetypenameparm = linetypenameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveLineTypeDataRequest{" +
+                "linetypeidparm=" + linetypeidparm +
+                ", linetypenameparm=" + linetypenameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                '}';
     }
 }
 

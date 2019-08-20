@@ -5,31 +5,40 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveVehicleRouteDataRequest {
 
-    @ApiModelProperty("Vehicle Route ID Parameter") private long vehiclerouteidparm ;
-    @ApiModelProperty("Vehicle ID Parameter") private long vehicleidparm ;
-    @ApiModelProperty("Route ID Parameter") private long routeidparm ;
+    @ApiModelProperty("Vehicle Route ID Parameter") private Long vehiclerouteidparm ;
+    @ApiModelProperty("Vehicle ID Parameter") private Long vehicleidparm ;
+    @ApiModelProperty("Route ID Parameter") private Long routeidparm ;
 
-    public long getVehiclerouteidparm() {
+    public Long getVehiclerouteidparm() {
         return vehiclerouteidparm;
     }
 
-    public void setVehiclerouteidparm(long vehiclerouteidparm) {
+    public void setVehiclerouteidparm(Long vehiclerouteidparm) {
         this.vehiclerouteidparm = vehiclerouteidparm;
     }
 
-    public long getVehicleidparm() {
+    public Long getVehicleidparm() {
         return vehicleidparm;
     }
 
-    public void setVehicleidparm(long vehicleidparm) {
+    public void setVehicleidparm(Long vehicleidparm) {
         this.vehicleidparm = vehicleidparm;
     }
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveVehicleRouteDataRequest{" +
+                "vehiclerouteidparm=" + vehiclerouteidparm +
+                ", vehicleidparm=" + vehicleidparm +
+                ", routeidparm=" + routeidparm +
+                '}';
     }
 }

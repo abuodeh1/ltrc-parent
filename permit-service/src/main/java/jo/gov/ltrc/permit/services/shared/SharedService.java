@@ -1,11 +1,14 @@
 package jo.gov.ltrc.permit.services.shared;
 
 import io.swagger.annotations.*;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -24,6 +27,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/api")
+@Log4j2
 public class SharedService {
 
     @PersistenceContext
@@ -61,12 +65,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Characteristic ")
     @PostMapping("/characteristic")
-    public String addCharacteristic(@ApiParam("\t") @RequestBody SaveCharacteristicDataRequest saveCharacteristicDataRequest){
+    public String addCharacteristic(@ApiParam("\t") @RequestBody SaveCharacteristicDataRequest saveCharacteristicDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveCharacteristicData");
-        storedProcedureQuery.setParameter(1, saveCharacteristicDataRequest.getCharacteristicidparm());
-        storedProcedureQuery.setParameter(2, saveCharacteristicDataRequest.getCharacteristicarabicnameparm());
-        storedProcedureQuery.setParameter(3, saveCharacteristicDataRequest.getCharacteristicenglishnameparm());
+        log.debug(" SaveCharacteristicDataRequest : " + saveCharacteristicDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveCharacteristicDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveCharacteristicData", saveCharacteristicDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -98,15 +113,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Country ")
     @PostMapping("/country")
-    public String addCountry(@ApiParam("\t") @RequestBody SaveCountryDataRequest saveCountryDataRequest){
+    public String addCountry(@ApiParam("\t") @RequestBody SaveCountryDataRequest saveCountryDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveCountryData");
-        storedProcedureQuery.setParameter(1, saveCountryDataRequest.getCountryidparm());
-        storedProcedureQuery.setParameter(2, saveCountryDataRequest.getCountryarabicnameparm());
-        storedProcedureQuery.setParameter(3, saveCountryDataRequest.getCountryenglishnameparm());
-        storedProcedureQuery.setParameter(4, saveCountryDataRequest.getCountrycodeparm());
-        storedProcedureQuery.setParameter(5, saveCountryDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(6, saveCountryDataRequest.getStatusparm());
+        log.debug(" SaveCountryDataRequest : " + saveCountryDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveCountryDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveCountryData", saveCountryDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -138,16 +161,23 @@ public class SharedService {
 //    })
 //    @ApiOperation("Add or Edit Province ")
 //    @PostMapping("/province")
-    public String addProvince(@ApiParam("\t") @RequestBody SaveProvinceDataRequest saveProvinceDataRequest){
+    public String addProvince(@ApiParam("\t") @RequestBody SaveProvinceDataRequest saveProvinceDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveProvinceData");
-        storedProcedureQuery.setParameter(1, saveProvinceDataRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(2, saveProvinceDataRequest.getProvincearabicnameparm());
-        storedProcedureQuery.setParameter(3, saveProvinceDataRequest.getProvinceenglishnameparm());
-        storedProcedureQuery.setParameter(4, saveProvinceDataRequest.getProvincecodeparm());
-        storedProcedureQuery.setParameter(5, saveProvinceDataRequest.getCountryidparm());
-        storedProcedureQuery.setParameter(6, saveProvinceDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(7, saveProvinceDataRequest.getStatusparm());
+        log.debug(" SaveProvinceDataRequest : " + saveProvinceDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveProvinceDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveProvinceData", saveProvinceDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -179,17 +209,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Governorate ")
     @PostMapping("/governorate")
-    public String addGovernorate(@ApiParam("\t") @RequestBody SaveGovernorateDataRequest saveGovernorateDataRequest){
+    public String addGovernorate(@ApiParam("\t") @RequestBody SaveGovernorateDataRequest saveGovernorateDataRequest, HttpServletRequest request){
 
-    StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveGovernorateData");
-    storedProcedureQuery.setParameter(1, saveGovernorateDataRequest.getGovernorateidparm());
-    storedProcedureQuery.setParameter(2, saveGovernorateDataRequest.getGovernoratearabicnameparm());
-    storedProcedureQuery.setParameter(3, saveGovernorateDataRequest.getGovernorateenglishnameparm());
-    storedProcedureQuery.setParameter(4, saveGovernorateDataRequest.getGovernoratecodeparm());
-    storedProcedureQuery.setParameter(5, saveGovernorateDataRequest.getCountryidparm());
-    storedProcedureQuery.setParameter(6, saveGovernorateDataRequest.getProvinceidparm());
-    storedProcedureQuery.setParameter(7, saveGovernorateDataRequest.getPrincepel());
-    storedProcedureQuery.setParameter(8, saveGovernorateDataRequest.getStatusparm());
+        log.debug(" SaveGovernorateDataRequest : " + saveGovernorateDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveGovernorateDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveGovernorateData", saveGovernorateDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
     return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -222,16 +258,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Municipality ")
     @PostMapping("/municipality")
-    public String addMunicipality(@ApiParam("\t") @RequestBody SaveMunicipalityDataRequest saveMunicipalityDataRequest){
+    public String addMunicipality(@ApiParam("\t") @RequestBody SaveMunicipalityDataRequest saveMunicipalityDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveMunicipalityData");
-        storedProcedureQuery.setParameter(1, saveMunicipalityDataRequest.getMunicipalityidparm());
-        storedProcedureQuery.setParameter(2, saveMunicipalityDataRequest.getMunicipalityarabicnameparm());
-        storedProcedureQuery.setParameter(3, saveMunicipalityDataRequest.getMunicipalityenglishnameparm());
-        storedProcedureQuery.setParameter(4, saveMunicipalityDataRequest.getMunicipalitycodeparm());
-        storedProcedureQuery.setParameter(5, saveMunicipalityDataRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(6, saveMunicipalityDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(7, saveMunicipalityDataRequest.getStatusparm());
+        log.debug(" SaveMunicipalityDataRequest : " + saveMunicipalityDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveMunicipalityDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveMunicipalityData", saveMunicipalityDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -264,16 +307,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Territory ")
     @PostMapping("/territory")
-    public String addTerritory(@ApiParam("\t") @RequestBody SaveTerritoryDataRequest saveTerritoryDataRequest){
+    public String addTerritory(@ApiParam("\t") @RequestBody SaveTerritoryDataRequest saveTerritoryDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveTerritoryData");
-        storedProcedureQuery.setParameter(1, saveTerritoryDataRequest.getTerritoryidparm());
-        storedProcedureQuery.setParameter(2, saveTerritoryDataRequest.getTerritoryarabicnameparm());
-        storedProcedureQuery.setParameter(3, saveTerritoryDataRequest.getTerritoryenglishnameparm());
-        storedProcedureQuery.setParameter(4, saveTerritoryDataRequest.getTerritorycodeparm());
-        storedProcedureQuery.setParameter(5, saveTerritoryDataRequest.getMunicipalityparm());
-        storedProcedureQuery.setParameter(6, saveTerritoryDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(7, saveTerritoryDataRequest.getStatusparm());
+        log.debug(" SaveTerritoryDataRequest : " + saveTerritoryDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveTerritoryDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveTerritoryData", saveTerritoryDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -306,14 +356,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Parking Type")
     @PostMapping("/parking-type")
-    public String addParkingType(@ApiParam("\t") @RequestBody SaveParkingTypeDataRequest saveParkingTypeDataRequest){
+    public String addParkingType(@ApiParam("\t") @RequestBody SaveParkingTypeDataRequest saveParkingTypeDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveParkingTypeData");
-        storedProcedureQuery.setParameter(1, saveParkingTypeDataRequest.getParkingtypeidparm());
-        storedProcedureQuery.setParameter(2, saveParkingTypeDataRequest.getParkingtypearabicnameparm());
-        storedProcedureQuery.setParameter(3, saveParkingTypeDataRequest.getParkingtypeenglishnameparm());
-        storedProcedureQuery.setParameter(4, saveParkingTypeDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(5, saveParkingTypeDataRequest.getStatusparm());
+        log.debug(" SaveParkingTypeDataRequest : " + saveParkingTypeDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveParkingTypeDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveParkingTypeData", saveParkingTypeDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -345,13 +404,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Line Type")
     @PostMapping("/line-type")
-    public String addLineType(@ApiParam("\t") @RequestBody SaveLineTypeDataRequest saveLineTypeDataRequest){
+    public String addLineType(@ApiParam("\t") @RequestBody SaveLineTypeDataRequest saveLineTypeDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveLineTypeData");
-        storedProcedureQuery.setParameter(1, saveLineTypeDataRequest.getLinetypeidparm());
-        storedProcedureQuery.setParameter(2, saveLineTypeDataRequest.getLinetypenameparm());
-        storedProcedureQuery.setParameter(3, saveLineTypeDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, saveLineTypeDataRequest.getStatusparm());
+        log.debug(" SaveLineTypeDataRequest : " + saveLineTypeDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveLineTypeDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveLineTypeData", saveLineTypeDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -422,13 +491,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Fuel Type ")
     @PostMapping("/fuel-type")
-    public String addFuelType(@ApiParam("\t") @RequestBody SaveFuelTypeDateRequest saveFuelTypeDateRequest){
+    public String addFuelType(@ApiParam("\t") @RequestBody SaveFuelTypeDateRequest saveFuelTypeDateRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveFuelTypeData");
-        storedProcedureQuery.setParameter(1, saveFuelTypeDateRequest.getFueltypeidparm());
-        storedProcedureQuery.setParameter(2, saveFuelTypeDateRequest.getFueltypenameparm());
-        storedProcedureQuery.setParameter(3, saveFuelTypeDateRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, saveFuelTypeDateRequest.getStatusparm());
+        log.debug(" SaveFuelTypeDateRequest : " + saveFuelTypeDateRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveFuelTypeDateRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveFuelTypeData", saveFuelTypeDateRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -651,13 +730,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Plate Classification ")
     @PostMapping("/plate-classification")
-    public String addPlateClassification(@ApiParam("\t") @RequestBody SavePlateClassificationDataRequest savePlateClassificationDataRequest){
+    public String addPlateClassification(@ApiParam("\t") @RequestBody SavePlateClassificationDataRequest savePlateClassificationDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SavePlateClassificationData");
-        storedProcedureQuery.setParameter(1, savePlateClassificationDataRequest.getPlateclassificationidparm());
-        storedProcedureQuery.setParameter(2, savePlateClassificationDataRequest.getPlateclassificationnameparm());
-        storedProcedureQuery.setParameter(3, savePlateClassificationDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, savePlateClassificationDataRequest.getStatusparm());
+        log.debug(" SavePlateClassificationDataRequest : " + savePlateClassificationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        savePlateClassificationDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SavePlateClassificationData", savePlateClassificationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -729,13 +818,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Transportation Class ")
     @PostMapping("/transportation-class")
-    public String addTransportationClass(@ApiParam("\t") @RequestBody SaveTransportationClassDataRequest saveTransportationClassDataRequest){
+    public String addTransportationClass(@ApiParam("\t") @RequestBody SaveTransportationClassDataRequest saveTransportationClassDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveTransportationClassData");
-        storedProcedureQuery.setParameter(1, saveTransportationClassDataRequest.getTransportationclassidparm());
-        storedProcedureQuery.setParameter(2, saveTransportationClassDataRequest.getTransportationclassnameparm());
-        storedProcedureQuery.setParameter(3, saveTransportationClassDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, saveTransportationClassDataRequest.getStatusparm());
+        log.debug(" SaveTransportationClassDataRequest : " + saveTransportationClassDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveTransportationClassDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveTransportationClassData", saveTransportationClassDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
 
@@ -768,13 +867,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Period Class ")
     @PostMapping("/period-class")
-    public String addPeriodClass(@ApiParam("\t") @RequestBody SavePeriodCalssDataRequest savePeriodCalssDataRequest){
+    public String addPeriodClass(@ApiParam("\t") @RequestBody SavePeriodCalssDataRequest savePeriodCalssDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SavePeriodCalssData");
-        storedProcedureQuery.setParameter(1, savePeriodCalssDataRequest.getPeriodidparm());
-        storedProcedureQuery.setParameter(2, savePeriodCalssDataRequest.getPeriodnameparm());
-        storedProcedureQuery.setParameter(3, savePeriodCalssDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, savePeriodCalssDataRequest.getStatusparm());
+        log.debug(" SavePeriodCalssDataRequest : " + savePeriodCalssDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        savePeriodCalssDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SavePeriodCalssData", savePeriodCalssDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -806,13 +915,23 @@ public class SharedService {
     })
     @ApiOperation("Add or Edit Operator Classification ")
     @PostMapping("/operator-classification")
-    public String addOperatorClassification(@ApiParam("\t") @RequestBody SaveOperatorClassificationDataRequest saveOperatorClassificationDataRequest){
+    public String addOperatorClassification(@ApiParam("\t") @RequestBody SaveOperatorClassificationDataRequest saveOperatorClassificationDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveOperatorClassificationData");
-        storedProcedureQuery.setParameter(1, saveOperatorClassificationDataRequest.getOperatorclassificationidparm());
-        storedProcedureQuery.setParameter(2, saveOperatorClassificationDataRequest.getOperatorclassificationnameparm());
-        storedProcedureQuery.setParameter(3, saveOperatorClassificationDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(4, saveOperatorClassificationDataRequest.getStatusparm());
+        log.debug(" SaveOperatorClassificationDataRequest : " + saveOperatorClassificationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        saveOperatorClassificationDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveOperatorClassificationData", saveOperatorClassificationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }
@@ -829,11 +948,19 @@ public class SharedService {
     @PostMapping("/country/find")
     public List<ReturnCountryResponse> findCountry(@ApiParam("\t") @RequestBody ReturnCountryRequest countryRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnCountry");
-        storedProcedureQuery.setParameter(1, countryRequest.getCountryidparm());
-        storedProcedureQuery.setParameter(2, countryRequest.getCountryarabicnameparm());
-        storedProcedureQuery.setParameter(3, countryRequest.getCountryenglishnameparm());
-        storedProcedureQuery.setParameter(4, countryRequest.getCountrycodeparm());
+        log.debug(" ReturnCountryRequest : " + countryRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnCountry", countryRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnCountryResponse> result = storedProcedureQuery.getResultList();
 
@@ -844,12 +971,19 @@ public class SharedService {
     @PostMapping("/region/find")
     public List<ReturnRegionResponse> findRegion(@ApiParam("\t") @RequestBody ReturnRegionRequest returnRegionRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnProvince");
-        storedProcedureQuery.setParameter(1, returnRegionRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(2, returnRegionRequest.getProvincearabicnameparm());
-        storedProcedureQuery.setParameter(3, returnRegionRequest.getProvinceenglishnameparm());
-        storedProcedureQuery.setParameter(4, returnRegionRequest.getProvincecodeparm());
-        storedProcedureQuery.setParameter(5, returnRegionRequest.getCountryidparm());
+        log.debug(" ReturnRegionRequest : " + returnRegionRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnProvince", returnRegionRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnRegionResponse> result = storedProcedureQuery.getResultList();
 
@@ -861,13 +995,19 @@ public class SharedService {
     @PostMapping("/governorate/find")
     public List<ReturnGovernerateResponse> findGovernerate(@ApiParam("\t") @RequestBody ReturnGovernerateRequest governerateRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnGovernorate");
-        storedProcedureQuery.setParameter(1, governerateRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(2, governerateRequest.getGovernoratearabicnameparm());
-        storedProcedureQuery.setParameter(3, governerateRequest.getGovernorateenglishnameparm());
-        storedProcedureQuery.setParameter(4, governerateRequest.getGovernoratecodeparm());
-        storedProcedureQuery.setParameter(5, governerateRequest.getCountryidparm());
-        storedProcedureQuery.setParameter(6, governerateRequest.getProvinceidparm());
+        log.debug(" ReturnGovernerateRequest : " + governerateRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnGovernorate", governerateRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnGovernerateResponse> result = storedProcedureQuery.getResultList();
 
@@ -879,12 +1019,19 @@ public class SharedService {
     @PostMapping("/municipality/find")
     public List<ReturnMunicipalityResponse> findMunicipality(@ApiParam("\t") @RequestBody ReturnMunicipalityRequest municipalityRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnMunicipality");
-        storedProcedureQuery.setParameter(1, municipalityRequest.getMunicipalityidparm());
-        storedProcedureQuery.setParameter(2, municipalityRequest.getMunicipalityarabicnameparm());
-        storedProcedureQuery.setParameter(3, municipalityRequest.getMunicipalityenglishnameparm());
-        storedProcedureQuery.setParameter(4, municipalityRequest.getMunicipalitycodeparm());
-        storedProcedureQuery.setParameter(5, municipalityRequest.getGovernorateidparm());
+        log.debug(" ReturnMunicipalityRequest : " + municipalityRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnMunicipality", municipalityRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         List<ReturnMunicipalityResponse> result = storedProcedureQuery.getResultList();
@@ -897,12 +1044,19 @@ public class SharedService {
     @PostMapping("/area/find")
     public List<ReturnAreaResponse> findArea(@ApiParam("\t") @RequestBody ReturnAreaRequest returnAreaRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnTerritory");
-        storedProcedureQuery.setParameter(1, returnAreaRequest.getTerritoryidparm());
-        storedProcedureQuery.setParameter(2, returnAreaRequest.getTerritoryarabicnameparm());
-        storedProcedureQuery.setParameter(3, returnAreaRequest.getTerritoryenglishnameparm());
-        storedProcedureQuery.setParameter(4, returnAreaRequest.getTerritorycodeparm());
-        storedProcedureQuery.setParameter(5, returnAreaRequest.getMunicipalityparm());
+        log.debug(" ReturnAreaRequest : " + returnAreaRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnTerritory", returnAreaRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         List<ReturnAreaResponse> result = storedProcedureQuery.getResultList();
@@ -948,9 +1102,19 @@ public class SharedService {
     @PostMapping("/operator-classification/find")
     public List<ReturnOperatorClassificationDataResponse> getOperatorClassification(@ApiParam("\t") @RequestBody  ReturnOperatorClassificationDataRequest returnOperatorClassificationDataRequest ){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnOperatorClassification");
-        storedProcedureQuery.setParameter(1, returnOperatorClassificationDataRequest.getOperatorclassificationidparm());
-        storedProcedureQuery.setParameter(2, returnOperatorClassificationDataRequest.getOperatorclassificationnameparm());
+        log.debug(" ReturnOperatorClassificationDataRequest : " + returnOperatorClassificationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnOperatorClassification", returnOperatorClassificationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnOperatorClassificationDataResponse> result = storedProcedureQuery.getResultList();
 
@@ -961,9 +1125,19 @@ public class SharedService {
     @PostMapping("/license-purpose/find")
     public  List<ReturnLicensePurposeDataResponse> getLicensePurpose(@ApiParam("\t") @RequestBody ReturnLicensePurposeDataRequest returnLicensePurposeDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnLicensepurpose");
-        storedProcedureQuery.setParameter(1, returnLicensePurposeDataRequest.getLicensepurposeidparm());
-        storedProcedureQuery.setParameter(2, returnLicensePurposeDataRequest.getLicensepurposenameparm());
+        log.debug(" ReturnLicensePurposeDataRequest : " + returnLicensePurposeDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnLicensepurpose", returnLicensePurposeDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnLicensePurposeDataResponse> result = storedProcedureQuery.getResultList();
 
@@ -974,9 +1148,19 @@ public class SharedService {
     @PostMapping("/plate-classification/find")
     public List<ReturnPlateClassificationResponse> getPlateClassification(@ApiParam("\t") @RequestBody ReturnPlateClassificationDataRequest returnPlateClassificationDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnPlateClassification");
-        storedProcedureQuery.setParameter(1, returnPlateClassificationDataRequest.getPlateclassificationidparm());
-        storedProcedureQuery.setParameter(2, returnPlateClassificationDataRequest.getPlateclassificationnameparm());
+        log.debug(" ReturnPlateClassificationDataRequest : " + returnPlateClassificationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnPlateClassification", returnPlateClassificationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnPlateClassificationResponse> result = storedProcedureQuery.getResultList();
 
@@ -987,9 +1171,19 @@ public class SharedService {
     @PostMapping("/operator-screen/find")
     public List<ReturnOperatorScreenSectionResponse> getOperatorScreenSection(@ApiParam("\t") @RequestBody ReturnOperatorScreenSectionDataRequest returnOperatorScreenSectionDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnOperatorScreenSection");
-        storedProcedureQuery.setParameter(1, returnOperatorScreenSectionDataRequest.getOperatorfieldsectionparm());
-        storedProcedureQuery.setParameter(2, returnOperatorScreenSectionDataRequest.getSectionnameparm());
+        log.debug(" ReturnOperatorScreenSectionDataRequest : " + returnOperatorScreenSectionDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnOperatorScreenSection", returnOperatorScreenSectionDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnOperatorScreenSectionResponse> result = storedProcedureQuery.getResultList();
 
@@ -1000,9 +1194,19 @@ public class SharedService {
     @PostMapping("/service-department/find")
     public List<ReturnServiceDepartmentResponse> getServiceDepartment(@ApiParam("\t") @RequestBody ReturnServiceDepartmentDataRequest returnServiceDepartmentDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnServiceDepartment");
-        storedProcedureQuery.setParameter(1, returnServiceDepartmentDataRequest.getServicedepartmentidparm());
-        storedProcedureQuery.setParameter(2, returnServiceDepartmentDataRequest.getServicedepartmentnameparm());
+        log.debug(" ReturnServiceDepartmentDataRequest : " + returnServiceDepartmentDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnServiceDepartment", returnServiceDepartmentDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnServiceDepartmentResponse> result = storedProcedureQuery.getResultList();
 
@@ -1013,10 +1217,19 @@ public class SharedService {
     @PostMapping("/parking-type/find")
     public List<ReturnParkingTypeResponse> getParkingType(@ApiParam("\t") @RequestBody ReturnParkingTypeRequest returnParkingTypeRequest ){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnParkingType");
-        storedProcedureQuery.setParameter(1, returnParkingTypeRequest.getParkingtypeidparm());
-        storedProcedureQuery.setParameter(2, returnParkingTypeRequest.getParkingtypearabicnameparm());
-        storedProcedureQuery.setParameter(3, returnParkingTypeRequest.getParkingtypeenglishnameparm());
+        log.debug(" ReturnParkingTypeRequest : " + returnParkingTypeRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnParkingType", returnParkingTypeRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnParkingTypeResponse> result = storedProcedureQuery.getResultList() ;
 

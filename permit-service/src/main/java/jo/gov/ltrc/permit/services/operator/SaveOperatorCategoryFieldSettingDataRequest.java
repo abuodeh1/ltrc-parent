@@ -5,76 +5,90 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveOperatorCategoryFieldSettingDataRequest {
 
-    @ApiModelProperty("Operator Category Field Setting ID Parameter ") private long operatorcategroryfieldsettingidparm ;
-    @ApiModelProperty("Operator Category ID Parameter ") private long operatorcategoryidparm ;
-    @ApiModelProperty("Operator Field Parameter ") private long operatorfieldparm ;
-    @ApiModelProperty("Required Parameter ") private int requiredparm ;
-    @ApiModelProperty("Visible Parameter ") private int visibleparm ;
-    @ApiModelProperty("Active Parameter ") private int activeparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Operator Category Field Setting ID Parameter ") private Long operatorcategroryfieldsettingidparm ;
+    @ApiModelProperty("Operator Category ID Parameter ") private Long operatorcategoryidparm ;
+    @ApiModelProperty("Operator Field Parameter ") private Long operatorfieldparm ;
+    @ApiModelProperty("Required Parameter ") private Integer requiredparm ;
+    @ApiModelProperty("Visible Parameter ") private Integer visibleparm ;
+    @ApiModelProperty("Active Parameter ") private Integer activeparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getOperatorcategroryfieldsettingidparm() {
+    public Long getOperatorcategroryfieldsettingidparm() {
         return operatorcategroryfieldsettingidparm;
     }
 
-    public void setOperatorcategroryfieldsettingidparm(long operatorcategroryfieldsettingidparm) {
+    public void setOperatorcategroryfieldsettingidparm(Long operatorcategroryfieldsettingidparm) {
         this.operatorcategroryfieldsettingidparm = operatorcategroryfieldsettingidparm;
     }
 
-    public long getOperatorcategoryidparm() {
+    public Long getOperatorcategoryidparm() {
         return operatorcategoryidparm;
     }
 
-    public void setOperatorcategoryidparm(long operatorcategoryidparm) {
+    public void setOperatorcategoryidparm(Long operatorcategoryidparm) {
         this.operatorcategoryidparm = operatorcategoryidparm;
     }
 
-    public long getOperatorfieldparm() {
+    public Long getOperatorfieldparm() {
         return operatorfieldparm;
     }
 
-    public void setOperatorfieldparm(long operatorfieldparm) {
+    public void setOperatorfieldparm(Long operatorfieldparm) {
         this.operatorfieldparm = operatorfieldparm;
     }
 
-    public int getRequiredparm() {
+    public Integer getRequiredparm() {
         return requiredparm;
     }
 
-    public void setRequiredparm(int requiredparm) {
+    public void setRequiredparm(Integer requiredparm) {
         this.requiredparm = requiredparm;
     }
 
-    public int getVisibleparm() {
+    public Integer getVisibleparm() {
         return visibleparm;
     }
 
-    public void setVisibleparm(int visibleparm) {
+    public void setVisibleparm(Integer visibleparm) {
         this.visibleparm = visibleparm;
     }
 
-    public int getActiveparm() {
+    public Integer getActiveparm() {
         return activeparm;
     }
 
-    public void setActiveparm(int activeparm) {
+    public void setActiveparm(Integer activeparm) {
         this.activeparm = activeparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveOperatorCategoryFieldSettingDataRequest{" +
+                "operatorcategroryfieldsettingidparm=" + operatorcategroryfieldsettingidparm +
+                ", operatorcategoryidparm=" + operatorcategoryidparm +
+                ", operatorfieldparm=" + operatorfieldparm +
+                ", requiredparm=" + requiredparm +
+                ", visibleparm=" + visibleparm +
+                ", activeparm=" + activeparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                '}';
     }
 }

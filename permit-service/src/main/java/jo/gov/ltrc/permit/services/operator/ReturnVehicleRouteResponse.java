@@ -10,11 +10,11 @@ import java.io.Serializable;
         name = "ReturnVehicleRoute",
         procedureName = "\"ReturnVehicleRoute\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclerouteidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehicleidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "registrationnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "routenameparm"),
         },
         resultSetMappings = {
                 "ReturnVehicleRouteSetMapping"
@@ -32,29 +32,29 @@ import java.io.Serializable;
 public class ReturnVehicleRouteResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Vehicle Route ID ") private long vehiclerouteid ;
-    @ApiModelProperty("Vehicle ID ") private long vehicleid ;
+    @ApiModelProperty("Vehicle Route ID ") private Long vehiclerouteid ;
+    @ApiModelProperty("Vehicle ID ") private Long vehicleid ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
-    @ApiModelProperty("Route ID ") private long routeid ;
+    @ApiModelProperty("Route ID ") private Long routeid ;
     @ApiModelProperty("Route Name ") private String routename ;
     @ApiModelProperty("Plate Code ") private String platecode ;
     @ApiModelProperty("Plate Number ") private String platenumber ;
-    @ApiModelProperty("Line ID ") private long lineid ;
+    @ApiModelProperty("Line ID ") private Long lineid ;
     @ApiModelProperty("Line Name ") private String linename ;
 
-    public long getVehiclerouteid() {
+    public Long getVehiclerouteid() {
         return vehiclerouteid;
     }
 
-    public void setVehiclerouteid(long vehiclerouteid) {
+    public void setVehiclerouteid(Long vehiclerouteid) {
         this.vehiclerouteid = vehiclerouteid;
     }
 
-    public long getVehicleid() {
+    public Long getVehicleid() {
         return vehicleid;
     }
 
-    public void setVehicleid(long vehicleid) {
+    public void setVehicleid(Long vehicleid) {
         this.vehicleid = vehicleid;
     }
 
@@ -66,11 +66,11 @@ public class ReturnVehicleRouteResponse implements Serializable {
         this.registrationnumber = registrationnumber;
     }
 
-    public long getRouteid() {
+    public Long getRouteid() {
         return routeid;
     }
 
-    public void setRouteid(long routeid) {
+    public void setRouteid(Long routeid) {
         this.routeid = routeid;
     }
 
@@ -98,11 +98,11 @@ public class ReturnVehicleRouteResponse implements Serializable {
         this.platenumber = platenumber;
     }
 
-    public long getLineid() {
+    public Long getLineid() {
         return lineid;
     }
 
-    public void setLineid(long lineid) {
+    public void setLineid(Long lineid) {
         this.lineid = lineid;
     }
 
@@ -112,5 +112,20 @@ public class ReturnVehicleRouteResponse implements Serializable {
 
     public void setLinename(String linename) {
         this.linename = linename;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleRouteResponse{" +
+                "vehiclerouteid=" + vehiclerouteid +
+                ", vehicleid=" + vehicleid +
+                ", registrationnumber=" + registrationnumber +
+                ", routeid=" + routeid +
+                ", routename=" + routename +
+                ", platecode=" + platecode +
+                ", platenumber=" + platenumber +
+                ", lineid=" + lineid +
+                ", linename=" + linename +
+                '}';
     }
 }

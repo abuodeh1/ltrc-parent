@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -30,54 +33,18 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/point")
 @Transactional( propagation = Propagation.SUPPORTS, readOnly = true )
+@Log4j2
 public class PointService {
 
     @PersistenceContext
     private EntityManager entityManager;
 
 
-    @ApiOperation("Retrieve Point Find ")
-    @PostMapping("/find-point")
-    public List<ReturnPointResponse> findPoint(@ApiParam("\t") @RequestBody ReturnPointRequest returnPointRequest){
-
-        List<ReturnPointResponse> result = findPointData(returnPointRequest);
-
-        return result;
-    }
-
-    @ApiOperation("Retrieve Point Characteristics")
-    @GetMapping("/{id}/characteristics")
-    public long getPointChar(@ApiParam("Point ID ") @PathVariable(value = "id") long id){
-
-       ReturnPointResponse returnPointResponse = getPointID(id);
-
-       return (returnPointResponse != null ? returnPointResponse.getPointcharacteristic() : 0L );
-
-    }
-
-    @ApiOperation("Retrieve Parking Type")
-    @GetMapping("/{id}/parking-type")
-    public long getParkingType(@ApiParam("Point ID") @PathVariable(value = "id") long id){
-
-        ReturnPointResponse returnPointResponse = getPointID(id);
-
-        return (returnPointResponse != null ? returnPointResponse.getPointparkingtype() : 0L );
-
-    }
-
-    @ApiOperation("Retrieve Point Status")
-    @GetMapping("/{id}/status")
-    public int getPointStatus(@ApiParam("Point ID") @PathVariable(value = "id") long id){
-
-        ReturnPointResponse returnPointResponse = getPointID(id);
-
-        return (returnPointResponse != null ? returnPointResponse.getPointstatus() : 0 );
-
-    }
+//    Start Add or Edit Methods
 
     @ApiResponses(value = {
             @ApiResponse(code = 200 , message =
-                            "Number$N\n" +
+                    "Number$N\n" +
                             "----------\n" +
                             "Number :  Effected rows  \n" +
                             "$ : Special character to split concatenated strings \n" +
@@ -101,38 +68,93 @@ public class PointService {
     })
     @ApiOperation("Add or Edit Point")
     @PostMapping
-    public String savePoint(@ApiParam("\t") @RequestBody SavePointDataRequest savePointDataRequest){
+    public String savePoint(@ApiParam("\t") @RequestBody SavePointDataRequest savePointDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SavePointData");
-        storedProcedureQuery.setParameter(1, savePointDataRequest.getPointidparm());
-        storedProcedureQuery.setParameter(2, savePointDataRequest.getPointarabicnameparm());
-        storedProcedureQuery.setParameter(3, savePointDataRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(4, savePointDataRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(5, savePointDataRequest.getMunicipalityidparm());
-        storedProcedureQuery.setParameter(6, savePointDataRequest.getTerritoryidparm());
-        storedProcedureQuery.setParameter(7, savePointDataRequest.getPointcharacteristicparm());
-        storedProcedureQuery.setParameter(8, savePointDataRequest.getPointparkingtypeparm());
-        storedProcedureQuery.setParameter(9, savePointDataRequest.getPointstreetparm());
-        storedProcedureQuery.setParameter(10, savePointDataRequest.getPointneighborhoodparm());
-        storedProcedureQuery.setParameter(11, savePointDataRequest.getOfficenameparm());
-        storedProcedureQuery.setParameter(12, savePointDataRequest.getOfficephonenumberparm());
-        storedProcedureQuery.setParameter(13, savePointDataRequest.getLiaisonofficernameparm());
-        storedProcedureQuery.setParameter(14, savePointDataRequest.getPointstatusparm());
-        storedProcedureQuery.setParameter(15 , savePointDataRequest.isSunshadesparm());
-        storedProcedureQuery.setParameter(16, savePointDataRequest.isHealthcarefacilitiesparm());
-        storedProcedureQuery.setParameter(17, savePointDataRequest.isPublictelephonesparm());
-        storedProcedureQuery.setParameter(18, savePointDataRequest.isSeatparm());
-        storedProcedureQuery.setParameter(19, savePointDataRequest.getTerminalareaparm());
-        storedProcedureQuery.setParameter(20, savePointDataRequest.getCountofsunshadesparm());
-        storedProcedureQuery.setParameter(21, savePointDataRequest.getCountofseatsparm());
-        storedProcedureQuery.setParameter(22, savePointDataRequest.getCountoflanesparm());
-        storedProcedureQuery.setParameter(23, savePointDataRequest.getCountofseatsandsunshadesparm());
-        storedProcedureQuery.setParameter(24, savePointDataRequest.getTerminalremarksparm());
-        storedProcedureQuery.setParameter(25, savePointDataRequest.getPrencipal());
+        log.debug(" SavePointDataRequest : " + savePointDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+//        savePointDataRequest.setIP = request.getRemoteAddr();
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SavePointData", savePointDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult();
 
     }
+
+//    End  Add or Edit Methods
+
+
+//    Start Retrieve Methods
+
+    @ApiOperation("Retrieve Point Find ")
+    @PostMapping("/find-point")
+    public List<ReturnPointResponse> findPoint(@ApiParam("\t") @RequestBody ReturnPointRequest returnPointRequest){
+
+        List<ReturnPointResponse> result = findPointData(returnPointRequest);
+
+        return result;
+    }
+
+    @ApiOperation("Retrieve Point Characteristics")
+    @GetMapping("/{id}/characteristics")
+    public Long getPointChar(@ApiParam("Point ID ") @PathVariable(value = "id") Long id){
+
+       ReturnPointResponse returnPointResponse = getPointID(id);
+
+       return (returnPointResponse != null ? returnPointResponse.getPointcharacteristic() : 0L );
+
+    }
+
+    @ApiOperation("Retrieve Parking Type")
+    @GetMapping("/{id}/parking-type")
+    public Long getParkingType(@ApiParam("Point ID") @PathVariable(value = "id") Long id){
+
+        ReturnPointResponse returnPointResponse = getPointID(id);
+
+        return (returnPointResponse != null ? returnPointResponse.getPointparkingtype() : 0L );
+
+    }
+
+    @ApiOperation("Retrieve Point Status")
+    @GetMapping("/{id}/status")
+    public Integer getPointStatus(@ApiParam("Point ID") @PathVariable(value = "id") Long id){
+
+        ReturnPointResponse returnPointResponse = getPointID(id);
+
+        return (returnPointResponse != null ? returnPointResponse.getPointstatus() : 0 );
+
+    }
+
+    @ApiOperation("Retrieve Point By ID")
+    @GetMapping("/{id}")
+    public  ReturnPointByIDResponse getPointByID(@ApiParam("Point ID") @PathVariable(value = "id") Long id){
+
+        if (id != 0) {
+            StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnPointByPointID");
+            storedProcedureQuery.setParameter(1, id);
+
+            List<ReturnPointByIDResponse> result = storedProcedureQuery.getResultList();
+
+            if (!result.isEmpty()) {
+                return result.get(0);
+            }else {
+                return null ;
+            }
+        }
+        return null;
+
+    }
+
+//    End Retrieve Methods
 
     @ApiResponses(value = {
             @ApiResponse(code = 200 , message =
@@ -154,7 +176,7 @@ public class PointService {
     })
     @ApiOperation("Change Point Status")
     @DeleteMapping("/{id}/principal/{principalid}")
-    public String deletePoint(@ApiParam("Point ID") @PathVariable(value = "id") long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") long principalid){
+    public String deletePoint(@ApiParam("Point ID") @PathVariable(value = "id") Long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") Long principalid){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangePointStatus");
         storedProcedureQuery.setParameter(1, id);
@@ -164,25 +186,6 @@ public class PointService {
         return (String)storedProcedureQuery.getSingleResult();
     }
 
-    @ApiOperation("Retrieve Point By ID")
-    @GetMapping("/{id}")
-    public  ReturnPointByIDResponse getPointByID(@ApiParam("Point ID") @PathVariable(value = "id") long id){
-
-        if (id != 0) {
-            StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnPointByPointID");
-            storedProcedureQuery.setParameter(1, id);
-
-            List<ReturnPointByIDResponse> result = storedProcedureQuery.getResultList();
-
-            if (!result.isEmpty()) {
-                return result.get(0);
-            }else {
-                return null ;
-            }
-        }
-        return null;
-
-    }
 
     private ReturnPointResponse getPointID(long id){
 
@@ -201,23 +204,19 @@ public class PointService {
 
     private List<ReturnPointResponse> findPointData(ReturnPointRequest returnPointRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnPoint");
-        storedProcedureQuery.setParameter(1, returnPointRequest.getMinpointidparm());
-        storedProcedureQuery.setParameter(2, returnPointRequest.getMaxpointidparm());
-        storedProcedureQuery.setParameter(3, returnPointRequest.getPointarabicnameparm());
-        storedProcedureQuery.setParameter(4, returnPointRequest.getGovernorateidparm());
-        storedProcedureQuery.setParameter(5, returnPointRequest.getPointstreetparm());
-        storedProcedureQuery.setParameter(6, returnPointRequest.getMunicipalityidparm());
-        storedProcedureQuery.setParameter(7, returnPointRequest.getTerritoryidparm());
-        storedProcedureQuery.setParameter(8, returnPointRequest.getProvinceidparm());
-        storedProcedureQuery.setParameter(9, returnPointRequest.getPointneighborhoodparm());
-        storedProcedureQuery.setParameter(10, returnPointRequest.getPointcharacteristicparm());
-        storedProcedureQuery.setParameter(11, returnPointRequest.getPointparkingtypeparm());
-        storedProcedureQuery.setParameter(12, returnPointRequest.getPointstatusparm());
-        storedProcedureQuery.setParameter(13, returnPointRequest.isSunshadesparm());
-        storedProcedureQuery.setParameter(14, returnPointRequest.isHealthcarefacilitiesparm());
-        storedProcedureQuery.setParameter(15, returnPointRequest.isPublictelephonesparm());
-        storedProcedureQuery.setParameter(16, returnPointRequest.isSeatparm());
+        log.debug(" ReturnPointRequest : " + returnPointRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnPoint", returnPointRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnPointResponse> result = storedProcedureQuery.getResultList();
 

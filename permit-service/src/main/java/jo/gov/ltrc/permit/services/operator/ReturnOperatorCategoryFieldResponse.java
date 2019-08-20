@@ -10,9 +10,9 @@ import java.io.Serializable;
         name = "ReturnOperatorCategoryField",
         procedureName = "\"ReturnOperatorCategoryField\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorfieldidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorfieldnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "operatorfieldsectionparm"),
 
         },
         resultSetMappings = {
@@ -31,15 +31,15 @@ import java.io.Serializable;
 public class ReturnOperatorCategoryFieldResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Field ID ") private long operatorfieldid ;
+    @ApiModelProperty("Operator Field ID ") private Long operatorfieldid ;
     @ApiModelProperty("Operator Field Name ") private String operatorfieldname ;
-    @ApiModelProperty("Operator Field Section ") private int operatorfieldsection ;
+    @ApiModelProperty("Operator Field Section ") private Integer operatorfieldsection ;
 
-    public long getOperatorfieldid() {
+    public Long getOperatorfieldid() {
         return operatorfieldid;
     }
 
-    public void setOperatorfieldid(long operatorfieldid) {
+    public void setOperatorfieldid(Long operatorfieldid) {
         this.operatorfieldid = operatorfieldid;
     }
 
@@ -51,11 +51,20 @@ public class ReturnOperatorCategoryFieldResponse implements Serializable {
         this.operatorfieldname = operatorfieldname;
     }
 
-    public int getOperatorfieldsection() {
+    public Integer getOperatorfieldsection() {
         return operatorfieldsection;
     }
 
-    public void setOperatorfieldsection(int operatorfieldsection) {
+    public void setOperatorfieldsection(Integer operatorfieldsection) {
         this.operatorfieldsection = operatorfieldsection;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorCategoryFieldResponse{" +
+                "operatorfieldid=" + operatorfieldid +
+                ", operatorfieldname=" + operatorfieldname +
+                ", operatorfieldsection=" + operatorfieldsection +
+                '}';
     }
 }

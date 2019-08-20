@@ -5,15 +5,15 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnOperatorCategoryFieldDataRequest {
 
-    @ApiModelProperty("Operator Field ID Parameter ") private long operatorfieldidparm ;
+    @ApiModelProperty("Operator Field ID Parameter ") private Long operatorfieldidparm ;
     @ApiModelProperty("Operator Field Name Parameter ") private String operatorfieldnameparm ;
-    @ApiModelProperty("Operator Field Section Parameter ") private int operatorfieldsectionparm ;
+    @ApiModelProperty("Operator Field Section Parameter ") private Integer operatorfieldsectionparm ;
 
-    public long getOperatorfieldidparm() {
+    public Long getOperatorfieldidparm() {
         return operatorfieldidparm;
     }
 
-    public void setOperatorfieldidparm(long operatorfieldidparm) {
+    public void setOperatorfieldidparm(Long operatorfieldidparm) {
         this.operatorfieldidparm = operatorfieldidparm;
     }
 
@@ -25,11 +25,20 @@ public class ReturnOperatorCategoryFieldDataRequest {
         this.operatorfieldnameparm = operatorfieldnameparm;
     }
 
-    public int getOperatorfieldsectionparm() {
+    public Integer getOperatorfieldsectionparm() {
         return operatorfieldsectionparm;
     }
 
-    public void setOperatorfieldsectionparm(int operatorfieldsectionparm) {
+    public void setOperatorfieldsectionparm(Integer operatorfieldsectionparm) {
         this.operatorfieldsectionparm = operatorfieldsectionparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorCategoryFieldDataRequest{" +
+                "operatorfieldidparm=" + operatorfieldidparm +
+                ", operatorfieldnameparm=" + operatorfieldnameparm +
+                ", operatorfieldsectionparm=" + operatorfieldsectionparm +
+                '}';
     }
 }

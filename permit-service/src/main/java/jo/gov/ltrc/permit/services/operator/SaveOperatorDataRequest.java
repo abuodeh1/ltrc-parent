@@ -6,15 +6,15 @@ import java.sql.Date;
 
 public class SaveOperatorDataRequest {
 
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator National ID Parameter ") private String operatornationalidparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
-    @ApiModelProperty("Operator Classification Parameter ") private long operatorclassificationparm ;
-    @ApiModelProperty("Operator Category Parameter ") private long operatorcategoryparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
+    @ApiModelProperty("Operator Classification Parameter ") private Long operatorclassificationparm ;
+    @ApiModelProperty("Operator Category Parameter ") private Long operatorcategoryparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
     @ApiModelProperty("Street Parameter ") private String streetparm ;
     @ApiModelProperty("Neighborhood Parameter ") private String neighborhoodparm ;
     @ApiModelProperty("Email Parameter ") private String emailparm ;
@@ -22,38 +22,38 @@ public class SaveOperatorDataRequest {
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("Mobile Number Parameter ") private String mobilephonenumberparm ;
     @ApiModelProperty("Fax Number Parameter ") private String faxnumberparm ;
-    @ApiModelProperty("License Purpose Parameter ") private long licensepurposeparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("License Purpose Parameter ") private Long licensepurposeparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Office Property Owner Parameter ") private String officepropertyownerparm ;
     @ApiModelProperty("Plate No Parameter ") private String plotnoparm ;
-    @ApiModelProperty("Office Area Parameter ") private double officeareaparm ;
+    @ApiModelProperty("Office Area Parameter ") private  Double officeareaparm ;
     @ApiModelProperty("Service Scope Parameter ") private String servicescopeparm ;
     @ApiModelProperty("Date of Contract Singing Parameter ") private Date dateofcontractsigningparm ;
     @ApiModelProperty("Commercial Name record Number Parameter ") private String commercialnamerecordnumberparm ;
     @ApiModelProperty("Commercial Name Parameter ") private String commercialnameparm ;
     @ApiModelProperty("Commercial Record Number Parameter ") private String commercialrecordnumberparm ;
     @ApiModelProperty("Commercial Record Date Parameter ") private Date commercialrecorddateparm ;
-    @ApiModelProperty("Employees Number Parameter ") private int employeesnumberparm ;
-    @ApiModelProperty("Drivers Number Parameter ") private int driversnumberparm ;
-    @ApiModelProperty("Working Cars Number Parameter ") private int workingcarsnumberparm ;
-    @ApiModelProperty("Basic Cars Number Parameter ") private int basiccarsnumberparm ;
+    @ApiModelProperty("Employees Number Parameter ") private Integer employeesnumberparm ;
+    @ApiModelProperty("Drivers Number Parameter ") private Integer driversnumberparm ;
+    @ApiModelProperty("Working Cars Number Parameter ") private Integer workingcarsnumberparm ;
+    @ApiModelProperty("Basic Cars Number Parameter ") private Integer basiccarsnumberparm ;
     @ApiModelProperty("Office Closing Date Parameter ") private Date officeclosingdateparm ;
     @ApiModelProperty("Remarks Parameter ") private String remarksparm ;
-    @ApiModelProperty("Fees Status Parameter ") private int feesstatusparm ;
+    @ApiModelProperty("Fees Status Parameter ") private Integer feesstatusparm ;
     @ApiModelProperty("License Issue Date Parameter ") private Date licenseissuedateparm ;
     @ApiModelProperty("License Expire Date Parameter ") private Date licenseexpiredateparm ;
     @ApiModelProperty("Plot Classification Parameter ") private String plotclassificationparm ;
     @ApiModelProperty("Office Floor Parameter ") private String officefloorparm ;
-    @ApiModelProperty("Contract Period Parameter ") private double contractperiodparm ;
+    @ApiModelProperty("Contract Period Parameter ") private  Double contractperiodparm ;
     @ApiModelProperty("Certification Registration Number Parameter ") private String certificateregistrationnumberparm ;
     @ApiModelProperty("Basin Parameter ") private String basinparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -73,51 +73,51 @@ public class SaveOperatorDataRequest {
         this.operatornameparm = operatornameparm;
     }
 
-    public long getOperatorclassificationparm() {
+    public Long getOperatorclassificationparm() {
         return operatorclassificationparm;
     }
 
-    public void setOperatorclassificationparm(long operatorclassificationparm) {
+    public void setOperatorclassificationparm(Long operatorclassificationparm) {
         this.operatorclassificationparm = operatorclassificationparm;
     }
 
-    public long getOperatorcategoryparm() {
+    public Long getOperatorcategoryparm() {
         return operatorcategoryparm;
     }
 
-    public void setOperatorcategoryparm(long operatorcategoryparm) {
+    public void setOperatorcategoryparm(Long operatorcategoryparm) {
         this.operatorcategoryparm = operatorcategoryparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
@@ -177,19 +177,19 @@ public class SaveOperatorDataRequest {
         this.faxnumberparm = faxnumberparm;
     }
 
-    public long getLicensepurposeparm() {
+    public Long getLicensepurposeparm() {
         return licensepurposeparm;
     }
 
-    public void setLicensepurposeparm(long licensepurposeparm) {
+    public void setLicensepurposeparm(Long licensepurposeparm) {
         this.licensepurposeparm = licensepurposeparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -209,11 +209,11 @@ public class SaveOperatorDataRequest {
         this.plotnoparm = plotnoparm;
     }
 
-    public double getOfficeareaparm() {
+    public Double getOfficeareaparm() {
         return officeareaparm;
     }
 
-    public void setOfficeareaparm(double officeareaparm) {
+    public void setOfficeareaparm(Double officeareaparm) {
         this.officeareaparm = officeareaparm;
     }
 
@@ -265,35 +265,35 @@ public class SaveOperatorDataRequest {
         this.commercialrecorddateparm = commercialrecorddateparm;
     }
 
-    public int getEmployeesnumberparm() {
+    public Integer getEmployeesnumberparm() {
         return employeesnumberparm;
     }
 
-    public void setEmployeesnumberparm(int employeesnumberparm) {
+    public void setEmployeesnumberparm(Integer employeesnumberparm) {
         this.employeesnumberparm = employeesnumberparm;
     }
 
-    public int getDriversnumberparm() {
+    public Integer getDriversnumberparm() {
         return driversnumberparm;
     }
 
-    public void setDriversnumberparm(int driversnumberparm) {
+    public void setDriversnumberparm(Integer driversnumberparm) {
         this.driversnumberparm = driversnumberparm;
     }
 
-    public int getWorkingcarsnumberparm() {
+    public Integer getWorkingcarsnumberparm() {
         return workingcarsnumberparm;
     }
 
-    public void setWorkingcarsnumberparm(int workingcarsnumberparm) {
+    public void setWorkingcarsnumberparm(Integer workingcarsnumberparm) {
         this.workingcarsnumberparm = workingcarsnumberparm;
     }
 
-    public int getBasiccarsnumberparm() {
+    public Integer getBasiccarsnumberparm() {
         return basiccarsnumberparm;
     }
 
-    public void setBasiccarsnumberparm(int basiccarsnumberparm) {
+    public void setBasiccarsnumberparm(Integer basiccarsnumberparm) {
         this.basiccarsnumberparm = basiccarsnumberparm;
     }
 
@@ -313,11 +313,11 @@ public class SaveOperatorDataRequest {
         this.remarksparm = remarksparm;
     }
 
-    public int getFeesstatusparm() {
+    public Integer getFeesstatusparm() {
         return feesstatusparm;
     }
 
-    public void setFeesstatusparm(int feesstatusparm) {
+    public void setFeesstatusparm(Integer feesstatusparm) {
         this.feesstatusparm = feesstatusparm;
     }
 
@@ -353,11 +353,11 @@ public class SaveOperatorDataRequest {
         this.officefloorparm = officefloorparm;
     }
 
-    public double getContractperiodparm() {
+    public Double getContractperiodparm() {
         return contractperiodparm;
     }
 
-    public void setContractperiodparm(double contractperiodparm) {
+    public void setContractperiodparm(Double contractperiodparm) {
         this.contractperiodparm = contractperiodparm;
     }
 
@@ -377,11 +377,59 @@ public class SaveOperatorDataRequest {
         this.basinparm = basinparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveOperatorDataRequest{" +
+                "operatoridparm=" + operatoridparm +
+                ", operatornationalidparm=" + operatornationalidparm +
+                ", operatornameparm=" + operatornameparm +
+                ", operatorclassificationparm=" + operatorclassificationparm +
+                ", operatorcategoryparm=" + operatorcategoryparm +
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", streetparm=" + streetparm +
+                ", neighborhoodparm=" + neighborhoodparm +
+                ", emailparm=" + emailparm +
+                ", poboxparm=" + poboxparm +
+                ", phonenumberparm=" + phonenumberparm +
+                ", mobilephonenumberparm=" + mobilephonenumberparm +
+                ", faxnumberparm=" + faxnumberparm +
+                ", licensepurposeparm=" + licensepurposeparm +
+                ", statusparm=" + statusparm +
+                ", officepropertyownerparm=" + officepropertyownerparm +
+                ", plotnoparm=" + plotnoparm +
+                ", officeareaparm=" + officeareaparm +
+                ", servicescopeparm=" + servicescopeparm +
+                ", dateofcontractsigningparm=" + dateofcontractsigningparm +
+                ", commercialnamerecordnumberparm=" + commercialnamerecordnumberparm +
+                ", commercialnameparm=" + commercialnameparm +
+                ", commercialrecordnumberparm=" + commercialrecordnumberparm +
+                ", commercialrecorddateparm=" + commercialrecorddateparm +
+                ", employeesnumberparm=" + employeesnumberparm +
+                ", driversnumberparm=" + driversnumberparm +
+                ", workingcarsnumberparm=" + workingcarsnumberparm +
+                ", basiccarsnumberparm=" + basiccarsnumberparm +
+                ", officeclosingdateparm=" + officeclosingdateparm +
+                ", remarksparm=" + remarksparm +
+                ", feesstatusparm=" + feesstatusparm +
+                ", licenseissuedateparm=" + licenseissuedateparm +
+                ", licenseexpiredateparm=" + licenseexpiredateparm +
+                ", plotclassificationparm=" + plotclassificationparm +
+                ", officefloorparm=" + officefloorparm +
+                ", contractperiodparm=" + contractperiodparm +
+                ", certificateregistrationnumberparm=" + certificateregistrationnumberparm +
+                ", basinparm=" + basinparm +
+                ", princepel=" + princepel +
+                '}';
     }
 }

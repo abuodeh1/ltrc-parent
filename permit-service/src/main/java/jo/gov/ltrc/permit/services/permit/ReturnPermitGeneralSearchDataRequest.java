@@ -7,62 +7,62 @@ import java.sql.Date;
 
 public class ReturnPermitGeneralSearchDataRequest {
 
-    @ApiModelProperty("Minimum Permit ID Parameter ") private long minpermitidparm ;
-    @ApiModelProperty("Maximum Permit ID Parameter ") private long maxpermitidparm ;
-    @ApiModelProperty("Permit Type Parameter ") private long permittypeparm ;
+    @ApiModelProperty("Minimum Permit ID Parameter ") private Long minpermitidparm ;
+    @ApiModelProperty("Maximum Permit ID Parameter ") private Long maxpermitidparm ;
+    @ApiModelProperty("Permit Type Parameter ") private Long permittypeparm ;
     @ApiModelProperty("Minimum Issue Date Parameter ") private Date minissuedateparm ;
     @ApiModelProperty("Maximum Issue Date Parameter ") private Date maxissuedateparm ;
     @ApiModelProperty("Minimum Delivery Date Parameter ") private Date mindeliverydateparm ;
     @ApiModelProperty("Maximum Delivery Date Parameter ") private Date maxdeliverydateparm ;
-    @ApiModelProperty("Minimum Period Parameter ") private int minperiodparm ;
-    @ApiModelProperty("Maximum Period Parameter ") private int maxperiodparm ;
+    @ApiModelProperty("Minimum Period Parameter ") private Integer minperiodparm ;
+    @ApiModelProperty("Maximum Period Parameter ") private Integer maxperiodparm ;
     @ApiModelProperty("Minimum Start Working Date Parameter ") private Date minstartworkingdateparm ;
     @ApiModelProperty("Maximum Start Working Date Parameter ") private Date maxstartworkingdateparm ;
     @ApiModelProperty("Minimum End Working Date Parameter ") private Date minendworkingdateparm ;
     @ApiModelProperty("Maximum End Working Date Parameter ") private Date maxendworkingdateparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Route Parameter ") private long routeparm ;
-    @ApiModelProperty("Minimum Number of Trips Parameter ") private int minnumberoftripsparm ;
-    @ApiModelProperty("Maximum Number of Trips Parameter ") private int maxnumberoftripsparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Route Parameter ") private Long routeparm ;
+    @ApiModelProperty("Minimum Number of Trips Parameter ") private Integer minnumberoftripsparm ;
+    @ApiModelProperty("Maximum Number of Trips Parameter ") private Integer maxnumberoftripsparm ;
     @ApiModelProperty("Primary Drive Parameter ") private String primarydriverparm ;
     @ApiModelProperty("Alternative Drive Parameter ") private String alternativedriverparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Vehicle Parameter ") private long vehicleparm ;
-    @ApiModelProperty("Classification Parameter ") private int classificationparm ;
-    @ApiModelProperty("Working As Parameter ") private long workingasparm ;
-    @ApiModelProperty("Start Point Parameter ") private long startpointparm ;
-    @ApiModelProperty("End Point Parameter ") private long endpointparm ;
-    @ApiModelProperty("Line ID Parameter ") private long lineidparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Vehicle Parameter ") private Long vehicleparm ;
+    @ApiModelProperty("Classification Parameter ") private Integer classificationparm ;
+    @ApiModelProperty("Working As Parameter ") private Long workingasparm ;
+    @ApiModelProperty("Start Point Parameter ") private Long startpointparm ;
+    @ApiModelProperty("End Point Parameter ") private Long endpointparm ;
+    @ApiModelProperty("Line ID Parameter ") private Long lineidparm ;
     @ApiModelProperty("Line Name Parameter ") private String linenameparm ;
     @ApiModelProperty("Route Name Parameter ") private String routenameparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Plate Number Parameter ") private String platenumberparm ;
     @ApiModelProperty("Plate Code Parameter ") private String platecodeparm ;
 
-    public long getMinpermitidparm() {
+    public Long getMinpermitidparm() {
         return minpermitidparm;
     }
 
-    public void setMinpermitidparm(long minpermitidparm) {
+    public void setMinpermitidparm(Long minpermitidparm) {
         this.minpermitidparm = minpermitidparm;
     }
 
-    public long getMaxpermitidparm() {
+    public Long getMaxpermitidparm() {
         return maxpermitidparm;
     }
 
-    public void setMaxpermitidparm(long maxpermitidparm) {
+    public void setMaxpermitidparm(Long maxpermitidparm) {
         this.maxpermitidparm = maxpermitidparm;
     }
 
-    public long getPermittypeparm() {
+    public Long getPermittypeparm() {
         return permittypeparm;
     }
 
-    public void setPermittypeparm(long permittypeparm) {
+    public void setPermittypeparm(Long permittypeparm) {
         this.permittypeparm = permittypeparm;
     }
 
@@ -98,19 +98,19 @@ public class ReturnPermitGeneralSearchDataRequest {
         this.maxdeliverydateparm = maxdeliverydateparm;
     }
 
-    public int getMinperiodparm() {
+    public Integer getMinperiodparm() {
         return minperiodparm;
     }
 
-    public void setMinperiodparm(int minperiodparm) {
+    public void setMinperiodparm(Integer minperiodparm) {
         this.minperiodparm = minperiodparm;
     }
 
-    public int getMaxperiodparm() {
+    public Integer getMaxperiodparm() {
         return maxperiodparm;
     }
 
-    public void setMaxperiodparm(int maxperiodparm) {
+    public void setMaxperiodparm(Integer maxperiodparm) {
         this.maxperiodparm = maxperiodparm;
     }
 
@@ -146,51 +146,51 @@ public class ReturnPermitGeneralSearchDataRequest {
         this.maxendworkingdateparm = maxendworkingdateparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getRouteparm() {
+    public Long getRouteparm() {
         return routeparm;
     }
 
-    public void setRouteparm(long routeparm) {
+    public void setRouteparm(Long routeparm) {
         this.routeparm = routeparm;
     }
 
-    public int getMinnumberoftripsparm() {
+    public Integer getMinnumberoftripsparm() {
         return minnumberoftripsparm;
     }
 
-    public void setMinnumberoftripsparm(int minnumberoftripsparm) {
+    public void setMinnumberoftripsparm(Integer minnumberoftripsparm) {
         this.minnumberoftripsparm = minnumberoftripsparm;
     }
 
-    public int getMaxnumberoftripsparm() {
+    public Integer getMaxnumberoftripsparm() {
         return maxnumberoftripsparm;
     }
 
-    public void setMaxnumberoftripsparm(int maxnumberoftripsparm) {
+    public void setMaxnumberoftripsparm(Integer maxnumberoftripsparm) {
         this.maxnumberoftripsparm = maxnumberoftripsparm;
     }
 
@@ -210,59 +210,59 @@ public class ReturnPermitGeneralSearchDataRequest {
         this.alternativedriverparm = alternativedriverparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public long getVehicleparm() {
+    public Long getVehicleparm() {
         return vehicleparm;
     }
 
-    public void setVehicleparm(long vehicleparm) {
+    public void setVehicleparm(Long vehicleparm) {
         this.vehicleparm = vehicleparm;
     }
 
-    public int getClassificationparm() {
+    public Integer getClassificationparm() {
         return classificationparm;
     }
 
-    public void setClassificationparm(int classificationparm) {
+    public void setClassificationparm(Integer classificationparm) {
         this.classificationparm = classificationparm;
     }
 
-    public long getWorkingasparm() {
+    public Long getWorkingasparm() {
         return workingasparm;
     }
 
-    public void setWorkingasparm(long workingasparm) {
+    public void setWorkingasparm(Long workingasparm) {
         this.workingasparm = workingasparm;
     }
 
-    public long getStartpointparm() {
+    public Long getStartpointparm() {
         return startpointparm;
     }
 
-    public void setStartpointparm(long startpointparm) {
+    public void setStartpointparm(Long startpointparm) {
         this.startpointparm = startpointparm;
     }
 
-    public long getEndpointparm() {
+    public Long getEndpointparm() {
         return endpointparm;
     }
 
-    public void setEndpointparm(long endpointparm) {
+    public void setEndpointparm(Long endpointparm) {
         this.endpointparm = endpointparm;
     }
 
-    public long getLineidparm() {
+    public Long getLineidparm() {
         return lineidparm;
     }
 
-    public void setLineidparm(long lineidparm) {
+    public void setLineidparm(Long lineidparm) {
         this.lineidparm = lineidparm;
     }
 
@@ -282,11 +282,11 @@ public class ReturnPermitGeneralSearchDataRequest {
         this.routenameparm = routenameparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -312,5 +312,45 @@ public class ReturnPermitGeneralSearchDataRequest {
 
     public void setPlatecodeparm(String platecodeparm) {
         this.platecodeparm = platecodeparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitGeneralSearchDataRequest{" +
+                "minpermitidparm=" + minpermitidparm +
+                ", maxpermitidparm=" + maxpermitidparm +
+                ", permittypeparm=" + permittypeparm +
+                ", minissuedateparm=" + minissuedateparm +
+                ", maxissuedateparm=" + maxissuedateparm +
+                ", mindeliverydateparm=" + mindeliverydateparm +
+                ", maxdeliverydateparm=" + maxdeliverydateparm +
+                ", minperiodparm=" + minperiodparm +
+                ", maxperiodparm=" + maxperiodparm +
+                ", minstartworkingdateparm=" + minstartworkingdateparm +
+                ", maxstartworkingdateparm=" + maxstartworkingdateparm +
+                ", minendworkingdateparm=" + minendworkingdateparm +
+                ", maxendworkingdateparm=" + maxendworkingdateparm +
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", routeparm=" + routeparm +
+                ", minnumberoftripsparm=" + minnumberoftripsparm +
+                ", maxnumberoftripsparm=" + maxnumberoftripsparm +
+                ", primarydriverparm=" + primarydriverparm +
+                ", alternativedriverparm=" + alternativedriverparm +
+                ", statusparm=" + statusparm +
+                ", vehicleparm=" + vehicleparm +
+                ", classificationparm=" + classificationparm +
+                ", workingasparm=" + workingasparm +
+                ", startpointparm=" + startpointparm +
+                ", endpointparm=" + endpointparm +
+                ", lineidparm=" + lineidparm +
+                ", linenameparm=" + linenameparm +
+                ", routenameparm=" + routenameparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm=" + operatornameparm +
+                ", platenumberparm=" + platenumberparm +
+                ", platecodeparm=" + platecodeparm +
+                '}';
     }
 }

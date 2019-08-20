@@ -5,17 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnMunicipalityRequest {
 
-    @ApiModelProperty("Municipality ID Parameter") private long municipalityidparm ;
+    @ApiModelProperty("Municipality ID Parameter") private Long municipalityidparm ;
     @ApiModelProperty("Municipality Arabic Name Parameter") private String municipalityarabicnameparm ;
     @ApiModelProperty("Municipality English Name Parameter") private String municipalityenglishnameparm ;
     @ApiModelProperty("Municipality Code Parameter") private String municipalitycodeparm ;
-    @ApiModelProperty("Governorate ID Parameter") private long governorateidparm ;
+    @ApiModelProperty("Governorate ID Parameter") private Long governorateidparm ;
 
-    public long getMunicipalityidparm() {
+    public Long getMunicipalityidparm() {
         return municipalityidparm;
     }
 
-    public void setMunicipalityidparm(long municipalityidparm) {
+    public void setMunicipalityidparm(Long municipalityidparm) {
         this.municipalityidparm = municipalityidparm;
     }
 
@@ -43,12 +43,23 @@ public class ReturnMunicipalityRequest {
         this.municipalitycodeparm = municipalitycodeparm;
     }
 
-    public long getGovernorateidparm() {
+    public Long getGovernorateidparm() {
         return governorateidparm;
     }
 
-    public void setGovernorateidparm(long governorateidparm) {
+    public void setGovernorateidparm(Long governorateidparm) {
         this.governorateidparm = governorateidparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnMunicipalityRequest{" +
+                "municipalityidparm=" + municipalityidparm +
+                ", municipalityarabicnameparm=" + municipalityarabicnameparm +
+                ", municipalityenglishnameparm=" + municipalityenglishnameparm +
+                ", municipalitycodeparm=" + municipalitycodeparm +
+                ", governorateidparm=" + governorateidparm +
+                '}';
     }
 }
 

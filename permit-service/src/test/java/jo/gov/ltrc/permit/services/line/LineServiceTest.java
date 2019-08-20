@@ -36,7 +36,7 @@ class LineServiceTest {
     private ObjectMapper objectMapper;
 
     private List<ReturnLineByLineDataResponse> line;
-    private int randomLineIndex;
+    private Long randomLineIndex;
 
     @BeforeEach
     void setup() throws Exception {
@@ -63,7 +63,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id}/start-point - ReturnLineByLineData Procedure")
     void getStartPoints() throws Exception {
         if (line.size() > 0) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex =  line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(get("/api/line/"+randomLineIndex+"/start-point")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -79,7 +79,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id}/end-point - ReturnLineByLineData Procedure")
     void getLineEndPoints()throws Exception {
         if(line.size() > 0 ) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex =  line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(get("/api/line/"+randomLineIndex+"/end-point")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -95,7 +95,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id}/status - ReturnLineByLineData Procedure")
     void getLineStatuses()throws Exception {
         if (line.size() > 0) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex =  line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(get("/api/line/"+randomLineIndex+"/line-status")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -141,7 +141,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id} - ReturnLineByLineData Procedure")
     void getLineByLineID() throws Exception {
         if (line.size() > 0) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex = line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(get("/api/line/"+randomLineIndex)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -157,7 +157,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id} - ChangeLineStatus Procedure")
     void deleteLine() throws Exception {
         if (line.size() > 0) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex =  line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(delete("/api/line/"+randomLineIndex)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -173,7 +173,7 @@ class LineServiceTest {
     @DisplayName("/api/line/{id}/tariff - ReturnRouteTariffByLineID" )
     void getRouteTariffByLineID() throws Exception {
         if (line.size() > 0) {
-            randomLineIndex = (int) line.get(new Random().nextInt(line.size())).getLineid();
+            randomLineIndex =  line.get(new Random().nextInt(line.size())).getLineid();
             mockMvc.perform(get("/api/line/"+randomLineIndex+"/tariff")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk());

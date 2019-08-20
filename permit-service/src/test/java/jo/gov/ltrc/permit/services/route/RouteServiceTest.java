@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     private List<ReturnRouteResponse> route;
     private List<ReturnRouteResponse> points;
     private List<ReturnLineByRouteDataResponse> line ;
-    private int randomLineIndex;
+    private Long randomLineIndex;
 
     RouteServiceTest() throws Exception {
     }
@@ -59,7 +59,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("/api/route/{id}/start-point - ReturnLineByRouteData Procedure  ")
     void getStartPoints() throws Exception {
         if (route.size() > 0 ) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
                     mockMvc.perform(get("/api/route/"+randomLineIndex+"/start-point")
                             .contentType(MediaType.APPLICATION_JSON))
                             .andExpect(status().isOk())
@@ -76,7 +76,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("/api/route/{id}/end-point - ReturnLineByRouteData Procedure")
     void getEndPoints()throws Exception {
         if (route.size() > 0) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
             mockMvc.perform(get("/api/route/"+randomLineIndex+"/end-point")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -92,7 +92,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("/api/route/{id}/line-status - ReturnLineByRouteData Procedure")
     void getStatuses() throws Exception {
         if (route.size() > 0) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
             mockMvc.perform(get("/api/route/"+randomLineIndex+"/end-point")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -125,7 +125,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("/api/route/{id}/point - ReturnRoutePoints Procedure")
     void getPoints() throws Exception {
         if (route.size() > 0) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
 
             ReturnRouteResponse[] point = objectMapper.readValue(
                     mockMvc.perform(get("/api/route/" + randomLineIndex + "/point")
@@ -202,7 +202,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     void getLineByRouteID()throws Exception {
 
         if (route.size() > 0) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
             mockMvc.perform(get("/api/route/"+randomLineIndex+"/line")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -218,7 +218,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("/{id}/principal/{principalid} - ChangeRouteStatus Procedure")
     void deleteRoute() throws Exception {
         if (route.size() > 0) {
-            randomLineIndex = (int) route.get(new Random().nextInt(route.size())).getRouteid();
+            randomLineIndex =  route.get(new Random().nextInt(route.size())).getRouteid();
             mockMvc.perform(delete("/api/route/" + randomLineIndex + "/principal/1")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())

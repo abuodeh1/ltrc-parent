@@ -5,13 +5,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveVehicleUsagePurposeDataRequest {
 
-    @ApiModelProperty("Usage Purpose ID Parameter ") private long usagepurposeidparm ;
+    @ApiModelProperty("Usage Purpose ID Parameter ") private Long usagepurposeidparm ;
     @ApiModelProperty("Usage Purpose Name Parameter ") private String usagepurposenameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
 
-    public long getUsagepurposeidparm() {
+    public Long getUsagepurposeidparm() {
         return usagepurposeidparm;
     }
 
@@ -27,7 +27,7 @@ public class SaveVehicleUsagePurposeDataRequest {
         this.usagepurposenameparm = usagepurposenameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
@@ -35,7 +35,7 @@ public class SaveVehicleUsagePurposeDataRequest {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 

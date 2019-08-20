@@ -9,22 +9,22 @@ import java.io.Serializable;
         name = "ReturnPoint",
         procedureName = "\"ReturnPoint\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minpointidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxpointidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "pointarabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "pointstreetparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territoryidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "pointneighborhoodparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "pointcharacteristicparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "pointparkingtypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pointstatusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "sunshadesparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "healthcarefacilitiesparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "publictelephonesparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "seatparm"),
         },
         resultSetMappings = {
                 "PointResultSetMapping"
@@ -42,29 +42,29 @@ import java.io.Serializable;
 public class ReturnPointResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Point ID ") private long pointid  ;
+    @ApiModelProperty("Point ID ") private Long pointid  ;
     @ApiModelProperty("Point Arabic Name ") private String pointarabicname ;
-    @ApiModelProperty("Province ID ") private long provinceid ;
+    @ApiModelProperty("Province ID ") private Long provinceid ;
     @ApiModelProperty("Province Arabic Name ") private String provincearabicname ;
-    @ApiModelProperty("Governorate ID ") private long governorateid  ;
+    @ApiModelProperty("Governorate ID ") private Long governorateid  ;
     @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname ;
-    @ApiModelProperty("Municipality ID ") private long municipalityid ;
+    @ApiModelProperty("Municipality ID ") private Long municipalityid ;
     @ApiModelProperty("Municipality Arabic Name ") private String municipalityarabicname ;
-    @ApiModelProperty("Territory ID ") private long territoryid ;
+    @ApiModelProperty("Territory ID ") private Long territoryid ;
     @ApiModelProperty("Territory Arabic Name ") private String territoryarabicname ;
     @ApiModelProperty("Point Neighborhood") private String pointneighborhood ;
     @ApiModelProperty("Point Street ") private String pointstreet ;
-    @ApiModelProperty("Point Characteristics ") private long pointcharacteristic ;
+    @ApiModelProperty("Point Characteristics ") private Long pointcharacteristic ;
     @ApiModelProperty("Characteristics Arabic Name ") private String characteristicarabicname ;
-    @ApiModelProperty("Point Parking Type ") private long pointparkingtype ;
+    @ApiModelProperty("Point Parking Type ") private Long pointparkingtype ;
     @ApiModelProperty("Point Parking Type Name ") private String pointparkingtypename;
-    @ApiModelProperty("Point Status ") private int pointstatus ;
+    @ApiModelProperty("Point Status ") private Integer pointstatus ;
 
-    public long getPointid() {
+    public Long getPointid() {
         return pointid;
     }
 
-    public void setPointid(long pointid) {
+    public void setPointid(Long pointid) {
         this.pointid = pointid;
     }
 
@@ -76,11 +76,11 @@ public class ReturnPointResponse implements Serializable {
         this.pointarabicname = pointarabicname;
     }
 
-    public long getProvinceid() {
+    public Long getProvinceid() {
         return provinceid;
     }
 
-    public void setProvinceid(long provinceid) {
+    public void setProvinceid(Long provinceid) {
         this.provinceid = provinceid;
     }
 
@@ -92,11 +92,11 @@ public class ReturnPointResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorateid() {
+    public Long getGovernorateid() {
         return governorateid;
     }
 
-    public void setGovernorateid(long governorateid) {
+    public void setGovernorateid(Long governorateid) {
         this.governorateid = governorateid;
     }
 
@@ -108,11 +108,11 @@ public class ReturnPointResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipalityid() {
+    public Long getMunicipalityid() {
         return municipalityid;
     }
 
-    public void setMunicipalityid(long municipalityid) {
+    public void setMunicipalityid(Long municipalityid) {
         this.municipalityid = municipalityid;
     }
 
@@ -124,11 +124,11 @@ public class ReturnPointResponse implements Serializable {
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getTerritoryid() {
+    public Long getTerritoryid() {
         return territoryid;
     }
 
-    public void setTerritoryid(long territoryid) {
+    public void setTerritoryid(Long territoryid) {
         this.territoryid = territoryid;
     }
 
@@ -156,11 +156,11 @@ public class ReturnPointResponse implements Serializable {
         this.pointstreet = pointstreet;
     }
 
-    public long getPointcharacteristic() {
+    public Long getPointcharacteristic() {
         return pointcharacteristic;
     }
 
-    public void setPointcharacteristic(long pointcharacteristic) {
+    public void setPointcharacteristic(Long pointcharacteristic) {
         this.pointcharacteristic = pointcharacteristic;
     }
 
@@ -172,11 +172,11 @@ public class ReturnPointResponse implements Serializable {
         this.characteristicarabicname = characteristicarabicname;
     }
 
-    public long getPointparkingtype() {
+    public Long getPointparkingtype() {
         return pointparkingtype;
     }
 
-    public void setPointparkingtype(long pointparkingtype) {
+    public void setPointparkingtype(Long pointparkingtype) {
         this.pointparkingtype = pointparkingtype;
     }
 
@@ -188,11 +188,34 @@ public class ReturnPointResponse implements Serializable {
         this.pointparkingtypename = pointparkingtypename;
     }
 
-    public int getPointstatus() {
+    public Integer getPointstatus() {
         return pointstatus;
     }
 
-    public void setPointstatus(int pointstatus) {
+    public void setPointstatus(Integer pointstatus) {
         this.pointstatus = pointstatus;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPointResponse{" +
+                "pointid=" + pointid +
+                ", pointarabicname=" + pointarabicname +
+                ", provinceid=" + provinceid +
+                ", provincearabicname=" + provincearabicname +
+                ", governorateid=" + governorateid +
+                ", governoratearabicname=" + governoratearabicname +
+                ", municipalityid=" + municipalityid +
+                ", municipalityarabicname=" + municipalityarabicname +
+                ", territoryid=" + territoryid +
+                ", territoryarabicname=" + territoryarabicname +
+                ", pointneighborhood=" + pointneighborhood +
+                ", pointstreet=" + pointstreet +
+                ", pointcharacteristic=" + pointcharacteristic +
+                ", characteristicarabicname=" + characteristicarabicname +
+                ", pointparkingtype=" + pointparkingtype +
+                ", pointparkingtypename=" + pointparkingtypename +
+                ", pointstatus=" + pointstatus +
+                '}';
     }
 }

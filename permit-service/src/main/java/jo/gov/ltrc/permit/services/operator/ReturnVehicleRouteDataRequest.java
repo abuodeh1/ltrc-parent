@@ -5,25 +5,25 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnVehicleRouteDataRequest {
 
-    @ApiModelProperty("Vehicle Route ID Parameter ") private long vehiclerouteidparm ;
-    @ApiModelProperty("Vehicle ID Parameter ") private long vehicleidparm ;
+    @ApiModelProperty("Vehicle Route ID Parameter ") private Long vehiclerouteidparm ;
+    @ApiModelProperty("Vehicle ID Parameter ") private Long vehicleidparm ;
     @ApiModelProperty("Registration Number Parameter ") private String registrationnumberparm ;
-    @ApiModelProperty("Route ID Parameter ") private long routeidparm ;
+    @ApiModelProperty("Route ID Parameter ") private Long routeidparm ;
     @ApiModelProperty("Route Name Parameter ") private String routenameparm ;
 
-    public long getVehiclerouteidparm() {
+    public Long getVehiclerouteidparm() {
         return vehiclerouteidparm;
     }
 
-    public void setVehiclerouteidparm(long vehiclerouteidparm) {
+    public void setVehiclerouteidparm(Long vehiclerouteidparm) {
         this.vehiclerouteidparm = vehiclerouteidparm;
     }
 
-    public long getVehicleidparm() {
+    public Long getVehicleidparm() {
         return vehicleidparm;
     }
 
-    public void setVehicleidparm(long vehicleidparm) {
+    public void setVehicleidparm(Long vehicleidparm) {
         this.vehicleidparm = vehicleidparm;
     }
 
@@ -35,11 +35,11 @@ public class ReturnVehicleRouteDataRequest {
         this.registrationnumberparm = registrationnumberparm;
     }
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
@@ -49,5 +49,16 @@ public class ReturnVehicleRouteDataRequest {
 
     public void setRoutenameparm(String routenameparm) {
         this.routenameparm = routenameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleRouteDataRequest{" +
+                "vehiclerouteidparm=" + vehiclerouteidparm +
+                ", vehicleidparm=" + vehicleidparm +
+                ", registrationnumberparm=" + registrationnumberparm +
+                ", routeidparm=" + routeidparm +
+                ", routenameparm=" + routenameparm +
+                '}';
     }
 }

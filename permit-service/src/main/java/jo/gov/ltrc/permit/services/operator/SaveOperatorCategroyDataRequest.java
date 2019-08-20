@@ -7,23 +7,23 @@ import java.util.List;
 
 public class SaveOperatorCategroyDataRequest {
 
-    @ApiModelProperty("Operator Category ID Parameter ") private long operatorcategoryidparm ;
+    @ApiModelProperty("Operator Category ID Parameter ") private Long operatorcategoryidparm ;
     @ApiModelProperty("Operator Category Name Parameter ") private String operatorcategorynameparm ;
     @ApiModelProperty("Operator Category English Parameter ") private String operatorcategoryenglishnameparm ;
-    @ApiModelProperty("Operator Category Classification Parameter ") private long operatorcategoryclassificationparm ;
-    @ApiModelProperty("Operator Category Department Parameter ") private long operatorcategorydepartmentparm ;
-    @ApiModelProperty("Vehicle Category Parameter ") private long vehiclecategoryparm ;
-    @ApiModelProperty("Plate Classification Parameter ") private long plateclassificationparm ;
-    @ApiModelProperty("Line Type Parameter ") private long linetypeparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Operator Category Classification Parameter ") private Long operatorcategoryclassificationparm ;
+    @ApiModelProperty("Operator Category Department Parameter ") private Long operatorcategorydepartmentparm ;
+    @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
+    @ApiModelProperty("Plate Classification Parameter ") private Long plateclassificationparm ;
+    @ApiModelProperty("Line Type Parameter ") private Long linetypeparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("List of Field Settings ") private List<SaveOperatorCategoryFieldSettingDataRequest> field ;
 
-    public long getOperatorcategoryidparm() {
+    public Long getOperatorcategoryidparm() {
         return operatorcategoryidparm;
     }
 
-    public void setOperatorcategoryidparm(long operatorcategoryidparm) {
+    public void setOperatorcategoryidparm(Long operatorcategoryidparm) {
         this.operatorcategoryidparm = operatorcategoryidparm;
     }
 
@@ -43,59 +43,59 @@ public class SaveOperatorCategroyDataRequest {
         this.operatorcategoryenglishnameparm = operatorcategoryenglishnameparm;
     }
 
-    public long getOperatorcategoryclassificationparm() {
+    public Long getOperatorcategoryclassificationparm() {
         return operatorcategoryclassificationparm;
     }
 
-    public void setOperatorcategoryclassificationparm(long operatorcategoryclassificationparm) {
+    public void setOperatorcategoryclassificationparm(Long operatorcategoryclassificationparm) {
         this.operatorcategoryclassificationparm = operatorcategoryclassificationparm;
     }
 
-    public long getOperatorcategorydepartmentparm() {
+    public Long getOperatorcategorydepartmentparm() {
         return operatorcategorydepartmentparm;
     }
 
-    public void setOperatorcategorydepartmentparm(long operatorcategorydepartmentparm) {
+    public void setOperatorcategorydepartmentparm(Long operatorcategorydepartmentparm) {
         this.operatorcategorydepartmentparm = operatorcategorydepartmentparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public long getPlateclassificationparm() {
+    public Long getPlateclassificationparm() {
         return plateclassificationparm;
     }
 
-    public void setPlateclassificationparm(long plateclassificationparm) {
+    public void setPlateclassificationparm(Long plateclassificationparm) {
         this.plateclassificationparm = plateclassificationparm;
     }
 
-    public long getLinetypeparm() {
+    public Long getLinetypeparm() {
         return linetypeparm;
     }
 
-    public void setLinetypeparm(long linetypeparm) {
+    public void setLinetypeparm(Long linetypeparm) {
         this.linetypeparm = linetypeparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -105,5 +105,22 @@ public class SaveOperatorCategroyDataRequest {
 
     public void setField(List<SaveOperatorCategoryFieldSettingDataRequest> field) {
         this.field = field;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveOperatorCategroyDataRequest{" +
+                "operatorcategoryidparm=" + operatorcategoryidparm +
+                ", operatorcategorynameparm=" + operatorcategorynameparm +
+                ", operatorcategoryenglishnameparm=" + operatorcategoryenglishnameparm +
+                ", operatorcategoryclassificationparm=" + operatorcategoryclassificationparm +
+                ", operatorcategorydepartmentparm=" + operatorcategorydepartmentparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", plateclassificationparm=" + plateclassificationparm +
+                ", linetypeparm=" + linetypeparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", field=" + field +
+                '}';
     }
 }

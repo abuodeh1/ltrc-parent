@@ -10,10 +10,10 @@ import java.io.Serializable;
         name = "ReturnPermitTypeField",
         procedureName = "\"ReturnPermitTypeField\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "permitfieldidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "permitfieldnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "permitfieldsectionparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "permitfieldsectionnameparm"),
         },
         resultSetMappings = {
                 "ReturnPermitTypeFieldSetMapping"
@@ -31,16 +31,16 @@ import java.io.Serializable;
 public class ReturnPermitTypeFieldResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Permit Field ID ") private long permitfieldid ;
+    @ApiModelProperty("Permit Field ID ") private Long permitfieldid ;
     @ApiModelProperty("Permit Field Name ") private String permitfieldname ;
-    @ApiModelProperty("Permit Field Section ") private int permitfieldsection ;
+    @ApiModelProperty("Permit Field Section ") private Integer permitfieldsection ;
     @ApiModelProperty("Permit Field Section Name ") private String permitfieldsectionname ;
 
-    public long getPermitfieldid() {
+    public Long getPermitfieldid() {
         return permitfieldid;
     }
 
-    public void setPermitfieldid(long permitfieldid) {
+    public void setPermitfieldid(Long permitfieldid) {
         this.permitfieldid = permitfieldid;
     }
 
@@ -52,11 +52,11 @@ public class ReturnPermitTypeFieldResponse implements Serializable {
         this.permitfieldname = permitfieldname;
     }
 
-    public int getPermitfieldsection() {
+    public Integer getPermitfieldsection() {
         return permitfieldsection;
     }
 
-    public void setPermitfieldsection(int permitfieldsection) {
+    public void setPermitfieldsection(Integer permitfieldsection) {
         this.permitfieldsection = permitfieldsection;
     }
 
@@ -66,5 +66,15 @@ public class ReturnPermitTypeFieldResponse implements Serializable {
 
     public void setPermitfieldsectionname(String permitfieldsectionname) {
         this.permitfieldsectionname = permitfieldsectionname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitTypeFieldResponse{" +
+                "permitfieldid=" + permitfieldid +
+                ", permitfieldname=" + permitfieldname +
+                ", permitfieldsection=" + permitfieldsection +
+                ", permitfieldsectionname=" + permitfieldsectionname +
+                '}';
     }
 }

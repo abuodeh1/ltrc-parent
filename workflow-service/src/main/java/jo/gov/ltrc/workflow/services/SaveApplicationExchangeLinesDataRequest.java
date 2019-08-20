@@ -6,37 +6,37 @@ import java.sql.Date;
 
 public class SaveApplicationExchangeLinesDataRequest {
 
-    @ApiModelProperty("Application Exchange Lines ID Parameter ") private long applicationexchangelinesidparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Application Exchange Lines ID Parameter ") private Long applicationexchangelinesidparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("National ID Parameter ") private String nationalidparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("1st Vehicle ID Parameter ") private long _1stvehicleidparm ;
-    @ApiModelProperty("2nd Vehicle ID Parameter ") private long _2ndvehicleidparm ;
+    @ApiModelProperty("1st Vehicle ID Parameter ") private Long _1stvehicleidparm ;
+    @ApiModelProperty("2nd Vehicle ID Parameter ") private Long _2ndvehicleidparm ;
     @ApiModelProperty("Reason Parameter ") private String reasonparm ;
     @ApiModelProperty("Head of Service Department Explanation Parameter ") private String headofservicedepartmentexplanationparm ;
-    @ApiModelProperty("Head of Service Department decision Parameter ") private int headofservicedepartmentdecisionparm ;
+    @ApiModelProperty("Head of Service Department decision Parameter ") private Integer headofservicedepartmentdecisionparm ;
     @ApiModelProperty("Director Directorate Passenger Transport Explanation Parameter ") private String directordirectoratepassengertransportexplanationparm ;
-    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private int directordirectoratepassengertransportdecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private Integer directordirectoratepassengertransportdecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-    public long getApplicationexchangelinesidparm() {
+    public Long getApplicationexchangelinesidparm() {
         return applicationexchangelinesidparm;
     }
 
-    public void setApplicationexchangelinesidparm(long applicationexchangelinesidparm) {
+    public void setApplicationexchangelinesidparm(Long applicationexchangelinesidparm) {
         this.applicationexchangelinesidparm = applicationexchangelinesidparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -72,19 +72,19 @@ public class SaveApplicationExchangeLinesDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long get_1stvehicleidparm() {
+    public Long get_1stvehicleidparm() {
         return _1stvehicleidparm;
     }
 
-    public void set_1stvehicleidparm(long _1stvehicleidparm) {
+    public void set_1stvehicleidparm(Long _1stvehicleidparm) {
         this._1stvehicleidparm = _1stvehicleidparm;
     }
 
-    public long get_2ndvehicleidparm() {
+    public Long get_2ndvehicleidparm() {
         return _2ndvehicleidparm;
     }
 
-    public void set_2ndvehicleidparm(long _2ndvehicleidparm) {
+    public void set_2ndvehicleidparm(Long _2ndvehicleidparm) {
         this._2ndvehicleidparm = _2ndvehicleidparm;
     }
 
@@ -104,11 +104,11 @@ public class SaveApplicationExchangeLinesDataRequest {
         this.headofservicedepartmentexplanationparm = headofservicedepartmentexplanationparm;
     }
 
-    public int getHeadofservicedepartmentdecisionparm() {
+    public Integer getHeadofservicedepartmentdecisionparm() {
         return headofservicedepartmentdecisionparm;
     }
 
-    public void setHeadofservicedepartmentdecisionparm(int headofservicedepartmentdecisionparm) {
+    public void setHeadofservicedepartmentdecisionparm(Integer headofservicedepartmentdecisionparm) {
         this.headofservicedepartmentdecisionparm = headofservicedepartmentdecisionparm;
     }
 
@@ -120,27 +120,27 @@ public class SaveApplicationExchangeLinesDataRequest {
         this.directordirectoratepassengertransportexplanationparm = directordirectoratepassengertransportexplanationparm;
     }
 
-    public int getDirectordirectoratepassengertransportdecisionparm() {
+    public Integer getDirectordirectoratepassengertransportdecisionparm() {
         return directordirectoratepassengertransportdecisionparm;
     }
 
-    public void setDirectordirectoratepassengertransportdecisionparm(int directordirectoratepassengertransportdecisionparm) {
+    public void setDirectordirectoratepassengertransportdecisionparm(Integer directordirectoratepassengertransportdecisionparm) {
         this.directordirectoratepassengertransportdecisionparm = directordirectoratepassengertransportdecisionparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -152,12 +152,36 @@ public class SaveApplicationExchangeLinesDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SaveApplicationExchangeLinesDataRequest{" +
+                "applicationexchangelinesidparm=" + applicationexchangelinesidparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm= " + operatornameparm + 
+                ", nationalidparm= " + nationalidparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", _1stvehicleidparm=" + _1stvehicleidparm +
+                ", _2ndvehicleidparm=" + _2ndvehicleidparm +
+                ", reasonparm= " + reasonparm + 
+                ", headofservicedepartmentexplanationparm= " + headofservicedepartmentexplanationparm + 
+                ", headofservicedepartmentdecisionparm=" + headofservicedepartmentdecisionparm +
+                ", directordirectoratepassengertransportexplanationparm= " + directordirectoratepassengertransportexplanationparm + 
+                ", directordirectoratepassengertransportdecisionparm=" + directordirectoratepassengertransportdecisionparm +
+                ", prencipal=" + prencipal +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

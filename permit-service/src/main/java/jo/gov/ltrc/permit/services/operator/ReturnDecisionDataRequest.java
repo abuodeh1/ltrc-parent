@@ -7,42 +7,42 @@ import java.sql.Date;
 
 public class ReturnDecisionDataRequest {
 
-    @ApiModelProperty("Decisions ID Parameter") private long decisionsidparm ;
-    @ApiModelProperty("Decisions Source Parameter") private int decisionssourceparm ;
-    @ApiModelProperty("Vehicle Parameter") private long vehicleparm ;
+    @ApiModelProperty("Decisions ID Parameter") private Long decisionsidparm ;
+    @ApiModelProperty("Decisions Source Parameter") private Integer decisionssourceparm ;
+    @ApiModelProperty("Vehicle Parameter") private Long vehicleparm ;
     @ApiModelProperty("Plate Code Parameter") private String platecodeparm ;
     @ApiModelProperty("Plate Number Parameter") private String platenumberparm ;
     @ApiModelProperty("Decisions Reference Parameter") private String decisionsreferenceparm ;
     @ApiModelProperty("Decisions Reference Date Parameter") private Date decisionsreferencedateparm;
     @ApiModelProperty("Decisions Reference Subject Parameter") private String decisionsreferencesubjectparm ;
-    @ApiModelProperty("Goverorate Parameter") private long governorateparm ;
+    @ApiModelProperty("Goverorate Parameter") private Long governorateparm ;
     @ApiModelProperty("Goverorate Arabic Name Parameter") private String governoratearabicnameparm ;
     @ApiModelProperty("Decisions Text Parameter") private String decisionstextparm ;
     @ApiModelProperty("Decisions Term Parameter") private String decisionstermparm ;
     @ApiModelProperty("Decisions Term Date Parameter") private Date decisionstermdateparm ;
     @ApiModelProperty("Decisions Term Number Parameter") private String decisionstermnumberparm ;
 
-    public long getDecisionsidparm() {
+    public Long getDecisionsidparm() {
         return decisionsidparm;
     }
 
-    public void setDecisionsidparm(long decisionsidparm) {
+    public void setDecisionsidparm(Long decisionsidparm) {
         this.decisionsidparm = decisionsidparm;
     }
 
-    public int getDecisionssourceparm() {
+    public Integer getDecisionssourceparm() {
         return decisionssourceparm;
     }
 
-    public void setDecisionssourceparm(int decisionssourceparm) {
+    public void setDecisionssourceparm(Integer decisionssourceparm) {
         this.decisionssourceparm = decisionssourceparm;
     }
 
-    public long getVehicleparm() {
+    public Long getVehicleparm() {
         return vehicleparm;
     }
 
-    public void setVehicleparm(long vehicleparm) {
+    public void setVehicleparm(Long vehicleparm) {
         this.vehicleparm = vehicleparm;
     }
 
@@ -86,11 +86,11 @@ public class ReturnDecisionDataRequest {
         this.decisionsreferencesubjectparm = decisionsreferencesubjectparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
@@ -132,5 +132,25 @@ public class ReturnDecisionDataRequest {
 
     public void setDecisionstermnumberparm(String decisionstermnumberparm) {
         this.decisionstermnumberparm = decisionstermnumberparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnDecisionDataRequest{" +
+                "decisionsidparm=" + decisionsidparm +
+                ", decisionssourceparm=" + decisionssourceparm +
+                ", vehicleparm=" + vehicleparm +
+                ", platecodeparm=" + platecodeparm +
+                ", platenumberparm=" + platenumberparm +
+                ", decisionsreferenceparm=" + decisionsreferenceparm +
+                ", decisionsreferencedateparm=" + decisionsreferencedateparm +
+                ", decisionsreferencesubjectparm=" + decisionsreferencesubjectparm +
+                ", governorateparm=" + governorateparm +
+                ", governoratearabicnameparm=" + governoratearabicnameparm +
+                ", decisionstextparm=" + decisionstextparm +
+                ", decisionstermparm=" + decisionstermparm +
+                ", decisionstermdateparm=" + decisionstermdateparm +
+                ", decisionstermnumberparm=" + decisionstermnumberparm +
+                '}';
     }
 }

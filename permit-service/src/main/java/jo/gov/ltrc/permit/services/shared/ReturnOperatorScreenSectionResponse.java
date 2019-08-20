@@ -9,8 +9,8 @@ import java.io.Serializable;
         name = "ReturnOperatorScreenSection",
         procedureName = "\"ReturnOperatorScreenSection\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "operatorfieldsectionparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "sectionnameparm"),
                 
         },
         resultSetMappings = {
@@ -29,14 +29,14 @@ import java.io.Serializable;
 public class ReturnOperatorScreenSectionResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Field Section ") private int operatorfieldsection ;
+    @ApiModelProperty("Operator Field Section ") private Integer operatorfieldsection ;
     @ApiModelProperty("Section Name ") private String sectionname ;
 
-    public int getOperatorfieldsection() {
+    public Integer getOperatorfieldsection() {
         return operatorfieldsection;
     }
 
-    public void setOperatorfieldsection(int operatorfieldsection) {
+    public void setOperatorfieldsection(Integer operatorfieldsection) {
         this.operatorfieldsection = operatorfieldsection;
     }
 
@@ -46,5 +46,13 @@ public class ReturnOperatorScreenSectionResponse implements Serializable {
 
     public void setSectionname(String sectionname) {
         this.sectionname = sectionname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorScreenSectionResponse{" +
+                "operatorfieldsection=" + operatorfieldsection +
+                ", sectionname=" + sectionname +
+                '}';
     }
 }
