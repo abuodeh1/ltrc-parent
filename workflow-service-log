@@ -12375,3 +12375,71 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-08-20 08:25:38.909  INFO 9792 --- [RMI TCP Connection(8)-192.168.60.243] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=workflow-service, profiles=[default], label=null, version=null, state=null
 2019-08-20 08:25:39.034  INFO 9792 --- [parallel-1] i.l.c.EpollProvider                      : Starting without optional epoll library
 2019-08-20 08:25:39.034  INFO 9792 --- [parallel-1] i.l.c.KqueueProvider                     : Starting without optional kqueue library
+2019-08-20 08:30:37.739  INFO 9792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2019-08-20 08:31:08.046  INFO 9792 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.DiscoveryClient                    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:16d669cbd1737dc80c34c6763cee1db4 - Re-registering apps/WORKFLOW-SERVICE
+2019-08-20 08:31:08.046  INFO 9792 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.DiscoveryClient                    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:16d669cbd1737dc80c34c6763cee1db4: registering service...
+2019-08-20 08:31:08.062  INFO 9792 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.DiscoveryClient                    : DiscoveryClient_WORKFLOW-SERVICE/workflow-service:16d669cbd1737dc80c34c6763cee1db4 - registration status: 204
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Disable delta property : false
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Application is null : false
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Application version is -1: false
+2019-08-20 08:31:38.066  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2019-08-20 08:31:38.082  INFO 9792 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.DiscoveryClient                    : The response status is 200
+2019-08-20 08:31:41.113  INFO 9792 --- [lettuce-nioEventLoop-4-1] i.l.c.p.CommandHandler                   : null Unexpected exception during request: java.io.IOException: An existing connection was forcibly closed by the remote host
+
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_191]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_191]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_191]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_191]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_191]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1125) ~[netty-buffer-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:682) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+
+2019-08-20 08:31:41.222  INFO 9792 --- [lettuce-eventExecutorLoop-1-3] i.l.c.p.ConnectionWatchdog               : Reconnecting, last destination was localhost/127.0.0.1:6379
+2019-08-20 08:31:42.231  WARN 9792 --- [lettuce-nioEventLoop-4-2] i.l.c.p.ConnectionWatchdog               : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+2019-08-20 08:31:46.730  INFO 9792 --- [lettuce-eventExecutorLoop-1-1] i.l.c.p.ConnectionWatchdog               : Reconnecting, last destination was localhost:6379
+2019-08-20 08:31:47.746  WARN 9792 --- [lettuce-nioEventLoop-4-7] i.l.c.p.ConnectionWatchdog               : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+2019-08-20 08:31:49.027  INFO 9792 --- [lettuce-nioEventLoop-4-1] i.l.c.p.ReconnectionHandler              : Reconnected to localhost:6379
+2019-08-20 08:35:37.746  INFO 9792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2019-08-20 08:37:18.145  INFO 9792 --- [lettuce-nioEventLoop-4-1] i.l.c.p.CommandHandler                   : null Unexpected exception during request: java.io.IOException: An existing connection was forcibly closed by the remote host
+
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_191]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_191]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_191]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_191]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_191]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1125) ~[netty-buffer-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:682) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) [netty-transport-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.36.Final.jar:4.1.36.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_191]
+
+2019-08-20 08:37:18.223  INFO 9792 --- [lettuce-eventExecutorLoop-1-3] i.l.c.p.ConnectionWatchdog               : Reconnecting, last destination was localhost/127.0.0.1:6379
+2019-08-20 08:37:19.248  WARN 9792 --- [lettuce-nioEventLoop-4-2] i.l.c.p.ConnectionWatchdog               : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+2019-08-20 08:37:23.731  INFO 9792 --- [lettuce-eventExecutorLoop-1-1] i.l.c.p.ConnectionWatchdog               : Reconnecting, last destination was localhost:6379
+2019-08-20 08:37:24.762  WARN 9792 --- [lettuce-nioEventLoop-4-7] i.l.c.p.ConnectionWatchdog               : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+2019-08-20 08:37:27.949  INFO 9792 --- [lettuce-nioEventLoop-4-2] i.l.c.p.ReconnectionHandler              : Reconnected to localhost:6379
+2019-08-20 08:40:37.762  INFO 9792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2019-08-20 08:45:37.776  INFO 9792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2019-08-20 08:50:37.788  INFO 9792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
