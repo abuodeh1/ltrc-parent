@@ -7,21 +7,21 @@ import java.sql.Date;
 
 public class ReturnViolationDataRequest {
 
-    @ApiModelProperty("Minimum Violation ID Parameter ") private long minviolationidparm ;
-    @ApiModelProperty("Maximum Violation ID Parameter ") private long maxviolationidparm ;
+    @ApiModelProperty("Minimum Violation ID Parameter ") private Long minviolationidparm ;
+    @ApiModelProperty("Maximum Violation ID Parameter ") private Long maxviolationidparm ;
     @ApiModelProperty("Minimum Violation Date Parameter ") private Date minviolationdateparm ;
     @ApiModelProperty("Maximum Violation Date Parameter ") private Date maxviolationdateparm ;
-    @ApiModelProperty("Violation Type Parameter ") private long violationtypeparm ;
-    @ApiModelProperty("Violation Subject Parameter ") private long violationsubjectparm ;
-    @ApiModelProperty("Violation Penalty Parameter ") private long violationpenaltyparm ;
+    @ApiModelProperty("Violation Type Parameter ") private Long violationtypeparm ;
+    @ApiModelProperty("Violation Subject Parameter ") private Long violationsubjectparm ;
+    @ApiModelProperty("Violation Penalty Parameter ") private Long violationpenaltyparm ;
     @ApiModelProperty("Registration Number Parameter ") private String registrationnumberparm ;
     @ApiModelProperty("Plate Code Parameter ") private String platecodeparm ;
     @ApiModelProperty("Plate Number Parameter ") private String platenumberparm ;
     @ApiModelProperty("Driver Parameter ") private String driverparm ;
-    @ApiModelProperty("Line ID Parameter ") private long lineidparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Vehicle Parameter ") private int vehicleparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Line ID Parameter ") private Long lineidparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Vehicle Parameter ") private Integer vehicleparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Violation Reference Parameter ") private String violationreferenceparm ;
     @ApiModelProperty("Minimum Violation Reference Date Parameter ") private Date minviolationreferencedateparm ;
@@ -29,27 +29,26 @@ public class ReturnViolationDataRequest {
     @ApiModelProperty("Cancellation of Arrest Order Reference Parameter ") private String cancellationofarrestorderreferenceparm ;
     @ApiModelProperty("Minimum Cancellation of Arrest Order Date Parameter ") private Date mincancellationofarrestorderdateparm ;
     @ApiModelProperty("Maximum Cancellation of Arrest Order Date Parameter ") private Date maxcancellationofarrestorderdateparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Violation By Parameter ") private int ViolationByParm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Violation By Parameter ") private Integer ViolationByParm ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
 
-
-    public long getMinviolationidparm() {
+    public Long getMinviolationidparm() {
         return minviolationidparm;
     }
 
-    public void setMinviolationidparm(long minviolationidparm) {
+    public void setMinviolationidparm(Long minviolationidparm) {
         this.minviolationidparm = minviolationidparm;
     }
 
-    public long getMaxviolationidparm() {
+    public Long getMaxviolationidparm() {
         return maxviolationidparm;
     }
 
-    public void setMaxviolationidparm(long maxviolationidparm) {
+    public void setMaxviolationidparm(Long maxviolationidparm) {
         this.maxviolationidparm = maxviolationidparm;
     }
 
@@ -69,27 +68,27 @@ public class ReturnViolationDataRequest {
         this.maxviolationdateparm = maxviolationdateparm;
     }
 
-    public long getViolationtypeparm() {
+    public Long getViolationtypeparm() {
         return violationtypeparm;
     }
 
-    public void setViolationtypeparm(long violationtypeparm) {
+    public void setViolationtypeparm(Long violationtypeparm) {
         this.violationtypeparm = violationtypeparm;
     }
 
-    public long getViolationsubjectparm() {
+    public Long getViolationsubjectparm() {
         return violationsubjectparm;
     }
 
-    public void setViolationsubjectparm(long violationsubjectparm) {
+    public void setViolationsubjectparm(Long violationsubjectparm) {
         this.violationsubjectparm = violationsubjectparm;
     }
 
-    public long getViolationpenaltyparm() {
+    public Long getViolationpenaltyparm() {
         return violationpenaltyparm;
     }
 
-    public void setViolationpenaltyparm(long violationpenaltyparm) {
+    public void setViolationpenaltyparm(Long violationpenaltyparm) {
         this.violationpenaltyparm = violationpenaltyparm;
     }
 
@@ -125,35 +124,35 @@ public class ReturnViolationDataRequest {
         this.driverparm = driverparm;
     }
 
-    public long getLineidparm() {
+    public Long getLineidparm() {
         return lineidparm;
     }
 
-    public void setLineidparm(long lineidparm) {
+    public void setLineidparm(Long lineidparm) {
         this.lineidparm = lineidparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public int getVehicleparm() {
+    public Integer getVehicleparm() {
         return vehicleparm;
     }
 
-    public void setVehicleparm(int vehicleparm) {
+    public void setVehicleparm(Integer vehicleparm) {
         this.vehicleparm = vehicleparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -213,43 +212,43 @@ public class ReturnViolationDataRequest {
         this.maxcancellationofarrestorderdateparm = maxcancellationofarrestorderdateparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getViolationByParm() {
+    public Integer getViolationByParm() {
         return ViolationByParm;
     }
 
-    public void setViolationByParm(int violationByParm) {
+    public void setViolationByParm(Integer violationByParm) {
         ViolationByParm = violationByParm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -259,5 +258,39 @@ public class ReturnViolationDataRequest {
 
     public void setSortby(String sortby) {
         this.sortby = sortby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnViolationDataRequest{" +
+                "minviolationidparm=" + minviolationidparm +
+                ", maxviolationidparm=" + maxviolationidparm +
+                ", minviolationdateparm=" + minviolationdateparm +
+                ", maxviolationdateparm=" + maxviolationdateparm +
+                ", violationtypeparm=" + violationtypeparm +
+                ", violationsubjectparm=" + violationsubjectparm +
+                ", violationpenaltyparm=" + violationpenaltyparm +
+                ", registrationnumberparm=" + registrationnumberparm +
+                ", platecodeparm=" + platecodeparm +
+                ", platenumberparm=" + platenumberparm +
+                ", driverparm=" + driverparm +
+                ", lineidparm=" + lineidparm +
+                ", statusparm=" + statusparm +
+                ", vehicleparm=" + vehicleparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm=" + operatornameparm +
+                ", violationreferenceparm=" + violationreferenceparm +
+                ", minviolationreferencedateparm=" + minviolationreferencedateparm +
+                ", maxviolationreferencedateparm=" + maxviolationreferencedateparm +
+                ", cancellationofarrestorderreferenceparm=" + cancellationofarrestorderreferenceparm +
+                ", mincancellationofarrestorderdateparm=" + mincancellationofarrestorderdateparm +
+                ", maxcancellationofarrestorderdateparm=" + maxcancellationofarrestorderdateparm +
+                ", princepel=" + princepel +
+                ", ViolationByParm=" + ViolationByParm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                '}';
     }
 }

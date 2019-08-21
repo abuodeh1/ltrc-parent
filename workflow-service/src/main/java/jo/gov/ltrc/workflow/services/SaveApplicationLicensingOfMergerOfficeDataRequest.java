@@ -6,17 +6,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationLicensingOfMergerOfficeDataRequest {
 
-    @ApiModelProperty("Application Licensing of Merge Offices ID Parameter ") private long applicationlicensingofmergerofficeidparm ;
-    @ApiModelProperty("1st Operator ID Parameter ") private long _1stoperatoridparm ;
+    @ApiModelProperty("Application Licensing of Merge Offices ID Parameter ") private Long applicationlicensingofmergerofficeidparm ;
+    @ApiModelProperty("1st Operator ID Parameter ") private Long _1stoperatoridparm ;
     @ApiModelProperty("1st Operator Name Parameter ") private String _1stoperatornameparm ;
-    @ApiModelProperty("2nd Operator ID Parameter ") private long _2ndoperatoridparm ;
+    @ApiModelProperty("2nd Operator ID Parameter ") private Long _2ndoperatoridparm ;
     @ApiModelProperty("2nd Operator Name Parameter ") private String _2ndoperatornameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
     @ApiModelProperty("Vehicle ID's List Parameter ") private String vehicleidlistparm ;
     @ApiModelProperty("HOD No Criminal Record Parameter ") private String hodnocriminalrecordparm ;
     @ApiModelProperty("HOD Profession License Parameter ") private String hodproffissionlicenseparm ;
@@ -26,33 +26,33 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
     @ApiModelProperty("HOD DVLD Explanation Parameter ") private String hoddvldexplanationparm ;
     @ApiModelProperty("HOD Parking Lot Renting Contract Parameter ") private String hodparkinglotrentingcontractparm ;
     @ApiModelProperty("HOD Site Ownership Parameter ") private String hodsiteownershipparm ;
-    @ApiModelProperty("Site Detection Request Reference Parameter ") private long sitedetectionrequestreferenceparm ;
-    @ApiModelProperty("Site Detection 1st Operator ID Parameter ") private long sitedetection_1stoperatoridparm ;
-    @ApiModelProperty("Site Detection 2nd Operator ID Parameter ") private long sitedetection_2ndoperatoridparm ;
+    @ApiModelProperty("Site Detection Request Reference Parameter ") private Long sitedetectionrequestreferenceparm ;
+    @ApiModelProperty("Site Detection 1st Operator ID Parameter ") private Long sitedetection_1stoperatoridparm ;
+    @ApiModelProperty("Site Detection 2nd Operator ID Parameter ") private Long sitedetection_2ndoperatoridparm ;
     @ApiModelProperty("Site Detection Phone Number Parameter ") private String sitedetectionphonenumberparm ;
     @ApiModelProperty("Site Detection E-Mail Parameter ") private String sitedetectionemailparm ;
-    @ApiModelProperty("Site Detection Province Parameter ") private long sitedetectionprovinceparm ;
-    @ApiModelProperty("Site Detection Governorate Parameter ") private long sitedetectiongovernorateparm ;
-    @ApiModelProperty("Site Detection Municipality Parameter ") private long sitedetectionmunicipalityparm ;
-    @ApiModelProperty("Site Detection Territory Parameter ") private long sitedetectionterritoryparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Site Detection Province Parameter ") private Long sitedetectionprovinceparm ;
+    @ApiModelProperty("Site Detection Governorate Parameter ") private Long sitedetectiongovernorateparm ;
+    @ApiModelProperty("Site Detection Municipality Parameter ") private Long sitedetectionmunicipalityparm ;
+    @ApiModelProperty("Site Detection Territory Parameter ") private Long sitedetectionterritoryparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-    public long getApplicationlicensingofmergerofficeidparm() {
+    public Long getApplicationlicensingofmergerofficeidparm() {
         return applicationlicensingofmergerofficeidparm;
     }
 
-    public void setApplicationlicensingofmergerofficeidparm(long applicationlicensingofmergerofficeidparm) {
+    public void setApplicationlicensingofmergerofficeidparm(Long applicationlicensingofmergerofficeidparm) {
         this.applicationlicensingofmergerofficeidparm = applicationlicensingofmergerofficeidparm;
     }
 
-    public long get_1stoperatoridparm() {
+    public Long get_1stoperatoridparm() {
         return _1stoperatoridparm;
     }
 
-    public void set_1stoperatoridparm(long _1stoperatoridparm) {
+    public void set_1stoperatoridparm(Long _1stoperatoridparm) {
         this._1stoperatoridparm = _1stoperatoridparm;
     }
 
@@ -64,11 +64,11 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
         this._1stoperatornameparm = _1stoperatornameparm;
     }
 
-    public long get_2ndoperatoridparm() {
+    public Long get_2ndoperatoridparm() {
         return _2ndoperatoridparm;
     }
 
-    public void set_2ndoperatoridparm(long _2ndoperatoridparm) {
+    public void set_2ndoperatoridparm(Long _2ndoperatoridparm) {
         this._2ndoperatoridparm = _2ndoperatoridparm;
     }
 
@@ -96,35 +96,35 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
@@ -200,27 +200,27 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
         this.hodsiteownershipparm = hodsiteownershipparm;
     }
 
-    public long getSitedetectionrequestreferenceparm() {
+    public Long getSitedetectionrequestreferenceparm() {
         return sitedetectionrequestreferenceparm;
     }
 
-    public void setSitedetectionrequestreferenceparm(long sitedetectionrequestreferenceparm) {
+    public void setSitedetectionrequestreferenceparm(Long sitedetectionrequestreferenceparm) {
         this.sitedetectionrequestreferenceparm = sitedetectionrequestreferenceparm;
     }
 
-    public long getSitedetection_1stoperatoridparm() {
+    public Long getSitedetection_1stoperatoridparm() {
         return sitedetection_1stoperatoridparm;
     }
 
-    public void setSitedetection_1stoperatoridparm(long sitedetection_1stoperatoridparm) {
+    public void setSitedetection_1stoperatoridparm(Long sitedetection_1stoperatoridparm) {
         this.sitedetection_1stoperatoridparm = sitedetection_1stoperatoridparm;
     }
 
-    public long getSitedetection_2ndoperatoridparm() {
+    public Long getSitedetection_2ndoperatoridparm() {
         return sitedetection_2ndoperatoridparm;
     }
 
-    public void setSitedetection_2ndoperatoridparm(long sitedetection_2ndoperatoridparm) {
+    public void setSitedetection_2ndoperatoridparm(Long sitedetection_2ndoperatoridparm) {
         this.sitedetection_2ndoperatoridparm = sitedetection_2ndoperatoridparm;
     }
 
@@ -240,51 +240,51 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
         this.sitedetectionemailparm = sitedetectionemailparm;
     }
 
-    public long getSitedetectionprovinceparm() {
+    public Long getSitedetectionprovinceparm() {
         return sitedetectionprovinceparm;
     }
 
-    public void setSitedetectionprovinceparm(long sitedetectionprovinceparm) {
+    public void setSitedetectionprovinceparm(Long sitedetectionprovinceparm) {
         this.sitedetectionprovinceparm = sitedetectionprovinceparm;
     }
 
-    public long getSitedetectiongovernorateparm() {
+    public Long getSitedetectiongovernorateparm() {
         return sitedetectiongovernorateparm;
     }
 
-    public void setSitedetectiongovernorateparm(long sitedetectiongovernorateparm) {
+    public void setSitedetectiongovernorateparm(Long sitedetectiongovernorateparm) {
         this.sitedetectiongovernorateparm = sitedetectiongovernorateparm;
     }
 
-    public long getSitedetectionmunicipalityparm() {
+    public Long getSitedetectionmunicipalityparm() {
         return sitedetectionmunicipalityparm;
     }
 
-    public void setSitedetectionmunicipalityparm(long sitedetectionmunicipalityparm) {
+    public void setSitedetectionmunicipalityparm(Long sitedetectionmunicipalityparm) {
         this.sitedetectionmunicipalityparm = sitedetectionmunicipalityparm;
     }
 
-    public long getSitedetectionterritoryparm() {
+    public Long getSitedetectionterritoryparm() {
         return sitedetectionterritoryparm;
     }
 
-    public void setSitedetectionterritoryparm(long sitedetectionterritoryparm) {
+    public void setSitedetectionterritoryparm(Long sitedetectionterritoryparm) {
         this.sitedetectionterritoryparm = sitedetectionterritoryparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -296,12 +296,52 @@ public class SaveApplicationLicensingOfMergerOfficeDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SaveApplicationLicensingOfMergerOfficeDataRequest{" +
+                "applicationlicensingofmergerofficeidparm=" + applicationlicensingofmergerofficeidparm +
+                ", _1stoperatoridparm=" + _1stoperatoridparm +
+                ", _1stoperatornameparm= " + _1stoperatornameparm + 
+                ", _2ndoperatoridparm=" + _2ndoperatoridparm +
+                ", _2ndoperatornameparm= " + _2ndoperatornameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", vehicleidlistparm= " + vehicleidlistparm + 
+                ", hodnocriminalrecordparm= " + hodnocriminalrecordparm + 
+                ", hodproffissionlicenseparm= " + hodproffissionlicenseparm + 
+                ", hodvehiclelistparm= " + hodvehiclelistparm + 
+                ", hodcommercialrecordparm= " + hodcommercialrecordparm + 
+                ", hodpatentdirectorateoffinanceparm= " + hodpatentdirectorateoffinanceparm + 
+                ", hoddvldexplanationparm= " + hoddvldexplanationparm + 
+                ", hodparkinglotrentingcontractparm= " + hodparkinglotrentingcontractparm + 
+                ", hodsiteownershipparm= " + hodsiteownershipparm + 
+                ", sitedetectionrequestreferenceparm=" + sitedetectionrequestreferenceparm +
+                ", sitedetection_1stoperatoridparm=" + sitedetection_1stoperatoridparm +
+                ", sitedetection_2ndoperatoridparm=" + sitedetection_2ndoperatoridparm +
+                ", sitedetectionphonenumberparm= " + sitedetectionphonenumberparm + 
+                ", sitedetectionemailparm= " + sitedetectionemailparm + 
+                ", sitedetectionprovinceparm=" + sitedetectionprovinceparm +
+                ", sitedetectiongovernorateparm=" + sitedetectiongovernorateparm +
+                ", sitedetectionmunicipalityparm=" + sitedetectionmunicipalityparm +
+                ", sitedetectionterritoryparm=" + sitedetectionterritoryparm +
+                ", prencipal=" + prencipal +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

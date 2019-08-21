@@ -5,19 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationSmartPermitsDataRequest {
 
-    @ApiModelProperty("Application Smart Permits ID Parameter ") private long applicationsmartpermitsidparm ;
+    @ApiModelProperty("Application Smart Permits ID Parameter ") private Long applicationsmartpermitsidparm ;
     @ApiModelProperty("Applicant National ID Parameter ") private String applicantnationalidparm ;
     @ApiModelProperty("Applicant Name Parameter ") private String applicantnameparm ;
     @ApiModelProperty("Vehicle Owner National ID Parameter ") private String vehicleownernationalidparm ;
     @ApiModelProperty("Vehicle Owner Name Parameter ") private String vehicleownernameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
-    @ApiModelProperty("Vehicle ID Parameter ") private long vehicleidparm ;
-    @ApiModelProperty("Permit ID Parameter ") private long permitidparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
+    @ApiModelProperty("Vehicle ID Parameter ") private Long vehicleidparm ;
+    @ApiModelProperty("Permit ID Parameter ") private Long permitidparm ;
     @ApiModelProperty("Category Parameter ") private String categoryparm ;
     @ApiModelProperty("Classification Parameter ") private String classificationparm ;
     @ApiModelProperty("Certificate of Disease Free Parameter ") private String certificateofdiseasefreeparm ;
@@ -25,17 +25,17 @@ public class SaveApplicationSmartPermitsDataRequest {
     @ApiModelProperty("Certificate of Non-Occupancy Parameter ") private String certificateofnon_occupancyparm ;
     @ApiModelProperty("Family Book Parameter ") private String familybookparm ;
     @ApiModelProperty("HOD Explanation Parameter ") private String hodexplanationparm ;
-    @ApiModelProperty("HOD Decision Parameter ") private int hoddecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("HOD Decision Parameter ") private Integer hoddecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-    public long getApplicationsmartpermitsidparm() {
+    public Long getApplicationsmartpermitsidparm() {
         return applicationsmartpermitsidparm;
     }
 
-    public void setApplicationsmartpermitsidparm(long applicationsmartpermitsidparm) {
+    public void setApplicationsmartpermitsidparm(Long applicationsmartpermitsidparm) {
         this.applicationsmartpermitsidparm = applicationsmartpermitsidparm;
     }
 
@@ -87,51 +87,51 @@ public class SaveApplicationSmartPermitsDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public long getVehicleidparm() {
+    public Long getVehicleidparm() {
         return vehicleidparm;
     }
 
-    public void setVehicleidparm(long vehicleidparm) {
+    public void setVehicleidparm(Long vehicleidparm) {
         this.vehicleidparm = vehicleidparm;
     }
 
-    public long getPermitidparm() {
+    public Long getPermitidparm() {
         return permitidparm;
     }
 
-    public void setPermitidparm(long permitidparm) {
+    public void setPermitidparm(Long permitidparm) {
         this.permitidparm = permitidparm;
     }
 
@@ -191,27 +191,27 @@ public class SaveApplicationSmartPermitsDataRequest {
         this.hodexplanationparm = hodexplanationparm;
     }
 
-    public int getHoddecisionparm() {
+    public Integer getHoddecisionparm() {
         return hoddecisionparm;
     }
 
-    public void setHoddecisionparm(int hoddecisionparm) {
+    public void setHoddecisionparm(Integer hoddecisionparm) {
         this.hoddecisionparm = hoddecisionparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -223,12 +223,43 @@ public class SaveApplicationSmartPermitsDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationSmartPermitsDataRequest{" +
+                "applicationsmartpermitsidparm=" + applicationsmartpermitsidparm +
+                ", applicantnationalidparm= " + applicantnationalidparm + 
+                ", applicantnameparm= " + applicantnameparm + 
+                ", vehicleownernationalidparm= " + vehicleownernationalidparm + 
+                ", vehicleownernameparm= " + vehicleownernameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", vehicleidparm=" + vehicleidparm +
+                ", permitidparm=" + permitidparm +
+                ", categoryparm= " + categoryparm + 
+                ", classificationparm= " + classificationparm + 
+                ", certificateofdiseasefreeparm= " + certificateofdiseasefreeparm + 
+                ", nocriminalrecordsparm= " + nocriminalrecordsparm + 
+                ", certificateofnon_occupancyparm= " + certificateofnon_occupancyparm + 
+                ", familybookparm= " + familybookparm + 
+                ", hodexplanationparm= " + hodexplanationparm + 
+                ", hoddecisionparm=" + hoddecisionparm +
+                ", prencipal=" + prencipal +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

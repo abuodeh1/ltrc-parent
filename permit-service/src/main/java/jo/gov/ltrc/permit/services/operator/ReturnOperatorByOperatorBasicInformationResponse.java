@@ -11,29 +11,29 @@ import java.sql.Date;
         name = "ReturnOperatorByOperatorBasicInformation",
         procedureName = "\"ReturnOperatorByOperatorBasicInformation\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minoperatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "licenseissuedateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "licenseexpiredateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorclassificationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornationalidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorcomercialnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "streetparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "neighborhoodparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "emaiparml"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "poboxparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "phonenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "mobilephonenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "faxnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "licensepurposeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "feesstatusparm"),
 
         },
         resultSetMappings = {
@@ -52,20 +52,20 @@ import java.sql.Date;
 public class ReturnOperatorByOperatorBasicInformationResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator ID ") private long operatorid ;
+    @ApiModelProperty("Operator ID ") private Long operatorid ;
     @ApiModelProperty("Operator Name ") private String operatorname ;
-    @ApiModelProperty("Operator Category ") private long operatorcategory ;
+    @ApiModelProperty("Operator Category ") private Long operatorcategory ;
     @ApiModelProperty("Operator Category Name ") private String operatorcategoryname ;
-    @ApiModelProperty("Operator Classification") private long operatorclassification ;
+    @ApiModelProperty("Operator Classification") private Long operatorclassification ;
     @ApiModelProperty("Operator Classification Name ") private String operatorclassificationname ;
-    @ApiModelProperty("Fees Status ") private int feesstatus ;
+    @ApiModelProperty("Fees Status ") private Integer feesstatus ;
     @ApiModelProperty("License Expired ") private Date licenseexpiredate ;
 
-    public long getOperatorid() {
+    public Long getOperatorid() {
         return operatorid;
     }
 
-    public void setOperatorid(long operatorid) {
+    public void setOperatorid(Long operatorid) {
         this.operatorid = operatorid;
     }
 
@@ -77,11 +77,11 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
         this.operatorname = operatorname;
     }
 
-    public long getOperatorcategory() {
+    public Long getOperatorcategory() {
         return operatorcategory;
     }
 
-    public void setOperatorcategory(long operatorcategory) {
+    public void setOperatorcategory(Long operatorcategory) {
         this.operatorcategory = operatorcategory;
     }
 
@@ -93,11 +93,11 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
         this.operatorcategoryname = operatorcategoryname;
     }
 
-    public long getOperatorclassification() {
+    public Long getOperatorclassification() {
         return operatorclassification;
     }
 
-    public void setOperatorclassification(long operatorclassification) {
+    public void setOperatorclassification(Long operatorclassification) {
         this.operatorclassification = operatorclassification;
     }
 
@@ -109,11 +109,11 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
         this.operatorclassificationname = operatorclassificationname;
     }
 
-    public int getFeesstatus() {
+    public Integer getFeesstatus() {
         return feesstatus;
     }
 
-    public void setFeesstatus(int feesstatus) {
+    public void setFeesstatus(Integer feesstatus) {
         this.feesstatus = feesstatus;
     }
 
@@ -123,5 +123,19 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
 
     public void setLicenseexpiredate(Date licenseexpiredate) {
         this.licenseexpiredate = licenseexpiredate;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorByOperatorBasicInformationResponse{" +
+                "operatorid=" + operatorid +
+                ", operatorname=" + operatorname +
+                ", operatorcategory=" + operatorcategory +
+                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorclassification=" + operatorclassification +
+                ", operatorclassificationname=" + operatorclassificationname +
+                ", feesstatus=" + feesstatus +
+                ", licenseexpiredate=" + licenseexpiredate +
+                '}';
     }
 }

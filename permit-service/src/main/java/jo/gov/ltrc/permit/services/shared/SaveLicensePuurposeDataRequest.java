@@ -5,16 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveLicensePuurposeDataRequest {
 
-    @ApiModelProperty("License Purpose ID Parameter ") private long licensepurposeidparm ;
+    @ApiModelProperty("License Purpose ID Parameter ") private Long licensepurposeidparm ;
     @ApiModelProperty("License Purpose Name Parameter ") private String licensepurposenameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-    public long getLicensepurposeidparm() {
+    public Long getLicensepurposeidparm() {
         return licensepurposeidparm;
     }
 
-    public void setLicensepurposeidparm(long licensepurposeidparm) {
+    public void setLicensepurposeidparm(Long licensepurposeidparm) {
         this.licensepurposeidparm = licensepurposeidparm;
     }
 
@@ -26,20 +27,39 @@ public class SaveLicensePuurposeDataRequest {
         this.licensepurposenameparm = licensepurposenameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveLicensePuurposeDataRequest{" +
+                "licensepurposeidparm=" + licensepurposeidparm +
+                ", licensepurposenameparm= " + licensepurposenameparm + 
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                '}';
     }
 }
 

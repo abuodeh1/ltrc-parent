@@ -10,8 +10,8 @@ import java.io.Serializable;
         name = "ReturnViolationType",
         procedureName = "\"ReturnViolationType\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "violationtypeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "violationtypenameparm"),
 
         },
         resultSetMappings = {
@@ -30,14 +30,14 @@ import java.io.Serializable;
 public class ReturnViolationTypeResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Violation Type ID ") private long violationtypeid ;
+    @ApiModelProperty("Violation Type ID ") private Long violationtypeid ;
     @ApiModelProperty("Violation Type Name ") private String violationtypename ;
 
-    public long getViolationtypeid() {
+    public Long getViolationtypeid() {
         return violationtypeid;
     }
 
-    public void setViolationtypeid(long violationtypeid) {
+    public void setViolationtypeid(Long violationtypeid) {
         this.violationtypeid = violationtypeid;
     }
 
@@ -47,5 +47,13 @@ public class ReturnViolationTypeResponse implements Serializable {
 
     public void setViolationtypename(String violationtypename) {
         this.violationtypename = violationtypename;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnViolationTypeResponse{" +
+                "violationtypeid=" + violationtypeid +
+                ", violationtypename=" + violationtypename +
+                '}';
     }
 }

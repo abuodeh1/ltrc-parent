@@ -4,37 +4,37 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveApplicationCncltnRplcmntDataRequest {
 
-    @ApiModelProperty("Parameter ") private long applicationcncltnrplcmntidparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Parameter ") private Long applicationcncltnrplcmntidparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Operator National ID Parameter ") private String operatornationalidparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Vehicle Parameter ") private long vehicleidparm ;
+    @ApiModelProperty("Vehicle Parameter ") private Long vehicleidparm ;
     @ApiModelProperty("Commercial Record Parameter ") private String commercialrecordparm ;
     @ApiModelProperty("DVLD Explanation Parameter ") private String dvldexplanationparm ;
     @ApiModelProperty("Head of Service Department Explanation Parameter ") private String headofservicedepartmentexplanationparm ;
-    @ApiModelProperty("Head of Service Department Decision Parameter ") private int headofservicedepartmentdecisionparm ;
+    @ApiModelProperty("Head of Service Department Decision Parameter ") private Integer headofservicedepartmentdecisionparm ;
     @ApiModelProperty("Director Directorate Passenger Transport Explanation Parameter ") private String directordirectoratepassengertransportexplanationparm ;
-    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private int directordirectoratepassengertransportdecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private Integer directordirectoratepassengertransportdecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-    public long getApplicationcncltnrplcmntidparm() {
+    public Long getApplicationcncltnrplcmntidparm() {
         return applicationcncltnrplcmntidparm;
     }
 
-    public void setApplicationcncltnrplcmntidparm(long applicationcncltnrplcmntidparm) {
+    public void setApplicationcncltnrplcmntidparm(Long applicationcncltnrplcmntidparm) {
         this.applicationcncltnrplcmntidparm = applicationcncltnrplcmntidparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -70,11 +70,11 @@ public class SaveApplicationCncltnRplcmntDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getVehicleidparm() {
+    public Long getVehicleidparm() {
         return vehicleidparm;
     }
 
-    public void setVehicleidparm(long vehicleidparm) {
+    public void setVehicleidparm(Long vehicleidparm) {
         this.vehicleidparm = vehicleidparm;
     }
 
@@ -102,11 +102,11 @@ public class SaveApplicationCncltnRplcmntDataRequest {
         this.headofservicedepartmentexplanationparm = headofservicedepartmentexplanationparm;
     }
 
-    public int getHeadofservicedepartmentdecisionparm() {
+    public Integer getHeadofservicedepartmentdecisionparm() {
         return headofservicedepartmentdecisionparm;
     }
 
-    public void setHeadofservicedepartmentdecisionparm(int headofservicedepartmentdecisionparm) {
+    public void setHeadofservicedepartmentdecisionparm(Integer headofservicedepartmentdecisionparm) {
         this.headofservicedepartmentdecisionparm = headofservicedepartmentdecisionparm;
     }
 
@@ -118,27 +118,27 @@ public class SaveApplicationCncltnRplcmntDataRequest {
         this.directordirectoratepassengertransportexplanationparm = directordirectoratepassengertransportexplanationparm;
     }
 
-    public int getDirectordirectoratepassengertransportdecisionparm() {
+    public Integer getDirectordirectoratepassengertransportdecisionparm() {
         return directordirectoratepassengertransportdecisionparm;
     }
 
-    public void setDirectordirectoratepassengertransportdecisionparm(int directordirectoratepassengertransportdecisionparm) {
+    public void setDirectordirectoratepassengertransportdecisionparm(Integer directordirectoratepassengertransportdecisionparm) {
         this.directordirectoratepassengertransportdecisionparm = directordirectoratepassengertransportdecisionparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -150,12 +150,36 @@ public class SaveApplicationCncltnRplcmntDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SaveApplicationCncltnRplcmntDataRequest{" +
+                "applicationcncltnrplcmntidparm=" + applicationcncltnrplcmntidparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm= " + operatornameparm + 
+                ", operatornationalidparm= " + operatornationalidparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", vehicleidparm=" + vehicleidparm +
+                ", commercialrecordparm= " + commercialrecordparm + 
+                ", dvldexplanationparm= " + dvldexplanationparm + 
+                ", headofservicedepartmentexplanationparm= " + headofservicedepartmentexplanationparm + 
+                ", headofservicedepartmentdecisionparm=" + headofservicedepartmentdecisionparm +
+                ", directordirectoratepassengertransportexplanationparm= " + directordirectoratepassengertransportexplanationparm + 
+                ", directordirectoratepassengertransportdecisionparm=" + directordirectoratepassengertransportdecisionparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

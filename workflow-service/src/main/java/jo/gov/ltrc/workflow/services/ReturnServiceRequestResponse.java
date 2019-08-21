@@ -30,40 +30,40 @@ import java.sql.Date;
 public class ReturnServiceRequestResponse implements Serializable {
 
     @Id
-    private long   servicerequestid      ;
-    private long   servicetype           ;
+    private Long   servicerequestid      ;
+    private Long   servicetype           ;
     private String servicetypename       ;
-    private long   requestedby           ;
+    private Long   requestedby           ;
     private Date   requestdate           ;
     private String applicantphonenumber  ;
     private String applicantemail        ;
-    private long   province              ;
+    private Long   province              ;
     private String provincearabicname    ;
-    private long   governorate           ;
+    private Long   governorate           ;
     private String governoratearabicname ;
-    private long   municipality          ;
+    private Long   municipality          ;
     private String municipalityarabicname;
-    private long   territory             ;
+    private Long   territory             ;
     private String territoryarabicname   ;
-    private int    servicerequeststatus  ;
+    private Integer    servicerequeststatus  ;
     private Date   createddate           ;
-    private long   createdby             ;
+    private Long   createdby             ;
     private Date   modifieddate          ;
-    private long   modifiedby            ;
+    private Long   modifiedby            ;
 
-    public long getServicerequestid() {
+    public Long getServicerequestid() {
         return servicerequestid;
     }
 
-    public void setServicerequestid(long servicerequestid) {
+    public void setServicerequestid(Long servicerequestid) {
         this.servicerequestid = servicerequestid;
     }
 
-    public long getServicetype() {
+    public Long getServicetype() {
         return servicetype;
     }
 
-    public void setServicetype(long servicetype) {
+    public void setServicetype(Long servicetype) {
         this.servicetype = servicetype;
     }
 
@@ -75,11 +75,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.servicetypename = servicetypename;
     }
 
-    public long getRequestedby() {
+    public Long getRequestedby() {
         return requestedby;
     }
 
-    public void setRequestedby(long requestedby) {
+    public void setRequestedby(Long requestedby) {
         this.requestedby = requestedby;
     }
 
@@ -107,11 +107,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.applicantemail = applicantemail;
     }
 
-    public long getProvince() {
+    public Long getProvince() {
         return province;
     }
 
-    public void setProvince(long province) {
+    public void setProvince(Long province) {
         this.province = province;
     }
 
@@ -123,11 +123,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorate() {
+    public Long getGovernorate() {
         return governorate;
     }
 
-    public void setGovernorate(long governorate) {
+    public void setGovernorate(Long governorate) {
         this.governorate = governorate;
     }
 
@@ -139,11 +139,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipality() {
+    public Long getMunicipality() {
         return municipality;
     }
 
-    public void setMunicipality(long municipality) {
+    public void setMunicipality(Long municipality) {
         this.municipality = municipality;
     }
 
@@ -155,11 +155,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getTerritory() {
+    public Long getTerritory() {
         return territory;
     }
 
-    public void setTerritory(long territory) {
+    public void setTerritory(Long territory) {
         this.territory = territory;
     }
 
@@ -171,11 +171,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.territoryarabicname = territoryarabicname;
     }
 
-    public int getServicerequeststatus() {
+    public Integer getServicerequeststatus() {
         return servicerequeststatus;
     }
 
-    public void setServicerequeststatus(int servicerequeststatus) {
+    public void setServicerequeststatus(Integer servicerequeststatus) {
         this.servicerequeststatus = servicerequeststatus;
     }
 
@@ -187,11 +187,11 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.createddate = createddate;
     }
 
-    public long getCreatedby() {
+    public Long getCreatedby() {
         return createdby;
     }
 
-    public void setCreatedby(long createdby) {
+    public void setCreatedby(Long createdby) {
         this.createdby = createdby;
     }
 
@@ -203,11 +203,37 @@ public class ReturnServiceRequestResponse implements Serializable {
         this.modifieddate = modifieddate;
     }
 
-    public long getModifiedby() {
+    public Long getModifiedby() {
         return modifiedby;
     }
 
-    public void setModifiedby(long modifiedby) {
+    public void setModifiedby(Long modifiedby) {
         this.modifiedby = modifiedby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnServiceRequestResponse{" +
+                "servicerequestid=" + servicerequestid +
+                ", servicetype=" + servicetype +
+                ", servicetypename= " + servicetypename + 
+                ", requestedby=" + requestedby +
+                ", requestdate=" + requestdate +
+                ", applicantphonenumber= " + applicantphonenumber + 
+                ", applicantemail= " + applicantemail + 
+                ", province=" + province +
+                ", provincearabicname= " + provincearabicname + 
+                ", governorate=" + governorate +
+                ", governoratearabicname= " + governoratearabicname + 
+                ", municipality=" + municipality +
+                ", municipalityarabicname= " + municipalityarabicname + 
+                ", territory=" + territory +
+                ", territoryarabicname= " + territoryarabicname + 
+                ", servicerequeststatus=" + servicerequeststatus +
+                ", createddate=" + createddate +
+                ", createdby=" + createdby +
+                ", modifieddate=" + modifieddate +
+                ", modifiedby=" + modifiedby +
+                '}';
     }
 }

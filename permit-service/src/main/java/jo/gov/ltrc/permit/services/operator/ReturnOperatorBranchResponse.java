@@ -11,38 +11,38 @@ import java.sql.Date;
         name = "ReturnOperatorBranch",
         procedureName = "\"ReturnOperatorBranch\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minoperatorbranchidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatorbranchidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minoperatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "provincearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "municipalityarabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "territoryarabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "neighborhoodparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "streetparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "basinparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "plotnoparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "poboxparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "telephoneparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "faxparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "mobilephoneparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "emailparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "aggreementreferencenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "aggreementreferencedateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minvehiclecountparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxvehiclecountparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "branchnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pagesize"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pageindex"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sorttype"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sortby"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "statusparm"),
 
 
         },
@@ -62,16 +62,16 @@ import java.sql.Date;
 public class ReturnOperatorBranchResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Branch ID ") private long operatorbranchid ;
-    @ApiModelProperty("Operator ID ") private long operatorid ;
+    @ApiModelProperty("Operator Branch ID ") private Long operatorbranchid ;
+    @ApiModelProperty("Operator ID ") private Long operatorid ;
     @ApiModelProperty("Operator Name ") private String operatorname ;
-    @ApiModelProperty("Province ") private long province ;
+    @ApiModelProperty("Province ") private Long province ;
     @ApiModelProperty("Province Arabic Name ") private String provincearabicname ;
-    @ApiModelProperty("Governorate ") private long governorate ;
+    @ApiModelProperty("Governorate ") private Long governorate ;
     @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname ;
-    @ApiModelProperty("Municipality ") private long municipality ;
+    @ApiModelProperty("Municipality ") private Long municipality ;
     @ApiModelProperty("Municipality Arabic Name ") private String municipalityarabicname ;
-    @ApiModelProperty("Territory ") private long territory ;
+    @ApiModelProperty("Territory ") private Long territory ;
     @ApiModelProperty("Territory Arabic Name ") private String territoryarabicname ;
     @ApiModelProperty("Neighborhood ") private String neighborhood ;
     @ApiModelProperty("Street ") private String street ;
@@ -84,25 +84,25 @@ public class ReturnOperatorBranchResponse implements Serializable {
     @ApiModelProperty("E-Mail ") private String email ;
     @ApiModelProperty("Agreement Reference Number ") private String aggreementreferencenumber ;
     @ApiModelProperty("Agreement Reference Date ") private Date aggreementreferencedate ;
-    @ApiModelProperty("Vehicle Count ") private int vehiclecount ;
+    @ApiModelProperty("Vehicle Count ") private Integer vehiclecount ;
     @ApiModelProperty("Branch Name ") private String branchname ;
     @ApiModelProperty("Certification Registration Number ") private String certificateregistrationnumber ;
     @ApiModelProperty("Status ") private String status ;
 
 
-    public long getOperatorbranchid() {
+    public Long getOperatorbranchid() {
         return operatorbranchid;
     }
 
-    public void setOperatorbranchid(long operatorbranchid) {
+    public void setOperatorbranchid(Long operatorbranchid) {
         this.operatorbranchid = operatorbranchid;
     }
 
-    public long getOperatorid() {
+    public Long getOperatorid() {
         return operatorid;
     }
 
-    public void setOperatorid(long operatorid) {
+    public void setOperatorid(Long operatorid) {
         this.operatorid = operatorid;
     }
 
@@ -114,11 +114,11 @@ public class ReturnOperatorBranchResponse implements Serializable {
         this.operatorname = operatorname;
     }
 
-    public long getProvince() {
+    public Long getProvince() {
         return province;
     }
 
-    public void setProvince(long province) {
+    public void setProvince(Long province) {
         this.province = province;
     }
 
@@ -130,11 +130,11 @@ public class ReturnOperatorBranchResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorate() {
+    public Long getGovernorate() {
         return governorate;
     }
 
-    public void setGovernorate(long governorate) {
+    public void setGovernorate(Long governorate) {
         this.governorate = governorate;
     }
 
@@ -146,11 +146,11 @@ public class ReturnOperatorBranchResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipality() {
+    public Long getMunicipality() {
         return municipality;
     }
 
-    public void setMunicipality(long municipality) {
+    public void setMunicipality(Long municipality) {
         this.municipality = municipality;
     }
 
@@ -162,11 +162,11 @@ public class ReturnOperatorBranchResponse implements Serializable {
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getTerritory() {
+    public Long getTerritory() {
         return territory;
     }
 
-    public void setTerritory(long territory) {
+    public void setTerritory(Long territory) {
         this.territory = territory;
     }
 
@@ -266,11 +266,11 @@ public class ReturnOperatorBranchResponse implements Serializable {
         this.aggreementreferencedate = aggreementreferencedate;
     }
 
-    public int getVehiclecount() {
+    public Integer getVehiclecount() {
         return vehiclecount;
     }
 
-    public void setVehiclecount(int vehiclecount) {
+    public void setVehiclecount(Integer vehiclecount) {
         this.vehiclecount = vehiclecount;
     }
 
@@ -296,5 +296,37 @@ public class ReturnOperatorBranchResponse implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorBranchResponse{" +
+                "operatorbranchid=" + operatorbranchid +
+                ", operatorid=" + operatorid +
+                ", operatorname=" + operatorname +
+                ", province=" + province +
+                ", provincearabicname=" + provincearabicname +
+                ", governorate=" + governorate +
+                ", governoratearabicname=" + governoratearabicname +
+                ", municipality=" + municipality +
+                ", municipalityarabicname=" + municipalityarabicname +
+                ", territory=" + territory +
+                ", territoryarabicname=" + territoryarabicname +
+                ", neighborhood=" + neighborhood +
+                ", street=" + street +
+                ", basin=" + basin +
+                ", plotno=" + plotno +
+                ", pobox=" + pobox +
+                ", telephone=" + telephone +
+                ", fax=" + fax +
+                ", mobilephone=" + mobilephone +
+                ", email=" + email +
+                ", aggreementreferencenumber=" + aggreementreferencenumber +
+                ", aggreementreferencedate=" + aggreementreferencedate +
+                ", vehiclecount=" + vehiclecount +
+                ", branchname=" + branchname +
+                ", certificateregistrationnumber=" + certificateregistrationnumber +
+                ", status=" + status +
+                '}';
     }
 }

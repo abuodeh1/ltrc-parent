@@ -12,40 +12,40 @@ import java.sql.Time;
         name = "ReturnPermitGeneralSearch",
         procedureName = "\"ReturnPermitGeneralSearch\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minpermitidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxpermitidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "permittypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "minissuedateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxissuedateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "mindeliverydateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxdeliverydateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minperiodparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxperiodparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "minstartworkingdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxstartworkingdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "minendworkingdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxendworkingdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minnumberoftripsparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxnumberoftripsparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "primarydriverparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "alternativedriverparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehicleparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "classificationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "workingasparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "startpointparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "endpointparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "lineidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "linenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "routenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platecodeparm"),
 
 
 
@@ -69,56 +69,56 @@ import java.sql.Time;
 public class ReturnPermitGeneralSearchResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Permit ID ") private long permitid ;
-    @ApiModelProperty("Permit Type ") private long permittype ;
+    @ApiModelProperty("Permit ID ") private Long permitid ;
+    @ApiModelProperty("Permit Type ") private Long permittype ;
     @ApiModelProperty("Permit Type Name ") private String permittypename ;
     @ApiModelProperty("Issue Date ") private Date issuedate ;
     @ApiModelProperty("Delivery Date ") private Date deliverydate ;
-    @ApiModelProperty("Period ") private long  period ;
+    @ApiModelProperty("Period ") private Long  period ;
     @ApiModelProperty("Start Working Date ") private Date startworkingdate ;
     @ApiModelProperty("End Working Date ") private Date endworkingdate ;
-    @ApiModelProperty("Province ") private long province ;
+    @ApiModelProperty("Province ") private Long province ;
     @ApiModelProperty("Province Arabic Name ") private String provincearabicname ;
-    @ApiModelProperty("Governorate ") private long governorate ;
+    @ApiModelProperty("Governorate ") private Long governorate ;
     @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname ;
-    @ApiModelProperty("Municipality ") private long municipality ;
+    @ApiModelProperty("Municipality ") private Long municipality ;
     @ApiModelProperty("Municipality Arabic Name ") private String municipalityarabicname ;
-    @ApiModelProperty("Route ") private long route ;
+    @ApiModelProperty("Route ") private Long route ;
     @ApiModelProperty("Route Name ") private String routename ;
     @ApiModelProperty("Departure Time ") private Time departuretime ;
     @ApiModelProperty("Completion Time ") private Time completiontime ;
-    @ApiModelProperty("Number of Trips ") private int numberoftrips ;
-    @ApiModelProperty("Decided Tariff ") private double decidedtariff  ;
+    @ApiModelProperty("Number of Trips ") private Integer numberoftrips ;
+    @ApiModelProperty("Decided Tariff ") private  Double decidedtariff  ;
     @ApiModelProperty("Primary Driver ") private String primarydriver ;
     @ApiModelProperty("Primary Driver Passport ") private String primarydriverpassport ;
     @ApiModelProperty("Alternative Driver") private String alternativedriver  ;
     @ApiModelProperty("Alternative Driver Passport ") private String alternativedriverpassport ;
-    @ApiModelProperty("Status ") private int status ;
-    @ApiModelProperty("Vehicle ") private long vehicle ;
+    @ApiModelProperty("Status ") private Integer status ;
+    @ApiModelProperty("Vehicle ") private Long vehicle ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
     @ApiModelProperty("Plate Code ") private String platecode ;
     @ApiModelProperty("Plate Number ") private String platenumber ;
-    @ApiModelProperty("Classification ") private int classification ;
-    @ApiModelProperty("Working As") private long workingas ;
+    @ApiModelProperty("Classification ") private Integer classification ;
+    @ApiModelProperty("Working As") private Long workingas ;
     @ApiModelProperty("Permit Working As Name ") private String permitworkingasname ;
-    @ApiModelProperty("Start Point ") private long startpoint ;
+    @ApiModelProperty("Start Point ") private Long startpoint ;
     @ApiModelProperty("Start Point Arabic Name ") private String startpointarabicname ;
-    @ApiModelProperty("End Point ") private long endpoint ;
+    @ApiModelProperty("End Point ") private Long endpoint ;
     @ApiModelProperty("End Point Arabic Name ") private String endpointarabicname ;
 
-    public long getPermitid() {
+    public Long getPermitid() {
         return permitid;
     }
 
-    public void setPermitid(long permitid) {
+    public void setPermitid(Long permitid) {
         this.permitid = permitid;
     }
 
-    public long getPermittype() {
+    public Long getPermittype() {
         return permittype;
     }
 
-    public void setPermittype(long permittype) {
+    public void setPermittype(Long permittype) {
         this.permittype = permittype;
     }
 
@@ -146,11 +146,11 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.deliverydate = deliverydate;
     }
 
-    public long getPeriod() {
+    public Long getPeriod() {
         return period;
     }
 
-    public void setPeriod(long period) {
+    public void setPeriod(Long period) {
         this.period = period;
     }
 
@@ -170,11 +170,11 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.endworkingdate = endworkingdate;
     }
 
-    public long getProvince() {
+    public Long getProvince() {
         return province;
     }
 
-    public void setProvince(long province) {
+    public void setProvince(Long province) {
         this.province = province;
     }
 
@@ -186,11 +186,11 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorate() {
+    public Long getGovernorate() {
         return governorate;
     }
 
-    public void setGovernorate(long governorate) {
+    public void setGovernorate(Long governorate) {
         this.governorate = governorate;
     }
 
@@ -202,11 +202,11 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipality() {
+    public Long getMunicipality() {
         return municipality;
     }
 
-    public void setMunicipality(long municipality) {
+    public void setMunicipality(Long municipality) {
         this.municipality = municipality;
     }
 
@@ -218,11 +218,11 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getRoute() {
+    public Long getRoute() {
         return route;
     }
 
-    public void setRoute(long route) {
+    public void setRoute(Long route) {
         this.route = route;
     }
 
@@ -250,19 +250,19 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.completiontime = completiontime;
     }
 
-    public int getNumberoftrips() {
+    public Integer getNumberoftrips() {
         return numberoftrips;
     }
 
-    public void setNumberoftrips(int numberoftrips) {
+    public void setNumberoftrips(Integer numberoftrips) {
         this.numberoftrips = numberoftrips;
     }
 
-    public double getDecidedtariff() {
+    public Double getDecidedtariff() {
         return decidedtariff;
     }
 
-    public void setDecidedtariff(double decidedtariff) {
+    public void setDecidedtariff(Double decidedtariff) {
         this.decidedtariff = decidedtariff;
     }
 
@@ -298,19 +298,19 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.alternativedriverpassport = alternativedriverpassport;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public long getVehicle() {
+    public Long getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(long vehicle) {
+    public void setVehicle(Long vehicle) {
         this.vehicle = vehicle;
     }
 
@@ -338,19 +338,19 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.platenumber = platenumber;
     }
 
-    public int getClassification() {
+    public Integer getClassification() {
         return classification;
     }
 
-    public void setClassification(int classification) {
+    public void setClassification(Integer classification) {
         this.classification = classification;
     }
 
-    public long getWorkingas() {
+    public Long getWorkingas() {
         return workingas;
     }
 
-    public void setWorkingas(long workingas) {
+    public void setWorkingas(Long workingas) {
         this.workingas = workingas;
     }
 
@@ -362,20 +362,12 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.permitworkingasname = permitworkingasname;
     }
 
-    public long getStartpoint() {
+    public Long getStartpoint() {
         return startpoint;
     }
 
-    public void setStartpoint(long startpoint) {
+    public void setStartpoint(Long startpoint) {
         this.startpoint = startpoint;
-    }
-
-    public long getEndpoint() {
-        return endpoint;
-    }
-
-    public void setEndpoint(long endpoint) {
-        this.endpoint = endpoint;
     }
 
     public String getStartpointarabicname() {
@@ -386,11 +378,61 @@ public class ReturnPermitGeneralSearchResponse implements Serializable {
         this.startpointarabicname = startpointarabicname;
     }
 
+    public Long getEndpoint() {
+        return endpoint;
+    }
+
+    public void setEndpoint(Long endpoint) {
+        this.endpoint = endpoint;
+    }
+
     public String getEndpointarabicname() {
         return endpointarabicname;
     }
 
     public void setEndpointarabicname(String endpointarabicname) {
         this.endpointarabicname = endpointarabicname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitGeneralSearchResponse{" +
+                "permitid=" + permitid +
+                ", permittype=" + permittype +
+                ", permittypename=" + permittypename +
+                ", issuedate=" + issuedate +
+                ", deliverydate=" + deliverydate +
+                ", period=" + period +
+                ", startworkingdate=" + startworkingdate +
+                ", endworkingdate=" + endworkingdate +
+                ", province=" + province +
+                ", provincearabicname=" + provincearabicname +
+                ", governorate=" + governorate +
+                ", governoratearabicname=" + governoratearabicname +
+                ", municipality=" + municipality +
+                ", municipalityarabicname=" + municipalityarabicname +
+                ", route=" + route +
+                ", routename=" + routename +
+                ", departuretime=" + departuretime +
+                ", completiontime=" + completiontime +
+                ", numberoftrips=" + numberoftrips +
+                ", decidedtariff=" + decidedtariff +
+                ", primarydriver=" + primarydriver +
+                ", primarydriverpassport=" + primarydriverpassport +
+                ", alternativedriver=" + alternativedriver +
+                ", alternativedriverpassport=" + alternativedriverpassport +
+                ", status=" + status +
+                ", vehicle=" + vehicle +
+                ", registrationnumber=" + registrationnumber +
+                ", platecode=" + platecode +
+                ", platenumber=" + platenumber +
+                ", classification=" + classification +
+                ", workingas=" + workingas +
+                ", permitworkingasname=" + permitworkingasname +
+                ", startpoint=" + startpoint +
+                ", startpointarabicname=" + startpointarabicname +
+                ", endpoint=" + endpoint +
+                ", endpointarabicname=" + endpointarabicname +
+                '}';
     }
 }

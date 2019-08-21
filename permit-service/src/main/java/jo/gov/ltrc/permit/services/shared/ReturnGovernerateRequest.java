@@ -5,18 +5,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnGovernerateRequest {
 
-    @ApiModelProperty("Governorate ID Parameter") private long governorateidparm ;
+    @ApiModelProperty("Governorate ID Parameter") private Long governorateidparm ;
     @ApiModelProperty("Governorate Arabic Name Parameter") private String governoratearabicnameparm ;
     @ApiModelProperty("Governorate English NameParameter") private String governorateenglishnameparm ;
     @ApiModelProperty("Governorate Code Parameter") private String governoratecodeparm ;
-    @ApiModelProperty("Country ID Parameter") private long countryidparm ;
-    @ApiModelProperty("Province ID Parameter") private long provinceidparm ;
+    @ApiModelProperty("Country ID Parameter") private Long countryidparm ;
+    @ApiModelProperty("Province ID Parameter") private Long provinceidparm ;
 
-    public long getGovernorateidparm() {
+    public Long getGovernorateidparm() {
         return governorateidparm;
     }
 
-    public void setGovernorateidparm(long governorateidparm) {
+    public void setGovernorateidparm(Long governorateidparm) {
         this.governorateidparm = governorateidparm;
     }
 
@@ -44,20 +44,32 @@ public class ReturnGovernerateRequest {
         this.governoratecodeparm = governoratecodeparm;
     }
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
     }
 
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnGovernerateRequest{" +
+                "governorateidparm=" + governorateidparm +
+                ", governoratearabicnameparm=" + governoratearabicnameparm +
+                ", governorateenglishnameparm=" + governorateenglishnameparm +
+                ", governoratecodeparm=" + governoratecodeparm +
+                ", countryidparm=" + countryidparm +
+                ", provinceidparm=" + provinceidparm +
+                '}';
     }
 }
 

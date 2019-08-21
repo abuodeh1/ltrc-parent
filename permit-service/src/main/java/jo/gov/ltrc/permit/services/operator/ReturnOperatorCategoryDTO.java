@@ -5,22 +5,22 @@ import java.util.List;
 
 public class ReturnOperatorCategoryDTO {
 
-    private long operatorcategoryid ;
+    private Long operatorcategoryid ;
     private String operatorcategoryname ;
     private String operatorcategoryenglishname ;
-    private long operatorcategoryclassification ;
+    private Long operatorcategoryclassification ;
     private String operatorclassificationname ;
-    private long operatorcategorydepartment ;
+    private Long operatorcategorydepartment ;
     private String servicedepartmentname ;
-    private long vehiclecategory ;
+    private Long vehiclecategory ;
     private String vehiclecategoryname ;
-    private long plateclassification ;
+    private Long plateclassification ;
     private String plateclassificationname ;
-    private long linetype ;
+    private Long linetype ;
     private String linetypename ;
     private List<ReturnOperatorCategoryFieldSettingResponse> field ;
 
-    public long getOperatorcategoryid() {
+    public Long getOperatorcategoryid() {
         return operatorcategoryid;
     }
 
@@ -44,7 +44,7 @@ public class ReturnOperatorCategoryDTO {
         this.operatorcategoryenglishname = operatorcategoryenglishname;
     }
 
-    public long getOperatorcategoryclassification() {
+    public Long getOperatorcategoryclassification() {
         return operatorcategoryclassification;
     }
 
@@ -60,7 +60,7 @@ public class ReturnOperatorCategoryDTO {
         this.operatorclassificationname = operatorclassificationname;
     }
 
-    public long getOperatorcategorydepartment() {
+    public Long getOperatorcategorydepartment() {
         return operatorcategorydepartment;
     }
 
@@ -76,7 +76,7 @@ public class ReturnOperatorCategoryDTO {
         this.servicedepartmentname = servicedepartmentname;
     }
 
-    public long getVehiclecategory() {
+    public Long getVehiclecategory() {
         return vehiclecategory;
     }
 
@@ -92,7 +92,7 @@ public class ReturnOperatorCategoryDTO {
         this.vehiclecategoryname = vehiclecategoryname;
     }
 
-    public long getPlateclassification() {
+    public Long getPlateclassification() {
         return plateclassification;
     }
 
@@ -108,7 +108,7 @@ public class ReturnOperatorCategoryDTO {
         this.plateclassificationname = plateclassificationname;
     }
 
-    public long getLinetype() {
+    public Long getLinetype() {
         return linetype;
     }
 

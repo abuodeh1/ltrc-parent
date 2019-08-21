@@ -42,7 +42,7 @@ class ViolationServiceTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", containsString("E$23503$")));
+                .andExpect(jsonPath("$", containsString("E$23502$")));
 
     }
 

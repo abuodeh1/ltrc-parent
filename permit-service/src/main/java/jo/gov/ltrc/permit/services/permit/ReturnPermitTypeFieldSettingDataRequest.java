@@ -5,58 +5,70 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnPermitTypeFieldSettingDataRequest {
 
-    @ApiModelProperty("Permit Type Field Setting ID Parameter ") private long permittypefieldsettingidparm ;
-    @ApiModelProperty("Permit Type Parameter ") private long permittypeparm ;
-    @ApiModelProperty("Permit Field Parameter ") private long permitfieldparm ;
-    @ApiModelProperty("Required Parameter ") private int requiredparm ;
-    @ApiModelProperty("Visible Parameter ") private int visibleparm ;
-    @ApiModelProperty("Active Parameter ") private int activeparm ;
+    @ApiModelProperty("Permit Type Field Setting ID Parameter ") private Long permittypefieldsettingidparm ;
+    @ApiModelProperty("Permit Type Parameter ") private Long permittypeparm ;
+    @ApiModelProperty("Permit Field Parameter ") private Long permitfieldparm ;
+    @ApiModelProperty("Required Parameter ") private Integer requiredparm ;
+    @ApiModelProperty("Visible Parameter ") private Integer visibleparm ;
+    @ApiModelProperty("Active Parameter ") private Integer activeparm ;
 
-    public long getPermittypefieldsettingidparm() {
+    public Long getPermittypefieldsettingidparm() {
         return permittypefieldsettingidparm;
     }
 
-    public void setPermittypefieldsettingidparm(long permittypefieldsettingidparm) {
+    public void setPermittypefieldsettingidparm(Long permittypefieldsettingidparm) {
         this.permittypefieldsettingidparm = permittypefieldsettingidparm;
     }
 
-    public long getPermittypeparm() {
+    public Long getPermittypeparm() {
         return permittypeparm;
     }
 
-    public void setPermittypeparm(long permittypeparm) {
+    public void setPermittypeparm(Long permittypeparm) {
         this.permittypeparm = permittypeparm;
     }
 
-    public long getPermitfieldparm() {
+    public Long getPermitfieldparm() {
         return permitfieldparm;
     }
 
-    public void setPermitfieldparm(long permitfieldparm) {
+    public void setPermitfieldparm(Long permitfieldparm) {
         this.permitfieldparm = permitfieldparm;
     }
 
-    public int getRequiredparm() {
+    public Integer getRequiredparm() {
         return requiredparm;
     }
 
-    public void setRequiredparm(int requiredparm) {
+    public void setRequiredparm(Integer requiredparm) {
         this.requiredparm = requiredparm;
     }
 
-    public int getVisibleparm() {
+    public Integer getVisibleparm() {
         return visibleparm;
     }
 
-    public void setVisibleparm(int visibleparm) {
+    public void setVisibleparm(Integer visibleparm) {
         this.visibleparm = visibleparm;
     }
 
-    public int getActiveparm() {
+    public Integer getActiveparm() {
         return activeparm;
     }
 
-    public void setActiveparm(int activeparm) {
+    public void setActiveparm(Integer activeparm) {
         this.activeparm = activeparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitTypeFieldSettingDataRequest{" +
+                "permittypefieldsettingidparm=" + permittypefieldsettingidparm +
+                ", permittypeparm=" + permittypeparm +
+                ", permitfieldparm=" + permitfieldparm +
+                ", requiredparm=" + requiredparm +
+                ", visibleparm=" + visibleparm +
+                ", activeparm=" + activeparm +
+                '}';
     }
 }

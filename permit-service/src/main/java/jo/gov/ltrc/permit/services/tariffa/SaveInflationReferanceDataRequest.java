@@ -7,53 +7,53 @@ import java.sql.Date;
 
 public class SaveInflationReferanceDataRequest {
 
-    @ApiModelProperty("Inflation Reference ID Parameter ") private long inflationreferanceidparm ;
-    @ApiModelProperty("Inflation Direction Parameter ") private boolean inflationdirectionparm ;
-    @ApiModelProperty("Gasoline Ration Parameter ") private double gasolineratioparm ;
-    @ApiModelProperty("Diesel Ration Parameter ") private double dieselratioparm ;
-    @ApiModelProperty("General Ration Parameter ") private double generalrationparm ;
+    @ApiModelProperty("Inflation Reference ID Parameter ") private Long inflationreferanceidparm ;
+    @ApiModelProperty("Inflation Direction Parameter ") private   Boolean inflationdirectionparm ;
+    @ApiModelProperty("Gasoline Ration Parameter ") private  Double gasolineratioparm ;
+    @ApiModelProperty("Diesel Ration Parameter ") private  Double dieselratioparm ;
+    @ApiModelProperty("General Ration Parameter ") private  Double generalrationparm ;
     @ApiModelProperty("Start Data Parameter ") private Date startdateparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-
-    public long getInflationreferanceidparm() {
+    public Long getInflationreferanceidparm() {
         return inflationreferanceidparm;
     }
 
-    public void setInflationreferanceidparm(long inflationreferanceidparm) {
+    public void setInflationreferanceidparm(Long inflationreferanceidparm) {
         this.inflationreferanceidparm = inflationreferanceidparm;
     }
 
-    public boolean isInflationdirectionparm() {
+    public Boolean getInflationdirectionparm() {
         return inflationdirectionparm;
     }
 
-    public void setInflationdirectionparm(boolean inflationdirectionparm) {
+    public void setInflationdirectionparm(Boolean inflationdirectionparm) {
         this.inflationdirectionparm = inflationdirectionparm;
     }
 
-    public double getGasolineratioparm() {
+    public Double getGasolineratioparm() {
         return gasolineratioparm;
     }
 
-    public void setGasolineratioparm(double gasolineratioparm) {
+    public void setGasolineratioparm(Double gasolineratioparm) {
         this.gasolineratioparm = gasolineratioparm;
     }
 
-    public double getDieselratioparm() {
+    public Double getDieselratioparm() {
         return dieselratioparm;
     }
 
-    public void setDieselratioparm(double dieselratioparm) {
+    public void setDieselratioparm(Double dieselratioparm) {
         this.dieselratioparm = dieselratioparm;
     }
 
-    public double getGeneralrationparm() {
+    public Double getGeneralrationparm() {
         return generalrationparm;
     }
 
-    public void setGeneralrationparm(double generalrationparm) {
+    public void setGeneralrationparm(Double generalrationparm) {
         this.generalrationparm = generalrationparm;
     }
 
@@ -65,20 +65,43 @@ public class SaveInflationReferanceDataRequest {
         this.startdateparm = startdateparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveInflationReferanceDataRequest{" +
+                "inflationreferanceidparm=" + inflationreferanceidparm +
+                ", inflationdirectionparm=" + inflationdirectionparm +
+                ", gasolineratioparm=" + gasolineratioparm +
+                ", dieselratioparm=" + dieselratioparm +
+                ", generalrationparm=" + generalrationparm +
+                ", startdateparm=" + startdateparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm +
+                '}';
     }
 }
 

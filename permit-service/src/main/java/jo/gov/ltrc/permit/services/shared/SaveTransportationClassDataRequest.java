@@ -5,17 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveTransportationClassDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long transportationclassidparm;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long transportationclassidparm;
     @ApiModelProperty("Violation Type Name Parameter ") private String transportationclassnameparm;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-
-    public long getTransportationclassidparm() {
+    public Long getTransportationclassidparm() {
         return transportationclassidparm;
     }
 
-    public void setTransportationclassidparm(long transportationclassidparm) {
+    public void setTransportationclassidparm(Long transportationclassidparm) {
         this.transportationclassidparm = transportationclassidparm;
     }
 
@@ -27,20 +27,39 @@ public class SaveTransportationClassDataRequest {
         this.transportationclassnameparm = transportationclassnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveTransportationClassDataRequest{" +
+                "transportationclassidparm=" + transportationclassidparm +
+                ", transportationclassnameparm=" + transportationclassnameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

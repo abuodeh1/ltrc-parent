@@ -11,31 +11,31 @@ import java.sql.Date;
         name = "ReturnOperatorByVehicleInformation",
         procedureName = "\"ReturnOperatorByVehicleInformation\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "registrationnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "permitstatusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platecodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "mindeliverydateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxdeliverydateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "feesstatusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "usagepurposeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "minlicenseexpirationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxlicenseexpirationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minyearofmanufactureparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxyearofmanufactureparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minpassengersnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxpassengersnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownernameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "fueltypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "addtionaldescriptionsparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pagesize"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pageindex"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sorttype"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "sortby"),
 
 
         },
@@ -55,7 +55,7 @@ import java.sql.Date;
 public class ReturnOperatorByVehicleInformationResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator ID ") private long operatorid ;
+    @ApiModelProperty("Operator ID ") private Long operatorid ;
     @ApiModelProperty("Operator Name ") private String operatorname ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
     @ApiModelProperty("Plate Code ") private String platecode ;
@@ -67,29 +67,29 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
     @ApiModelProperty("Owner Name ") private String ownername ;
     @ApiModelProperty("Fuel Type Name ") private String fueltypename ;
     @ApiModelProperty("Additional Descriptions ") private String addtionaldescriptions ;
-    @ApiModelProperty("Permit Status ") private int permitstatus ;
+    @ApiModelProperty("Permit Status ") private Integer permitstatus ;
     @ApiModelProperty("Delivery Date ") private Date deliverydate ;
-    @ApiModelProperty("Status ") private int status ;
-    @ApiModelProperty("Fees Status ") private int feesstatus ;
+    @ApiModelProperty("Status ") private Integer status ;
+    @ApiModelProperty("Fees Status ") private Integer feesstatus ;
     @ApiModelProperty("License Expiration ") private Date licenseexpiration ;
-    @ApiModelProperty("Year of Manufacture ") private int yearofmanufacture ;
-    @ApiModelProperty("Passengers Number ") private int passengersnumber ;
-    @ApiModelProperty("Province ") private long province ;
+    @ApiModelProperty("Year of Manufacture ") private Integer yearofmanufacture ;
+    @ApiModelProperty("Passengers Number ") private Integer passengersnumber ;
+    @ApiModelProperty("Province ") private Long province ;
     @ApiModelProperty("Province Arabic Name ") private String provincearabicname ;
-    @ApiModelProperty("Governorate ") private long governorate ;
+    @ApiModelProperty("Governorate ") private Long governorate ;
     @ApiModelProperty("Governorate Arabic Name ") private String governoratearabicname ;
-    @ApiModelProperty("Municipality ") private long municipality ;
+    @ApiModelProperty("Municipality ") private Long municipality ;
     @ApiModelProperty("Municipality Arabic Name ") private String municipalityarabicname ;
-    @ApiModelProperty("Territory ") private long territory ;
+    @ApiModelProperty("Territory ") private Long territory ;
     @ApiModelProperty("Territory Arabic Name ") private String territoryarabicname ;
-    @ApiModelProperty("Operator Category ") private long operatorcategory ;
+    @ApiModelProperty("Operator Category ") private Long operatorcategory ;
     @ApiModelProperty("Operator Category Name ") private String operatorcategoryname ;
 
-    public long getOperatorid() {
+    public Long getOperatorid() {
         return operatorid;
     }
 
-    public void setOperatorid(long operatorid) {
+    public void setOperatorid(Long operatorid) {
         this.operatorid = operatorid;
     }
 
@@ -101,12 +101,12 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.operatorname = operatorname;
     }
 
-    public String getRegistrationnumberparm() {
+    public String getRegistrationnumber() {
         return registrationnumber;
     }
 
-    public void setRegistrationnumberparm(String registrationnumberparm) {
-        this.registrationnumber = registrationnumberparm;
+    public void setRegistrationnumber(String registrationnumber) {
+        this.registrationnumber = registrationnumber;
     }
 
     public String getPlatecode() {
@@ -181,11 +181,11 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.addtionaldescriptions = addtionaldescriptions;
     }
 
-    public int getPermitstatus() {
+    public Integer getPermitstatus() {
         return permitstatus;
     }
 
-    public void setPermitstatus(int permitstatus) {
+    public void setPermitstatus(Integer permitstatus) {
         this.permitstatus = permitstatus;
     }
 
@@ -197,19 +197,19 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.deliverydate = deliverydate;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getFeesstatus() {
+    public Integer getFeesstatus() {
         return feesstatus;
     }
 
-    public void setFeesstatus(int feesstatus) {
+    public void setFeesstatus(Integer feesstatus) {
         this.feesstatus = feesstatus;
     }
 
@@ -221,27 +221,27 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.licenseexpiration = licenseexpiration;
     }
 
-    public int getYearofmanufacture() {
+    public Integer getYearofmanufacture() {
         return yearofmanufacture;
     }
 
-    public void setYearofmanufacture(int yearofmanufacture) {
+    public void setYearofmanufacture(Integer yearofmanufacture) {
         this.yearofmanufacture = yearofmanufacture;
     }
 
-    public int getPassengersnumber() {
+    public Integer getPassengersnumber() {
         return passengersnumber;
     }
 
-    public void setPassengersnumber(int passengersnumber) {
+    public void setPassengersnumber(Integer passengersnumber) {
         this.passengersnumber = passengersnumber;
     }
 
-    public long getProvince() {
+    public Long getProvince() {
         return province;
     }
 
-    public void setProvince(long province) {
+    public void setProvince(Long province) {
         this.province = province;
     }
 
@@ -253,11 +253,11 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.provincearabicname = provincearabicname;
     }
 
-    public long getGovernorate() {
+    public Long getGovernorate() {
         return governorate;
     }
 
-    public void setGovernorate(long governorate) {
+    public void setGovernorate(Long governorate) {
         this.governorate = governorate;
     }
 
@@ -269,11 +269,11 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.governoratearabicname = governoratearabicname;
     }
 
-    public long getMunicipality() {
+    public Long getMunicipality() {
         return municipality;
     }
 
-    public void setMunicipality(long municipality) {
+    public void setMunicipality(Long municipality) {
         this.municipality = municipality;
     }
 
@@ -285,11 +285,11 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.municipalityarabicname = municipalityarabicname;
     }
 
-    public long getTerritory() {
+    public Long getTerritory() {
         return territory;
     }
 
-    public void setTerritory(long territory) {
+    public void setTerritory(Long territory) {
         this.territory = territory;
     }
 
@@ -301,11 +301,11 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.territoryarabicname = territoryarabicname;
     }
 
-    public long getOperatorcategory() {
+    public Long getOperatorcategory() {
         return operatorcategory;
     }
 
-    public void setOperatorcategory(long operatorcategory) {
+    public void setOperatorcategory(Long operatorcategory) {
         this.operatorcategory = operatorcategory;
     }
 
@@ -315,5 +315,40 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
 
     public void setOperatorcategoryname(String operatorcategoryname) {
         this.operatorcategoryname = operatorcategoryname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorByVehicleInformationResponse{" +
+                "operatorid=" + operatorid +
+                ", operatorname=" + operatorname +
+                ", registrationnumber=" + registrationnumber +
+                ", platecode=" + platecode +
+                ", platenumber=" + platenumber +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                ", manufacturer=" + manufacturer +
+                ", usagepurposename=" + usagepurposename +
+                ", ownernationalid=" + ownernationalid +
+                ", ownername=" + ownername +
+                ", fueltypename=" + fueltypename +
+                ", addtionaldescriptions=" + addtionaldescriptions +
+                ", permitstatus=" + permitstatus +
+                ", deliverydate=" + deliverydate +
+                ", status=" + status +
+                ", feesstatus=" + feesstatus +
+                ", licenseexpiration=" + licenseexpiration +
+                ", yearofmanufacture=" + yearofmanufacture +
+                ", passengersnumber=" + passengersnumber +
+                ", province=" + province +
+                ", provincearabicname=" + provincearabicname +
+                ", governorate=" + governorate +
+                ", governoratearabicname=" + governoratearabicname +
+                ", municipality=" + municipality +
+                ", municipalityarabicname=" + municipalityarabicname +
+                ", territory=" + territory +
+                ", territoryarabicname=" + territoryarabicname +
+                ", operatorcategory=" + operatorcategory +
+                ", operatorcategoryname=" + operatorcategoryname +
+                '}';
     }
 }

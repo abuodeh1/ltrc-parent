@@ -5,18 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveCountryDataRequest {
 
-    @ApiModelProperty("Country ID Parameter ") private long countryidparm ;
+    @ApiModelProperty("Country ID Parameter ") private Long countryidparm ;
     @ApiModelProperty("Country Arabic Name Parameter ") private String countryarabicnameparm ;
     @ApiModelProperty("Country English Name Parameter ") private String countryenglishnameparm ;
     @ApiModelProperty("Country Code Parameter ") private String countrycodeparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
     }
 
@@ -44,20 +45,41 @@ public class SaveCountryDataRequest {
         this.countrycodeparm = countrycodeparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveCountryDataRequest{" +
+                "countryidparm=" + countryidparm +
+                ", countryarabicnameparm=" + countryarabicnameparm +
+                ", countryenglishnameparm=" + countryenglishnameparm +
+                ", countrycodeparm=" + countrycodeparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

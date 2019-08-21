@@ -11,36 +11,36 @@ import java.sql.Date;
         name = "ReturnVehicleGeneralSearch",
         procedureName = "\"ReturnVehicleGeneralSearch\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minvehicleidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxvehicleidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "registrationnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "vehiclecategorynameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "remarksparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "yearofmanufactureparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "passengersnumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownernameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "licenseexpirationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "addtionaldescriptionsparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platecodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "feesstatusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "officeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "officenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "fueltypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "fueltypenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "vehicleentrydateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclepermitparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pagesize"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pageindex"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sorttype"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "sortby"),
 
 
         },
@@ -60,39 +60,39 @@ import java.sql.Date;
 public class ReturnVehicleGeneralSearchResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Vehicle ID ") private long vehicleid ;
+    @ApiModelProperty("Vehicle ID ") private Long vehicleid ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
     @ApiModelProperty("Plate Number ") private String platenumber ;
-    @ApiModelProperty("Vehicle Category ") private long vehiclecategory ;
+    @ApiModelProperty("Vehicle Category ") private Long vehiclecategory ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
     @ApiModelProperty("Operation ") private String operation ;
-    @ApiModelProperty("Status ") private int status ;
+    @ApiModelProperty("Status ") private Integer status ;
     @ApiModelProperty("Remarks ") private String remarks  ;
-    @ApiModelProperty("Year of Manufacture ") private int yearofmanufacture ;
-    @ApiModelProperty("Passengers Number ") private int passengersnumber ;
+    @ApiModelProperty("Year of Manufacture ") private Integer yearofmanufacture ;
+    @ApiModelProperty("Passengers Number ") private Integer passengersnumber ;
     @ApiModelProperty("Manufacturer ") private String manufacturer ;
     @ApiModelProperty("Owner Name ") private String ownername ;
     @ApiModelProperty("License Expiration ") private Date licenseexpiration ;
     @ApiModelProperty("Additional Descriptions ") private String addtionaldescriptions ;
     @ApiModelProperty("Plate Code ") private String platecode ;
-    @ApiModelProperty("Fees Status ") private int feesstatus ;
-    @ApiModelProperty("Office ID ") private long officeid ;
+    @ApiModelProperty("Fees Status ") private Integer feesstatus ;
+    @ApiModelProperty("Office ID ") private Long officeid ;
     @ApiModelProperty("Office Name ") private String officename ;
-    @ApiModelProperty("fuel Type ") private long fueltype ;
+    @ApiModelProperty("fuel Type ") private Long fueltype ;
     @ApiModelProperty("Fuel Name ") private String fueltypename ;
     @ApiModelProperty("Vehicle Entry Date ") private Date vehicleentrydate ;
     @ApiModelProperty("Vehicle Owner ") private String vehicleowner ;
-    @ApiModelProperty("Vehicle Operator ") private long vehicleoperator ;
+    @ApiModelProperty("Vehicle Operator ") private Long vehicleoperator ;
     @ApiModelProperty("Operator Name ") private String operatorname  ;
-    @ApiModelProperty("Permit Status ") private int permitstatus ;
-    @ApiModelProperty("Usage Purpose ") private long usagepurpose ;
+    @ApiModelProperty("Permit Status ") private Integer permitstatus ;
+    @ApiModelProperty("Usage Purpose ") private Long usagepurpose ;
     @ApiModelProperty("Usage Purpose Name ") private String usagepurposename ;
 
-    public long getVehicleid() {
+    public Long getVehicleid() {
         return vehicleid;
     }
 
-    public void setVehicleid(long vehicleid) {
+    public void setVehicleid(Long vehicleid) {
         this.vehicleid = vehicleid;
     }
 
@@ -112,11 +112,11 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.platenumber = platenumber;
     }
 
-    public long getVehiclecategory() {
+    public Long getVehiclecategory() {
         return vehiclecategory;
     }
 
-    public void setVehiclecategory(long vehiclecategory) {
+    public void setVehiclecategory(Long vehiclecategory) {
         this.vehiclecategory = vehiclecategory;
     }
 
@@ -136,11 +136,11 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.operation = operation;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -152,19 +152,19 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.remarks = remarks;
     }
 
-    public int getYearofmanufacture() {
+    public Integer getYearofmanufacture() {
         return yearofmanufacture;
     }
 
-    public void setYearofmanufacture(int yearofmanufacture) {
+    public void setYearofmanufacture(Integer yearofmanufacture) {
         this.yearofmanufacture = yearofmanufacture;
     }
 
-    public int getPassengersnumber() {
+    public Integer getPassengersnumber() {
         return passengersnumber;
     }
 
-    public void setPassengersnumber(int passengersnumber) {
+    public void setPassengersnumber(Integer passengersnumber) {
         this.passengersnumber = passengersnumber;
     }
 
@@ -208,19 +208,19 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.platecode = platecode;
     }
 
-    public int getFeesstatus() {
+    public Integer getFeesstatus() {
         return feesstatus;
     }
 
-    public void setFeesstatus(int feesstatus) {
+    public void setFeesstatus(Integer feesstatus) {
         this.feesstatus = feesstatus;
     }
 
-    public long getOfficeid() {
+    public Long getOfficeid() {
         return officeid;
     }
 
-    public void setOfficeid(long officeid) {
+    public void setOfficeid(Long officeid) {
         this.officeid = officeid;
     }
 
@@ -232,11 +232,11 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.officename = officename;
     }
 
-    public long getFueltype() {
+    public Long getFueltype() {
         return fueltype;
     }
 
-    public void setFueltype(long fueltype) {
+    public void setFueltype(Long fueltype) {
         this.fueltype = fueltype;
     }
 
@@ -264,11 +264,11 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.vehicleowner = vehicleowner;
     }
 
-    public long getVehicleoperator() {
+    public Long getVehicleoperator() {
         return vehicleoperator;
     }
 
-    public void setVehicleoperator(long vehicleoperator) {
+    public void setVehicleoperator(Long vehicleoperator) {
         this.vehicleoperator = vehicleoperator;
     }
 
@@ -280,19 +280,19 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.operatorname = operatorname;
     }
 
-    public int getPermitstatus() {
+    public Integer getPermitstatus() {
         return permitstatus;
     }
 
-    public void setPermitstatus(int permitstatus) {
+    public void setPermitstatus(Integer permitstatus) {
         this.permitstatus = permitstatus;
     }
 
-    public long getUsagepurpose() {
+    public Long getUsagepurpose() {
         return usagepurpose;
     }
 
-    public void setUsagepurpose(long usagepurpose) {
+    public void setUsagepurpose(Long usagepurpose) {
         this.usagepurpose = usagepurpose;
     }
 
@@ -302,5 +302,38 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
 
     public void setUsagepurposename(String usagepurposename) {
         this.usagepurposename = usagepurposename;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleGeneralSearchResponse{" +
+                "vehicleid=" + vehicleid +
+                ", registrationnumber=" + registrationnumber +
+                ", platenumber=" + platenumber +
+                ", vehiclecategory=" + vehiclecategory +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                ", operation=" + operation +
+                ", status=" + status +
+                ", remarks=" + remarks +
+                ", yearofmanufacture=" + yearofmanufacture +
+                ", passengersnumber=" + passengersnumber +
+                ", manufacturer=" + manufacturer +
+                ", ownername=" + ownername +
+                ", licenseexpiration=" + licenseexpiration +
+                ", addtionaldescriptions=" + addtionaldescriptions +
+                ", platecode=" + platecode +
+                ", feesstatus=" + feesstatus +
+                ", officeid=" + officeid +
+                ", officename=" + officename +
+                ", fueltype=" + fueltype +
+                ", fueltypename=" + fueltypename +
+                ", vehicleentrydate=" + vehicleentrydate +
+                ", vehicleowner=" + vehicleowner +
+                ", vehicleoperator=" + vehicleoperator +
+                ", operatorname=" + operatorname +
+                ", permitstatus=" + permitstatus +
+                ", usagepurpose=" + usagepurpose +
+                ", usagepurposename=" + usagepurposename +
+                '}';
     }
 }

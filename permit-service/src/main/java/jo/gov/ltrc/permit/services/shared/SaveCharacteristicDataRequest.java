@@ -5,17 +5,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveCharacteristicDataRequest {
 
-    @ApiModelProperty("Characteristic ID Parameter ") private long characteristicidparm ;
+    @ApiModelProperty("Characteristic ID Parameter ") private Long characteristicidparm ;
     @ApiModelProperty("Characteristic Arabic Name Parameter ") private String characteristicarabicnameparm ;
     @ApiModelProperty("Characteristic English Name Parameter ") private String characteristicenglishnameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-    public long getCharacteristicidparm() {
+    public Long getCharacteristicidparm() {
         return characteristicidparm;
     }
 
-    public void setCharacteristicidparm(long characteristicidparm) {
+    public void setCharacteristicidparm(Long characteristicidparm) {
         this.characteristicidparm = characteristicidparm;
     }
 
@@ -35,20 +36,40 @@ public class SaveCharacteristicDataRequest {
         this.characteristicenglishnameparm = characteristicenglishnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveCharacteristicDataRequest{" +
+                "characteristicidparm=" + characteristicidparm +
+                ", characteristicarabicnameparm=" + characteristicarabicnameparm +
+                ", characteristicenglishnameparm=" + characteristicenglishnameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

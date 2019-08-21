@@ -9,8 +9,8 @@ import java.io.Serializable;
         name = "ReturnServiceDepartment",
         procedureName = "\"ReturnServiceDepartment\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "servicedepartmentidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "servicedepartmentnameparm"),
                 
         },
         resultSetMappings = {
@@ -29,14 +29,14 @@ import java.io.Serializable;
 public class ReturnServiceDepartmentResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Service Department ID ") private long servicedepartmentid ;
+    @ApiModelProperty("Service Department ID ") private Long servicedepartmentid ;
     @ApiModelProperty("Service Department Name ") private String servicedepartmentname ;
 
-    public long getServicedepartmentid() {
+    public Long getServicedepartmentid() {
         return servicedepartmentid;
     }
 
-    public void setServicedepartmentid(long servicedepartmentid) {
+    public void setServicedepartmentid(Long servicedepartmentid) {
         this.servicedepartmentid = servicedepartmentid;
     }
 
@@ -46,5 +46,13 @@ public class ReturnServiceDepartmentResponse implements Serializable {
 
     public void setServicedepartmentname(String servicedepartmentname) {
         this.servicedepartmentname = servicedepartmentname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnServiceDepartmentResponse{" +
+                "servicedepartmentid=" + servicedepartmentid +
+                ", servicedepartmentname=" + servicedepartmentname +
+                '}';
     }
 }

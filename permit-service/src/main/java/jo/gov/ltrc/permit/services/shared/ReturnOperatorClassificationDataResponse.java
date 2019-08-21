@@ -9,8 +9,8 @@ import java.io.Serializable;
         name = "ReturnOperatorClassification",
         procedureName = "\"ReturnOperatorClassification\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorclassificationidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class , name = "operatorclassificationnameparm"),
         },
         resultSetMappings = {
                 "ReturnOperatorClassificationDataSetMapping"
@@ -28,14 +28,14 @@ import java.io.Serializable;
 public class ReturnOperatorClassificationDataResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Classification ID ") private long operatorclassificationid   ;
+    @ApiModelProperty("Operator Classification ID ") private Long operatorclassificationid   ;
     @ApiModelProperty("Operator Classification Name ") private String operatorclassificationname ;
 
-    public long getOperatorclassificationid() {
+    public Long getOperatorclassificationid() {
         return operatorclassificationid;
     }
 
-    public void setOperatorclassificationid(long operatorclassificationid) {
+    public void setOperatorclassificationid(Long operatorclassificationid) {
         this.operatorclassificationid = operatorclassificationid;
     }
 
@@ -45,5 +45,13 @@ public class ReturnOperatorClassificationDataResponse implements Serializable {
 
     public void setOperatorclassificationname(String operatorclassificationname) {
         this.operatorclassificationname = operatorclassificationname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorClassificationDataResponse{" +
+                "operatorclassificationid=" + operatorclassificationid +
+                ", operatorclassificationname=" + operatorclassificationname +
+                '}';
     }
 }

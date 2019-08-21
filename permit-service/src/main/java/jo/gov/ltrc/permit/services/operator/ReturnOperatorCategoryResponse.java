@@ -10,23 +10,23 @@ import java.io.Serializable;
         name = "ReturnOperatorCategory",
         procedureName = "\"ReturnOperatorCategory\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategoryidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorcategorynameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorcategoryenglishnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategoryclassificationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorclassificationnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategorydepartmentparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "servicedepartmentnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "vehiclecategorynameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "plateclassificationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "plateclassificationnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "linetypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "linetypenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pagesize"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pageindex"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sorttype"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "sortby"),
 
 
         },
@@ -46,26 +46,25 @@ import java.io.Serializable;
 public class ReturnOperatorCategoryResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Category ID ") private long operatorcategoryid ;
+    @ApiModelProperty("Operator Category ID ") private Long operatorcategoryid ;
     @ApiModelProperty("Operator Category Name ") private String operatorcategoryname ;
     @ApiModelProperty("Operator Category English Name ") private String operatorcategoryenglishname ;
-    @ApiModelProperty("Operator Category Classification ") private long operatorcategoryclassification ;
+    @ApiModelProperty("Operator Category Classification ") private Long operatorcategoryclassification ;
     @ApiModelProperty("Operator Classification Name ") private String operatorclassificationname ;
-    @ApiModelProperty("Operator Category Department ") private long operatorcategorydepartment ;
+    @ApiModelProperty("Operator Category Department ") private Long operatorcategorydepartment ;
     @ApiModelProperty("Service Department Name ") private String servicedepartmentname ;
-    @ApiModelProperty("Vehicle Category ") private long vehiclecategory ;
+    @ApiModelProperty("Vehicle Category ") private Long vehiclecategory ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
-    @ApiModelProperty("Plate Classification ") private long plateclassification ;
+    @ApiModelProperty("Plate Classification ") private Long plateclassification ;
     @ApiModelProperty("Plate Classification Name ") private String plateclassificationname ;
-    @ApiModelProperty("Line Type ") private long linetype ;
+    @ApiModelProperty("Line Type ") private Long linetype ;
     @ApiModelProperty("Line Type Name ") private String linetypename ;
 
-
-    public long getOperatorcategoryid() {
+    public Long getOperatorcategoryid() {
         return operatorcategoryid;
     }
 
-    public void setOperatorcategoryid(long operatorcategoryid) {
+    public void setOperatorcategoryid(Long operatorcategoryid) {
         this.operatorcategoryid = operatorcategoryid;
     }
 
@@ -85,11 +84,11 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.operatorcategoryenglishname = operatorcategoryenglishname;
     }
 
-    public long getOperatorcategoryclassification() {
+    public Long getOperatorcategoryclassification() {
         return operatorcategoryclassification;
     }
 
-    public void setOperatorcategoryclassification(long operatorcategoryclassification) {
+    public void setOperatorcategoryclassification(Long operatorcategoryclassification) {
         this.operatorcategoryclassification = operatorcategoryclassification;
     }
 
@@ -101,11 +100,11 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.operatorclassificationname = operatorclassificationname;
     }
 
-    public long getOperatorcategorydepartment() {
+    public Long getOperatorcategorydepartment() {
         return operatorcategorydepartment;
     }
 
-    public void setOperatorcategorydepartment(long operatorcategorydepartment) {
+    public void setOperatorcategorydepartment(Long operatorcategorydepartment) {
         this.operatorcategorydepartment = operatorcategorydepartment;
     }
 
@@ -117,11 +116,11 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.servicedepartmentname = servicedepartmentname;
     }
 
-    public long getVehiclecategory() {
+    public Long getVehiclecategory() {
         return vehiclecategory;
     }
 
-    public void setVehiclecategory(long vehiclecategory) {
+    public void setVehiclecategory(Long vehiclecategory) {
         this.vehiclecategory = vehiclecategory;
     }
 
@@ -133,11 +132,11 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.vehiclecategoryname = vehiclecategoryname;
     }
 
-    public long getPlateclassification() {
+    public Long getPlateclassification() {
         return plateclassification;
     }
 
-    public void setPlateclassification(long plateclassification) {
+    public void setPlateclassification(Long plateclassification) {
         this.plateclassification = plateclassification;
     }
 
@@ -149,11 +148,11 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.plateclassificationname = plateclassificationname;
     }
 
-    public long getLinetype() {
+    public Long getLinetype() {
         return linetype;
     }
 
-    public void setLinetype(long linetype) {
+    public void setLinetype(Long linetype) {
         this.linetype = linetype;
     }
 
@@ -165,4 +164,22 @@ public class ReturnOperatorCategoryResponse implements Serializable {
         this.linetypename = linetypename;
     }
 
+    @Override
+    public String toString() {
+        return "ReturnOperatorCategoryResponse{" +
+                "operatorcategoryid=" + operatorcategoryid +
+                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorcategoryenglishname=" + operatorcategoryenglishname +
+                ", operatorcategoryclassification=" + operatorcategoryclassification +
+                ", operatorclassificationname=" + operatorclassificationname +
+                ", operatorcategorydepartment=" + operatorcategorydepartment +
+                ", servicedepartmentname=" + servicedepartmentname +
+                ", vehiclecategory=" + vehiclecategory +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                ", plateclassification=" + plateclassification +
+                ", plateclassificationname=" + plateclassificationname +
+                ", linetype=" + linetype +
+                ", linetypename=" + linetypename +
+                '}';
+    }
 }

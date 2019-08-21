@@ -5,15 +5,15 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnParkingTypeRequest {
 
-    @ApiModelProperty("Parking Type ID Parameter ") private long parkingtypeidparm ;
+    @ApiModelProperty("Parking Type ID Parameter ") private Long parkingtypeidparm ;
     @ApiModelProperty("Parking Type Arabic Name Parameter ") private String parkingtypearabicnameparm ;
     @ApiModelProperty("Parking Type English Name Parameter ") private String parkingtypeenglishnameparm ;
 
-    public long getParkingtypeidparm() {
+    public Long getParkingtypeidparm() {
         return parkingtypeidparm;
     }
 
-    public void setParkingtypeidparm(long parkingtypeidparm) {
+    public void setParkingtypeidparm(Long parkingtypeidparm) {
         this.parkingtypeidparm = parkingtypeidparm;
     }
 
@@ -31,6 +31,15 @@ public class ReturnParkingTypeRequest {
 
     public void setParkingtypeenglishnameparm(String parkingtypeenglishnameparm) {
         this.parkingtypeenglishnameparm = parkingtypeenglishnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnParkingTypeRequest{" +
+                "parkingtypeidparm=" + parkingtypeidparm +
+                ", parkingtypearabicnameparm=" + parkingtypearabicnameparm +
+                ", parkingtypeenglishnameparm=" + parkingtypeenglishnameparm +
+                '}';
     }
 }
 

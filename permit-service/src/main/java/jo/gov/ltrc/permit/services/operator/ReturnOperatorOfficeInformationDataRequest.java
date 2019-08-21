@@ -10,14 +10,14 @@ public class ReturnOperatorOfficeInformationDataRequest {
     @ApiModelProperty("Certification Registration Number Parameter ") private String certificateregistrationnumberparm ;
     @ApiModelProperty("Commercial Record Number Parameter ") private String commercialrecordnumberparm ;
     @ApiModelProperty("Commercial Name Record Number Parameter ") private String commercialnamerecordnumberparm ;
-    @ApiModelProperty("Minimum Employees Number Parameter ") private int minemployeesnumberparm ;
-    @ApiModelProperty("Maximum Employees Number Parameter ") private int maxemployeesnumberparm ;
-    @ApiModelProperty("Minimum Drivers Number Parameter ") private int mindriversnumberparm ;
-    @ApiModelProperty("Maximum Drivers Number Parameter ") private int maxdriversnumberparm ;
-    @ApiModelProperty("Minimum Basic Cars Number Parameter ") private int minbasiccarsnumberparm ;
-    @ApiModelProperty("Maximum Basic Cars Number Parameter ") private int maxbasiccarsnumberparm ;
-    @ApiModelProperty("Minimum Working Cars Number Parameter ") private int minworkingcarsnumberparm ;
-    @ApiModelProperty("Maximum Working Cars Number Parameter ") private int maxworkingcarsnumberparm ;
+    @ApiModelProperty("Minimum Employees Number Parameter ") private Integer minemployeesnumberparm ;
+    @ApiModelProperty("Maximum Employees Number Parameter ") private Integer maxemployeesnumberparm ;
+    @ApiModelProperty("Minimum Drivers Number Parameter ") private Integer mindriversnumberparm ;
+    @ApiModelProperty("Maximum Drivers Number Parameter ") private Integer maxdriversnumberparm ;
+    @ApiModelProperty("Minimum Basic Cars Number Parameter ") private Integer minbasiccarsnumberparm ;
+    @ApiModelProperty("Maximum Basic Cars Number Parameter ") private Integer maxbasiccarsnumberparm ;
+    @ApiModelProperty("Minimum Working Cars Number Parameter ") private Integer minworkingcarsnumberparm ;
+    @ApiModelProperty("Maximum Working Cars Number Parameter ") private Integer maxworkingcarsnumberparm ;
     @ApiModelProperty("Service Scope Parameter ") private String servicescopeparm ;
     @ApiModelProperty("Office Closing Date Parameter ") private Date officeclosingdateparm ;
 
@@ -45,67 +45,67 @@ public class ReturnOperatorOfficeInformationDataRequest {
         this.commercialnamerecordnumberparm = commercialnamerecordnumberparm;
     }
 
-    public int getMinemployeesnumberparm() {
+    public Integer getMinemployeesnumberparm() {
         return minemployeesnumberparm;
     }
 
-    public void setMinemployeesnumberparm(int minemployeesnumberparm) {
+    public void setMinemployeesnumberparm(Integer minemployeesnumberparm) {
         this.minemployeesnumberparm = minemployeesnumberparm;
     }
 
-    public int getMaxemployeesnumberparm() {
+    public Integer getMaxemployeesnumberparm() {
         return maxemployeesnumberparm;
     }
 
-    public void setMaxemployeesnumberparm(int maxemployeesnumberparm) {
+    public void setMaxemployeesnumberparm(Integer maxemployeesnumberparm) {
         this.maxemployeesnumberparm = maxemployeesnumberparm;
     }
 
-    public int getMindriversnumberparm() {
+    public Integer getMindriversnumberparm() {
         return mindriversnumberparm;
     }
 
-    public void setMindriversnumberparm(int mindriversnumberparm) {
+    public void setMindriversnumberparm(Integer mindriversnumberparm) {
         this.mindriversnumberparm = mindriversnumberparm;
     }
 
-    public int getMaxdriversnumberparm() {
+    public Integer getMaxdriversnumberparm() {
         return maxdriversnumberparm;
     }
 
-    public void setMaxdriversnumberparm(int maxdriversnumberparm) {
+    public void setMaxdriversnumberparm(Integer maxdriversnumberparm) {
         this.maxdriversnumberparm = maxdriversnumberparm;
     }
 
-    public int getMinbasiccarsnumberparm() {
+    public Integer getMinbasiccarsnumberparm() {
         return minbasiccarsnumberparm;
     }
 
-    public void setMinbasiccarsnumberparm(int minbasiccarsnumberparm) {
+    public void setMinbasiccarsnumberparm(Integer minbasiccarsnumberparm) {
         this.minbasiccarsnumberparm = minbasiccarsnumberparm;
     }
 
-    public int getMaxbasiccarsnumberparm() {
+    public Integer getMaxbasiccarsnumberparm() {
         return maxbasiccarsnumberparm;
     }
 
-    public void setMaxbasiccarsnumberparm(int maxbasiccarsnumberparm) {
+    public void setMaxbasiccarsnumberparm(Integer maxbasiccarsnumberparm) {
         this.maxbasiccarsnumberparm = maxbasiccarsnumberparm;
     }
 
-    public int getMinworkingcarsnumberparm() {
+    public Integer getMinworkingcarsnumberparm() {
         return minworkingcarsnumberparm;
     }
 
-    public void setMinworkingcarsnumberparm(int minworkingcarsnumberparm) {
+    public void setMinworkingcarsnumberparm(Integer minworkingcarsnumberparm) {
         this.minworkingcarsnumberparm = minworkingcarsnumberparm;
     }
 
-    public int getMaxworkingcarsnumberparm() {
+    public Integer getMaxworkingcarsnumberparm() {
         return maxworkingcarsnumberparm;
     }
 
-    public void setMaxworkingcarsnumberparm(int maxworkingcarsnumberparm) {
+    public void setMaxworkingcarsnumberparm(Integer maxworkingcarsnumberparm) {
         this.maxworkingcarsnumberparm = maxworkingcarsnumberparm;
     }
 
@@ -123,5 +123,24 @@ public class ReturnOperatorOfficeInformationDataRequest {
 
     public void setOfficeclosingdateparm(Date officeclosingdateparm) {
         this.officeclosingdateparm = officeclosingdateparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorOfficeInformationDataRequest{" +
+                "certificateregistrationnumberparm=" + certificateregistrationnumberparm +
+                ", commercialrecordnumberparm=" + commercialrecordnumberparm +
+                ", commercialnamerecordnumberparm=" + commercialnamerecordnumberparm +
+                ", minemployeesnumberparm=" + minemployeesnumberparm +
+                ", maxemployeesnumberparm=" + maxemployeesnumberparm +
+                ", mindriversnumberparm=" + mindriversnumberparm +
+                ", maxdriversnumberparm=" + maxdriversnumberparm +
+                ", minbasiccarsnumberparm=" + minbasiccarsnumberparm +
+                ", maxbasiccarsnumberparm=" + maxbasiccarsnumberparm +
+                ", minworkingcarsnumberparm=" + minworkingcarsnumberparm +
+                ", maxworkingcarsnumberparm=" + maxworkingcarsnumberparm +
+                ", servicescopeparm=" + servicescopeparm +
+                ", officeclosingdateparm=" + officeclosingdateparm +
+                '}';
     }
 }

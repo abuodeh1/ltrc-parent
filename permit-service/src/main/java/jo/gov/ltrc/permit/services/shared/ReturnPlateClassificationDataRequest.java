@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnPlateClassificationDataRequest {
 
-    @ApiModelProperty("Plate Classification ID Parameter ") private int plateclassificationidparm ;
+    @ApiModelProperty("Plate Classification ID Parameter ") private Integer plateclassificationidparm ;
     @ApiModelProperty("Plate Classification Name Parameter ") private String plateclassificationnameparm ;
 
-    public int getPlateclassificationidparm() {
+    public Integer getPlateclassificationidparm() {
         return plateclassificationidparm;
     }
 
-    public void setPlateclassificationidparm(int plateclassificationidparm) {
+    public void setPlateclassificationidparm(Integer plateclassificationidparm) {
         this.plateclassificationidparm = plateclassificationidparm;
     }
 
@@ -22,6 +22,14 @@ public class ReturnPlateClassificationDataRequest {
 
     public void setPlateclassificationnameparm(String plateclassificationnameparm) {
         this.plateclassificationnameparm = plateclassificationnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPlateClassificationDataRequest{" +
+                "plateclassificationidparm=" + plateclassificationidparm +
+                ", plateclassificationnameparm=" + plateclassificationnameparm +
+                '}';
     }
 }
 

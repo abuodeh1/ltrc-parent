@@ -6,11 +6,14 @@ import io.swagger.annotations.ApiParam;
 
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -30,84 +33,18 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/api/route")
+@Log4j2
 public class RouteService {
 
     @PersistenceContext
     private EntityManager entityManager;
 
-
-    @ApiOperation("Retrieve Start Point Line By Route ID")
-    @GetMapping("/{id}/start-point")
-    public long getStartPoints(@ApiParam("Route ID") @PathVariable(value = "id") long id) {
-
-        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
-
-        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getStartpoint() : 0L);
-    }
-
-    @ApiOperation("Retrieve End Point Line By Route ID")
-    @GetMapping("/{id}/end-point")
-    public long getEndPoints(@ApiParam("Route ID") @PathVariable(value = "id") long id) {
-
-        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
-
-        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getEndpoint() : 0L);
-
-    }
-
-    @ApiOperation("Retrieve Status Line By Route ID")
-    @GetMapping("/{id}/line-status")
-    public long getStatuses(@ApiParam("Route ID") @PathVariable(value = "id") long id) {
-
-        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
-
-        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getLinestatus() : 0L);
-
-    }
-
-    @ApiOperation("Retrieve Route Find ")
-    @PostMapping("/find")
-    public List<ReturnRouteResponse> findRoute (@ApiParam("\t") @RequestBody ReturnRouteRequest returnRouteRequest){
-
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnRoute");
-        storedProcedureQuery.setParameter(1, returnRouteRequest.getRouteidparm());
-        storedProcedureQuery.setParameter(2, returnRouteRequest.getRoutenameparm());
-        storedProcedureQuery.setParameter(3, returnRouteRequest.getRoutelengthparm());
-        storedProcedureQuery.setParameter(4, returnRouteRequest.getRoutelengthviagisparm());
-        storedProcedureQuery.setParameter(5, returnRouteRequest.getRoutedailypassengersparm());
-        storedProcedureQuery.setParameter(6, returnRouteRequest.getBuslineidparm());
-        storedProcedureQuery.setParameter(7, returnRouteRequest.getLinenameparm());
-
-        List<ReturnRouteResponse> result = storedProcedureQuery.getResultList();
-
-        return result ;
-    }
-
-    @ApiOperation("Retrieve Route Points By Route ID")
-    @GetMapping("/{id}/point")
-    public List<ReturnRoutePointsResponse> getPoints (@ApiParam("Route ID") @PathVariable(value = "id") long id){
-
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnRoutePoints");
-        storedProcedureQuery.setParameter(1, id);
-
-        List<ReturnRoutePointsResponse> result = storedProcedureQuery.getResultList();
-
-        return result;
-    }
-
-    @ApiOperation("Retrieve Line Search By Route Data ")
-    @PostMapping("/find-line")
-    public List<ReturnLineByRouteDataResponse> searchLines(@ApiParam("\t") @RequestBody ReturnLineByRouteDataRequest returnLineByRouteDataRequest){
-
-        List<ReturnLineByRouteDataResponse> result = findLineByRouteData(returnLineByRouteDataRequest);
-
-        return result;
-    }
+//    Start Add or Edit Methods
 
     @ApiResponses(value = {
 
             @ApiResponse(code = 200 , message =
-                            "Number$N\n" +
+                    "Number$N\n" +
                             "----------\n" +
                             "Number :  Effected rows  \n" +
                             "$ : Special character to split concatenated strings \n" +
@@ -131,46 +68,52 @@ public class RouteService {
     })
     @ApiOperation("Add or Edit Route ")
     @PostMapping
-    public String addRoute(@ApiParam("\t") @RequestBody SaveRouteDataRequest saveRouteDataRequest) {
+    public String addRoute(@ApiParam("\t") @RequestBody SaveRouteDataRequest saveRouteDataRequest, HttpServletRequest request) {
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveRouteData");
-        storedProcedureQuery.setParameter(1, saveRouteDataRequest.getRoutenameparm());
-        storedProcedureQuery.setParameter(2, saveRouteDataRequest.getRoutelengthparm());
-        storedProcedureQuery.setParameter(3, saveRouteDataRequest.getRoutelengthviagisparm());
-        storedProcedureQuery.setParameter(4, saveRouteDataRequest.getRoutedailypassengersparm());
-        storedProcedureQuery.setParameter(5, saveRouteDataRequest.getPrincepal());
-        storedProcedureQuery.setParameter(6, saveRouteDataRequest.getBuslineidparm());
-        storedProcedureQuery.setParameter(7, saveRouteDataRequest.getStatusparm());
-        storedProcedureQuery.setParameter(8, saveRouteDataRequest.getRouteidparm());
-        storedProcedureQuery.setParameter(9, saveRouteDataRequest.getGoingparm());
-        storedProcedureQuery.setParameter(10, saveRouteDataRequest.getReturningparm());
+        log.debug(" SaveRouteDataRequest : " + saveRouteDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        saveRouteDataRequest.setIpaddressparm(request.getRemoteAddr());
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveRouteData", saveRouteDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         String routeRs = (String) storedProcedureQuery.getSingleResult();
 
         if(!routeRs.startsWith("E")){
 
-            long routeId = Long.valueOf(routeRs.substring(0, routeRs.indexOf("$")));
+            Long routeId = Long.valueOf(routeRs.substring(0, routeRs.indexOf("$")));
 
-            String deleteRs = deleteRoutePointData(saveRouteDataRequest.getRouteidparm() , 0 , saveRouteDataRequest.getPrincepal());
+            String deleteRs = deleteRoutePointData(saveRouteDataRequest.getRouteidparm() , 0L , saveRouteDataRequest.getPrincepal());
 
             if(saveRouteDataRequest.getPoints() != null && deleteRs.equalsIgnoreCase("1$D")) {
 
                 if (saveRouteDataRequest.getRouteidparm() == 0) {
-                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(routeId, point));
+                    saveRouteDataRequest.setRouteidparm(routeId);
+                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(point));
                 }else {
-                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(saveRouteDataRequest.getRouteidparm(), point));
+                    saveRouteDataRequest.setRouteidparm(saveRouteDataRequest.getRouteidparm());
+                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(point));
                 }
             }
 
 
         }
 
-            return routeRs;
+        return routeRs;
     }
 
     @ApiResponses(value = {
             @ApiResponse(code = 200 , message =
-                            "Number$N\n" +
+                    "Number$N\n" +
                             "----------\n" +
                             "Number :  Effected rows  \n" +
                             "$ : Special character to split concatenated strings \n" +
@@ -194,21 +137,107 @@ public class RouteService {
     })
     @ApiOperation("Add or Edit Point Route ")
     @PostMapping("/{id}/point")
-    public String addRoutePoint(@ApiParam("\t") @PathVariable(value = "id") long id, @RequestBody SaveRoutePointDataRequest saveRoutePointDataRequest) {
+    public String addRoutePoint(@ApiParam("\t") @RequestBody SaveRoutePointDataRequest saveRoutePointDataRequest) {
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveRoutePointData");
-        storedProcedureQuery.setParameter(1, id);
-        storedProcedureQuery.setParameter(2, saveRoutePointDataRequest.getPointidparm());
-        storedProcedureQuery.setParameter(3, saveRoutePointDataRequest.getPrincipal());
-        storedProcedureQuery.setParameter(4, saveRoutePointDataRequest.getPointorderparm());
-        storedProcedureQuery.setParameter(5, saveRoutePointDataRequest.isPointdirectionparm());
+        log.debug(" SaveRoutePointDataRequest : " + saveRoutePointDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveRoutePointData", saveRoutePointDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult();
     }
 
+
+//    End Add or Edit Methods
+
+
+//    Start Retrieve Methods
+
+    @ApiOperation("Retrieve Start Point Line By Route ID")
+    @GetMapping("/{id}/start-point")
+    public Long getStartPoints(@ApiParam("Route ID") @PathVariable(value = "id") Long id) {
+
+        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
+
+        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getStartpoint() : 0L);
+    }
+
+    @ApiOperation("Retrieve End Point Line By Route ID")
+    @GetMapping("/{id}/end-point")
+    public Long getEndPoints(@ApiParam("Route ID") @PathVariable(value = "id") Long id) {
+
+        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
+
+        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getEndpoint() : 0L);
+
+    }
+
+    @ApiOperation("Retrieve Status Line By Route ID")
+    @GetMapping("/{id}/line-status")
+    public Long getStatuses(@ApiParam("Route ID") @PathVariable(value = "id") Long id) {
+
+        ReturnLineByRouteDataResponse returnLineByRouteDataResponse = getLineByRouteID(id);
+
+        return (returnLineByRouteDataResponse != null? returnLineByRouteDataResponse.getLinestatus() : 0L);
+
+    }
+
+    @ApiOperation("Retrieve Route Find ")
+    @PostMapping("/find")
+    public List<ReturnRouteResponse> findRoute (@ApiParam("\t") @RequestBody ReturnRouteRequest returnRouteRequest){
+
+        log.debug(" ReturnRouteRequest : " + returnRouteRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnRoute", returnRouteRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
+        List<ReturnRouteResponse> result = storedProcedureQuery.getResultList();
+
+        return result ;
+    }
+
+    @ApiOperation("Retrieve Route Points By Route ID")
+    @GetMapping("/{id}/point")
+    public List<ReturnRoutePointsResponse> getPoints (@ApiParam("Route ID") @PathVariable(value = "id") Long id){
+
+        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnRoutePoints");
+        storedProcedureQuery.setParameter(1, id);
+
+        List<ReturnRoutePointsResponse> result = storedProcedureQuery.getResultList();
+
+        return result;
+    }
+
+    @ApiOperation("Retrieve Line Search By Route Data ")
+    @PostMapping("/find-line")
+    public List<ReturnLineByRouteDataResponse> searchLines(@ApiParam("\t") @RequestBody ReturnLineByRouteDataRequest returnLineByRouteDataRequest){
+
+        List<ReturnLineByRouteDataResponse> result = findLineByRouteData(returnLineByRouteDataRequest);
+
+        return result;
+    }
+
     @ApiOperation("Retrieve Line By Route ID")
     @GetMapping("/{id}/line")
-    public ReturnLineByRouteDataResponse getLineByRouteID(@ApiParam("Route ID") @PathVariable(value = "id") long id){
+    public ReturnLineByRouteDataResponse getLineByRouteID(@ApiParam("Route ID") @PathVariable(value = "id") Long id){
 
         ReturnLineByRouteDataRequest returnLineByRouteDataRequest = new ReturnLineByRouteDataRequest();
         returnLineByRouteDataRequest.setMinrouteidparm(id);
@@ -223,6 +252,9 @@ public class RouteService {
 
         return null;
     }
+
+//    End Retrieve Methods
+
 
     @ApiResponses(value = {
             @ApiResponse(code = 200 , message =
@@ -245,7 +277,7 @@ public class RouteService {
     })
     @ApiOperation("Change Route Status ")
     @DeleteMapping("/{id}/principal/{principalid}")
-    public String deleteRoute(@ApiParam("Route ID") @PathVariable(value = "id") long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") long principalid) {
+    public String deleteRoute(@ApiParam("Route ID") @PathVariable(value = "id") Long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") Long principalid) {
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangeRouteStatus");
         storedProcedureQuery.setParameter(1, 3);
@@ -255,25 +287,7 @@ public class RouteService {
         return (String)storedProcedureQuery.getSingleResult();
     }
 
-    private List<ReturnLineByRouteDataResponse> findLineByRouteData(ReturnLineByRouteDataRequest returnLineByRouteDataRequest){
-
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnLineByRouteData");
-        storedProcedureQuery.setParameter(1, returnLineByRouteDataRequest.getMinrouteidparm());
-        storedProcedureQuery.setParameter(2, returnLineByRouteDataRequest.getMaxrouteidparm());
-        storedProcedureQuery.setParameter(3, returnLineByRouteDataRequest.getMinroutedailypassengersparm());
-        storedProcedureQuery.setParameter(4, returnLineByRouteDataRequest.getMaxroutedailypassengersparm());
-        storedProcedureQuery.setParameter(5, returnLineByRouteDataRequest.getMinroutelengthparm());
-        storedProcedureQuery.setParameter(6, returnLineByRouteDataRequest.getMaxroutelengthparm());
-        storedProcedureQuery.setParameter(7, returnLineByRouteDataRequest.getMinroutelengthviagisparm());
-        storedProcedureQuery.setParameter(8, returnLineByRouteDataRequest.getMaxroutelengthviagisparm());
-
-        List<ReturnLineByRouteDataResponse> result = storedProcedureQuery.getResultList();
-
-        return result;
-
-    }
-
-    private String deleteRoutePointData(long id , long pointId , long prinsipal){
+    private String deleteRoutePointData(long id , Long pointId , Long prinsipal){
 
         StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("DeleteRoutePointData");
         storedProcedureQuery.setParameter(1, id);
@@ -281,6 +295,28 @@ public class RouteService {
         storedProcedureQuery.setParameter(3, prinsipal);
 
         return (String) storedProcedureQuery.getSingleResult() ;
+    }
+
+    private List<ReturnLineByRouteDataResponse> findLineByRouteData(ReturnLineByRouteDataRequest returnLineByRouteDataRequest){
+
+        log.debug(" ReturnLineByRouteDataRequest : " + returnLineByRouteDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnLineByRouteData", returnLineByRouteDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
+        List<ReturnLineByRouteDataResponse> result = storedProcedureQuery.getResultList();
+
+        return result;
+
     }
 
 }

@@ -7,51 +7,50 @@ import java.sql.Date;
 
 public class ReturnVehicleGeneralSearchDataRequest {
 
-    @ApiModelProperty("Minimum Vehicle ID Parameter ") private long minvehicleidparm ;
-    @ApiModelProperty("Maximum Vehicle ID Parameter ") private long maxvehicleidparm ;
+    @ApiModelProperty("Minimum Vehicle ID Parameter ") private Long minvehicleidparm ;
+    @ApiModelProperty("Maximum Vehicle ID Parameter ") private Long maxvehicleidparm ;
     @ApiModelProperty("Registration Number Parameter ") private String registrationnumberparm ;
     @ApiModelProperty("Plate Number Parameter ") private String platenumberparm ;
-    @ApiModelProperty("Vehicle Category Parameter ") private long vehiclecategoryparm ;
+    @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
     @ApiModelProperty("Vehicle Category Name Parameter ") private String vehiclecategorynameparm ;
     @ApiModelProperty("Operation Parameter ") private String operationparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Remarks Parameter ") private String remarksparm ;
-    @ApiModelProperty("Year of Manufacture Parameter ") private int yearofmanufactureparm ;
-    @ApiModelProperty("Passengers Number Parameter ") private int passengersnumberparm ;
+    @ApiModelProperty("Year of Manufacture Parameter ") private Integer yearofmanufactureparm ;
+    @ApiModelProperty("Passengers Number Parameter ") private Integer passengersnumberparm ;
     @ApiModelProperty("Manufacture Parameter ") private String manufacturerparm ;
     @ApiModelProperty("Owner Name Parameter ") private String ownernameparm ;
     @ApiModelProperty("License Expiration Parameter ") private Date licenseexpirationparm ;
     @ApiModelProperty("Additional Descriptions Parameter ") private String addtionaldescriptionsparm ;
     @ApiModelProperty("Plate Code Parameter ") private String platecodeparm ;
-    @ApiModelProperty("Fees Status Parameter ") private int feesstatusparm ;
-    @ApiModelProperty("Office ID Parameter ") private long officeidparm ;
+    @ApiModelProperty("Fees Status Parameter ") private Integer feesstatusparm ;
+    @ApiModelProperty("Office ID Parameter ") private Long officeidparm ;
     @ApiModelProperty("Office Name Parameter ") private String officenameparm ;
-    @ApiModelProperty("Fuel Type Parameter ") private long fueltypeparm ;
+    @ApiModelProperty("Fuel Type Parameter ") private Long fueltypeparm ;
     @ApiModelProperty("Fuel Type Name Parameter ") private String fueltypenameparm ;
     @ApiModelProperty("Vehicle Entry date Parameter ") private Date vehicleentrydateparm ;
     @ApiModelProperty("Owner Parameter ") private String ownerparm ;
-    @ApiModelProperty("Operator Parameter ") private long operatorparm ;
-    @ApiModelProperty("Vehicle Permit Parameter ") private long vehiclepermitparm ;
+    @ApiModelProperty("Operator Parameter ") private Long operatorparm ;
+    @ApiModelProperty("Vehicle Permit Parameter ") private Long vehiclepermitparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
 
-
-    public long getMinvehicleidparm() {
+    public Long getMinvehicleidparm() {
         return minvehicleidparm;
     }
 
-    public void setMinvehicleidparm(long minvehicleidparm) {
+    public void setMinvehicleidparm(Long minvehicleidparm) {
         this.minvehicleidparm = minvehicleidparm;
     }
 
-    public long getMaxvehicleidparm() {
+    public Long getMaxvehicleidparm() {
         return maxvehicleidparm;
     }
 
-    public void setMaxvehicleidparm(long maxvehicleidparm) {
+    public void setMaxvehicleidparm(Long maxvehicleidparm) {
         this.maxvehicleidparm = maxvehicleidparm;
     }
 
@@ -71,11 +70,11 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.platenumberparm = platenumberparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
@@ -95,11 +94,11 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.operationparm = operationparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -111,19 +110,19 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.remarksparm = remarksparm;
     }
 
-    public int getYearofmanufactureparm() {
+    public Integer getYearofmanufactureparm() {
         return yearofmanufactureparm;
     }
 
-    public void setYearofmanufactureparm(int yearofmanufactureparm) {
+    public void setYearofmanufactureparm(Integer yearofmanufactureparm) {
         this.yearofmanufactureparm = yearofmanufactureparm;
     }
 
-    public int getPassengersnumberparm() {
+    public Integer getPassengersnumberparm() {
         return passengersnumberparm;
     }
 
-    public void setPassengersnumberparm(int passengersnumberparm) {
+    public void setPassengersnumberparm(Integer passengersnumberparm) {
         this.passengersnumberparm = passengersnumberparm;
     }
 
@@ -167,19 +166,19 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.platecodeparm = platecodeparm;
     }
 
-    public int getFeesstatusparm() {
+    public Integer getFeesstatusparm() {
         return feesstatusparm;
     }
 
-    public void setFeesstatusparm(int feesstatusparm) {
+    public void setFeesstatusparm(Integer feesstatusparm) {
         this.feesstatusparm = feesstatusparm;
     }
 
-    public long getOfficeidparm() {
+    public Long getOfficeidparm() {
         return officeidparm;
     }
 
-    public void setOfficeidparm(long officeidparm) {
+    public void setOfficeidparm(Long officeidparm) {
         this.officeidparm = officeidparm;
     }
 
@@ -191,11 +190,11 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.officenameparm = officenameparm;
     }
 
-    public long getFueltypeparm() {
+    public Long getFueltypeparm() {
         return fueltypeparm;
     }
 
-    public void setFueltypeparm(long fueltypeparm) {
+    public void setFueltypeparm(Long fueltypeparm) {
         this.fueltypeparm = fueltypeparm;
     }
 
@@ -223,19 +222,19 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.ownerparm = ownerparm;
     }
 
-    public long getOperatorparm() {
+    public Long getOperatorparm() {
         return operatorparm;
     }
 
-    public void setOperatorparm(long operatorparm) {
+    public void setOperatorparm(Long operatorparm) {
         this.operatorparm = operatorparm;
     }
 
-    public long getVehiclepermitparm() {
+    public Long getVehiclepermitparm() {
         return vehiclepermitparm;
     }
 
-    public void setVehiclepermitparm(long vehiclepermitparm) {
+    public void setVehiclepermitparm(Long vehiclepermitparm) {
         this.vehiclepermitparm = vehiclepermitparm;
     }
 
@@ -247,27 +246,27 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.operatornameparm = operatornameparm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -277,5 +276,41 @@ public class ReturnVehicleGeneralSearchDataRequest {
 
     public void setSortby(String sortby) {
         this.sortby = sortby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleGeneralSearchDataRequest{" +
+                "minvehicleidparm=" + minvehicleidparm +
+                ", maxvehicleidparm=" + maxvehicleidparm +
+                ", registrationnumberparm=" + registrationnumberparm +
+                ", platenumberparm=" + platenumberparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", vehiclecategorynameparm=" + vehiclecategorynameparm +
+                ", operationparm=" + operationparm +
+                ", statusparm=" + statusparm +
+                ", remarksparm=" + remarksparm +
+                ", yearofmanufactureparm=" + yearofmanufactureparm +
+                ", passengersnumberparm=" + passengersnumberparm +
+                ", manufacturerparm=" + manufacturerparm +
+                ", ownernameparm=" + ownernameparm +
+                ", licenseexpirationparm=" + licenseexpirationparm +
+                ", addtionaldescriptionsparm=" + addtionaldescriptionsparm +
+                ", platecodeparm=" + platecodeparm +
+                ", feesstatusparm=" + feesstatusparm +
+                ", officeidparm=" + officeidparm +
+                ", officenameparm=" + officenameparm +
+                ", fueltypeparm=" + fueltypeparm +
+                ", fueltypenameparm=" + fueltypenameparm +
+                ", vehicleentrydateparm=" + vehicleentrydateparm +
+                ", ownerparm=" + ownerparm +
+                ", operatorparm=" + operatorparm +
+                ", vehiclepermitparm=" + vehiclepermitparm +
+                ", operatornameparm=" + operatornameparm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                '}';
     }
 }

@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnOperatorClassificationDataRequest {
 
-    @ApiModelProperty("Operator Classification ID Parameter") private long operatorclassificationidparm ;
+    @ApiModelProperty("Operator Classification ID Parameter") private Long operatorclassificationidparm ;
     @ApiModelProperty("Operator Classification Name Parameter") private String operatorclassificationnameparm ;
 
-    public long getOperatorclassificationidparm() {
+    public Long getOperatorclassificationidparm() {
         return operatorclassificationidparm;
     }
 
-    public void setOperatorclassificationidparm(long operatorclassificationidparm) {
+    public void setOperatorclassificationidparm(Long operatorclassificationidparm) {
         this.operatorclassificationidparm = operatorclassificationidparm;
     }
 
@@ -22,6 +22,14 @@ public class ReturnOperatorClassificationDataRequest {
 
     public void setOperatorclassificationnameparm(String operatorclassificationnameparm) {
         this.operatorclassificationnameparm = operatorclassificationnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorClassificationDataRequest{" +
+                "operatorclassificationidparm=" + operatorclassificationidparm +
+                ", operatorclassificationnameparm=" + operatorclassificationnameparm +
+                '}';
     }
 }
 

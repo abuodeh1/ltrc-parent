@@ -6,32 +6,31 @@ import java.sql.Date;
 
 public class SaveApplicationBusRentingOfficeLicenseDataRequest {
 
-    @ApiModelProperty("Parameter ") private long applicationbusrentalofficelicenseidparm ;
+    @ApiModelProperty("Parameter ") private Long applicationbusrentalofficelicenseidparm ;
     @ApiModelProperty("Applicant National ID Parameter ") private String applicantnationalidparm ;
     @ApiModelProperty("Applicant Name  Parameter ") private String applicantnameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
-    @ApiModelProperty("Technical Financial Study Parameter ") private int technicalfinancialstudyparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
+    @ApiModelProperty("Technical Financial Study Parameter ") private Integer technicalfinancialstudyparm ;
     @ApiModelProperty("Evaluation Commit Explanation Parameter ") private String evaluationcommitteeexplanationparm ;
-    @ApiModelProperty("Evaluation Commit Decision Parameter ") private int evaluationcommitteedecisionparm ;
+    @ApiModelProperty("Evaluation Commit Decision Parameter ") private Integer evaluationcommitteedecisionparm ;
     @ApiModelProperty("General Director Explanation Parameter ") private String generaldirectorexplanationparm ;
-    @ApiModelProperty("General Director Decision Parameter ") private int generaldirectordecisionparm ;
+    @ApiModelProperty("General Director Decision Parameter ") private Integer generaldirectordecisionparm ;
     @ApiModelProperty("Disclosure Commit Explanation Parameter ") private String disclosurecommitteeexplanationparm ;
-    @ApiModelProperty("Disclosure Commit Decision Parameter ") private int disclosurecommitteedecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Disclosure Commit Decision Parameter ") private Integer disclosurecommitteedecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddress ;
 
-
-    public long getApplicationbusrentalofficelicenseidparm() {
+    public Long getApplicationbusrentalofficelicenseidparm() {
         return applicationbusrentalofficelicenseidparm;
     }
 
-    public void setApplicationbusrentalofficelicenseidparm(long applicationbusrentalofficelicenseidparm) {
+    public void setApplicationbusrentalofficelicenseidparm(Long applicationbusrentalofficelicenseidparm) {
         this.applicationbusrentalofficelicenseidparm = applicationbusrentalofficelicenseidparm;
     }
 
@@ -67,43 +66,43 @@ public class SaveApplicationBusRentingOfficeLicenseDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public int getTechnicalfinancialstudyparm() {
+    public Integer getTechnicalfinancialstudyparm() {
         return technicalfinancialstudyparm;
     }
 
-    public void setTechnicalfinancialstudyparm(int technicalfinancialstudyparm) {
+    public void setTechnicalfinancialstudyparm(Integer technicalfinancialstudyparm) {
         this.technicalfinancialstudyparm = technicalfinancialstudyparm;
     }
 
@@ -115,11 +114,11 @@ public class SaveApplicationBusRentingOfficeLicenseDataRequest {
         this.evaluationcommitteeexplanationparm = evaluationcommitteeexplanationparm;
     }
 
-    public int getEvaluationcommitteedecisionparm() {
+    public Integer getEvaluationcommitteedecisionparm() {
         return evaluationcommitteedecisionparm;
     }
 
-    public void setEvaluationcommitteedecisionparm(int evaluationcommitteedecisionparm) {
+    public void setEvaluationcommitteedecisionparm(Integer evaluationcommitteedecisionparm) {
         this.evaluationcommitteedecisionparm = evaluationcommitteedecisionparm;
     }
 
@@ -131,11 +130,11 @@ public class SaveApplicationBusRentingOfficeLicenseDataRequest {
         this.generaldirectorexplanationparm = generaldirectorexplanationparm;
     }
 
-    public int getGeneraldirectordecisionparm() {
+    public Integer getGeneraldirectordecisionparm() {
         return generaldirectordecisionparm;
     }
 
-    public void setGeneraldirectordecisionparm(int generaldirectordecisionparm) {
+    public void setGeneraldirectordecisionparm(Integer generaldirectordecisionparm) {
         this.generaldirectordecisionparm = generaldirectordecisionparm;
     }
 
@@ -147,27 +146,27 @@ public class SaveApplicationBusRentingOfficeLicenseDataRequest {
         this.disclosurecommitteeexplanationparm = disclosurecommitteeexplanationparm;
     }
 
-    public int getDisclosurecommitteedecisionparm() {
+    public Integer getDisclosurecommitteedecisionparm() {
         return disclosurecommitteedecisionparm;
     }
 
-    public void setDisclosurecommitteedecisionparm(int disclosurecommitteedecisionparm) {
+    public void setDisclosurecommitteedecisionparm(Integer disclosurecommitteedecisionparm) {
         this.disclosurecommitteedecisionparm = disclosurecommitteedecisionparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -177,6 +176,32 @@ public class SaveApplicationBusRentingOfficeLicenseDataRequest {
 
     public void setIpaddress(String ipaddress) {
         this.ipaddress = ipaddress;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SaveApplicationBusRentingOfficeLicenseDataRequest{" +
+                "applicationbusrentalofficelicenseidparm=" + applicationbusrentalofficelicenseidparm +
+                ", applicantnationalidparm= " + applicantnationalidparm + 
+                ", applicantnameparm= " + applicantnameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", technicalfinancialstudyparm=" + technicalfinancialstudyparm +
+                ", evaluationcommitteeexplanationparm= " + evaluationcommitteeexplanationparm + 
+                ", evaluationcommitteedecisionparm=" + evaluationcommitteedecisionparm +
+                ", generaldirectorexplanationparm= " + generaldirectorexplanationparm + 
+                ", generaldirectordecisionparm=" + generaldirectordecisionparm +
+                ", disclosurecommitteeexplanationparm= " + disclosurecommitteeexplanationparm + 
+                ", disclosurecommitteedecisionparm=" + disclosurecommitteedecisionparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddress= " + ipaddress + 
+                '}';
     }
 }
 

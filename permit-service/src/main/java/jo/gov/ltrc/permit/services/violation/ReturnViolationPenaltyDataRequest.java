@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnViolationPenaltyDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long violationpenaltyidparm;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long violationpenaltyidparm;
     @ApiModelProperty("Violation Type Name Parameter ") private String violationpenaltynameparm;
 
-    public long getViolationpenaltyidparm() {
+    public Long getViolationpenaltyidparm() {
         return violationpenaltyidparm;
     }
 
-    public void setViolationpenaltyidparm(long violationpenaltyidparm) {
+    public void setViolationpenaltyidparm(Long violationpenaltyidparm) {
         this.violationpenaltyidparm = violationpenaltyidparm;
     }
 
@@ -22,5 +22,13 @@ public class ReturnViolationPenaltyDataRequest {
 
     public void setViolationpenaltynameparm(String violationpenaltynameparm) {
         this.violationpenaltynameparm = violationpenaltynameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnViolationPenaltyDataRequest{" +
+                "violationpenaltyidparm=" + violationpenaltyidparm +
+                ", violationpenaltynameparm=" + violationpenaltynameparm +
+                '}';
     }
 }

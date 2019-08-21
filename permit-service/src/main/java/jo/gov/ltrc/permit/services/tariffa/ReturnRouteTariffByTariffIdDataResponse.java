@@ -31,22 +31,22 @@ import java.io.Serializable;
 public class ReturnRouteTariffByTariffIdDataResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Route ID ") private long routeid ;
+    @ApiModelProperty("Route ID ") private Long routeid ;
     @ApiModelProperty("Route Name ") private String routename ;
-    @ApiModelProperty("Value P") private double valuep ;
-    @ApiModelProperty("Vehicle Category ") private long vehiclecategory ;
+    @ApiModelProperty("Value P") private  Double valuep ;
+    @ApiModelProperty("Vehicle Category ") private Long vehiclecategory ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
-    @ApiModelProperty("Fuel Type ") private long fueltype ;
+    @ApiModelProperty("Fuel Type ") private Long fueltype ;
     @ApiModelProperty("Fuel Type Name ") private String fueltypename ;
-    @ApiModelProperty("based On ") private int basedon ;
-    @ApiModelProperty("Tariffa Equation ") private long tariffeqution ;
-    @ApiModelProperty("Tariffa Study ") private long tariffstudy ;
+    @ApiModelProperty("based On ") private Integer basedon ;
+    @ApiModelProperty("Tariffa Equation ") private Long tariffeqution ;
+    @ApiModelProperty("Tariffa Study ") private Long tariffstudy ;
 
-    public long getRouteid() {
+    public Long getRouteid() {
         return routeid;
     }
 
-    public void setRouteid(long routeid) {
+    public void setRouteid(Long routeid) {
         this.routeid = routeid;
     }
 
@@ -58,19 +58,19 @@ public class ReturnRouteTariffByTariffIdDataResponse implements Serializable {
         this.routename = routename;
     }
 
-    public double getValuep() {
+    public Double getValuep() {
         return valuep;
     }
 
-    public void setValuep(double valuep) {
+    public void setValuep(Double valuep) {
         this.valuep = valuep;
     }
 
-    public long getVehiclecategory() {
+    public Long getVehiclecategory() {
         return vehiclecategory;
     }
 
-    public void setVehiclecategory(long vehiclecategory) {
+    public void setVehiclecategory(Long vehiclecategory) {
         this.vehiclecategory = vehiclecategory;
     }
 
@@ -82,11 +82,11 @@ public class ReturnRouteTariffByTariffIdDataResponse implements Serializable {
         this.vehiclecategoryname = vehiclecategoryname;
     }
 
-    public long getFueltype() {
+    public Long getFueltype() {
         return fueltype;
     }
 
-    public void setFueltype(long fueltype) {
+    public void setFueltype(Long fueltype) {
         this.fueltype = fueltype;
     }
 
@@ -98,27 +98,43 @@ public class ReturnRouteTariffByTariffIdDataResponse implements Serializable {
         this.fueltypename = fueltypename;
     }
 
-    public int getBasedon() {
+    public Integer getBasedon() {
         return basedon;
     }
 
-    public void setBasedon(int basedon) {
+    public void setBasedon(Integer basedon) {
         this.basedon = basedon;
     }
 
-    public long getTariffeqution() {
+    public Long getTariffeqution() {
         return tariffeqution;
     }
 
-    public void setTariffeqution(long tariffeqution) {
+    public void setTariffeqution(Long tariffeqution) {
         this.tariffeqution = tariffeqution;
     }
 
-    public long getTariffstudy() {
+    public Long getTariffstudy() {
         return tariffstudy;
     }
 
-    public void setTariffstudy(long tariffstudy) {
+    public void setTariffstudy(Long tariffstudy) {
         this.tariffstudy = tariffstudy;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnRouteTariffByTariffIdDataResponse{" +
+                "routeid=" + routeid +
+                ", routename=" + routename +
+                ", valuep=" + valuep +
+                ", vehiclecategory=" + vehiclecategory +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                ", fueltype=" + fueltype +
+                ", fueltypename=" + fueltypename +
+                ", basedon=" + basedon +
+                ", tariffeqution=" + tariffeqution +
+                ", tariffstudy=" + tariffstudy +
+                '}';
     }
 }

@@ -12,16 +12,16 @@ import java.sql.Date;
         parameters = {
 
 
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "tariffequationidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "adeddvalueparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "startdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "enddateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "equationtextparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "operationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "linetypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routecoefficientmultiplicationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
 
         }
         ,
@@ -41,40 +41,48 @@ import java.sql.Date;
 public class ReturnTariffEquationDataResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Tariff Equation ID ") private long tariffequationid ;
-    @ApiModelProperty("Vehicle Category ") private long vehiclecategory ;
+    @ApiModelProperty("Tariff Equation ID ") private Long tariffequationid ;
+    @ApiModelProperty("Vehicle Category ") private Long vehiclecategory ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
-    @ApiModelProperty("Added Value ") private double adeddvalue ;
+    @ApiModelProperty("Added Value ") private  Double adeddvalue ;
     @ApiModelProperty("Start Date ") private Date startdate ;
     @ApiModelProperty("End Date ") private Date enddate ;
     @ApiModelProperty("Equation Text ") private String equationtext ;
-    @ApiModelProperty("Operation ") private int operation ;
-    @ApiModelProperty("Line Type ") private long linetype ;
+    @ApiModelProperty("Operation ") private Integer operation ;
+    @ApiModelProperty("Line Type ") private Long linetype ;
     @ApiModelProperty("Line Type Name ") private String linetypename ;
-    @ApiModelProperty("Route Coefficient Multiplication ") private double routecoefficientmultiplication ;
-    @ApiModelProperty("Status ") private int status ;
+    @ApiModelProperty("Route Coefficient Multiplication ") private  Double routecoefficientmultiplication ;
+    @ApiModelProperty("Status ") private Integer status ;
 
-    public long getTariffequationid() {
+    public Long getTariffequationid() {
         return tariffequationid;
     }
 
-    public void setTariffequationid(long tariffequationid) {
+    public void setTariffequationid(Long tariffequationid) {
         this.tariffequationid = tariffequationid;
     }
 
-    public long getVehiclecategory() {
+    public Long getVehiclecategory() {
         return vehiclecategory;
     }
 
-    public void setVehiclecategory(long vehiclecategory) {
+    public void setVehiclecategory(Long vehiclecategory) {
         this.vehiclecategory = vehiclecategory;
     }
 
-    public double getAdeddvalue() {
+    public String getVehiclecategoryname() {
+        return vehiclecategoryname;
+    }
+
+    public void setVehiclecategoryname(String vehiclecategoryname) {
+        this.vehiclecategoryname = vehiclecategoryname;
+    }
+
+    public Double getAdeddvalue() {
         return adeddvalue;
     }
 
-    public void setAdeddvalue(double adeddvalue) {
+    public void setAdeddvalue(Double adeddvalue) {
         this.adeddvalue = adeddvalue;
     }
 
@@ -102,44 +110,20 @@ public class ReturnTariffEquationDataResponse implements Serializable {
         this.equationtext = equationtext;
     }
 
-    public int getOperation() {
+    public Integer getOperation() {
         return operation;
     }
 
-    public void setOperation(int operation) {
+    public void setOperation(Integer operation) {
         this.operation = operation;
     }
 
-    public long getLinetype() {
+    public Long getLinetype() {
         return linetype;
     }
 
-    public void setLinetype(long linetype) {
+    public void setLinetype(Long linetype) {
         this.linetype = linetype;
-    }
-
-    public double getRoutecoefficientmultiplication() {
-        return routecoefficientmultiplication;
-    }
-
-    public void setRoutecoefficientmultiplication(double routecoefficientmultiplication) {
-        this.routecoefficientmultiplication = routecoefficientmultiplication;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public String getVehiclecategoryname() {
-        return vehiclecategoryname;
-    }
-
-    public void setVehiclecategoryname(String vehiclecategoryname) {
-        this.vehiclecategoryname = vehiclecategoryname;
     }
 
     public String getLinetypename() {
@@ -148,5 +132,39 @@ public class ReturnTariffEquationDataResponse implements Serializable {
 
     public void setLinetypename(String linetypename) {
         this.linetypename = linetypename;
+    }
+
+    public Double getRoutecoefficientmultiplication() {
+        return routecoefficientmultiplication;
+    }
+
+    public void setRoutecoefficientmultiplication(Double routecoefficientmultiplication) {
+        this.routecoefficientmultiplication = routecoefficientmultiplication;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnTariffEquationDataResponse{" +
+                "tariffequationid=" + tariffequationid +
+                ", vehiclecategory=" + vehiclecategory +
+                ", vehiclecategoryname=" + vehiclecategoryname +
+                ", adeddvalue=" + adeddvalue +
+                ", startdate=" + startdate +
+                ", enddate=" + enddate +
+                ", equationtext=" + equationtext +
+                ", operation=" + operation +
+                ", linetype=" + linetype +
+                ", linetypename=" + linetypename +
+                ", routecoefficientmultiplication=" + routecoefficientmultiplication +
+                ", status=" + status +
+                '}';
     }
 }

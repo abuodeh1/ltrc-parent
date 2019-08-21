@@ -5,16 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SavePeriodCalssDataRequest {
 
-    @ApiModelProperty("Territory ID Parameter ") private long periodidparm;
+    @ApiModelProperty("Territory ID Parameter ") private Long periodidparm;
     @ApiModelProperty("Territory Arabic Name Parameter ") private String periodnameparm;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-    public long getPeriodidparm() {
+    public Long getPeriodidparm() {
         return periodidparm;
     }
 
-    public void setPeriodidparm(long periodidparm) {
+    public void setPeriodidparm(Long periodidparm) {
         this.periodidparm = periodidparm;
     }
 
@@ -26,20 +27,39 @@ public class SavePeriodCalssDataRequest {
         this.periodnameparm = periodnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SavePeriodCalssDataRequest{" +
+                "periodidparm=" + periodidparm +
+                ", periodnameparm=" + periodnameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

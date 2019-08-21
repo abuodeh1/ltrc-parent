@@ -10,12 +10,12 @@ import java.io.Serializable;
         name = "ReturnPermitTypeFieldSetting",
         procedureName = "\"ReturnPermitTypeFieldSetting\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "permittypefieldsettingidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "permittypeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "permitfieldparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "requiredparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "visibleparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "activeparm"),
         },
         resultSetMappings = {
                 "ReturnPermitTypeFieldSettingSetMapping"
@@ -33,36 +33,36 @@ import java.io.Serializable;
 public class ReturnPermitTypeFieldSettingResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Permit Type Field Setting ID ") private long permittypefieldsettingid ;
-    @ApiModelProperty("Permit Type ") private long permittype ;
-    @ApiModelProperty("Permit Field ") private long permitfieldid;
+    @ApiModelProperty("Permit Type Field Setting ID ") private Long permittypefieldsettingid ;
+    @ApiModelProperty("Permit Type ") private Long permittype ;
+    @ApiModelProperty("Permit Field ") private Long permitfieldid;
     @ApiModelProperty("Permit Field Name ") private String permitfieldname ;
-    @ApiModelProperty("Permit Field Section ") private int permitfieldsection ;
-    @ApiModelProperty("Required ") private int required ;
-    @ApiModelProperty("Visible ") private int visible ;
-    @ApiModelProperty("Active ") private int active ;
+    @ApiModelProperty("Permit Field Section ") private Integer permitfieldsection ;
+    @ApiModelProperty("Required ") private Integer required ;
+    @ApiModelProperty("Visible ") private Integer visible ;
+    @ApiModelProperty("Active ") private Integer active ;
 
-    public long getPermittypefieldsettingid() {
+    public Long getPermittypefieldsettingid() {
         return permittypefieldsettingid;
     }
 
-    public void setPermittypefieldsettingid(long permittypefieldsettingid) {
+    public void setPermittypefieldsettingid(Long permittypefieldsettingid) {
         this.permittypefieldsettingid = permittypefieldsettingid;
     }
 
-    public long getPermittype() {
+    public Long getPermittype() {
         return permittype;
     }
 
-    public void setPermittype(long permittype) {
+    public void setPermittype(Long permittype) {
         this.permittype = permittype;
     }
 
-    public long getPermitfieldid() {
+    public Long getPermitfieldid() {
         return permitfieldid;
     }
 
-    public void setPermitfieldid(long permitfieldid) {
+    public void setPermitfieldid(Long permitfieldid) {
         this.permitfieldid = permitfieldid;
     }
 
@@ -74,35 +74,49 @@ public class ReturnPermitTypeFieldSettingResponse implements Serializable {
         this.permitfieldname = permitfieldname;
     }
 
-    public int getPermitfieldsection() {
+    public Integer getPermitfieldsection() {
         return permitfieldsection;
     }
 
-    public void setPermitfieldsection(int permitfieldsection) {
+    public void setPermitfieldsection(Integer permitfieldsection) {
         this.permitfieldsection = permitfieldsection;
     }
 
-    public int getRequired() {
+    public Integer getRequired() {
         return required;
     }
 
-    public void setRequired(int required) {
+    public void setRequired(Integer required) {
         this.required = required;
     }
 
-    public int getVisible() {
+    public Integer getVisible() {
         return visible;
     }
 
-    public void setVisible(int visible) {
+    public void setVisible(Integer visible) {
         this.visible = visible;
     }
 
-    public int getActive() {
+    public Integer getActive() {
         return active;
     }
 
-    public void setActive(int active) {
+    public void setActive(Integer active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitTypeFieldSettingResponse{" +
+                "permittypefieldsettingid=" + permittypefieldsettingid +
+                ", permittype=" + permittype +
+                ", permitfieldid=" + permitfieldid +
+                ", permitfieldname=" + permitfieldname +
+                ", permitfieldsection=" + permitfieldsection +
+                ", required=" + required +
+                ", visible=" + visible +
+                ", active=" + active +
+                '}';
     }
 }

@@ -1,43 +1,45 @@
 package jo.gov.ltrc.workflow.services;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.sql.Date;
 
 public class SaveServiceRequestDataRequest {
 
-    private long servicerequestidparm;
-    private long servicetypeparm;
-    private long requestedbyparm;
-    private Date requestdateparm;
-    private String applicantphonenumberparm;
-    private String applicantemailparm;
-    private long provinceparm;
-    private long governorateparm;
-    private long municipalityparm;
-    private long territoryparm;
-    private int statusparm;
-    private long princepal;
+    @ApiModelProperty("Service Request ID Parameter ") private Long servicerequestidparm;
+    @ApiModelProperty("Service Type Parameter ") private Long servicetypeparm;
+    @ApiModelProperty("Requested By Parameter ") private Long requestedbyparm;
+    @ApiModelProperty("Request Date Parameter ") private Date requestdateparm;
+    @ApiModelProperty("Applicant Phone Number Parameter ") private String applicantphonenumberparm;
+    @ApiModelProperty("Applicant E-Mail Parameter ") private String applicantemailparm;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm;
+    @ApiModelProperty("Principal Parameter ") private Long princepal;
 
-    public long getServicerequestidparm() {
+    public Long getServicerequestidparm() {
         return servicerequestidparm;
     }
 
-    public void setServicerequestidparm(long servicerequestidparm) {
+    public void setServicerequestidparm(Long servicerequestidparm) {
         this.servicerequestidparm = servicerequestidparm;
     }
 
-    public long getServicetypeparm() {
+    public Long getServicetypeparm() {
         return servicetypeparm;
     }
 
-    public void setServicetypeparm(long servicetypeparm) {
+    public void setServicetypeparm(Long servicetypeparm) {
         this.servicetypeparm = servicetypeparm;
     }
 
-    public long getRequestedbyparm() {
+    public Long getRequestedbyparm() {
         return requestedbyparm;
     }
 
-    public void setRequestedbyparm(long requestedbyparm) {
+    public void setRequestedbyparm(Long requestedbyparm) {
         this.requestedbyparm = requestedbyparm;
     }
 
@@ -65,52 +67,70 @@ public class SaveServiceRequestDataRequest {
         this.applicantemailparm = applicantemailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public long getPrincepal() {
+    public Long getPrincepal() {
         return princepal;
     }
 
-    public void setPrincepal(long princepal) {
+    public void setPrincepal(Long princepal) {
         this.princepal = princepal;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveServiceRequestDataRequest{" +
+                "servicerequestidparm=" + servicerequestidparm +
+                ", servicetypeparm=" + servicetypeparm +
+                ", requestedbyparm=" + requestedbyparm +
+                ", requestdateparm=" + requestdateparm +
+                ", applicantphonenumberparm= " + applicantphonenumberparm + 
+                ", applicantemailparm= " + applicantemailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", statusparm=" + statusparm +
+                ", princepal=" + princepal +
+                '}';
     }
 }
 

@@ -13,12 +13,12 @@ public class ReturnVehicleInformationDataRequest {
     @ApiModelProperty("Plate Number Parameter") private String platenumberparm ;
     @ApiModelProperty("Manufacture Parameter") private String manufacturerparm ;
     @ApiModelProperty("Office Name Parameter") private String officenameparm ;
-    @ApiModelProperty("Vehicle Status Parameter") private int vehiclestatusparm ;
-    @ApiModelProperty("Vehicle Category Parameter") private long vehiclecategoryparm ;
-    @ApiModelProperty("Fuel Type Parameter") private long fueltypeparm ;
-    @ApiModelProperty("Operator Parameter") private long operatorparm ;
-    @ApiModelProperty("Permit Status Parameter") private int permitstatusparm ;
-    @ApiModelProperty("Permit Parameter") private int permitidparm ;
+    @ApiModelProperty("Vehicle Status Parameter") private Integer vehiclestatusparm ;
+    @ApiModelProperty("Vehicle Category Parameter") private Long vehiclecategoryparm ;
+    @ApiModelProperty("Fuel Type Parameter") private Long fueltypeparm ;
+    @ApiModelProperty("Operator Parameter") private Long operatorparm ;
+    @ApiModelProperty("Permit Status Parameter") private Integer permitstatusparm ;
+    @ApiModelProperty("Permit Parameter") private Integer permitidparm ;
     @ApiModelProperty("Vehicle Entry Date Parameter") private Date vehicleentrydateparm ;
     @ApiModelProperty("Delivery Date Parameter") private Date deliverydateparm ;
 
@@ -62,51 +62,51 @@ public class ReturnVehicleInformationDataRequest {
         this.officenameparm = officenameparm;
     }
 
-    public int getVehiclestatusparm() {
+    public Integer getVehiclestatusparm() {
         return vehiclestatusparm;
     }
 
-    public void setVehiclestatusparm(int vehiclestatusparm) {
+    public void setVehiclestatusparm(Integer vehiclestatusparm) {
         this.vehiclestatusparm = vehiclestatusparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public long getFueltypeparm() {
+    public Long getFueltypeparm() {
         return fueltypeparm;
     }
 
-    public void setFueltypeparm(long fueltypeparm) {
+    public void setFueltypeparm(Long fueltypeparm) {
         this.fueltypeparm = fueltypeparm;
     }
 
-    public long getOperatorparm() {
+    public Long getOperatorparm() {
         return operatorparm;
     }
 
-    public void setOperatorparm(long operatorparm) {
+    public void setOperatorparm(Long operatorparm) {
         this.operatorparm = operatorparm;
     }
 
-    public int getPermitstatusparm() {
+    public Integer getPermitstatusparm() {
         return permitstatusparm;
     }
 
-    public void setPermitstatusparm(int permitstatusparm) {
+    public void setPermitstatusparm(Integer permitstatusparm) {
         this.permitstatusparm = permitstatusparm;
     }
 
-    public int getPermitidparm() {
+    public Integer getPermitidparm() {
         return permitidparm;
     }
 
-    public void setPermitidparm(int permitidparm) {
+    public void setPermitidparm(Integer permitidparm) {
         this.permitidparm = permitidparm;
     }
 
@@ -124,5 +124,24 @@ public class ReturnVehicleInformationDataRequest {
 
     public void setDeliverydateparm(Date deliverydateparm) {
         this.deliverydateparm = deliverydateparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnVehicleInformationDataRequest{" +
+                "registrationnumberparm=" + registrationnumberparm +
+                ", platecodeparm=" + platecodeparm +
+                ", platenumberparm=" + platenumberparm +
+                ", manufacturerparm=" + manufacturerparm +
+                ", officenameparm=" + officenameparm +
+                ", vehiclestatusparm=" + vehiclestatusparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", fueltypeparm=" + fueltypeparm +
+                ", operatorparm=" + operatorparm +
+                ", permitstatusparm=" + permitstatusparm +
+                ", permitidparm=" + permitidparm +
+                ", vehicleentrydateparm=" + vehicleentrydateparm +
+                ", deliverydateparm=" + deliverydateparm +
+                '}';
     }
 }

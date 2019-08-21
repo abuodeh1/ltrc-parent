@@ -9,9 +9,9 @@ import java.io.Serializable;
         name = "ReturnParkingType",
         procedureName = "\"ReturnParkingType\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "parkingtypeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "parkingtypearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "parkingtypeenglishnameparm"),
                 
         },
         resultSetMappings = {
@@ -30,15 +30,15 @@ import java.io.Serializable;
 public class ReturnParkingTypeResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Parking Type ID ") private long ParkingTypeID ;
+    @ApiModelProperty("Parking Type ID ") private Long ParkingTypeID ;
     @ApiModelProperty("Parking Type Arabic ") private String ParkingTypeArabicName ;
     @ApiModelProperty("Parking Type English ") private String ParkingTypeEnglishName ;
 
-    public long getParkingTypeID() {
+    public Long getParkingTypeID() {
         return ParkingTypeID;
     }
 
-    public void setParkingTypeID(long parkingTypeID) {
+    public void setParkingTypeID(Long parkingTypeID) {
         ParkingTypeID = parkingTypeID;
     }
 
@@ -56,5 +56,14 @@ public class ReturnParkingTypeResponse implements Serializable {
 
     public void setParkingTypeEnglishName(String parkingTypeEnglishName) {
         ParkingTypeEnglishName = parkingTypeEnglishName;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnParkingTypeResponse{" +
+                "ParkingTypeID=" + ParkingTypeID +
+                ", ParkingTypeArabicName=" + ParkingTypeArabicName +
+                ", ParkingTypeEnglishName=" + ParkingTypeEnglishName +
+                '}';
     }
 }

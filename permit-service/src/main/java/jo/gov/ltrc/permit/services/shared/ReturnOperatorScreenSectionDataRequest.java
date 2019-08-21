@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnOperatorScreenSectionDataRequest {
 
-    @ApiModelProperty("Operator Field Section Parameter ") private int operatorfieldsectionparm ;
+    @ApiModelProperty("Operator Field Section Parameter ") private Integer operatorfieldsectionparm ;
     @ApiModelProperty("Section Name Parameter ") private String sectionnameparm ;
 
-    public int getOperatorfieldsectionparm() {
+    public Integer getOperatorfieldsectionparm() {
         return operatorfieldsectionparm;
     }
 
-    public void setOperatorfieldsectionparm(int operatorfieldsectionparm) {
+    public void setOperatorfieldsectionparm(Integer operatorfieldsectionparm) {
         this.operatorfieldsectionparm = operatorfieldsectionparm;
     }
 
@@ -22,6 +22,14 @@ public class ReturnOperatorScreenSectionDataRequest {
 
     public void setSectionnameparm(String sectionnameparm) {
         this.sectionnameparm = sectionnameparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorScreenSectionDataRequest{" +
+                "operatorfieldsectionparm=" + operatorfieldsectionparm +
+                ", sectionnameparm=" + sectionnameparm +
+                '}';
     }
 }
 

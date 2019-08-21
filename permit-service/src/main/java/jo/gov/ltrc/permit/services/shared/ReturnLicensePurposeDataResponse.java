@@ -9,8 +9,8 @@ import java.io.Serializable;
         name = "ReturnLicensepurpose",
         procedureName = "\"ReturnLicensepurpose\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class)
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "licensepurposeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "licensepurposenameparm"),
                 
         },
         resultSetMappings = {
@@ -29,14 +29,14 @@ import java.io.Serializable;
 public class ReturnLicensePurposeDataResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("License Purpose ID ") private long licensepurposeid ;
+    @ApiModelProperty("License Purpose ID ") private Long licensepurposeid ;
     @ApiModelProperty("License Purpose Name ") private String licensepurposename ;
 
-    public long getLicensepurposeid() {
+    public Long getLicensepurposeid() {
         return licensepurposeid;
     }
 
-    public void setLicensepurposeid(long licensepurposeid) {
+    public void setLicensepurposeid(Long licensepurposeid) {
         this.licensepurposeid = licensepurposeid;
     }
 
@@ -46,5 +46,13 @@ public class ReturnLicensePurposeDataResponse implements Serializable {
 
     public void setLicensepurposename(String licensepurposename) {
         this.licensepurposename = licensepurposename;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnLicensePurposeDataResponse{" +
+                "licensepurposeid=" + licensepurposeid +
+                ", licensepurposename=" + licensepurposename +
+                '}';
     }
 }

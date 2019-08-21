@@ -31,14 +31,14 @@ import java.io.Serializable;
 public class ReturnAllLineTypesResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Line Type ID ") private long linetypeid ;
+    @ApiModelProperty("Line Type ID ") private Long linetypeid ;
     @ApiModelProperty("Line Type Name ") private String linetypename ;
 
-    public long getLinetypeid() {
+    public Long getLinetypeid() {
         return linetypeid;
     }
 
-    public void setLinetypeid(long linetypeid) {
+    public void setLinetypeid(Long linetypeid) {
         this.linetypeid = linetypeid;
     }
 
@@ -48,5 +48,13 @@ public class ReturnAllLineTypesResponse implements Serializable {
 
     public void setLinetypename(String linetypename) {
         this.linetypename = linetypename;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnAllLineTypesResponse{" +
+                "linetypeid=" + linetypeid +
+                ", linetypename=" + linetypename +
+                '}';
     }
 }

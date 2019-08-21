@@ -8,46 +8,47 @@ import java.sql.Time;
 
 public class SavePermitDataRequest {
 
-    @ApiModelProperty("Permit ID Parameter ") private long permitidparm ;
-    @ApiModelProperty("Permit Type Parameter ") private long permittypeparm ;
+    @ApiModelProperty("Permit ID Parameter ") private Long permitidparm ;
+    @ApiModelProperty("Permit Type Parameter ") private Long permittypeparm ;
     @ApiModelProperty("Issue Date Parameter ") private Date issuedateparm ;
     @ApiModelProperty("Delivery Date Parameter ") private Date deliverydateparm ;
-    @ApiModelProperty("Period Parameter ") private int periodparm ;
+    @ApiModelProperty("Period Parameter ") private Integer periodparm ;
     @ApiModelProperty("Start Working Date Parameter ") private Date startworkingdateparm ;
     @ApiModelProperty("End Working Date Parameter ") private Date endworkingdateparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Route Parameter ") private long routeparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Route Parameter ") private Long routeparm ;
     @ApiModelProperty("Departure Time Parameter ") private Time departuretimeparm ;
     @ApiModelProperty("Completion Time Parameter ") private Time completiontimeparm ;
-    @ApiModelProperty("Number of Trips Parameter ") private int numberoftripsparm ;
-    @ApiModelProperty("Decided Tariifa Parameter ") private double decidedtariffparm ;
+    @ApiModelProperty("Number of Trips Parameter ") private Integer numberoftripsparm ;
+    @ApiModelProperty("Decided Tariifa Parameter ") private  Double decidedtariffparm ;
     @ApiModelProperty("Primary Driver Parameter ") private String primarydriverparm ;
     @ApiModelProperty("Primary Driver Passport Parameter ") private String primarydriverpassportparm ;
     @ApiModelProperty("Alternative Driver Parameter ") private String alternativedriverparm ;
     @ApiModelProperty("Alternative Driver Passport Parameter ") private String alternativedriverpassportparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Vehicle Parameter ") private long vehicleparm ;
-    @ApiModelProperty("Classification Parameter ") private int classificationparm ;
-    @ApiModelProperty("Working As Parameter ") private long workingasparm ;
-    @ApiModelProperty("Start Point Parameter ") private long startpointparm ;
-    @ApiModelProperty("End Point Parameter ") private long endpointparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Vehicle Parameter ") private Long vehicleparm ;
+    @ApiModelProperty("Classification Parameter ") private Integer classificationparm ;
+    @ApiModelProperty("Working As Parameter ") private Long workingasparm ;
+    @ApiModelProperty("Start Point Parameter ") private Long startpointparm ;
+    @ApiModelProperty("End Point Parameter ") private Long endpointparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-    public long getPermitidparm() {
+    public Long getPermitidparm() {
         return permitidparm;
     }
 
-    public void setPermitidparm(long permitidparm) {
+    public void setPermitidparm(Long permitidparm) {
         this.permitidparm = permitidparm;
     }
 
-    public long getPermittypeparm() {
+    public Long getPermittypeparm() {
         return permittypeparm;
     }
 
-    public void setPermittypeparm(long permittypeparm) {
+    public void setPermittypeparm(Long permittypeparm) {
         this.permittypeparm = permittypeparm;
     }
 
@@ -67,11 +68,11 @@ public class SavePermitDataRequest {
         this.deliverydateparm = deliverydateparm;
     }
 
-    public int getPeriodparm() {
+    public Integer getPeriodparm() {
         return periodparm;
     }
 
-    public void setPeriodparm(int periodparm) {
+    public void setPeriodparm(Integer periodparm) {
         this.periodparm = periodparm;
     }
 
@@ -91,35 +92,35 @@ public class SavePermitDataRequest {
         this.endworkingdateparm = endworkingdateparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getRouteparm() {
+    public Long getRouteparm() {
         return routeparm;
     }
 
-    public void setRouteparm(long routeparm) {
+    public void setRouteparm(Long routeparm) {
         this.routeparm = routeparm;
     }
 
@@ -139,19 +140,19 @@ public class SavePermitDataRequest {
         this.completiontimeparm = completiontimeparm;
     }
 
-    public int getNumberoftripsparm() {
+    public Integer getNumberoftripsparm() {
         return numberoftripsparm;
     }
 
-    public void setNumberoftripsparm(int numberoftripsparm) {
+    public void setNumberoftripsparm(Integer numberoftripsparm) {
         this.numberoftripsparm = numberoftripsparm;
     }
 
-    public double getDecidedtariffparm() {
+    public Double getDecidedtariffparm() {
         return decidedtariffparm;
     }
 
-    public void setDecidedtariffparm(double decidedtariffparm) {
+    public void setDecidedtariffparm(Double decidedtariffparm) {
         this.decidedtariffparm = decidedtariffparm;
     }
 
@@ -187,59 +188,100 @@ public class SavePermitDataRequest {
         this.alternativedriverpassportparm = alternativedriverpassportparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public long getVehicleparm() {
+    public Long getVehicleparm() {
         return vehicleparm;
     }
 
-    public void setVehicleparm(long vehicleparm) {
+    public void setVehicleparm(Long vehicleparm) {
         this.vehicleparm = vehicleparm;
     }
 
-    public int getClassificationparm() {
+    public Integer getClassificationparm() {
         return classificationparm;
     }
 
-    public void setClassificationparm(int classificationparm) {
+    public void setClassificationparm(Integer classificationparm) {
         this.classificationparm = classificationparm;
     }
 
-    public long getWorkingasparm() {
+    public Long getWorkingasparm() {
         return workingasparm;
     }
 
-    public void setWorkingasparm(long workingasparm) {
+    public void setWorkingasparm(Long workingasparm) {
         this.workingasparm = workingasparm;
     }
 
-    public long getStartpointparm() {
+    public Long getStartpointparm() {
         return startpointparm;
     }
 
-    public void setStartpointparm(long startpointparm) {
+    public void setStartpointparm(Long startpointparm) {
         this.startpointparm = startpointparm;
     }
 
-    public long getEndpointparm() {
+    public Long getEndpointparm() {
         return endpointparm;
     }
 
-    public void setEndpointparm(long endpointparm) {
+    public void setEndpointparm(Long endpointparm) {
         this.endpointparm = endpointparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SavePermitDataRequest{" +
+                "permitidparm=" + permitidparm +
+                ", permittypeparm=" + permittypeparm +
+                ", issuedateparm=" + issuedateparm +
+                ", deliverydateparm=" + deliverydateparm +
+                ", periodparm=" + periodparm +
+                ", startworkingdateparm=" + startworkingdateparm +
+                ", endworkingdateparm=" + endworkingdateparm +
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", routeparm=" + routeparm +
+                ", departuretimeparm=" + departuretimeparm +
+                ", completiontimeparm=" + completiontimeparm +
+                ", numberoftripsparm=" + numberoftripsparm +
+                ", decidedtariffparm=" + decidedtariffparm +
+                ", primarydriverparm=" + primarydriverparm +
+                ", primarydriverpassportparm=" + primarydriverpassportparm +
+                ", alternativedriverparm=" + alternativedriverparm +
+                ", alternativedriverpassportparm=" + alternativedriverpassportparm +
+                ", statusparm=" + statusparm +
+                ", vehicleparm=" + vehicleparm +
+                ", classificationparm=" + classificationparm +
+                ", workingasparm=" + workingasparm +
+                ", startpointparm=" + startpointparm +
+                ", endpointparm=" + endpointparm +
+                ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }

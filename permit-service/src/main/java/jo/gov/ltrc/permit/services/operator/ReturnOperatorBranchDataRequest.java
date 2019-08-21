@@ -7,18 +7,18 @@ import java.sql.Date;
 
 public class ReturnOperatorBranchDataRequest {
 
-    @ApiModelProperty("Minimum Operator Branch ID Parameter ") private long minoperatorbranchidparm ;
-    @ApiModelProperty("Maximum Operator Branch ID Parameter ") private long maxoperatorbranchidparm ;
-    @ApiModelProperty("Maximum Operator ID Parameter ") private long maxoperatoridparm ;
-    @ApiModelProperty("Minimum Operator ID Parameter") private long minoperatoridparm ;
+    @ApiModelProperty("Minimum Operator Branch ID Parameter ") private Long minoperatorbranchidparm ;
+    @ApiModelProperty("Maximum Operator Branch ID Parameter ") private Long maxoperatorbranchidparm ;
+    @ApiModelProperty("Maximum Operator ID Parameter ") private Long maxoperatoridparm ;
+    @ApiModelProperty("Minimum Operator ID Parameter") private Long minoperatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
     @ApiModelProperty("Province Arabic Name Parameter ") private String provincearabicnameparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
     @ApiModelProperty("Governorate Arabic Name Parameter ") private String governoratearabicnameparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
     @ApiModelProperty("Municipality Arabic Name Parameter ") private String municipalityarabicnameparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
     @ApiModelProperty("Territory Arabic Name Parameter ") private String territoryarabicnameparm ;
     @ApiModelProperty("Neighborhood Parameter ") private String neighborhoodparm ;
     @ApiModelProperty("Street Parameter ") private String streetparm ;
@@ -31,44 +31,44 @@ public class ReturnOperatorBranchDataRequest {
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
     @ApiModelProperty("Agreement Reference Number Parameter ") private String aggreementreferencenumberparm ;
     @ApiModelProperty("Agreement Reference Date Parameter ") private Date aggreementreferencedateparm ;
-    @ApiModelProperty("Minimum Vehicle Count Parameter ") private int minvehiclecountparm ;
-    @ApiModelProperty("Maximum Vehicle Count Parameter ") private int maxvehiclecountparm ;
+    @ApiModelProperty("Minimum Vehicle Count Parameter ") private Integer minvehiclecountparm ;
+    @ApiModelProperty("Maximum Vehicle Count Parameter ") private Integer maxvehiclecountparm ;
     @ApiModelProperty("Branch Name Parameter ") private String branchnameparm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
-    public long getMinoperatorbranchidparm() {
+    public Long getMinoperatorbranchidparm() {
         return minoperatorbranchidparm;
     }
 
-    public void setMinoperatorbranchidparm(long minoperatorbranchidparm) {
+    public void setMinoperatorbranchidparm(Long minoperatorbranchidparm) {
         this.minoperatorbranchidparm = minoperatorbranchidparm;
     }
 
-    public long getMaxoperatorbranchidparm() {
+    public Long getMaxoperatorbranchidparm() {
         return maxoperatorbranchidparm;
     }
 
-    public void setMaxoperatorbranchidparm(long maxoperatorbranchidparm) {
+    public void setMaxoperatorbranchidparm(Long maxoperatorbranchidparm) {
         this.maxoperatorbranchidparm = maxoperatorbranchidparm;
     }
 
-    public long getMaxoperatoridparm() {
+    public Long getMaxoperatoridparm() {
         return maxoperatoridparm;
     }
 
-    public void setMaxoperatoridparm(long maxoperatoridparm) {
+    public void setMaxoperatoridparm(Long maxoperatoridparm) {
         this.maxoperatoridparm = maxoperatoridparm;
     }
 
-    public long getMinoperatoridparm() {
+    public Long getMinoperatoridparm() {
         return minoperatoridparm;
     }
 
-    public void setMinoperatoridparm(long minoperatoridparm) {
+    public void setMinoperatoridparm(Long minoperatoridparm) {
         this.minoperatoridparm = minoperatoridparm;
     }
 
@@ -80,11 +80,11 @@ public class ReturnOperatorBranchDataRequest {
         this.operatornameparm = operatornameparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
@@ -96,11 +96,11 @@ public class ReturnOperatorBranchDataRequest {
         this.provincearabicnameparm = provincearabicnameparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
@@ -112,11 +112,11 @@ public class ReturnOperatorBranchDataRequest {
         this.governoratearabicnameparm = governoratearabicnameparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
@@ -128,11 +128,11 @@ public class ReturnOperatorBranchDataRequest {
         this.municipalityarabicnameparm = municipalityarabicnameparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
@@ -232,19 +232,19 @@ public class ReturnOperatorBranchDataRequest {
         this.aggreementreferencedateparm = aggreementreferencedateparm;
     }
 
-    public int getMinvehiclecountparm() {
+    public Integer getMinvehiclecountparm() {
         return minvehiclecountparm;
     }
 
-    public void setMinvehiclecountparm(int minvehiclecountparm) {
+    public void setMinvehiclecountparm(Integer minvehiclecountparm) {
         this.minvehiclecountparm = minvehiclecountparm;
     }
 
-    public int getMaxvehiclecountparm() {
+    public Integer getMaxvehiclecountparm() {
         return maxvehiclecountparm;
     }
 
-    public void setMaxvehiclecountparm(int maxvehiclecountparm) {
+    public void setMaxvehiclecountparm(Integer maxvehiclecountparm) {
         this.maxvehiclecountparm = maxvehiclecountparm;
     }
 
@@ -256,27 +256,27 @@ public class ReturnOperatorBranchDataRequest {
         this.branchnameparm = branchnameparm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -288,11 +288,49 @@ public class ReturnOperatorBranchDataRequest {
         this.sortby = sortby;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorBranchDataRequest{" +
+                "minoperatorbranchidparm=" + minoperatorbranchidparm +
+                ", maxoperatorbranchidparm=" + maxoperatorbranchidparm +
+                ", maxoperatoridparm=" + maxoperatoridparm +
+                ", minoperatoridparm=" + minoperatoridparm +
+                ", operatornameparm=" + operatornameparm +
+                ", provinceparm=" + provinceparm +
+                ", provincearabicnameparm=" + provincearabicnameparm +
+                ", governorateparm=" + governorateparm +
+                ", governoratearabicnameparm=" + governoratearabicnameparm +
+                ", municipalityparm=" + municipalityparm +
+                ", municipalityarabicnameparm=" + municipalityarabicnameparm +
+                ", territoryparm=" + territoryparm +
+                ", territoryarabicnameparm=" + territoryarabicnameparm +
+                ", neighborhoodparm=" + neighborhoodparm +
+                ", streetparm=" + streetparm +
+                ", basinparm=" + basinparm +
+                ", plotnoparm=" + plotnoparm +
+                ", poboxparm=" + poboxparm +
+                ", telephoneparm=" + telephoneparm +
+                ", faxparm=" + faxparm +
+                ", mobilephoneparm=" + mobilephoneparm +
+                ", emailparm=" + emailparm +
+                ", aggreementreferencenumberparm=" + aggreementreferencenumberparm +
+                ", aggreementreferencedateparm=" + aggreementreferencedateparm +
+                ", minvehiclecountparm=" + minvehiclecountparm +
+                ", maxvehiclecountparm=" + maxvehiclecountparm +
+                ", branchnameparm=" + branchnameparm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                ", statusparm=" + statusparm +
+                '}';
     }
 }

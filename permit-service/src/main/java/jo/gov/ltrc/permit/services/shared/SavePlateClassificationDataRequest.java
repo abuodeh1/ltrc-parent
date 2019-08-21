@@ -5,17 +5,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SavePlateClassificationDataRequest {
 
-    @ApiModelProperty("Violation Type ID Parameter ") private long plateclassificationidparm;
+    @ApiModelProperty("Violation Type ID Parameter ") private Long plateclassificationidparm;
     @ApiModelProperty("Violation Type Name Parameter ") private String plateclassificationnameparm;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
 
-    public long getPlateclassificationidparm() {
+    public Long getPlateclassificationidparm() {
         return plateclassificationidparm;
     }
 
-    public void setPlateclassificationidparm(long plateclassificationidparm) {
+    public void setPlateclassificationidparm(Long plateclassificationidparm) {
         this.plateclassificationidparm = plateclassificationidparm;
     }
 
@@ -27,20 +28,39 @@ public class SavePlateClassificationDataRequest {
         this.plateclassificationnameparm = plateclassificationnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SavePlateClassificationDataRequest{" +
+                "plateclassificationidparm=" + plateclassificationidparm +
+                ", plateclassificationnameparm=" + plateclassificationnameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

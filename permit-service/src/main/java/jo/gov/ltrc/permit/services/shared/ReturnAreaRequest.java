@@ -5,17 +5,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnAreaRequest {
 
-    @ApiModelProperty("Territory ID Parameter") private long territoryidparm ;
+    @ApiModelProperty("Territory ID Parameter") private Long territoryidparm ;
     @ApiModelProperty("Territory Arabic Name Parameter") private String territoryarabicnameparm ;
     @ApiModelProperty("Territory English Name Parameter") private String territoryenglishnameparm ;
     @ApiModelProperty("Territory Code Parameter") private String territorycodeparm ;
-    @ApiModelProperty("Municipality Parameter") private long municipalityparm ;
+    @ApiModelProperty("Municipality Parameter") private Long municipalityparm ;
 
-    public long getTerritoryidparm() {
+    public Long getTerritoryidparm() {
         return territoryidparm;
     }
 
-    public void setTerritoryidparm(long territoryidparm) {
+    public void setTerritoryidparm(Long territoryidparm) {
         this.territoryidparm = territoryidparm;
     }
 
@@ -43,12 +43,23 @@ public class ReturnAreaRequest {
         this.territorycodeparm = territorycodeparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnAreaRequest{" +
+                "territoryidparm=" + territoryidparm +
+                ", territoryarabicnameparm=" + territoryarabicnameparm +
+                ", territoryenglishnameparm=" + territoryenglishnameparm +
+                ", territorycodeparm=" + territorycodeparm +
+                ", municipalityparm=" + municipalityparm +
+                '}';
     }
 }
 

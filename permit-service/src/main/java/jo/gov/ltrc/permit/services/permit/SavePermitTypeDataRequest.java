@@ -7,18 +7,19 @@ import java.util.List;
 
 public class SavePermitTypeDataRequest {
 
-    @ApiModelProperty("Permit Type ID Parameter") private long permittypeidparm ;
+    @ApiModelProperty("Permit Type ID Parameter") private Long permittypeidparm ;
     @ApiModelProperty("Permit Type Name Parameter") private String permittypenameparm ;
     @ApiModelProperty("Permit Type English Name Parameter") private String permittypeenglishnameparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
     private List<SavePermitTypeFieldSettingDataRequest> field ;
 
-    public long getPermittypeidparm() {
+    public Long getPermittypeidparm() {
         return permittypeidparm;
     }
 
-    public void setPermittypeidparm(long permittypeidparm) {
+    public void setPermittypeidparm(Long permittypeidparm) {
         this.permittypeidparm = permittypeidparm;
     }
 
@@ -38,20 +39,28 @@ public class SavePermitTypeDataRequest {
         this.permittypeenglishnameparm = permittypeenglishnameparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
     }
 
     public List<SavePermitTypeFieldSettingDataRequest> getField() {
@@ -60,5 +69,18 @@ public class SavePermitTypeDataRequest {
 
     public void setField(List<SavePermitTypeFieldSettingDataRequest> field) {
         this.field = field;
+    }
+
+    @Override
+    public String toString() {
+        return "SavePermitTypeDataRequest{" +
+                "permittypeidparm=" + permittypeidparm +
+                ", permittypenameparm=" + permittypenameparm +
+                ", permittypeenglishnameparm=" + permittypeenglishnameparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                ", field=" + field +
+                '}';
     }
 }

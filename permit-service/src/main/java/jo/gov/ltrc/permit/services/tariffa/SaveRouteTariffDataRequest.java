@@ -6,77 +6,94 @@ import java.sql.Date;
 
 public class SaveRouteTariffDataRequest {
 
-    @ApiModelProperty("Route Tariffa ID Parameter") private long routetariffidparm ;
-    @ApiModelProperty("Route ID Parameter")         private long routeidparm ;
-    @ApiModelProperty("Tariffa Equation Parameter") private long tariffequtionparm ;
-    @ApiModelProperty("Tariffa Study Parameter")    private long tariffstudyparm ;
-    @ApiModelProperty("Fuel Type Parameter")        private long fueltypeparm ;
-    @ApiModelProperty("Vehicle Category Parameter") private long vehiclecategoryparm ;
-    @ApiModelProperty("Inflation Parameter")        private long inflationparm ;
-    @ApiModelProperty("Value 1 Parameter")          private double valueparm1 ;
-    @ApiModelProperty("Value 2 Parameter")          private double valueparm2 ;
+    @ApiModelProperty("Route Tariffa ID Parameter") private Long routetariffidparm ;
+    @ApiModelProperty("Route ID Parameter")         private Long routeidparm ;
+    @ApiModelProperty("Tariffa Equation Parameter") private Long tariffequtionparm ;
+    @ApiModelProperty("Tariffa Study Parameter")    private Long tariffstudyparm ;
+    @ApiModelProperty("Fuel Type Parameter")        private Long fueltypeparm ;
+    @ApiModelProperty("Vehicle Category Parameter") private Long vehiclecategoryparm ;
+    @ApiModelProperty("Inflation Parameter")        private Long inflationparm ;
+    @ApiModelProperty("Value 1 Parameter")          private Double valueparm1 ;
+    @ApiModelProperty("Value 2 Parameter")          private Double valueparm2 ;
     @ApiModelProperty("Start Date Parameter")       private Date startdateparm ;
     @ApiModelProperty("End Date Parameter")         private Date enddateparm ;
-    @ApiModelProperty("Principal Parameter")        private long prencipal ;
-    @ApiModelProperty("Tariffa Unit Parameter")     private int tariffunitparm ;
-    @ApiModelProperty("Based On Parameter")         private int basedonparm ;
-    @ApiModelProperty("Status Parameter")           private int statusparm ;
+    @ApiModelProperty("Principal Parameter")        private Long prencipal ;
+    @ApiModelProperty("Tariffa Unit Parameter")     private Integer tariffunitparm ;
+    @ApiModelProperty("Based On Parameter")         private Integer basedonparm ;
+    @ApiModelProperty("Status Parameter")           private Integer statusparm ;
+    @ApiModelProperty("IP Address")                 private String ipaddressparm  ;
 
 
-    public long getRoutetariffidparm() {
+    public Long getRoutetariffidparm() {
         return routetariffidparm;
     }
 
-    public void setRoutetariffidparm(long routetariffidparm) {
+    public void setRoutetariffidparm(Long routetariffidparm) {
         this.routetariffidparm = routetariffidparm;
     }
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
-    public long getTariffequtionparm() {
+    public Long getTariffequtionparm() {
         return tariffequtionparm;
     }
 
-    public void setTariffequtionparm(long tariffequtionparm) {
+    public void setTariffequtionparm(Long tariffequtionparm) {
         this.tariffequtionparm = tariffequtionparm;
     }
 
-    public long getTariffstudyparm() {
+    public Long getTariffstudyparm() {
         return tariffstudyparm;
     }
 
-    public void setTariffstudyparm(long tariffstudyparm) {
+    public void setTariffstudyparm(Long tariffstudyparm) {
         this.tariffstudyparm = tariffstudyparm;
     }
 
-    public long getFueltypeparm() {
+    public Long getFueltypeparm() {
         return fueltypeparm;
     }
 
-    public void setFueltypeparm(long fueltypeparm) {
+    public void setFueltypeparm(Long fueltypeparm) {
         this.fueltypeparm = fueltypeparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public long getInflationparm() {
+    public Long getInflationparm() {
         return inflationparm;
     }
 
-    public void setInflationparm(long inflationparm) {
+    public void setInflationparm(Long inflationparm) {
         this.inflationparm = inflationparm;
+    }
+
+    public Double getValueparm1() {
+        return valueparm1;
+    }
+
+    public void setValueparm1(Double valueparm1) {
+        this.valueparm1 = valueparm1;
+    }
+
+    public Double getValueparm2() {
+        return valueparm2;
+    }
+
+    public void setValueparm2(Double valueparm2) {
+        this.valueparm2 = valueparm2;
     }
 
     public Date getStartdateparm() {
@@ -95,52 +112,66 @@ public class SaveRouteTariffDataRequest {
         this.enddateparm = enddateparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getTariffunitparm() {
+    public Integer getTariffunitparm() {
         return tariffunitparm;
     }
 
-    public void setTariffunitparm(int tariffunitparm) {
+    public void setTariffunitparm(Integer tariffunitparm) {
         this.tariffunitparm = tariffunitparm;
     }
 
-    public int getBasedonparm() {
+    public Integer getBasedonparm() {
         return basedonparm;
     }
 
-    public void setBasedonparm(int basedonparm) {
+    public void setBasedonparm(Integer basedonparm) {
         this.basedonparm = basedonparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public double getValueparm1() {
-        return valueparm1;
+    public String getIpaddressparm() {
+        return ipaddressparm;
     }
 
-    public void setValueparm1(double valueparm1) {
-        this.valueparm1 = valueparm1;
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
     }
 
-    public double getValueparm2() {
-        return valueparm2;
-    }
-
-    public void setValueparm2(double valueparm2) {
-        this.valueparm2 = valueparm2;
+    @Override
+    public String toString() {
+        return "SaveRouteTariffDataRequest{" +
+                "routetariffidparm=" + routetariffidparm +
+                ", routeidparm=" + routeidparm +
+                ", tariffequtionparm=" + tariffequtionparm +
+                ", tariffstudyparm=" + tariffstudyparm +
+                ", fueltypeparm=" + fueltypeparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", inflationparm=" + inflationparm +
+                ", valueparm1=" + valueparm1 +
+                ", valueparm2=" + valueparm2 +
+                ", startdateparm=" + startdateparm +
+                ", enddateparm=" + enddateparm +
+                ", prencipal=" + prencipal +
+                ", tariffunitparm=" + tariffunitparm +
+                ", basedonparm=" + basedonparm +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm +
+                '}';
     }
 }
 

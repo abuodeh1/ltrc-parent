@@ -5,19 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnPermitTypeDataRequest {
 
-    @ApiModelProperty("Permit Type ID Parameter ") private long permittypeidparm ;
+    @ApiModelProperty("Permit Type ID Parameter ") private Long permittypeidparm ;
     @ApiModelProperty("Permit Type Name Parameter ") private String permittypenameparm ;
     @ApiModelProperty("Permit Type English Name  Parameter ") private String permittypeenglishnameparm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
 
-    public long getPermittypeidparm() {
+    public Long getPermittypeidparm() {
         return permittypeidparm;
     }
 
-    public void setPermittypeidparm(long permittypeidparm) {
+    public void setPermittypeidparm(Long permittypeidparm) {
         this.permittypeidparm = permittypeidparm;
     }
 
@@ -37,27 +37,27 @@ public class ReturnPermitTypeDataRequest {
         this.permittypeenglishnameparm = permittypeenglishnameparm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -67,5 +67,18 @@ public class ReturnPermitTypeDataRequest {
 
     public void setSortby(String sortby) {
         this.sortby = sortby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPermitTypeDataRequest{" +
+                "permittypeidparm=" + permittypeidparm +
+                ", permittypenameparm=" + permittypenameparm +
+                ", permittypeenglishnameparm=" + permittypeenglishnameparm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                '}';
     }
 }

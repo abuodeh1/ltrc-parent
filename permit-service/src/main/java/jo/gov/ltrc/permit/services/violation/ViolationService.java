@@ -4,11 +4,14 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jo.gov.ltrc.helper.DatabaseHelper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @ApiResponses(value = {
@@ -27,6 +30,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/violation")
+@Log4j2
 public class ViolationService {
 
     @PersistenceContext
@@ -62,25 +66,23 @@ public class ViolationService {
     })
     @ApiOperation("Add or Edit Violation Data ")
     @PostMapping
-    public String addViolation(@ApiParam("\t") @RequestBody SaveViolationDataRequest saveViolationDataRequest){
+    public String addViolation(@ApiParam("\t") @RequestBody SaveViolationDataRequest saveViolationDataRequest, HttpServletRequest request){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("SaveViolationData");
-        storedProcedureQuery.setParameter(1, saveViolationDataRequest.getViolationidparm());
-        storedProcedureQuery.setParameter(2, saveViolationDataRequest.getViolationdateparm());
-        storedProcedureQuery.setParameter(3, saveViolationDataRequest.getViolationbyparm());
-        storedProcedureQuery.setParameter(4, saveViolationDataRequest.getViolationtypeparm());
-        storedProcedureQuery.setParameter(5, saveViolationDataRequest.getViolationsubjectparm());
-        storedProcedureQuery.setParameter(6, saveViolationDataRequest.getViolationpenaltyparm());
-        storedProcedureQuery.setParameter(7, saveViolationDataRequest.getStatusparm());
-        storedProcedureQuery.setParameter(8, saveViolationDataRequest.getVehicleparm());
-        storedProcedureQuery.setParameter(9, saveViolationDataRequest.getDriverparm());
-        storedProcedureQuery.setParameter(10, saveViolationDataRequest.getLineidparm());
-        storedProcedureQuery.setParameter(11, saveViolationDataRequest.getViolationreferenceparm());
-        storedProcedureQuery.setParameter(12, saveViolationDataRequest.getViolationreferencedateparm());
-        storedProcedureQuery.setParameter(13, saveViolationDataRequest.getCancellationofarrestorderreferenceparm());
-        storedProcedureQuery.setParameter(14, saveViolationDataRequest.getCancellationofarrestorderdateparm());
-        storedProcedureQuery.setParameter(15, saveViolationDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(16, saveViolationDataRequest.getOperatorparm());
+        log.debug(" SaveViolationDataRequest : " + saveViolationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        saveViolationDataRequest.setIpaddressparm(request.getRemoteAddr());
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveViolationData", saveViolationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         return (String) storedProcedureQuery.getSingleResult() ;
@@ -97,35 +99,19 @@ public class ViolationService {
     @PostMapping("/find")
     public List<ReturnViolationResponse> getViolation(@ApiParam("\t") @RequestBody ReturnViolationDataRequest returnViolationDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnViolation");
-        storedProcedureQuery.setParameter(1, returnViolationDataRequest.getMinviolationidparm());
-        storedProcedureQuery.setParameter(2, returnViolationDataRequest.getMaxviolationidparm());
-        storedProcedureQuery.setParameter(3, returnViolationDataRequest.getMinviolationdateparm());
-        storedProcedureQuery.setParameter(4, returnViolationDataRequest.getMaxviolationdateparm());
-        storedProcedureQuery.setParameter(5, returnViolationDataRequest.getViolationtypeparm());
-        storedProcedureQuery.setParameter(6, returnViolationDataRequest.getViolationsubjectparm());
-        storedProcedureQuery.setParameter(7, returnViolationDataRequest.getViolationpenaltyparm());
-        storedProcedureQuery.setParameter(8, returnViolationDataRequest.getRegistrationnumberparm());
-        storedProcedureQuery.setParameter(9, returnViolationDataRequest.getPlatecodeparm());
-        storedProcedureQuery.setParameter(10, returnViolationDataRequest.getPlatenumberparm());
-        storedProcedureQuery.setParameter(11, returnViolationDataRequest.getDriverparm());
-        storedProcedureQuery.setParameter(12, returnViolationDataRequest.getLineidparm());
-        storedProcedureQuery.setParameter(13, returnViolationDataRequest.getStatusparm());
-        storedProcedureQuery.setParameter(14, returnViolationDataRequest.getVehicleparm());
-        storedProcedureQuery.setParameter(15, returnViolationDataRequest.getOperatoridparm());
-        storedProcedureQuery.setParameter(16, returnViolationDataRequest.getOperatornameparm());
-        storedProcedureQuery.setParameter(17, returnViolationDataRequest.getViolationreferenceparm());
-        storedProcedureQuery.setParameter(18, returnViolationDataRequest.getMinviolationreferencedateparm());
-        storedProcedureQuery.setParameter(19, returnViolationDataRequest.getMaxviolationreferencedateparm());
-        storedProcedureQuery.setParameter(20, returnViolationDataRequest.getCancellationofarrestorderreferenceparm());
-        storedProcedureQuery.setParameter(21, returnViolationDataRequest.getMincancellationofarrestorderdateparm());
-        storedProcedureQuery.setParameter(22, returnViolationDataRequest.getMaxcancellationofarrestorderdateparm());
-        storedProcedureQuery.setParameter(23, returnViolationDataRequest.getPrincepel());
-        storedProcedureQuery.setParameter(24, returnViolationDataRequest.getViolationByParm());
-        storedProcedureQuery.setParameter(25, returnViolationDataRequest.getPagesize());
-        storedProcedureQuery.setParameter(26, returnViolationDataRequest.getPageindex());
-        storedProcedureQuery.setParameter(27, returnViolationDataRequest.getSorttype());
-        storedProcedureQuery.setParameter(28, returnViolationDataRequest.getSortby());
+        log.debug(" ReturnViolationDataRequest : " + returnViolationDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnViolation", returnViolationDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         List<ReturnViolationResponse> result = storedProcedureQuery.getResultList() ;
@@ -138,9 +124,19 @@ public class ViolationService {
     @PostMapping("/find/type")
     public List<ReturnViolationTypeResponse> getViolationType(@ApiParam("\t") @RequestBody ReturnViolationTypeDataRequest returnViolationTypeDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnViolationType");
-        storedProcedureQuery.setParameter(1, returnViolationTypeDataRequest.getViolationtypeidparm());
-        storedProcedureQuery.setParameter(2, returnViolationTypeDataRequest.getViolationtypenameparm());
+        log.debug(" ReturnViolationTypeDataRequest : " + returnViolationTypeDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnViolationType", returnViolationTypeDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnViolationTypeResponse> result = storedProcedureQuery.getResultList() ;
 
@@ -151,9 +147,19 @@ public class ViolationService {
     @PostMapping("/find/subject")
     public List<ReturnViolationSubjectResponse> getViolationSubject(@ApiParam("\t") @RequestBody ReturnViolationSubjectDataRequest returnViolationSubjectDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnViolationSubject");
-        storedProcedureQuery.setParameter(1, returnViolationSubjectDataRequest.getViolationsubjectidparm());
-        storedProcedureQuery.setParameter(2, returnViolationSubjectDataRequest.getViolationsubjectnameparm());
+        log.debug(" ReturnViolationSubjectDataRequest : " + returnViolationSubjectDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnViolationSubject", returnViolationSubjectDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         List<ReturnViolationSubjectResponse> result = storedProcedureQuery.getResultList() ;
 
@@ -164,9 +170,19 @@ public class ViolationService {
     @PostMapping("/find/penalty")
     public List<ReturnViolationPenaltyResponse> getViolationPenalty (@ApiParam("\t") @RequestBody ReturnViolationPenaltyDataRequest returnViolationPenaltyDataRequest){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ReturnViolationPenalty");
-        storedProcedureQuery.setParameter(1, returnViolationPenaltyDataRequest.getViolationpenaltyidparm());
-        storedProcedureQuery.setParameter(2, returnViolationPenaltyDataRequest.getViolationpenaltynameparm());
+        log.debug(" ReturnViolationPenaltyDataRequest : " + returnViolationPenaltyDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnViolationPenalty", returnViolationPenaltyDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
 
         List<ReturnViolationPenaltyResponse> result = storedProcedureQuery.getResultList() ;

@@ -12,13 +12,13 @@ import java.sql.Date;
         parameters = {
 
 
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "inflationreferanceidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "inflationdirectionparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "gasolineratioparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "dieselratioparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "generalrationparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "startdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
 
         }
         ,
@@ -38,51 +38,51 @@ import java.sql.Date;
 public class ReturnInflationResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Inflation Reference ID ") private long inflationreferanceid ;
-    @ApiModelProperty("Inflation Direction ") private boolean inflationdirection ;
-    @ApiModelProperty("Gasoline Ration ") private double gasolineratio ;
-    @ApiModelProperty("Diesel Ration ") private double dieselratio ;
-    @ApiModelProperty("General Ration ") private double generalration ;
+    @ApiModelProperty("Inflation Reference ID ") private Long inflationreferanceid ;
+    @ApiModelProperty("Inflation Direction ") private   Boolean inflationdirection ;
+    @ApiModelProperty("Gasoline Ration ") private  Double gasolineratio ;
+    @ApiModelProperty("Diesel Ration ") private  Double dieselratio ;
+    @ApiModelProperty("General Ration ") private  Double generalration ;
     @ApiModelProperty("Start Date ") private Date startdate ;
-    @ApiModelProperty("Status ") private int status ;
+    @ApiModelProperty("Status ") private Integer status ;
 
-    public long getInflationreferanceid() {
+    public Long getInflationreferanceid() {
         return inflationreferanceid;
     }
 
-    public void setInflationreferanceid(long inflationreferanceid) {
+    public void setInflationreferanceid(Long inflationreferanceid) {
         this.inflationreferanceid = inflationreferanceid;
     }
 
-    public boolean isInflationdirection() {
+    public Boolean getInflationdirection() {
         return inflationdirection;
     }
 
-    public void setInflationdirection(boolean inflationdirection) {
+    public void setInflationdirection(Boolean inflationdirection) {
         this.inflationdirection = inflationdirection;
     }
 
-    public double getGasolineratio() {
+    public Double getGasolineratio() {
         return gasolineratio;
     }
 
-    public void setGasolineratio(double gasolineratio) {
+    public void setGasolineratio(Double gasolineratio) {
         this.gasolineratio = gasolineratio;
     }
 
-    public double getDieselratio() {
+    public Double getDieselratio() {
         return dieselratio;
     }
 
-    public void setDieselratio(double dieselratio) {
+    public void setDieselratio(Double dieselratio) {
         this.dieselratio = dieselratio;
     }
 
-    public double getGeneralration() {
+    public Double getGeneralration() {
         return generalration;
     }
 
-    public void setGeneralration(double generalration) {
+    public void setGeneralration(Double generalration) {
         this.generalration = generalration;
     }
 
@@ -94,11 +94,24 @@ public class ReturnInflationResponse implements Serializable {
         this.startdate = startdate;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnInflationResponse{" +
+                "inflationreferanceid=" + inflationreferanceid +
+                ", inflationdirection=" + inflationdirection +
+                ", gasolineratio=" + gasolineratio +
+                ", dieselratio=" + dieselratio +
+                ", generalration=" + generalration +
+                ", startdate=" + startdate +
+                ", status=" + status +
+                '}';
     }
 }

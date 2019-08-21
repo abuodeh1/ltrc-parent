@@ -9,10 +9,10 @@ import java.io.Serializable;
         name = "ReturnCountry",
         procedureName = "\"ReturnCountry\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "countryidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countryarabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countryenglishnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countrycodeparm"),
         },
         resultSetMappings = {
                 "CountryResultSetMapping"

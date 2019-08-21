@@ -6,44 +6,44 @@ import java.sql.Date;
 
 public class SaveApplicationRouteAmedmentDataRequest {
 
-    @ApiModelProperty("Application Route Amendment ID Parameter ") private long applicationrouteamedmentidparm ;
-    @ApiModelProperty("Operator ID Parameter ") private long operatoridparm ;
+    @ApiModelProperty("Application Route Amendment ID Parameter ") private Long applicationrouteamedmentidparm ;
+    @ApiModelProperty("Operator ID Parameter ") private Long operatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("E-Mail Parameter ") private String emailparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
-    @ApiModelProperty("Route ID Parameter ") private long routeidparm ;
-    @ApiModelProperty("Current Route Length Parameter ") private double currentroutelengthparm ;
-    @ApiModelProperty("Suggested Route Length Parameter ") private double suggestedroutelengthparm ;
-    @ApiModelProperty("Current Route Passengers Parameter ") private int currentroutepassengersparm ;
-    @ApiModelProperty("Suggested Route Passengers Parameter ") private int suggestedroutepassengersparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
+    @ApiModelProperty("Route ID Parameter ") private Long routeidparm ;
+    @ApiModelProperty("Current Route Length Parameter ") private Double currentroutelengthparm ;
+    @ApiModelProperty("Suggested Route Length Parameter ") private Double suggestedroutelengthparm ;
+    @ApiModelProperty("Current Route Passengers Parameter ") private Integer currentroutepassengersparm ;
+    @ApiModelProperty("Suggested Route Passengers Parameter ") private Integer suggestedroutepassengersparm ;
     @ApiModelProperty("Suggested Points Parameter ") private String suggestedpointsparm ;
     @ApiModelProperty("Reason Parameter ") private String reasonparm ;
     @ApiModelProperty("Passenger Transport Committee Explanation Parameter ") private String passengertransportcommitteeexplanationparm ;
-    @ApiModelProperty("Passenger Transport Committee Decision Parameter ") private int passengertransportcommitteedecisionparm ;
+    @ApiModelProperty("Passenger Transport Committee Decision Parameter ") private Integer passengertransportcommitteedecisionparm ;
     @ApiModelProperty("Director Directorate Passenger Transport Explanation Parameter ") private String directordirectoratepassengertransportexplanationparm ;
-    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private int directordirectoratepassengertransportdecisionparm ;
-    @ApiModelProperty("Principal Parameter ") private long prencipal ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Director Directorate Passenger Transport Decision Parameter ") private Integer directordirectoratepassengertransportdecisionparm ;
+    @ApiModelProperty("Principal Parameter ") private Long prencipal ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
-    @ApiModelProperty("Service Department Parameter ") private long servicedepartmentparm ;
+    @ApiModelProperty("Service Department Parameter ") private Long servicedepartmentparm ;
 
-    public long getApplicationrouteamedmentidparm() {
+    public Long getApplicationrouteamedmentidparm() {
         return applicationrouteamedmentidparm;
     }
 
-    public void setApplicationrouteamedmentidparm(long applicationrouteamedmentidparm) {
+    public void setApplicationrouteamedmentidparm(Long applicationrouteamedmentidparm) {
         this.applicationrouteamedmentidparm = applicationrouteamedmentidparm;
     }
 
-    public long getOperatoridparm() {
+    public Long getOperatoridparm() {
         return operatoridparm;
     }
 
-    public void setOperatoridparm(long operatoridparm) {
+    public void setOperatoridparm(Long operatoridparm) {
         this.operatoridparm = operatoridparm;
     }
 
@@ -71,75 +71,75 @@ public class SaveApplicationRouteAmedmentDataRequest {
         this.emailparm = emailparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
-    public double getCurrentroutelengthparm() {
+    public Double getCurrentroutelengthparm() {
         return currentroutelengthparm;
     }
 
-    public void setCurrentroutelengthparm(double currentroutelengthparm) {
+    public void setCurrentroutelengthparm(Double currentroutelengthparm) {
         this.currentroutelengthparm = currentroutelengthparm;
     }
 
-    public double getSuggestedroutelengthparm() {
+    public Double getSuggestedroutelengthparm() {
         return suggestedroutelengthparm;
     }
 
-    public void setSuggestedroutelengthparm(double suggestedroutelengthparm) {
+    public void setSuggestedroutelengthparm(Double suggestedroutelengthparm) {
         this.suggestedroutelengthparm = suggestedroutelengthparm;
     }
 
-    public int getCurrentroutepassengersparm() {
+    public Integer getCurrentroutepassengersparm() {
         return currentroutepassengersparm;
     }
 
-    public void setCurrentroutepassengersparm(int currentroutepassengersparm) {
+    public void setCurrentroutepassengersparm(Integer currentroutepassengersparm) {
         this.currentroutepassengersparm = currentroutepassengersparm;
     }
 
-    public int getSuggestedroutepassengersparm() {
+    public Integer getSuggestedroutepassengersparm() {
         return suggestedroutepassengersparm;
     }
 
-    public void setSuggestedroutepassengersparm(int suggestedroutepassengersparm) {
+    public void setSuggestedroutepassengersparm(Integer suggestedroutepassengersparm) {
         this.suggestedroutepassengersparm = suggestedroutepassengersparm;
     }
 
@@ -167,11 +167,11 @@ public class SaveApplicationRouteAmedmentDataRequest {
         this.passengertransportcommitteeexplanationparm = passengertransportcommitteeexplanationparm;
     }
 
-    public int getPassengertransportcommitteedecisionparm() {
+    public Integer getPassengertransportcommitteedecisionparm() {
         return passengertransportcommitteedecisionparm;
     }
 
-    public void setPassengertransportcommitteedecisionparm(int passengertransportcommitteedecisionparm) {
+    public void setPassengertransportcommitteedecisionparm(Integer passengertransportcommitteedecisionparm) {
         this.passengertransportcommitteedecisionparm = passengertransportcommitteedecisionparm;
     }
 
@@ -183,27 +183,27 @@ public class SaveApplicationRouteAmedmentDataRequest {
         this.directordirectoratepassengertransportexplanationparm = directordirectoratepassengertransportexplanationparm;
     }
 
-    public int getDirectordirectoratepassengertransportdecisionparm() {
+    public Integer getDirectordirectoratepassengertransportdecisionparm() {
         return directordirectoratepassengertransportdecisionparm;
     }
 
-    public void setDirectordirectoratepassengertransportdecisionparm(int directordirectoratepassengertransportdecisionparm) {
+    public void setDirectordirectoratepassengertransportdecisionparm(Integer directordirectoratepassengertransportdecisionparm) {
         this.directordirectoratepassengertransportdecisionparm = directordirectoratepassengertransportdecisionparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
@@ -215,12 +215,42 @@ public class SaveApplicationRouteAmedmentDataRequest {
         this.ipaddressparm = ipaddressparm;
     }
 
-    public long getServicedepartmentparm() {
+    public Long getServicedepartmentparm() {
         return servicedepartmentparm;
     }
 
-    public void setServicedepartmentparm(long servicedepartmentparm) {
+    public void setServicedepartmentparm(Long servicedepartmentparm) {
         this.servicedepartmentparm = servicedepartmentparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveApplicationRouteAmedmentDataRequest{" +
+                "applicationrouteamedmentidparm=" + applicationrouteamedmentidparm +
+                ", operatoridparm=" + operatoridparm +
+                ", operatornameparm= " + operatornameparm + 
+                ", phonenumberparm= " + phonenumberparm + 
+                ", emailparm= " + emailparm + 
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", routeidparm=" + routeidparm +
+                ", currentroutelengthparm=" + currentroutelengthparm +
+                ", suggestedroutelengthparm=" + suggestedroutelengthparm +
+                ", currentroutepassengersparm=" + currentroutepassengersparm +
+                ", suggestedroutepassengersparm=" + suggestedroutepassengersparm +
+                ", suggestedpointsparm= " + suggestedpointsparm + 
+                ", reasonparm= " + reasonparm + 
+                ", passengertransportcommitteeexplanationparm= " + passengertransportcommitteeexplanationparm + 
+                ", passengertransportcommitteedecisionparm=" + passengertransportcommitteedecisionparm +
+                ", directordirectoratepassengertransportexplanationparm= " + directordirectoratepassengertransportexplanationparm + 
+                ", directordirectoratepassengertransportdecisionparm=" + directordirectoratepassengertransportdecisionparm +
+                ", prencipal=" + prencipal +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                ", servicedepartmentparm=" + servicedepartmentparm +
+                '}';
     }
 }
 

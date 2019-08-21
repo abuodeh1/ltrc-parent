@@ -8,32 +8,32 @@ import java.sql.Date;
 public class ReturnOperatorByVehicleInformationDataRequest {
 
     @ApiModelProperty("Registration Number Parameter ") private String registrationnumberparm ;
-    @ApiModelProperty("Permit Status Parameter ") private int permitstatusparm ;
+    @ApiModelProperty("Permit Status Parameter ") private Integer permitstatusparm ;
     @ApiModelProperty("Plate Code Parameter ") private String platecodeparm ;
     @ApiModelProperty("Plate Number Parameter ") private String platenumberparm ;
     @ApiModelProperty("Minimum Delivery Date Parameter ") private Date mindeliverydateparm ;
     @ApiModelProperty("Maximum Delivery Date Parameter ") private Date maxdeliverydateparm ;
-    @ApiModelProperty("Vehicle Category Parameter ") private long vehiclecategoryparm ;
+    @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
     @ApiModelProperty("Manufacture Parameter ") private String manufacturerparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Fees Status Parameter ") private int feesstatusparm ;
-    @ApiModelProperty("Usage Purpose Parameter ") private long usagepurposeparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Fees Status Parameter ") private Integer feesstatusparm ;
+    @ApiModelProperty("Usage Purpose Parameter ") private Long usagepurposeparm ;
     @ApiModelProperty("Minimum License Expiration Parameter ") private Date minlicenseexpirationparm ;
     @ApiModelProperty("Maximum License Expiration Parameter ") private Date maxlicenseexpirationparm ;
-    @ApiModelProperty("Minimum Year of Manufacture Parameter ") private int minyearofmanufactureparm ;
-    @ApiModelProperty("Maximum Year of Manufacture Parameter ") private int maxyearofmanufactureparm ;
-    @ApiModelProperty("Minimum Passenger Number Parameter ") private int minpassengersnumberparm ;
-    @ApiModelProperty("Maximum Passenger Number Parameter ") private int maxpassengersnumberparm ;
+    @ApiModelProperty("Minimum Year of Manufacture Parameter ") private Integer minyearofmanufactureparm ;
+    @ApiModelProperty("Maximum Year of Manufacture Parameter ") private Integer maxyearofmanufactureparm ;
+    @ApiModelProperty("Minimum Passenger Number Parameter ") private Integer minpassengersnumberparm ;
+    @ApiModelProperty("Maximum Passenger Number Parameter ") private Integer maxpassengersnumberparm ;
     @ApiModelProperty("Owner Parameter ") private String ownerparm ;
     @ApiModelProperty("Owner Name Parameter ") private String ownernameparm ;
-    @ApiModelProperty("Fuel Type Parameter ") private long fueltypeparm ;
+    @ApiModelProperty("Fuel Type Parameter ") private Long fueltypeparm ;
     @ApiModelProperty("Additional Descriptions Parameter ") private String addtionaldescriptionsparm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
 
-
+    
     public String getRegistrationnumberparm() {
         return registrationnumberparm;
     }
@@ -42,11 +42,11 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.registrationnumberparm = registrationnumberparm;
     }
 
-    public int getPermitstatusparm() {
+    public Integer getPermitstatusparm() {
         return permitstatusparm;
     }
 
-    public void setPermitstatusparm(int permitstatusparm) {
+    public void setPermitstatusparm(Integer permitstatusparm) {
         this.permitstatusparm = permitstatusparm;
     }
 
@@ -82,11 +82,11 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.maxdeliverydateparm = maxdeliverydateparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
@@ -98,27 +98,27 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.manufacturerparm = manufacturerparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public int getFeesstatusparm() {
+    public Integer getFeesstatusparm() {
         return feesstatusparm;
     }
 
-    public void setFeesstatusparm(int feesstatusparm) {
+    public void setFeesstatusparm(Integer feesstatusparm) {
         this.feesstatusparm = feesstatusparm;
     }
 
-    public long getUsagepurposeparm() {
+    public Long getUsagepurposeparm() {
         return usagepurposeparm;
     }
 
-    public void setUsagepurposeparm(long usagepurposeparm) {
+    public void setUsagepurposeparm(Long usagepurposeparm) {
         this.usagepurposeparm = usagepurposeparm;
     }
 
@@ -138,35 +138,35 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.maxlicenseexpirationparm = maxlicenseexpirationparm;
     }
 
-    public int getMinyearofmanufactureparm() {
+    public Integer getMinyearofmanufactureparm() {
         return minyearofmanufactureparm;
     }
 
-    public void setMinyearofmanufactureparm(int minyearofmanufactureparm) {
+    public void setMinyearofmanufactureparm(Integer minyearofmanufactureparm) {
         this.minyearofmanufactureparm = minyearofmanufactureparm;
     }
 
-    public int getMaxyearofmanufactureparm() {
+    public Integer getMaxyearofmanufactureparm() {
         return maxyearofmanufactureparm;
     }
 
-    public void setMaxyearofmanufactureparm(int maxyearofmanufactureparm) {
+    public void setMaxyearofmanufactureparm(Integer maxyearofmanufactureparm) {
         this.maxyearofmanufactureparm = maxyearofmanufactureparm;
     }
 
-    public int getMinpassengersnumberparm() {
+    public Integer getMinpassengersnumberparm() {
         return minpassengersnumberparm;
     }
 
-    public void setMinpassengersnumberparm(int minpassengersnumberparm) {
+    public void setMinpassengersnumberparm(Integer minpassengersnumberparm) {
         this.minpassengersnumberparm = minpassengersnumberparm;
     }
 
-    public int getMaxpassengersnumberparm() {
+    public Integer getMaxpassengersnumberparm() {
         return maxpassengersnumberparm;
     }
 
-    public void setMaxpassengersnumberparm(int maxpassengersnumberparm) {
+    public void setMaxpassengersnumberparm(Integer maxpassengersnumberparm) {
         this.maxpassengersnumberparm = maxpassengersnumberparm;
     }
 
@@ -186,11 +186,11 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.ownernameparm = ownernameparm;
     }
 
-    public long getFueltypeparm() {
+    public Long getFueltypeparm() {
         return fueltypeparm;
     }
 
-    public void setFueltypeparm(long fueltypeparm) {
+    public void setFueltypeparm(Long fueltypeparm) {
         this.fueltypeparm = fueltypeparm;
     }
 
@@ -202,27 +202,27 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.addtionaldescriptionsparm = addtionaldescriptionsparm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -232,5 +232,36 @@ public class ReturnOperatorByVehicleInformationDataRequest {
 
     public void setSortby(String sortby) {
         this.sortby = sortby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorByVehicleInformationDataRequest{" +
+                "registrationnumberparm=" + registrationnumberparm +
+                ", permitstatusparm=" + permitstatusparm +
+                ", platecodeparm=" + platecodeparm +
+                ", platenumberparm=" + platenumberparm +
+                ", mindeliverydateparm=" + mindeliverydateparm +
+                ", maxdeliverydateparm=" + maxdeliverydateparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", manufacturerparm=" + manufacturerparm +
+                ", statusparm=" + statusparm +
+                ", feesstatusparm=" + feesstatusparm +
+                ", usagepurposeparm=" + usagepurposeparm +
+                ", minlicenseexpirationparm=" + minlicenseexpirationparm +
+                ", maxlicenseexpirationparm=" + maxlicenseexpirationparm +
+                ", minyearofmanufactureparm=" + minyearofmanufactureparm +
+                ", maxyearofmanufactureparm=" + maxyearofmanufactureparm +
+                ", minpassengersnumberparm=" + minpassengersnumberparm +
+                ", maxpassengersnumberparm=" + maxpassengersnumberparm +
+                ", ownerparm=" + ownerparm +
+                ", ownernameparm=" + ownernameparm +
+                ", fueltypeparm=" + fueltypeparm +
+                ", addtionaldescriptionsparm=" + addtionaldescriptionsparm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                '}';
     }
 }

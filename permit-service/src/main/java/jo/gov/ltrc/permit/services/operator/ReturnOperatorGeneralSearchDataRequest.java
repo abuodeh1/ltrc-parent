@@ -7,22 +7,22 @@ import java.sql.Date;
 
 public class ReturnOperatorGeneralSearchDataRequest {
 
-    @ApiModelProperty("Minimum Operator ID Parameter ") private long minoperatoridparm ;
-    @ApiModelProperty("Maximum Operator ID Parameter ") private long maxoperatoridparm ;
-    @ApiModelProperty("Operator Classification Parameter ") private long operatorclassificationparm ;
-    @ApiModelProperty("Operator Category Parameter ") private long operatorcategoryparm ;
-    @ApiModelProperty("Province Parameter ") private long provinceparm ;
-    @ApiModelProperty("Governorate Parameter ") private long governorateparm ;
-    @ApiModelProperty("Municipality Parameter ") private long municipalityparm ;
-    @ApiModelProperty("Territory Parameter ") private long territoryparm ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
-    @ApiModelProperty("Employees Number Parameter ") private int employeesnumberparm ;
-    @ApiModelProperty("Drivers Number Parameter ") private int driversnumberparm ;
-    @ApiModelProperty("Working Cars Number Parameter ") private int workingcarsnumberparm ;
-    @ApiModelProperty("Basic Cars Number Parameter ") private int basiccarsnumberparm ;
-    @ApiModelProperty("Fees Status Parameter ") private int feesstatusparm ;
-    @ApiModelProperty("Office Area Parameter ") private double officeareaparm ;
-    @ApiModelProperty("License Purpose Parameter ") private long licensepurposeparm ;
+    @ApiModelProperty("Minimum Operator ID Parameter ") private Long minoperatoridparm ;
+    @ApiModelProperty("Maximum Operator ID Parameter ") private Long maxoperatoridparm ;
+    @ApiModelProperty("Operator Classification Parameter ") private Long operatorclassificationparm ;
+    @ApiModelProperty("Operator Category Parameter ") private Long operatorcategoryparm ;
+    @ApiModelProperty("Province Parameter ") private Long provinceparm ;
+    @ApiModelProperty("Governorate Parameter ") private Long governorateparm ;
+    @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
+    @ApiModelProperty("Territory Parameter ") private Long territoryparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("Employees Number Parameter ") private Integer employeesnumberparm ;
+    @ApiModelProperty("Drivers Number Parameter ") private Integer driversnumberparm ;
+    @ApiModelProperty("Working Cars Number Parameter ") private Integer workingcarsnumberparm ;
+    @ApiModelProperty("Basic Cars Number Parameter ") private Integer basiccarsnumberparm ;
+    @ApiModelProperty("Fees Status Parameter ") private Integer feesstatusparm ;
+    @ApiModelProperty("Office Area Parameter ") private  Double officeareaparm ;
+    @ApiModelProperty("License Purpose Parameter ") private Long licensepurposeparm ;
     @ApiModelProperty("Operator National ID Parameter ") private String operatornationalidparm ;
     @ApiModelProperty("Operator Name  Parameter ") private String operatornameparm ;
     @ApiModelProperty("Operator Commercial Name Parameter ") private String operatorcomercialnameparm ;
@@ -39,7 +39,7 @@ public class ReturnOperatorGeneralSearchDataRequest {
     @ApiModelProperty("Phone Number Parameter ") private String phonenumberparm ;
     @ApiModelProperty("Mobile Phone Number Parameter ") private String mobilephonenumberparm ;
     @ApiModelProperty("Fax Number Parameter ") private String faxnumberparm ;
-    @ApiModelProperty("Contract Period Parameter ") private double contractperiodparm ;
+    @ApiModelProperty("Contract Period Parameter ") private  Double contractperiodparm ;
     @ApiModelProperty("Commercial Name Record Number Parameter ") private String commercialnamerecordnumberparm ;
     @ApiModelProperty("Commercial Name Parameter ") private String commercialnameparm ;
     @ApiModelProperty("Commercial Record Number Parameter ") private String commercialrecordnumberparm ;
@@ -55,136 +55,136 @@ public class ReturnOperatorGeneralSearchDataRequest {
     @ApiModelProperty("License Expire Date Parameter ") private Date licenseexpiredateparm ;
     @ApiModelProperty("Office Closing Date Parameter ") private Date officeclosingdateparm ;
     @ApiModelProperty("Commercial Record Date Parameter ") private Date commercialrecorddateparm ;
-    @ApiModelProperty("Page Size Parameter ") private int pagesize ;
-    @ApiModelProperty("Page Index Parameter ") private int pageindex ;
-    @ApiModelProperty("Sort Type Parameter ") private int sorttype ;
+    @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
+    @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
+    @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
 
-    public long getMinoperatoridparm() {
+    public Long getMinoperatoridparm() {
         return minoperatoridparm;
     }
 
-    public void setMinoperatoridparm(long minoperatoridparm) {
+    public void setMinoperatoridparm(Long minoperatoridparm) {
         this.minoperatoridparm = minoperatoridparm;
     }
 
-    public long getMaxoperatoridparm() {
+    public Long getMaxoperatoridparm() {
         return maxoperatoridparm;
     }
 
-    public void setMaxoperatoridparm(long maxoperatoridparm) {
+    public void setMaxoperatoridparm(Long maxoperatoridparm) {
         this.maxoperatoridparm = maxoperatoridparm;
     }
 
-    public long getOperatorclassificationparm() {
+    public Long getOperatorclassificationparm() {
         return operatorclassificationparm;
     }
 
-    public void setOperatorclassificationparm(long operatorclassificationparm) {
+    public void setOperatorclassificationparm(Long operatorclassificationparm) {
         this.operatorclassificationparm = operatorclassificationparm;
     }
 
-    public long getOperatorcategoryparm() {
+    public Long getOperatorcategoryparm() {
         return operatorcategoryparm;
     }
 
-    public void setOperatorcategoryparm(long operatorcategoryparm) {
+    public void setOperatorcategoryparm(Long operatorcategoryparm) {
         this.operatorcategoryparm = operatorcategoryparm;
     }
 
-    public long getProvinceparm() {
+    public Long getProvinceparm() {
         return provinceparm;
     }
 
-    public void setProvinceparm(long provinceparm) {
+    public void setProvinceparm(Long provinceparm) {
         this.provinceparm = provinceparm;
     }
 
-    public long getGovernorateparm() {
+    public Long getGovernorateparm() {
         return governorateparm;
     }
 
-    public void setGovernorateparm(long governorateparm) {
+    public void setGovernorateparm(Long governorateparm) {
         this.governorateparm = governorateparm;
     }
 
-    public long getMunicipalityparm() {
+    public Long getMunicipalityparm() {
         return municipalityparm;
     }
 
-    public void setMunicipalityparm(long municipalityparm) {
+    public void setMunicipalityparm(Long municipalityparm) {
         this.municipalityparm = municipalityparm;
     }
 
-    public long getTerritoryparm() {
+    public Long getTerritoryparm() {
         return territoryparm;
     }
 
-    public void setTerritoryparm(long territoryparm) {
+    public void setTerritoryparm(Long territoryparm) {
         this.territoryparm = territoryparm;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
     }
 
-    public int getEmployeesnumberparm() {
+    public Integer getEmployeesnumberparm() {
         return employeesnumberparm;
     }
 
-    public void setEmployeesnumberparm(int employeesnumberparm) {
+    public void setEmployeesnumberparm(Integer employeesnumberparm) {
         this.employeesnumberparm = employeesnumberparm;
     }
 
-    public int getDriversnumberparm() {
+    public Integer getDriversnumberparm() {
         return driversnumberparm;
     }
 
-    public void setDriversnumberparm(int driversnumberparm) {
+    public void setDriversnumberparm(Integer driversnumberparm) {
         this.driversnumberparm = driversnumberparm;
     }
 
-    public int getWorkingcarsnumberparm() {
+    public Integer getWorkingcarsnumberparm() {
         return workingcarsnumberparm;
     }
 
-    public void setWorkingcarsnumberparm(int workingcarsnumberparm) {
+    public void setWorkingcarsnumberparm(Integer workingcarsnumberparm) {
         this.workingcarsnumberparm = workingcarsnumberparm;
     }
 
-    public int getBasiccarsnumberparm() {
+    public Integer getBasiccarsnumberparm() {
         return basiccarsnumberparm;
     }
 
-    public void setBasiccarsnumberparm(int basiccarsnumberparm) {
+    public void setBasiccarsnumberparm(Integer basiccarsnumberparm) {
         this.basiccarsnumberparm = basiccarsnumberparm;
     }
 
-    public int getFeesstatusparm() {
+    public Integer getFeesstatusparm() {
         return feesstatusparm;
     }
 
-    public void setFeesstatusparm(int feesstatusparm) {
+    public void setFeesstatusparm(Integer feesstatusparm) {
         this.feesstatusparm = feesstatusparm;
     }
 
-    public double getOfficeareaparm() {
+    public Double getOfficeareaparm() {
         return officeareaparm;
     }
 
-    public void setOfficeareaparm(double officeareaparm) {
+    public void setOfficeareaparm(Double officeareaparm) {
         this.officeareaparm = officeareaparm;
     }
 
-    public long getLicensepurposeparm() {
+    public Long getLicensepurposeparm() {
         return licensepurposeparm;
     }
 
-    public void setLicensepurposeparm(long licensepurposeparm) {
+    public void setLicensepurposeparm(Long licensepurposeparm) {
         this.licensepurposeparm = licensepurposeparm;
     }
 
@@ -444,27 +444,27 @@ public class ReturnOperatorGeneralSearchDataRequest {
         this.commercialrecorddateparm = commercialrecorddateparm;
     }
 
-    public int getPagesize() {
+    public Integer getPagesize() {
         return pagesize;
     }
 
-    public void setPagesize(int pagesize) {
+    public void setPagesize(Integer pagesize) {
         this.pagesize = pagesize;
     }
 
-    public int getPageindex() {
+    public Integer getPageindex() {
         return pageindex;
     }
 
-    public void setPageindex(int pageindex) {
+    public void setPageindex(Integer pageindex) {
         this.pageindex = pageindex;
     }
 
-    public int getSorttype() {
+    public Integer getSorttype() {
         return sorttype;
     }
 
-    public void setSorttype(int sorttype) {
+    public void setSorttype(Integer sorttype) {
         this.sorttype = sorttype;
     }
 
@@ -474,5 +474,63 @@ public class ReturnOperatorGeneralSearchDataRequest {
 
     public void setSortby(String sortby) {
         this.sortby = sortby;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorGeneralSearchDataRequest{" +
+                "minoperatoridparm=" + minoperatoridparm +
+                ", maxoperatoridparm=" + maxoperatoridparm +
+                ", operatorclassificationparm=" + operatorclassificationparm +
+                ", operatorcategoryparm=" + operatorcategoryparm +
+                ", provinceparm=" + provinceparm +
+                ", governorateparm=" + governorateparm +
+                ", municipalityparm=" + municipalityparm +
+                ", territoryparm=" + territoryparm +
+                ", statusparm=" + statusparm +
+                ", employeesnumberparm=" + employeesnumberparm +
+                ", driversnumberparm=" + driversnumberparm +
+                ", workingcarsnumberparm=" + workingcarsnumberparm +
+                ", basiccarsnumberparm=" + basiccarsnumberparm +
+                ", feesstatusparm=" + feesstatusparm +
+                ", officeareaparm=" + officeareaparm +
+                ", licensepurposeparm=" + licensepurposeparm +
+                ", operatornationalidparm=" + operatornationalidparm +
+                ", operatornameparm=" + operatornameparm +
+                ", operatorcomercialnameparm=" + operatorcomercialnameparm +
+                ", operatorclassificationnameparm=" + operatorclassificationnameparm +
+                ", operatorcategorynameparm=" + operatorcategorynameparm +
+                ", provincearabicnameparm=" + provincearabicnameparm +
+                ", governoratearabicnameparm=" + governoratearabicnameparm +
+                ", municipalityarabicnameparm=" + municipalityarabicnameparm +
+                ", territoryarabicnameparm=" + territoryarabicnameparm +
+                ", streetparm=" + streetparm +
+                ", neighborhoodparm=" + neighborhoodparm +
+                ", emailparm=" + emailparm +
+                ", poboxparm=" + poboxparm +
+                ", phonenumberparm=" + phonenumberparm +
+                ", mobilephonenumberparm=" + mobilephonenumberparm +
+                ", faxnumberparm=" + faxnumberparm +
+                ", contractperiodparm=" + contractperiodparm +
+                ", commercialnamerecordnumberparm=" + commercialnamerecordnumberparm +
+                ", commercialnameparm=" + commercialnameparm +
+                ", commercialrecordnumberparm=" + commercialrecordnumberparm +
+                ", officepropertyownerparm=" + officepropertyownerparm +
+                ", plotnoparm=" + plotnoparm +
+                ", plotclassificationparm=" + plotclassificationparm +
+                ", officefloorparm=" + officefloorparm +
+                ", servicescopeparm=" + servicescopeparm +
+                ", licensepurposenameparm=" + licensepurposenameparm +
+                ", remarksparm=" + remarksparm +
+                ", licenseissuedateparm=" + licenseissuedateparm +
+                ", dateofcontractsigningparm=" + dateofcontractsigningparm +
+                ", licenseexpiredateparm=" + licenseexpiredateparm +
+                ", officeclosingdateparm=" + officeclosingdateparm +
+                ", commercialrecorddateparm=" + commercialrecorddateparm +
+                ", pagesize=" + pagesize +
+                ", pageindex=" + pageindex +
+                ", sorttype=" + sorttype +
+                ", sortby=" + sortby +
+                '}';
     }
 }

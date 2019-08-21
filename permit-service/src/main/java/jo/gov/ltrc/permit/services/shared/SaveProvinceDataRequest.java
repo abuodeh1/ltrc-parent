@@ -5,20 +5,20 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveProvinceDataRequest {
 
-    @ApiModelProperty("Province ID Parameter ") private long provinceidparm ;
+    @ApiModelProperty("Province ID Parameter ") private Long provinceidparm ;
     @ApiModelProperty("Province Arabic Name Parameter ") private String provincearabicnameparm ;
     @ApiModelProperty("Province English Name Parameter ") private String provinceenglishnameparm ;
     @ApiModelProperty("Province Code Parameter ") private String provincecodeparm ;
-    @ApiModelProperty("Country ID Parameter ") private long countryidparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Country ID Parameter ") private Long countryidparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
     }
 
@@ -46,28 +46,50 @@ public class SaveProvinceDataRequest {
         this.provincecodeparm = provincecodeparm;
     }
 
-    public long getCountryidparm() {
+    public Long getCountryidparm() {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveProvinceDataRequest{" +
+                "provinceidparm=" + provinceidparm +
+                ", provincearabicnameparm= " + provincearabicnameparm + 
+                ", provinceenglishnameparm= " + provinceenglishnameparm + 
+                ", provincecodeparm= " + provincecodeparm + 
+                ", countryidparm=" + countryidparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                '}';
     }
 }
 

@@ -5,19 +5,19 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnRouteRequest {
 
-     @ApiModelProperty("Route ID Parameter") private long routeidparm ;
+     @ApiModelProperty("Route ID Parameter") private Long routeidparm ;
      @ApiModelProperty("Route Name Parameter") private String routenameparm ;
-     @ApiModelProperty("Route Length Parameter") private double routelengthparm ;
-     @ApiModelProperty("Route Length Viagis Parameter") private double routelengthviagisparm ;
-     @ApiModelProperty("Route Daily Passengers Parameter") private double routedailypassengersparm ;
-     @ApiModelProperty("Bus Line ID Parameter") private long buslineidparm ;
+     @ApiModelProperty("Route Length Parameter") private  Double routelengthparm ;
+     @ApiModelProperty("Route Length Viagis Parameter") private  Double routelengthviagisparm ;
+     @ApiModelProperty("Route Daily Passengers Parameter") private  Double routedailypassengersparm ;
+     @ApiModelProperty("Bus Line ID Parameter") private Long buslineidparm ;
      @ApiModelProperty("Line Name Parameter") private String linenameparm ;
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
@@ -29,35 +29,35 @@ public class ReturnRouteRequest {
         this.routenameparm = routenameparm;
     }
 
-    public double getRoutelengthparm() {
+    public Double getRoutelengthparm() {
         return routelengthparm;
     }
 
-    public void setRoutelengthparm(double routelengthparm) {
+    public void setRoutelengthparm(Double routelengthparm) {
         this.routelengthparm = routelengthparm;
     }
 
-    public double getRoutelengthviagisparm() {
+    public Double getRoutelengthviagisparm() {
         return routelengthviagisparm;
     }
 
-    public void setRoutelengthviagisparm(double routelengthviagisparm) {
+    public void setRoutelengthviagisparm(Double routelengthviagisparm) {
         this.routelengthviagisparm = routelengthviagisparm;
     }
 
-    public double getRoutedailypassengersparm() {
+    public Double getRoutedailypassengersparm() {
         return routedailypassengersparm;
     }
 
-    public void setRoutedailypassengersparm(double routedailypassengersparm) {
+    public void setRoutedailypassengersparm(Double routedailypassengersparm) {
         this.routedailypassengersparm = routedailypassengersparm;
     }
 
-    public long getBuslineidparm() {
+    public Long getBuslineidparm() {
         return buslineidparm;
     }
 
-    public void setBuslineidparm(long buslineidparm) {
+    public void setBuslineidparm(Long buslineidparm) {
         this.buslineidparm = buslineidparm;
     }
 
@@ -69,6 +69,18 @@ public class ReturnRouteRequest {
         this.linenameparm = linenameparm;
     }
 
+    @Override
+    public String toString() {
+        return "ReturnRouteRequest{" +
+                "routeidparm=" + routeidparm +
+                ", routenameparm=" + routenameparm +
+                ", routelengthparm=" + routelengthparm +
+                ", routelengthviagisparm=" + routelengthviagisparm +
+                ", routedailypassengersparm=" + routedailypassengersparm +
+                ", buslineidparm=" + buslineidparm +
+                ", linenameparm=" + linenameparm +
+                '}';
+    }
 }
 
 

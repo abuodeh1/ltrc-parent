@@ -5,26 +5,32 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CalculateTariffValueDataRequest {
 
-    @ApiModelProperty("Route ID Parameter") private long routeidparm ;
-    @ApiModelProperty("Vehicle Category Parameter") private long vehiclecategoryparm ;
+    @ApiModelProperty("Route ID Parameter") private Long routeidparm ;
+    @ApiModelProperty("Vehicle Category Parameter") private Long vehiclecategoryparm ;
 
-
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
+    @Override
+    public String toString() {
+        return "CalculateTariffValueDataRequest{" +
+                "routeidparm=" + routeidparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                '}';
+    }
 }
 
 

@@ -5,37 +5,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SavePointDataRequest {
 
-    @ApiModelProperty("Point ID Parameter") private long pointidparm ;
+    @ApiModelProperty("Point ID Parameter") private Long pointidparm ;
     @ApiModelProperty("Point Arabic Name Parameter") private String pointarabicnameparm ;
-    @ApiModelProperty("Province Id Parameter") private long provinceidparm ;
-    @ApiModelProperty("Governorate ID Parameter") private long governorateidparm ;
-    @ApiModelProperty("Municipality ID Parameter") private long municipalityidparm ;
-    @ApiModelProperty("Territory ID Parameter") private long territoryidparm ;
-    @ApiModelProperty("Point Characteristic Parameter") private long pointcharacteristicparm ;
-    @ApiModelProperty("Point Parking Type Parameter") private long pointparkingtypeparm ;
+    @ApiModelProperty("Province Id Parameter") private Long provinceidparm ;
+    @ApiModelProperty("Governorate ID Parameter") private Long governorateidparm ;
+    @ApiModelProperty("Municipality ID Parameter") private Long municipalityidparm ;
+    @ApiModelProperty("Territory ID Parameter") private Long territoryidparm ;
+    @ApiModelProperty("Point Characteristic Parameter") private Long pointcharacteristicparm ;
+    @ApiModelProperty("Point Parking Type Parameter") private Long pointparkingtypeparm ;
     @ApiModelProperty("Point Street Parameter") private String pointstreetparm ;
     @ApiModelProperty("Point Neighborhood Parameter") private String pointneighborhoodparm ;
     @ApiModelProperty("Office Name Parameter") private String officenameparm ;
     @ApiModelProperty("Office Phone Number Parameter") private String officephonenumberparm ;
     @ApiModelProperty("Liaison Officer Name Parameter") private String liaisonofficernameparm ;
-    @ApiModelProperty("Point Status Parameter") private int pointstatusparm;
-    @ApiModelProperty("Sunshade Parameter") private boolean sunshadesparm  ;
-    @ApiModelProperty("Health Care Facilities Parameter") private boolean healthcarefacilitiesparm ;
-    @ApiModelProperty("Public Telephone Parameter") private boolean publictelephonesparm ;
-    @ApiModelProperty("Seat Parameter") private boolean seatparm ;
-    @ApiModelProperty("Terminal Area Parameter") private double terminalareaparm ;
-    @ApiModelProperty("Count of Sunshade Parameter") private double countofsunshadesparm ;
-    @ApiModelProperty("Count of Seats Parameter") private double countofseatsparm ;
-    @ApiModelProperty("Count of Lanes Parameter") private double countoflanesparm ;
-    @ApiModelProperty("Count of Seats & Sunshade Parameter") private double countofseatsandsunshadesparm ;
+    @ApiModelProperty("Point Status Parameter") private Integer pointstatusparm;
+    @ApiModelProperty("Sunshade Parameter") private   Boolean sunshadesparm  ;
+    @ApiModelProperty("Health Care Facilities Parameter") private   Boolean healthcarefacilitiesparm ;
+    @ApiModelProperty("Public Telephone Parameter") private   Boolean publictelephonesparm ;
+    @ApiModelProperty("Seat Parameter") private   Boolean seatparm ;
+    @ApiModelProperty("Terminal Area Parameter") private  Double terminalareaparm ;
+    @ApiModelProperty("Count of Sunshade Parameter") private  Double countofsunshadesparm ;
+    @ApiModelProperty("Count of Seats Parameter") private  Double countofseatsparm ;
+    @ApiModelProperty("Count of Lanes Parameter") private  Double countoflanesparm ;
+    @ApiModelProperty("Count of Seats & Sunshade Parameter") private  Double countofseatsandsunshadesparm ;
     @ApiModelProperty("Terminal Remarks Parameter") private String terminalremarksparm ;
-    @ApiModelProperty("Principal Parameter") private long prencipal ;
+    @ApiModelProperty("Principal Parameter") private Long prencipal ;
+    @ApiModelProperty("IP Address Parameter ") private String ipaddressparm ;
 
-    public long getPointidparm() {
+    public Long getPointidparm() {
         return pointidparm;
     }
 
-    public void setPointidparm(long pointidparm) {
+    public void setPointidparm(Long pointidparm) {
         this.pointidparm = pointidparm;
     }
 
@@ -47,51 +48,51 @@ public class SavePointDataRequest {
         this.pointarabicnameparm = pointarabicnameparm;
     }
 
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
     }
 
-    public long getGovernorateidparm() {
+    public Long getGovernorateidparm() {
         return governorateidparm;
     }
 
-    public void setGovernorateidparm(long governorateidparm) {
+    public void setGovernorateidparm(Long governorateidparm) {
         this.governorateidparm = governorateidparm;
     }
 
-    public long getMunicipalityidparm() {
+    public Long getMunicipalityidparm() {
         return municipalityidparm;
     }
 
-    public void setMunicipalityidparm(long municipalityidparm) {
+    public void setMunicipalityidparm(Long municipalityidparm) {
         this.municipalityidparm = municipalityidparm;
     }
 
-    public long getTerritoryidparm() {
+    public Long getTerritoryidparm() {
         return territoryidparm;
     }
 
-    public void setTerritoryidparm(long territoryidparm) {
+    public void setTerritoryidparm(Long territoryidparm) {
         this.territoryidparm = territoryidparm;
     }
 
-    public long getPointcharacteristicparm() {
+    public Long getPointcharacteristicparm() {
         return pointcharacteristicparm;
     }
 
-    public void setPointcharacteristicparm(long pointcharacteristicparm) {
+    public void setPointcharacteristicparm(Long pointcharacteristicparm) {
         this.pointcharacteristicparm = pointcharacteristicparm;
     }
 
-    public long getPointparkingtypeparm() {
+    public Long getPointparkingtypeparm() {
         return pointparkingtypeparm;
     }
 
-    public void setPointparkingtypeparm(long pointparkingtypeparm) {
+    public void setPointparkingtypeparm(Long pointparkingtypeparm) {
         this.pointparkingtypeparm = pointparkingtypeparm;
     }
 
@@ -135,60 +136,84 @@ public class SavePointDataRequest {
         this.liaisonofficernameparm = liaisonofficernameparm;
     }
 
-    public int getPointstatusparm() {
+    public Integer getPointstatusparm() {
         return pointstatusparm;
     }
 
-    public void setPointstatusparm(int pointstatusparm) {
+    public void setPointstatusparm(Integer pointstatusparm) {
         this.pointstatusparm = pointstatusparm;
     }
 
-    public boolean isSunshadesparm() {
+    public Boolean getSunshadesparm() {
         return sunshadesparm;
     }
 
-    public void setSunshadesparm(boolean sunshadesparm) {
+    public void setSunshadesparm(Boolean sunshadesparm) {
         this.sunshadesparm = sunshadesparm;
     }
 
-    public boolean isHealthcarefacilitiesparm() {
+    public Boolean getHealthcarefacilitiesparm() {
         return healthcarefacilitiesparm;
     }
 
-    public void setHealthcarefacilitiesparm(boolean healthcarefacilitiesparm) {
+    public void setHealthcarefacilitiesparm(Boolean healthcarefacilitiesparm) {
         this.healthcarefacilitiesparm = healthcarefacilitiesparm;
     }
 
-    public boolean isPublictelephonesparm() {
+    public Boolean getPublictelephonesparm() {
         return publictelephonesparm;
     }
 
-    public void setPublictelephonesparm(boolean publictelephonesparm) {
+    public void setPublictelephonesparm(Boolean publictelephonesparm) {
         this.publictelephonesparm = publictelephonesparm;
     }
 
-    public boolean isSeatparm() {
+    public Boolean getSeatparm() {
         return seatparm;
     }
 
-    public void setSeatparm(boolean seatparm) {
+    public void setSeatparm(Boolean seatparm) {
         this.seatparm = seatparm;
     }
 
-    public double getCountofsunshadesparm() {
+    public Double getTerminalareaparm() {
+        return terminalareaparm;
+    }
+
+    public void setTerminalareaparm(Double terminalareaparm) {
+        this.terminalareaparm = terminalareaparm;
+    }
+
+    public Double getCountofsunshadesparm() {
         return countofsunshadesparm;
     }
 
-    public void setCountofsunshadesparm(double countofsunshadesparm) {
+    public void setCountofsunshadesparm(Double countofsunshadesparm) {
         this.countofsunshadesparm = countofsunshadesparm;
     }
 
-    public double getCountoflanesparm() {
+    public Double getCountofseatsparm() {
+        return countofseatsparm;
+    }
+
+    public void setCountofseatsparm(Double countofseatsparm) {
+        this.countofseatsparm = countofseatsparm;
+    }
+
+    public Double getCountoflanesparm() {
         return countoflanesparm;
     }
 
-    public void setCountoflanesparm(double countoflanesparm) {
+    public void setCountoflanesparm(Double countoflanesparm) {
         this.countoflanesparm = countoflanesparm;
+    }
+
+    public Double getCountofseatsandsunshadesparm() {
+        return countofseatsandsunshadesparm;
+    }
+
+    public void setCountofseatsandsunshadesparm(Double countofseatsandsunshadesparm) {
+        this.countofseatsandsunshadesparm = countofseatsandsunshadesparm;
     }
 
     public String getTerminalremarksparm() {
@@ -199,36 +224,52 @@ public class SavePointDataRequest {
         this.terminalremarksparm = terminalremarksparm;
     }
 
-    public long getPrencipal() {
+    public Long getPrencipal() {
         return prencipal;
     }
 
-    public void setPrencipal(long prencipal) {
+    public void setPrencipal(Long prencipal) {
         this.prencipal = prencipal;
     }
 
-    public double getCountofseatsparm() {
-        return countofseatsparm;
+    public String getIpaddressparm() {
+        return ipaddressparm;
     }
 
-    public void setCountofseatsparm(double countofseatsparm) {
-        this.countofseatsparm = countofseatsparm;
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
     }
 
-    public double getTerminalareaparm() {
-        return terminalareaparm;
-    }
-
-    public void setTerminalareaparm(double terminalareaparm) {
-        this.terminalareaparm = terminalareaparm;
-    }
-
-    public double getCountofseatsandsunshadesparm() {
-        return countofseatsandsunshadesparm;
-    }
-
-    public void setCountofseatsandsunshadesparm(double countofseatsandsunshadesparm) {
-        this.countofseatsandsunshadesparm = countofseatsandsunshadesparm;
+    @Override
+    public String toString() {
+        return "SavePointDataRequest{" +
+                "pointidparm=" + pointidparm +
+                ", pointarabicnameparm= " + pointarabicnameparm + 
+                ", provinceidparm=" + provinceidparm +
+                ", governorateidparm=" + governorateidparm +
+                ", municipalityidparm=" + municipalityidparm +
+                ", territoryidparm=" + territoryidparm +
+                ", pointcharacteristicparm=" + pointcharacteristicparm +
+                ", pointparkingtypeparm=" + pointparkingtypeparm +
+                ", pointstreetparm= " + pointstreetparm + 
+                ", pointneighborhoodparm= " + pointneighborhoodparm + 
+                ", officenameparm= " + officenameparm + 
+                ", officephonenumberparm= " + officephonenumberparm + 
+                ", liaisonofficernameparm= " + liaisonofficernameparm + 
+                ", pointstatusparm=" + pointstatusparm +
+                ", sunshadesparm=" + sunshadesparm +
+                ", healthcarefacilitiesparm=" + healthcarefacilitiesparm +
+                ", publictelephonesparm=" + publictelephonesparm +
+                ", seatparm=" + seatparm +
+                ", terminalareaparm=" + terminalareaparm +
+                ", countofsunshadesparm=" + countofsunshadesparm +
+                ", countofseatsparm=" + countofseatsparm +
+                ", countoflanesparm=" + countoflanesparm +
+                ", countofseatsandsunshadesparm=" + countofseatsandsunshadesparm +
+                ", terminalremarksparm= " + terminalremarksparm + 
+                ", prencipal=" + prencipal +
+                ", ipaddressparm= " + ipaddressparm + 
+                '}';
     }
 }
 

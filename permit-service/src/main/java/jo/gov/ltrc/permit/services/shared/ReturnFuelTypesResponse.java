@@ -27,14 +27,14 @@ import java.io.Serializable;
 public class ReturnFuelTypesResponse implements Serializable {
 
     @Id
-   @ApiModelProperty("Fuel Type ID ") private long fueltypeid ;
+   @ApiModelProperty("Fuel Type ID ") private Long fueltypeid ;
    @ApiModelProperty("Fuel Type Name ") private String fueltypename ;
 
-    public long getFueltypeid() {
+    public Long getFueltypeid() {
         return fueltypeid;
     }
 
-    public void setFueltypeid(long fueltypeid) {
+    public void setFueltypeid(Long fueltypeid) {
         this.fueltypeid = fueltypeid;
     }
 

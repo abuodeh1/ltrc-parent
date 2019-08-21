@@ -5,29 +5,29 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnOperatorCategoryFieldSettingDataRequest {
 
-    @ApiModelProperty("Operator Category Field Setting ID Parameter ") private long operatorcategroryfieldsettingidparm ;
-    @ApiModelProperty("Operator Category ID Parameter ") private long operatorcategoryidparm ;
+    @ApiModelProperty("Operator Category Field Setting ID Parameter ") private Long operatorcategroryfieldsettingidparm ;
+    @ApiModelProperty("Operator Category ID Parameter ") private Long operatorcategoryidparm ;
     @ApiModelProperty("Operator Category Name Parameter ") private String operatorcategorynameparm ;
-    @ApiModelProperty("Operator  Field Parameter ") private long operatorfieldparm ;
+    @ApiModelProperty("Operator  Field Parameter ") private Long operatorfieldparm ;
     @ApiModelProperty("Operator  Filed Name Parameter ") private String operatorfieldnameparm ;
-    @ApiModelProperty("Operator  Field Section Parameter ") private int operatorfieldsectionparm ;
-    @ApiModelProperty("Required Parameter ") private int requiredparm ;
-    @ApiModelProperty("Visible Parameter ") private int visibleparm ;
-    @ApiModelProperty("Active Parameter ") private int activeparm ;
+    @ApiModelProperty("Operator  Field Section Parameter ") private Integer operatorfieldsectionparm ;
+    @ApiModelProperty("Required Parameter ") private Integer requiredparm ;
+    @ApiModelProperty("Visible Parameter ") private Integer visibleparm ;
+    @ApiModelProperty("Active Parameter ") private Integer activeparm ;
 
-    public long getOperatorcategroryfieldsettingidparm() {
+    public Long getOperatorcategroryfieldsettingidparm() {
         return operatorcategroryfieldsettingidparm;
     }
 
-    public void setOperatorcategroryfieldsettingidparm(long operatorcategroryfieldsettingidparm) {
+    public void setOperatorcategroryfieldsettingidparm(Long operatorcategroryfieldsettingidparm) {
         this.operatorcategroryfieldsettingidparm = operatorcategroryfieldsettingidparm;
     }
 
-    public long getOperatorcategoryidparm() {
+    public Long getOperatorcategoryidparm() {
         return operatorcategoryidparm;
     }
 
-    public void setOperatorcategoryidparm(long operatorcategoryidparm) {
+    public void setOperatorcategoryidparm(Long operatorcategoryidparm) {
         this.operatorcategoryidparm = operatorcategoryidparm;
     }
 
@@ -39,11 +39,11 @@ public class ReturnOperatorCategoryFieldSettingDataRequest {
         this.operatorcategorynameparm = operatorcategorynameparm;
     }
 
-    public long getOperatorfieldparm() {
+    public Long getOperatorfieldparm() {
         return operatorfieldparm;
     }
 
-    public void setOperatorfieldparm(long operatorfieldparm) {
+    public void setOperatorfieldparm(Long operatorfieldparm) {
         this.operatorfieldparm = operatorfieldparm;
     }
 
@@ -55,35 +55,35 @@ public class ReturnOperatorCategoryFieldSettingDataRequest {
         this.operatorfieldnameparm = operatorfieldnameparm;
     }
 
-    public int getOperatorfieldsectionparm() {
+    public Integer getOperatorfieldsectionparm() {
         return operatorfieldsectionparm;
     }
 
-    public void setOperatorfieldsectionparm(int operatorfieldsectionparm) {
+    public void setOperatorfieldsectionparm(Integer operatorfieldsectionparm) {
         this.operatorfieldsectionparm = operatorfieldsectionparm;
     }
 
-    public int getRequiredparm() {
+    public Integer getRequiredparm() {
         return requiredparm;
     }
 
-    public void setRequiredparm(int requiredparm) {
+    public void setRequiredparm(Integer requiredparm) {
         this.requiredparm = requiredparm;
     }
 
-    public int getVisibleparm() {
+    public Integer getVisibleparm() {
         return visibleparm;
     }
 
-    public void setVisibleparm(int visibleparm) {
+    public void setVisibleparm(Integer visibleparm) {
         this.visibleparm = visibleparm;
     }
 
-    public int getActiveparm() {
+    public Integer getActiveparm() {
         return activeparm;
     }
 
-    public void setActiveparm(int activeparm) {
+    public void setActiveparm(Integer activeparm) {
         this.activeparm = activeparm;
     }
 }

@@ -6,16 +6,17 @@ import io.swagger.annotations.ApiModelProperty;
 public class SaveLineDataRequest {
 
     @ApiModelProperty("Line Name Parameter") private String linenameparm ;
-    @ApiModelProperty("Allow Temporary Permit Parameter ") private boolean allowtemporarypermitparm ;
-    @ApiModelProperty("Line ID Parameter") private long lineidparm ;
-    @ApiModelProperty("Province ID Parameter") private long provinceidparm ;
-    @ApiModelProperty("Governorate ID Parameter") private long governorateidparm ;
-    @ApiModelProperty("Line Type Parameter") private long linetypeparm ;
-    @ApiModelProperty("Start Point Parameter") private long stratpointparm ;
-    @ApiModelProperty("End Point Parameter") private long endpointparm ;
+    @ApiModelProperty("Allow Temporary Permit Parameter ") private   Boolean allowtemporarypermitparm ;
+    @ApiModelProperty("Line ID Parameter") private Long lineidparm ;
+    @ApiModelProperty("Province ID Parameter") private Long provinceidparm ;
+    @ApiModelProperty("Governorate ID Parameter") private Long governorateidparm ;
+    @ApiModelProperty("Line Type Parameter") private Long linetypeparm ;
+    @ApiModelProperty("Start Point Parameter") private Long stratpointparm ;
+    @ApiModelProperty("End Point Parameter") private Long endpointparm ;
     @ApiModelProperty("Remarks Parameter") private String remarksparm ;
-    @ApiModelProperty("Line Status Parameter") private int linestatusparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
+    @ApiModelProperty("Line Status Parameter") private Integer linestatusparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
 
     public String getLinenameparm() {
@@ -26,59 +27,59 @@ public class SaveLineDataRequest {
         this.linenameparm = linenameparm;
     }
 
-    public boolean isAllowtemporarypermitparm() {
+    public Boolean getAllowtemporarypermitparm() {
         return allowtemporarypermitparm;
     }
 
-    public void setAllowtemporarypermitparm(boolean allowtemporarypermitparm) {
+    public void setAllowtemporarypermitparm(Boolean allowtemporarypermitparm) {
         this.allowtemporarypermitparm = allowtemporarypermitparm;
     }
 
-    public long getLineidparm() {
+    public Long getLineidparm() {
         return lineidparm;
     }
 
-    public void setLineidparm(long lineidparm) {
+    public void setLineidparm(Long lineidparm) {
         this.lineidparm = lineidparm;
     }
 
-    public long getProvinceidparm() {
+    public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
     }
 
-    public long getGovernorateidparm() {
+    public Long getGovernorateidparm() {
         return governorateidparm;
     }
 
-    public void setGovernorateidparm(long governorateidparm) {
+    public void setGovernorateidparm(Long governorateidparm) {
         this.governorateidparm = governorateidparm;
     }
 
-    public long getLinetypeparm() {
+    public Long getLinetypeparm() {
         return linetypeparm;
     }
 
-    public void setLinetypeparm(long linetypeparm) {
+    public void setLinetypeparm(Long linetypeparm) {
         this.linetypeparm = linetypeparm;
     }
 
-    public long getStratpointparm() {
+    public Long getStratpointparm() {
         return stratpointparm;
     }
 
-    public void setStratpointparm(long stratpointparm) {
+    public void setStratpointparm(Long stratpointparm) {
         this.stratpointparm = stratpointparm;
     }
 
-    public long getEndpointparm() {
+    public Long getEndpointparm() {
         return endpointparm;
     }
 
-    public void setEndpointparm(long endpointparm) {
+    public void setEndpointparm(Long endpointparm) {
         this.endpointparm = endpointparm;
     }
 
@@ -90,20 +91,46 @@ public class SaveLineDataRequest {
         this.remarksparm = remarksparm;
     }
 
-    public int getLinestatusparm() {
+    public Integer getLinestatusparm() {
         return linestatusparm;
     }
 
-    public void setLinestatusparm(int linestatusparm) {
+    public void setLinestatusparm(Integer linestatusparm) {
         this.linestatusparm = linestatusparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveLineDataRequest{" +
+                "linenameparm=" + linenameparm +
+                ", allowtemporarypermitparm=" + allowtemporarypermitparm +
+                ", lineidparm=" + lineidparm +
+                ", provinceidparm=" + provinceidparm +
+                ", governorateidparm=" + governorateidparm +
+                ", linetypeparm=" + linetypeparm +
+                ", stratpointparm=" + stratpointparm +
+                ", endpointparm=" + endpointparm +
+                ", remarksparm=" + remarksparm +
+                ", linestatusparm=" + linestatusparm +
+                ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

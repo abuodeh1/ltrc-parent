@@ -5,86 +5,101 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ReturnLineByTariffDataRequest {
 
-    @ApiModelProperty("Route ID Parameter") private long routeidparm ;
-    @ApiModelProperty("Fuel Type Parameter") private long fueltypeparm ;
-    @ApiModelProperty("Vehicle Category") private long vehiclecategoryparm  ;
-    @ApiModelProperty("Tariffa Unit Parameter") private int tariffunitparm ;
-    @ApiModelProperty("Tariffa Methodology Parameter") private int tariffmethedologyparm ;
-    @ApiModelProperty("Minimum Tariffa Value Parameter") private double minmumtariffvalueparm ;
-    @ApiModelProperty("Maximum Tariffa Value Parameter") private double maximumtariffvalueparm ;
-    @ApiModelProperty("Minimum Tariffa Maximum Value Parameter") private double mintariffmaxvalueparm  ;
-    @ApiModelProperty("Maximum Tariffa Maximum Value Parameter") private double maxtariffmaxvalueparm ;
+    @ApiModelProperty("Route ID Parameter") private Long routeidparm ;
+    @ApiModelProperty("Fuel Type Parameter") private Long fueltypeparm ;
+    @ApiModelProperty("Vehicle Category") private Long vehiclecategoryparm  ;
+    @ApiModelProperty("Tariffa Unit Parameter") private Integer tariffunitparm ;
+    @ApiModelProperty("Tariffa Methodology Parameter") private Integer tariffmethedologyparm ;
+    @ApiModelProperty("Minimum Tariffa Value Parameter") private  Double minmumtariffvalueparm ;
+    @ApiModelProperty("Maximum Tariffa Value Parameter") private  Double maximumtariffvalueparm ;
+    @ApiModelProperty("Minimum Tariffa Maximum Value Parameter") private  Double mintariffmaxvalueparm  ;
+    @ApiModelProperty("Maximum Tariffa Maximum Value Parameter") private  Double maxtariffmaxvalueparm ;
 
-    public long getRouteidparm() {
+    public Long getRouteidparm() {
         return routeidparm;
     }
 
-    public void setRouteidparm(long routeidparm) {
+    public void setRouteidparm(Long routeidparm) {
         this.routeidparm = routeidparm;
     }
 
-    public long getFueltypeparm() {
+    public Long getFueltypeparm() {
         return fueltypeparm;
     }
 
-    public void setFueltypeparm(long fueltypeparm) {
+    public void setFueltypeparm(Long fueltypeparm) {
         this.fueltypeparm = fueltypeparm;
     }
 
-    public long getVehiclecategoryparm() {
+    public Long getVehiclecategoryparm() {
         return vehiclecategoryparm;
     }
 
-    public void setVehiclecategoryparm(long vehiclecategoryparm) {
+    public void setVehiclecategoryparm(Long vehiclecategoryparm) {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public int getTariffunitparm() {
+    public Integer getTariffunitparm() {
         return tariffunitparm;
     }
 
-    public void setTariffunitparm(int tariffunitparm) {
+    public void setTariffunitparm(Integer tariffunitparm) {
         this.tariffunitparm = tariffunitparm;
     }
 
-    public int getTariffmethedologyparm() {
+    public Integer getTariffmethedologyparm() {
         return tariffmethedologyparm;
     }
 
-    public void setTariffmethedologyparm(int tariffmethedologyparm) {
+    public void setTariffmethedologyparm(Integer tariffmethedologyparm) {
         this.tariffmethedologyparm = tariffmethedologyparm;
     }
 
-    public double getMinmumtariffvalueparm() {
+    public Double getMinmumtariffvalueparm() {
         return minmumtariffvalueparm;
     }
 
-    public void setMinmumtariffvalueparm(double minmumtariffvalueparm) {
+    public void setMinmumtariffvalueparm(Double minmumtariffvalueparm) {
         this.minmumtariffvalueparm = minmumtariffvalueparm;
     }
 
-    public double getMaximumtariffvalueparm() {
+    public Double getMaximumtariffvalueparm() {
         return maximumtariffvalueparm;
     }
 
-    public void setMaximumtariffvalueparm(double maximumtariffvalueparm) {
+    public void setMaximumtariffvalueparm(Double maximumtariffvalueparm) {
         this.maximumtariffvalueparm = maximumtariffvalueparm;
     }
 
-    public double getMintariffmaxvalueparm() {
+    public Double getMintariffmaxvalueparm() {
         return mintariffmaxvalueparm;
     }
 
-    public void setMintariffmaxvalueparm(double mintariffmaxvalueparm) {
+    public void setMintariffmaxvalueparm(Double mintariffmaxvalueparm) {
         this.mintariffmaxvalueparm = mintariffmaxvalueparm;
     }
 
-    public double getMaxtariffmaxvalueparm() {
+    public Double getMaxtariffmaxvalueparm() {
         return maxtariffmaxvalueparm;
     }
 
-    public void setMaxtariffmaxvalueparm(double maxtariffmaxvalueparm) {
+    public void setMaxtariffmaxvalueparm(Double maxtariffmaxvalueparm) {
         this.maxtariffmaxvalueparm = maxtariffmaxvalueparm;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnLineByTariffDataRequest{" +
+                "routeidparm=" + routeidparm +
+                ", fueltypeparm=" + fueltypeparm +
+                ", vehiclecategoryparm=" + vehiclecategoryparm +
+                ", tariffunitparm=" + tariffunitparm +
+                ", tariffmethedologyparm=" + tariffmethedologyparm +
+                ", minmumtariffvalueparm=" + minmumtariffvalueparm +
+                ", maximumtariffvalueparm=" + maximumtariffvalueparm +
+                ", mintariffmaxvalueparm=" + mintariffmaxvalueparm +
+                ", maxtariffmaxvalueparm=" + maxtariffmaxvalueparm +
+                '}';
     }
 }
 

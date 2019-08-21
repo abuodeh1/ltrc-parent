@@ -12,13 +12,13 @@ import java.io.Serializable;
         parameters = {
 
 
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = double.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "routenameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routelengthparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routelengthviagisparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Double.class, name = "routedailypassengersparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "buslineidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "linenameparm"),
 
 
         },
@@ -41,21 +41,21 @@ import java.io.Serializable;
 public class ReturnRouteResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Route ID ") private long routeid ;
+    @ApiModelProperty("Route ID ") private Long routeid ;
     @ApiModelProperty("Route Name ") private String routename ;
-    @ApiModelProperty("Route Length") private double routelength ;
-    @ApiModelProperty("Route Length Viagis") private double routelengthviagis ;
-    @ApiModelProperty("Route Daily Passengers ") private long routedailypassengers ;
-    @ApiModelProperty("Bus Line ID ") private long buslineid ;
+    @ApiModelProperty("Route Length") private  Double routelength ;
+    @ApiModelProperty("Route Length Viagis") private  Double routelengthviagis ;
+    @ApiModelProperty("Route Daily Passengers ") private Long routedailypassengers ;
+    @ApiModelProperty("Bus Line ID ") private Long buslineid ;
     @ApiModelProperty("Line Name ") private String linename ;
     @ApiModelProperty("Going ") private String going ;
     @ApiModelProperty("Return in GP") private String returningp ;
 
-    public long getRouteid() {
+    public Long getRouteid() {
         return routeid;
     }
 
-    public void setRouteid(long routeid) {
+    public void setRouteid(Long routeid) {
         this.routeid = routeid;
     }
 
@@ -67,35 +67,35 @@ public class ReturnRouteResponse implements Serializable {
         this.routename = routename;
     }
 
-    public double getRoutelength() {
+    public Double getRoutelength() {
         return routelength;
     }
 
-    public void setRoutelength(double routelength) {
+    public void setRoutelength(Double routelength) {
         this.routelength = routelength;
     }
 
-    public double getRoutelengthviagis() {
+    public Double getRoutelengthviagis() {
         return routelengthviagis;
     }
 
-    public void setRoutelengthviagis(double routelengthviagis) {
+    public void setRoutelengthviagis(Double routelengthviagis) {
         this.routelengthviagis = routelengthviagis;
     }
 
-    public long getRoutedailypassengers() {
+    public Long getRoutedailypassengers() {
         return routedailypassengers;
     }
 
-    public void setRoutedailypassengers(long routedailypassengers) {
+    public void setRoutedailypassengers(Long routedailypassengers) {
         this.routedailypassengers = routedailypassengers;
     }
 
-    public long getBuslineid() {
+    public Long getBuslineid() {
         return buslineid;
     }
 
-    public void setBuslineid(long buslineid) {
+    public void setBuslineid(Long buslineid) {
         this.buslineid = buslineid;
     }
 
@@ -121,5 +121,20 @@ public class ReturnRouteResponse implements Serializable {
 
     public void setReturningp(String returningp) {
         this.returningp = returningp;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnRouteResponse{" +
+                "routeid=" + routeid +
+                ", routename=" + routename +
+                ", routelength=" + routelength +
+                ", routelengthviagis=" + routelengthviagis +
+                ", routedailypassengers=" + routedailypassengers +
+                ", buslineid=" + buslineid +
+                ", linename=" + linename +
+                ", going=" + going +
+                ", returningp=" + returningp +
+                '}';
     }
 }

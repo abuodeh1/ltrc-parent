@@ -35,7 +35,7 @@ class PointServiceTest {
     public ObjectMapper objectMapper;
 
     private List<ReturnPointResponse> point;
-    private int randomPointIndex;
+    private Long randomPointIndex;
 
     @BeforeEach
     void setup() throws Exception {
@@ -62,7 +62,7 @@ class PointServiceTest {
     @DisplayName("/api/point/{id} - ReturnPointByPointID Procedure")
     void getPointByID() throws Exception {
         if (point.size() > 0){
-            randomPointIndex = (int) point.get(new Random().nextInt(point.size())).getPointid();
+            randomPointIndex =  point.get(new Random().nextInt(point.size())).getPointid();
             mockMvc.perform(get("/api/point/" +randomPointIndex)
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -78,7 +78,7 @@ class PointServiceTest {
     @DisplayName("/api/point/{id}/characteristics - ReturnPoint Procedure")
     void getPointChar() throws Exception {
         if (point.size() > 0) {
-            randomPointIndex = (int) point.get(new Random().nextInt(point.size())).getPointid();
+            randomPointIndex =  point.get(new Random().nextInt(point.size())).getPointid();
             mockMvc.perform(get("/api/point/"+randomPointIndex+"/characteristics")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -95,7 +95,7 @@ class PointServiceTest {
     @DisplayName("/api/point/{id}/parking-type - ReturnPoint Procedure")
     void getParkingType() throws Exception {
         if (point.size() > 0) {
-            randomPointIndex = (int) point.get(new Random().nextInt(point.size())).getPointid();
+            randomPointIndex =  point.get(new Random().nextInt(point.size())).getPointid();
             mockMvc.perform(get("/api/point/"+randomPointIndex+"/parking-type")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -111,7 +111,7 @@ class PointServiceTest {
     @DisplayName("/api/point/{id}/status - ReturnPoint Procedure")
     void getPointStatus() throws Exception {
         if (point.size() > 0 ) {
-            randomPointIndex = (int) point.get(new Random().nextInt(point.size())).getPointid();
+            randomPointIndex =  point.get(new Random().nextInt(point.size())).getPointid();
             mockMvc.perform(get("/api/point/"+randomPointIndex+"/status")
                     .contentType(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
@@ -137,7 +137,7 @@ class PointServiceTest {
     @DisplayName("/api/point/{id}/principal/{principalid} - ChangePointStatus Procedure")
     void deletePoint() throws Exception {
         if (point.size() > 0) {
-            randomPointIndex = (int) point.get(new Random().nextInt(point.size())).getPointid();
+            randomPointIndex =  point.get(new Random().nextInt(point.size())).getPointid();
             mockMvc.perform(delete("/api/point/"+randomPointIndex+"/principal/"+randomPointIndex)
                     .contentType(MediaType.APPLICATION_JSON)
                     .content("{}"))

@@ -5,20 +5,20 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SaveMunicipalityDataRequest {
 
-    @ApiModelProperty("Municipality ID Parameter ") private long municipalityidparm ;
+    @ApiModelProperty("Municipality ID Parameter ") private Long municipalityidparm ;
     @ApiModelProperty("Municipality Arabic Name Parameter ") private String municipalityarabicnameparm ;
     @ApiModelProperty("Municipality English Name Parameter ") private String municipalityenglishnameparm ;
     @ApiModelProperty("Municipality Code Parameter ") private String municipalitycodeparm ;
-    @ApiModelProperty("Governorate ID Parameter ") private long governorateidparm ;
-    @ApiModelProperty("Principal Parameter ") private long princepel ;
-    @ApiModelProperty("Status Parameter ") private int statusparm ;
+    @ApiModelProperty("Governorate ID Parameter ") private Long governorateidparm ;
+    @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
-
-    public long getMunicipalityidparm() {
+    public Long getMunicipalityidparm() {
         return municipalityidparm;
     }
 
-    public void setMunicipalityidparm(long municipalityidparm) {
+    public void setMunicipalityidparm(Long municipalityidparm) {
         this.municipalityidparm = municipalityidparm;
     }
 
@@ -46,28 +46,50 @@ public class SaveMunicipalityDataRequest {
         this.municipalitycodeparm = municipalitycodeparm;
     }
 
-    public long getGovernorateidparm() {
+    public Long getGovernorateidparm() {
         return governorateidparm;
     }
 
-    public void setGovernorateidparm(long governorateidparm) {
+    public void setGovernorateidparm(Long governorateidparm) {
         this.governorateidparm = governorateidparm;
     }
 
-    public long getPrincepel() {
+    public Long getPrincepel() {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
-    public int getStatusparm() {
+    public Integer getStatusparm() {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveMunicipalityDataRequest{" +
+                "municipalityidparm=" + municipalityidparm +
+                ", municipalityarabicnameparm=" + municipalityarabicnameparm +
+                ", municipalityenglishnameparm=" + municipalityenglishnameparm +
+                ", municipalitycodeparm=" + municipalitycodeparm +
+                ", governorateidparm=" + governorateidparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
+                '}';
     }
 }
 

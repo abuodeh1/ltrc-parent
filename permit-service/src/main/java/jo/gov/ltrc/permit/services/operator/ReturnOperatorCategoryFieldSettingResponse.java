@@ -10,15 +10,15 @@ import java.io.Serializable;
         name = "ReturnOperatorCategoryFieldSetting",
         procedureName = "\"ReturnOperatorCategoryFieldSetting\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategroryfieldsettingidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorcategoryidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorcategorynameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorfieldparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorfieldnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "operatorfieldsectionparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "requiredparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "visibleparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "activeparm"),
 
 
         },
@@ -38,29 +38,29 @@ import java.io.Serializable;
 public class ReturnOperatorCategoryFieldSettingResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Operator Category Field ID ") private long operatorcategroryfieldsettingid ;
-    @ApiModelProperty("Operator Category ID ") private long operatorcategoryid ;
+    @ApiModelProperty("Operator Category Field ID ") private Long operatorcategroryfieldsettingid ;
+    @ApiModelProperty("Operator Category ID ") private Long operatorcategoryid ;
     @ApiModelProperty("Operator Category Name  ") private String operatorcategoryname ;
-    @ApiModelProperty("Operator Field") private long operatorfield ;
+    @ApiModelProperty("Operator Field") private Long operatorfield ;
     @ApiModelProperty("Operator Field Name ") private String operatorfieldname ;
-    @ApiModelProperty("Operator Field Section") private int operatorfieldsection ;
-    @ApiModelProperty("Required ") private int required ;
-    @ApiModelProperty("Visible ") private int visible ;
-    @ApiModelProperty("Active ") private int active ;
+    @ApiModelProperty("Operator Field Section") private Integer operatorfieldsection ;
+    @ApiModelProperty("Required ") private Integer required ;
+    @ApiModelProperty("Visible ") private Integer visible ;
+    @ApiModelProperty("Active ") private Integer active ;
 
-    public long getOperatorcategroryfieldsettingid() {
+    public Long getOperatorcategroryfieldsettingid() {
         return operatorcategroryfieldsettingid;
     }
 
-    public void setOperatorcategroryfieldsettingid(long operatorcategroryfieldsettingid) {
+    public void setOperatorcategroryfieldsettingid(Long operatorcategroryfieldsettingid) {
         this.operatorcategroryfieldsettingid = operatorcategroryfieldsettingid;
     }
 
-    public long getOperatorcategoryid() {
+    public Long getOperatorcategoryid() {
         return operatorcategoryid;
     }
 
-    public void setOperatorcategoryid(long operatorcategoryid) {
+    public void setOperatorcategoryid(Long operatorcategoryid) {
         this.operatorcategoryid = operatorcategoryid;
     }
 
@@ -72,12 +72,12 @@ public class ReturnOperatorCategoryFieldSettingResponse implements Serializable 
         this.operatorcategoryname = operatorcategoryname;
     }
 
-    public long getOperatorfiel() {
+    public Long getOperatorfield() {
         return operatorfield;
     }
 
-    public void setOperatorfiel(long operatorfiel) {
-        this.operatorfield = operatorfiel;
+    public void setOperatorfield(Long operatorfield) {
+        this.operatorfield = operatorfield;
     }
 
     public String getOperatorfieldname() {
@@ -88,35 +88,50 @@ public class ReturnOperatorCategoryFieldSettingResponse implements Serializable 
         this.operatorfieldname = operatorfieldname;
     }
 
-    public int getOperatorfieldsection() {
+    public Integer getOperatorfieldsection() {
         return operatorfieldsection;
     }
 
-    public void setOperatorfieldsection(int operatorfieldsection) {
+    public void setOperatorfieldsection(Integer operatorfieldsection) {
         this.operatorfieldsection = operatorfieldsection;
     }
 
-    public int getRequired() {
+    public Integer getRequired() {
         return required;
     }
 
-    public void setRequired(int required) {
+    public void setRequired(Integer required) {
         this.required = required;
     }
 
-    public int getVisible() {
+    public Integer getVisible() {
         return visible;
     }
 
-    public void setVisible(int visible) {
+    public void setVisible(Integer visible) {
         this.visible = visible;
     }
 
-    public int getActive() {
+    public Integer getActive() {
         return active;
     }
 
-    public void setActive(int active) {
+    public void setActive(Integer active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnOperatorCategoryFieldSettingResponse{" +
+                "operatorcategroryfieldsettingid=" + operatorcategroryfieldsettingid +
+                ", operatorcategoryid=" + operatorcategoryid +
+                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorfield=" + operatorfield +
+                ", operatorfieldname=" + operatorfieldname +
+                ", operatorfieldsection=" + operatorfieldsection +
+                ", required=" + required +
+                ", visible=" + visible +
+                ", active=" + active +
+                '}';
     }
 }

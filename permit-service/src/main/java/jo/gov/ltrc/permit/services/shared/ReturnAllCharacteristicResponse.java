@@ -27,15 +27,15 @@ import java.io.Serializable;
 public class ReturnAllCharacteristicResponse implements Serializable {
 
     @Id
-    @ApiModelProperty("Characteristic ID ") private long characteristicid ;
+    @ApiModelProperty("Characteristic ID ") private Long characteristicid ;
     @ApiModelProperty("Characteristic Arabic Name ") private String characteristicarabicname ;
     @ApiModelProperty("Characteristic English Name ") private String characteristicenglishname ;
 
-    public long getCharacteristicid() {
+    public Long getCharacteristicid() {
         return characteristicid;
     }
 
-    public void setCharacteristicid(long characteristicid) {
+    public void setCharacteristicid(Long characteristicid) {
         this.characteristicid = characteristicid;
     }
 
@@ -53,5 +53,14 @@ public class ReturnAllCharacteristicResponse implements Serializable {
 
     public void setCharacteristicenglishname(String characteristicenglishname) {
         this.characteristicenglishname = characteristicenglishname;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnAllCharacteristicResponse{" +
+                "characteristicid=" + characteristicid +
+                ", characteristicarabicname=" + characteristicarabicname +
+                ", characteristicenglishname=" + characteristicenglishname +
+                '}';
     }
 }

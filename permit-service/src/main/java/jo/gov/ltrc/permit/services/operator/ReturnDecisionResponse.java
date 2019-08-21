@@ -11,20 +11,20 @@ import java.sql.Date;
         name = "ReturnDecision",
         procedureName = "\"ReturnDecision\"",
         parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "decisionsidparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "decisionssourceparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehicleparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platecodeparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionsreferenceparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "decisionsreferencedateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionsreferencesubjectparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "governoratearabicnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionstextparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionstermparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "decisionstermdateparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionstermnumberparm"),
 
 
         },
@@ -44,42 +44,42 @@ import java.sql.Date;
 public class ReturnDecisionResponse implements Serializable {
 
     @Id
-        @ApiModelProperty("Decisions ID ") private long decisionsid ;
-    @ApiModelProperty("Decisions Source ") private int decisionssource ;
-    @ApiModelProperty("Vehicle ") private long vehicle ;
+    @ApiModelProperty("Decisions ID ") private Long decisionsid ;
+    @ApiModelProperty("Decisions Source ") private Integer decisionssource ;
+    @ApiModelProperty("Vehicle ") private Long vehicle ;
     @ApiModelProperty("Plate Code ") private  String platecode ;
     @ApiModelProperty("Plate Number ") private  String platenumber ;
     @ApiModelProperty("Decisions Reference ") private  String decisionsreference ;
     @ApiModelProperty("Decisions Reference Date ") private Date decisionsreferencedate ;
     @ApiModelProperty("Decisions Reference Subject") private  String decisionsreferencesubject ;
-    @ApiModelProperty("Governorate ") private long governorate ;
+    @ApiModelProperty("Governorate ") private Long governorate ;
     @ApiModelProperty("Governorate Arabic Name ") private  String governoratearabicname ;
     @ApiModelProperty("Decisions Text ") private  String decisionstext ;
     @ApiModelProperty("Decisions Term") private  String decisionsterm ;
     @ApiModelProperty("Decisions Term Date ") private Date decisionstermdate ;
     @ApiModelProperty("Decisions Term Number ") private  String decisionstermnumber ;
 
-    public long getDecisionsid() {
+    public Long getDecisionsid() {
         return decisionsid;
     }
 
-    public void setDecisionsid(long decisionsid) {
+    public void setDecisionsid(Long decisionsid) {
         this.decisionsid = decisionsid;
     }
 
-    public int getDecisionssource() {
+    public Integer getDecisionssource() {
         return decisionssource;
     }
 
-    public void setDecisionssource(int decisionssource) {
+    public void setDecisionssource(Integer decisionssource) {
         this.decisionssource = decisionssource;
     }
 
-    public long getVehicle() {
+    public Long getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(long vehicle) {
+    public void setVehicle(Long vehicle) {
         this.vehicle = vehicle;
     }
 
@@ -123,11 +123,11 @@ public class ReturnDecisionResponse implements Serializable {
         this.decisionsreferencesubject = decisionsreferencesubject;
     }
 
-    public long getGovernorate() {
+    public Long getGovernorate() {
         return governorate;
     }
 
-    public void setGovernorate(long governorate) {
+    public void setGovernorate(Long governorate) {
         this.governorate = governorate;
     }
 
@@ -169,5 +169,25 @@ public class ReturnDecisionResponse implements Serializable {
 
     public void setDecisionstermnumber(String decisionstermnumber) {
         this.decisionstermnumber = decisionstermnumber;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnDecisionResponse{" +
+                "decisionsid=" + decisionsid +
+                ", decisionssource=" + decisionssource +
+                ", vehicle=" + vehicle +
+                ", platecode=" + platecode +
+                ", platenumber=" + platenumber +
+                ", decisionsreference=" + decisionsreference +
+                ", decisionsreferencedate=" + decisionsreferencedate +
+                ", decisionsreferencesubject=" + decisionsreferencesubject +
+                ", governorate=" + governorate +
+                ", governoratearabicname=" + governoratearabicname +
+                ", decisionstext=" + decisionstext +
+                ", decisionsterm=" + decisionsterm +
+                ", decisionstermdate=" + decisionstermdate +
+                ", decisionstermnumber=" + decisionstermnumber +
+                '}';
     }
 }
