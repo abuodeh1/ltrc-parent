@@ -2,6 +2,7 @@ package jo.gov.ltrc.permit.authserver.confg;
 
 import jo.gov.ltrc.permit.authserver.repositories.UserDBService;
 import jo.gov.ltrc.permit.authserver.util.CookieUtil;
+import jo.gov.ltrc.permit.authserver.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -15,8 +16,13 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider;
+import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -39,6 +45,9 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
     @Value("${ldap.base.dn}")
     private String rootDn;
 
+    @Value("${cookie.security.domain}")
+    private String cookieDomain;
+
     private static final String jwtTokenCookieName = "JWT-TOKEN";
 
     @Override
@@ -53,12 +62,12 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
                 .successHandler(myAuthenticationSuccessHandler())
             .and()
                 .logout()
-                .invalidateHttpSession(true)
                 .permitAll()
                 .addLogoutHandler((httpServletRequest, httpServletResponse, authentication) -> {
-                    CookieUtil.clear(httpServletResponse, jwtTokenCookieName);
+                    CookieUtil.clear(httpServletResponse, jwtTokenCookieName, cookieDomain);
 //                    JwtUtil.invalidateRelatedTokens(httpServletRequest);
-                });
+                })
+                .invalidateHttpSession(true);
 //                .logoutUrl("/logout")
 //                .deleteCookies(jwtTokenCookieName)
 //                .logoutUrl("http://192.168.60.243:8889/login");

@@ -25,7 +25,7 @@ public class RouteFilter extends ZuulFilter {
 
 	@Override
 	public Object run() {
-		System.out.println("Using Route Filter");
+//		System.out.println("Using Route Filter");
 
 		return null;
 	}

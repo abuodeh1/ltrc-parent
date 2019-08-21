@@ -1,6 +1,11 @@
 package jo.gov.ltrc.permit.gateway.filters;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import java.util.*;
 
 public class PostFilter extends ZuulFilter {
 
@@ -21,7 +26,7 @@ public class PostFilter extends ZuulFilter {
 
 	@Override
 	public Object run() {
-		System.out.println("Using Post Filter");
+//		System.out.println("Using Post Filter");
 
 		return null;
 	}

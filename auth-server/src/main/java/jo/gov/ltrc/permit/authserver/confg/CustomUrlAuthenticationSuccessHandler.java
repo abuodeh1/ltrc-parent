@@ -28,12 +28,14 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
     @Value("${server.gateway.url}")
     private String gatewayURI;
 
+    @Value("${cookie.security.domain}")
+    private String cookieDomain;
+
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
                                         HttpServletResponse response, Authentication authentication) throws IOException {
-
         handle(request, response, authentication);
         clearAuthenticationAttributes(request);
     }
@@ -42,21 +44,25 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
                           HttpServletResponse response, Authentication authentication)
             throws IOException {
 
-        String targetUrl = request.getParameter("redirect_uri"); //determineTargetUrl(authentication);
+//        StringBuffer requestURL = request.getRequestURL();
+//        String referer = request.getHeader("Referer");
+        String targetUrl = request.getParameter("redirectUrl"); //determineTargetUrl(authentication);
 
         if (response.isCommitted()) {
-            logger.debug(
-                    "Response has already been committed. Unable to redirect to "
-                            + targetUrl);
+//            logger.debug(
+//                    "Response has already been committed. Unable to redirect to "
+//                            + targetUrl);
             return;
         }
 
 
         String token = JwtUtil.generateToken(signingKey, authentication.getName());
-        CookieUtil.create(response, jwtTokenCookieName, token, false, -1, "192.168.60.243");
+        CookieUtil.create(response, jwtTokenCookieName, token, false, -1, cookieDomain);
 
+//        URL refererURL = new URL(request.getHeader("Referer"));
 
-        redirectStrategy.sendRedirect(request, response, gatewayURI+(targetUrl==null? "": targetUrl));
+//        redirectStrategy.sendRedirect(request, response, refererURL.toString().substring(0 , refererURL.toString().indexOf(refererURL.getPath())));
+        redirectStrategy.sendRedirect(request, response, gatewayURI + (targetUrl == null ? "" : targetUrl));
     }
 
     protected String determineTargetUrl(Authentication authentication) {

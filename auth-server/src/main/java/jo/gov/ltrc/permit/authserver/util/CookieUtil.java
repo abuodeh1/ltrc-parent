@@ -1,5 +1,6 @@
 package jo.gov.ltrc.permit.authserver.util;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.util.WebUtils;
 
 import javax.servlet.http.Cookie;
@@ -17,12 +18,12 @@ public class CookieUtil {
         httpServletResponse.addCookie(cookie);
     }
 
-    public static void clear(HttpServletResponse httpServletResponse, String name) {
+    public static void clear(HttpServletResponse httpServletResponse, String name, String domain) {
         Cookie cookie = new Cookie(name, null);
         cookie.setPath("/");
         cookie.setHttpOnly(true);
         cookie.setMaxAge(0);
-        cookie.setDomain("192.168.60.243");
+        cookie.setDomain(domain);
         httpServletResponse.addCookie(cookie);
     }
 

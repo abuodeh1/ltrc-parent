@@ -11,6 +11,12 @@ public class JwtUtil {
     
     private static final String REDIS_SET_ACTIVE_SUBJECTS = "active-subjects";
 
+    public static String getSubject(HttpServletRequest httpServletRequest, String jwtTokenCookieName, String signingKey){
+        String token = CookieUtil.getValue(httpServletRequest, jwtTokenCookieName);
+        if(token == null) return null;
+        return Jwts.parser().setSigningKey(signingKey).parseClaimsJws(token).getBody().getSubject();
+    }
+
     public static String generateToken(String signingKey, String subject) {
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
@@ -42,6 +48,7 @@ public class JwtUtil {
     }
 
     public static void invalidateRelatedTokens(HttpServletRequest httpServletRequest) {
-        RedisUtil.INSTANCE.srem(REDIS_SET_ACTIVE_SUBJECTS, (String) httpServletRequest.getAttribute("username"));
+        String username = JwtUtil.getSubject(httpServletRequest, "JWT-TOKEN", "signingKey");
+        RedisUtil.INSTANCE.srem(REDIS_SET_ACTIVE_SUBJECTS, username);
     }
 }
