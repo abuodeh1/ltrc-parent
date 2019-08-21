@@ -4,7 +4,10 @@ import jo.gov.ltrc.permit.authserver.util.CookieUtil;
 import jo.gov.ltrc.permit.authserver.util.JwtUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.DefaultRedirectStrategy;
@@ -17,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
@@ -25,13 +29,10 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
     private static final String jwtTokenCookieName = "JWT-TOKEN";
     private static final String signingKey = "signingKey";
 
-    @Value("${server.gateway.url}")
-    private String gatewayURI;
-
-    @Value("${cookie.security.domain}")
-    private String cookieDomain;
-
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
@@ -46,23 +47,21 @@ public class CustomUrlAuthenticationSuccessHandler implements AuthenticationSucc
 
 //        StringBuffer requestURL = request.getRequestURL();
 //        String referer = request.getHeader("Referer");
-        String targetUrl = request.getParameter("redirectUrl"); //determineTargetUrl(authentication);
+//        String targetUrl = request.getParameter("redirectUrl"); //determineTargetUrl(authentication);
 
         if (response.isCommitted()) {
-//            logger.debug(
-//                    "Response has already been committed. Unable to redirect to "
-//                            + targetUrl);
+            logger.debug(
+                    "Response has already been committed. Unable to redirect to "
+                            + request.getRequestURL());
             return;
         }
 
+        ServiceInstance gatewayInstance = discoveryClient.getInstances("gateway-server").get(0);
 
         String token = JwtUtil.generateToken(signingKey, authentication.getName());
-        CookieUtil.create(response, jwtTokenCookieName, token, false, -1, cookieDomain);
+        CookieUtil.create(response, jwtTokenCookieName, token, false, -1, gatewayInstance.getUri().getHost());
 
-//        URL refererURL = new URL(request.getHeader("Referer"));
-
-//        redirectStrategy.sendRedirect(request, response, refererURL.toString().substring(0 , refererURL.toString().indexOf(refererURL.getPath())));
-        redirectStrategy.sendRedirect(request, response, gatewayURI + (targetUrl == null ? "" : targetUrl));
+        redirectStrategy.sendRedirect(request, response, gatewayInstance.getUri().toString()/*gatewayURI + (targetUrl == null ? "" : targetUrl)*/);
     }
 
     protected String determineTargetUrl(Authentication authentication) {
