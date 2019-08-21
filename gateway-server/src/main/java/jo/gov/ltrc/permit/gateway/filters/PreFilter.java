@@ -8,7 +8,6 @@ import jo.gov.ltrc.permit.gateway.util.JwtUtil;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
 
 public class PreFilter extends ZuulFilter {
 
@@ -56,7 +55,7 @@ public class PreFilter extends ZuulFilter {
 //                System.out.println(
 //                        "Request Method : " + request.getMethod() + " Request URL : " + request.getRequestURL().toString());
 ////                request.setAttribute("redirect", request.getRequestURL().toString());
-                response.sendRedirect("/login");
+                   response.sendRedirect("/login");
 
             } else {
                 request.getSession().setAttribute("username", username);

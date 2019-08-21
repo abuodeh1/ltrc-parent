@@ -68,9 +68,6 @@ public class MultipleAuthProvidersSecurityConfig extends WebSecurityConfigurerAd
 //                    JwtUtil.invalidateRelatedTokens(httpServletRequest);
                 })
                 .invalidateHttpSession(true);
-//                .logoutUrl("/logout")
-//                .deleteCookies(jwtTokenCookieName)
-//                .logoutUrl("http://192.168.60.243:8889/login");
     }
 
     @Override
