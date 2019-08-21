@@ -9,6 +9,7 @@ public class SaveOperatorClassificationDataRequest {
     @ApiModelProperty("Violation Type Name Parameter ") private String operatorclassificationnameparm;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getOperatorclassificationidparm() {
         return operatorclassificationidparm;
@@ -42,6 +43,14 @@ public class SaveOperatorClassificationDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveOperatorClassificationDataRequest{" +
@@ -49,6 +58,7 @@ public class SaveOperatorClassificationDataRequest {
                 ", operatorclassificationnameparm=" + operatorclassificationnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

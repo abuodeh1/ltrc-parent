@@ -72,7 +72,7 @@ public class ViolationService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveViolationDataRequest.setIP = request.getRemoteAddr();
+        saveViolationDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

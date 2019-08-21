@@ -9,6 +9,7 @@ public class SaveTransportationClassDataRequest {
     @ApiModelProperty("Violation Type Name Parameter ") private String transportationclassnameparm;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getTransportationclassidparm() {
         return transportationclassidparm;
@@ -42,6 +43,14 @@ public class SaveTransportationClassDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveTransportationClassDataRequest{" +
@@ -49,6 +58,7 @@ public class SaveTransportationClassDataRequest {
                 ", transportationclassnameparm=" + transportationclassnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

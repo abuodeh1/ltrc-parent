@@ -28,6 +28,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "cancellationofarrestorderdateparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
 
                 }

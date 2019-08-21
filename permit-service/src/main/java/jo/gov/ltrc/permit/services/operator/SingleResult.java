@@ -33,6 +33,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "certificateregistrationnumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
 
@@ -85,6 +86,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "certificateregistrationnumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "basinparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
 
                 }
@@ -108,6 +110,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "decisionstremnumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),
@@ -141,6 +144,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatorparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownernationalidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),
@@ -152,6 +156,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclerouteidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehicleidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -170,6 +175,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "linetypeparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -185,6 +191,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "activeparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),

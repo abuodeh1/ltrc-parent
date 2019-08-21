@@ -9,6 +9,7 @@ public class SaveFuelTypeDateRequest {
     @ApiModelProperty("Fuel Type Name Parameter ") private String fueltypenameparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getFueltypeidparm() {
         return fueltypeidparm;
@@ -42,6 +43,14 @@ public class SaveFuelTypeDateRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveFuelTypeDateRequest{" +
@@ -49,6 +58,7 @@ public class SaveFuelTypeDateRequest {
                 ", fueltypenameparm=" + fueltypenameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

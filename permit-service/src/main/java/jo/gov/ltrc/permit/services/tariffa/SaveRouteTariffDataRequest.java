@@ -13,14 +13,15 @@ public class SaveRouteTariffDataRequest {
     @ApiModelProperty("Fuel Type Parameter")        private Long fueltypeparm ;
     @ApiModelProperty("Vehicle Category Parameter") private Long vehiclecategoryparm ;
     @ApiModelProperty("Inflation Parameter")        private Long inflationparm ;
-    @ApiModelProperty("Value 1 Parameter")          private  Double valueparm1 ;
-    @ApiModelProperty("Value 2 Parameter")          private  Double valueparm2 ;
+    @ApiModelProperty("Value 1 Parameter")          private Double valueparm1 ;
+    @ApiModelProperty("Value 2 Parameter")          private Double valueparm2 ;
     @ApiModelProperty("Start Date Parameter")       private Date startdateparm ;
     @ApiModelProperty("End Date Parameter")         private Date enddateparm ;
     @ApiModelProperty("Principal Parameter")        private Long prencipal ;
     @ApiModelProperty("Tariffa Unit Parameter")     private Integer tariffunitparm ;
     @ApiModelProperty("Based On Parameter")         private Integer basedonparm ;
     @ApiModelProperty("Status Parameter")           private Integer statusparm ;
+    @ApiModelProperty("IP Address")                 private String ipaddressparm  ;
 
 
     public Long getRoutetariffidparm() {
@@ -143,6 +144,14 @@ public class SaveRouteTariffDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveRouteTariffDataRequest{" +
@@ -161,6 +170,7 @@ public class SaveRouteTariffDataRequest {
                 ", tariffunitparm=" + tariffunitparm +
                 ", basedonparm=" + basedonparm +
                 ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm +
                 '}';
     }
 }

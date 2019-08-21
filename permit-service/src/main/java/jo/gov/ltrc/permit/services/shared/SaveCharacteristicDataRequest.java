@@ -10,6 +10,7 @@ public class SaveCharacteristicDataRequest {
     @ApiModelProperty("Characteristic English Name Parameter ") private String characteristicenglishnameparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getCharacteristicidparm() {
         return characteristicidparm;
@@ -51,6 +52,14 @@ public class SaveCharacteristicDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveCharacteristicDataRequest{" +
@@ -59,6 +68,7 @@ public class SaveCharacteristicDataRequest {
                 ", characteristicenglishnameparm=" + characteristicenglishnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

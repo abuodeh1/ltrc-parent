@@ -74,7 +74,7 @@ public class RouteService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveRouteDataRequest.setIP = request.getRemoteAddr();
+        saveRouteDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

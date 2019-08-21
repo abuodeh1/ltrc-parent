@@ -18,6 +18,7 @@ public class SaveTariffEquationDataRequest {
     @ApiModelProperty("Line Type Parameter ") private Long linetypeparm ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepal ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getTariffequationidparm() {
         return tariffequationidparm;
@@ -107,6 +108,14 @@ public class SaveTariffEquationDataRequest {
         this.princepal = princepal;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveTariffEquationDataRequest{" +
@@ -121,6 +130,7 @@ public class SaveTariffEquationDataRequest {
                 ", linetypeparm=" + linetypeparm +
                 ", statusparm=" + statusparm +
                 ", princepal=" + princepal +
+                ", ipaddressparm= " + ipaddressparm +
                 '}';
     }
 }

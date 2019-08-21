@@ -71,7 +71,7 @@ public class TariffaService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveRouteTariffDataRequest.setIP = request.getRemoteAddr();
+        saveRouteTariffDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -118,7 +118,7 @@ public class TariffaService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveInflationReferanceDataRequest.setIP = request.getRemoteAddr();
+        saveInflationReferanceDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -165,7 +165,7 @@ public class TariffaService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveTariffEquationDataRequest.setIP = request.getRemoteAddr();
+        saveTariffEquationDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

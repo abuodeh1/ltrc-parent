@@ -9,13 +9,13 @@ public class SaveViolationPenaltyDataRequest {
     @ApiModelProperty("Violation Type Name Parameter ") private String violationpenaltynameparm;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
-
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getViolationpenaltyidparm() {
         return violationpenaltyidparm;
     }
 
-    public void setViolationpenaltyidparm(long violationpenaltyidparm) {
+    public void setViolationpenaltyidparm(Long violationpenaltyidparm) {
         this.violationpenaltyidparm = violationpenaltyidparm;
     }
 
@@ -31,7 +31,7 @@ public class SaveViolationPenaltyDataRequest {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
@@ -39,8 +39,27 @@ public class SaveViolationPenaltyDataRequest {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveViolationPenaltyDataRequest{" +
+                "violationpenaltyidparm=" + violationpenaltyidparm +
+                ", violationpenaltynameparm= " + violationpenaltynameparm + 
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                '}';
     }
 }
 

@@ -71,7 +71,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveCharacteristicDataRequest.setIP = request.getRemoteAddr();
+        saveCharacteristicDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -119,7 +119,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveCountryDataRequest.setIP = request.getRemoteAddr();
+        saveCountryDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -215,7 +215,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveGovernorateDataRequest.setIP = request.getRemoteAddr();
+        saveGovernorateDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -264,7 +264,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveMunicipalityDataRequest.setIP = request.getRemoteAddr();
+        saveMunicipalityDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -313,7 +313,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveTerritoryDataRequest.setIP = request.getRemoteAddr();
+        saveTerritoryDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -362,7 +362,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveParkingTypeDataRequest.setIP = request.getRemoteAddr();
+        saveParkingTypeDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -410,7 +410,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveLineTypeDataRequest.setIP = request.getRemoteAddr();
+        saveLineTypeDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -497,7 +497,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveFuelTypeDateRequest.setIP = request.getRemoteAddr();
+        saveFuelTypeDateRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -736,7 +736,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        savePlateClassificationDataRequest.setIP = request.getRemoteAddr();
+        savePlateClassificationDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -824,7 +824,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveTransportationClassDataRequest.setIP = request.getRemoteAddr();
+        saveTransportationClassDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -873,7 +873,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        savePeriodCalssDataRequest.setIP = request.getRemoteAddr();
+        savePeriodCalssDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -921,7 +921,7 @@ public class SharedService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveOperatorClassificationDataRequest.setIP = request.getRemoteAddr();
+        saveOperatorClassificationDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

@@ -12,13 +12,13 @@ public class SaveProvinceDataRequest {
     @ApiModelProperty("Country ID Parameter ") private Long countryidparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
-
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getProvinceidparm() {
         return provinceidparm;
     }
 
-    public void setProvinceidparm(long provinceidparm) {
+    public void setProvinceidparm(Long provinceidparm) {
         this.provinceidparm = provinceidparm;
     }
 
@@ -50,7 +50,7 @@ public class SaveProvinceDataRequest {
         return countryidparm;
     }
 
-    public void setCountryidparm(long countryidparm) {
+    public void setCountryidparm(Long countryidparm) {
         this.countryidparm = countryidparm;
     }
 
@@ -58,7 +58,7 @@ public class SaveProvinceDataRequest {
         return princepel;
     }
 
-    public void setPrincepel(long princepel) {
+    public void setPrincepel(Long princepel) {
         this.princepel = princepel;
     }
 
@@ -66,8 +66,30 @@ public class SaveProvinceDataRequest {
         return statusparm;
     }
 
-    public void setStatusparm(int statusparm) {
+    public void setStatusparm(Integer statusparm) {
         this.statusparm = statusparm;
+    }
+
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
+    @Override
+    public String toString() {
+        return "SaveProvinceDataRequest{" +
+                "provinceidparm=" + provinceidparm +
+                ", provincearabicnameparm= " + provincearabicnameparm + 
+                ", provinceenglishnameparm= " + provinceenglishnameparm + 
+                ", provincecodeparm= " + provincecodeparm + 
+                ", countryidparm=" + countryidparm +
+                ", princepel=" + princepel +
+                ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm + 
+                '}';
     }
 }
 

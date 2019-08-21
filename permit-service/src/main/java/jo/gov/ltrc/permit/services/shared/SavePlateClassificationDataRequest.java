@@ -9,6 +9,7 @@ public class SavePlateClassificationDataRequest {
     @ApiModelProperty("Violation Type Name Parameter ") private String plateclassificationnameparm;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
 
     public Long getPlateclassificationidparm() {
@@ -43,6 +44,14 @@ public class SavePlateClassificationDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SavePlateClassificationDataRequest{" +
@@ -50,6 +59,7 @@ public class SavePlateClassificationDataRequest {
                 ", plateclassificationnameparm=" + plateclassificationnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

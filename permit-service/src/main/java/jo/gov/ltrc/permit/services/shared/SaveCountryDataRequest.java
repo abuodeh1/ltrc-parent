@@ -11,6 +11,7 @@ public class SaveCountryDataRequest {
     @ApiModelProperty("Country Code Parameter ") private String countrycodeparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getCountryidparm() {
         return countryidparm;
@@ -60,6 +61,14 @@ public class SaveCountryDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveCountryDataRequest{" +
@@ -69,6 +78,7 @@ public class SaveCountryDataRequest {
                 ", countrycodeparm=" + countrycodeparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

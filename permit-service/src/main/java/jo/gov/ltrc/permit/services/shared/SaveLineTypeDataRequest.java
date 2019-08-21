@@ -9,6 +9,7 @@ public class SaveLineTypeDataRequest {
     @ApiModelProperty("Line Type Name Parameter ") private String linetypenameparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getLinetypeidparm() {
         return linetypeidparm;
@@ -42,6 +43,14 @@ public class SaveLineTypeDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveLineTypeDataRequest{" +
@@ -49,6 +58,7 @@ public class SaveLineTypeDataRequest {
                 ", linetypenameparm=" + linetypenameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

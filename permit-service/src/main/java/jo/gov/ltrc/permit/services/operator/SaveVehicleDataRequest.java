@@ -31,6 +31,7 @@ public class SaveVehicleDataRequest {
     @ApiModelProperty("Operator Parameter ") private Long operatorparm ;
     @ApiModelProperty("Owner National ID Parameter ") private String ownernationalidparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getVehicleidparm() {
         return vehicleidparm;
@@ -224,6 +225,14 @@ public class SaveVehicleDataRequest {
         this.princepel = princepel;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveVehicleDataRequest{" +
@@ -251,6 +260,7 @@ public class SaveVehicleDataRequest {
                 ", operatorparm=" + operatorparm +
                 ", ownernationalidparm=" + ownernationalidparm +
                 ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

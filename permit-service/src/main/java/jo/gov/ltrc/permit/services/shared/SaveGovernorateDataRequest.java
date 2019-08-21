@@ -13,6 +13,7 @@ public class SaveGovernorateDataRequest {
     @ApiModelProperty("Province ID Parameter ") private Long provinceidparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getGovernorateidparm() {
         return governorateidparm;
@@ -78,6 +79,14 @@ public class SaveGovernorateDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveGovernorateDataRequest{" +
@@ -89,6 +98,7 @@ public class SaveGovernorateDataRequest {
                 ", provinceidparm=" + provinceidparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

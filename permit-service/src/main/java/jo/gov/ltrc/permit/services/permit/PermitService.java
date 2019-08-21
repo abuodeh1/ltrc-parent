@@ -76,7 +76,7 @@ public class PermitService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        savePermitDataRequest.setIP = request.getRemoteAddr();
+        savePermitDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -119,13 +119,13 @@ public class PermitService {
     })
     @ApiOperation("Add or Edit Permit Type Field ")
     @PostMapping("/type-field")
-    public String addPermitType(@ApiParam("\t") @RequestBody SavePermitTypeDataRequest savePermitTypeDataRequest){
+    public String addPermitType(@ApiParam("\t") @RequestBody SavePermitTypeDataRequest savePermitTypeDataRequest, HttpServletRequest request){
 
         log.debug(" SavePermitTypeDataRequest : " + savePermitTypeDataRequest.toString());
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        savePermitTypeDataRequest.setIP = request.getRemoteAddr();
+        savePermitTypeDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

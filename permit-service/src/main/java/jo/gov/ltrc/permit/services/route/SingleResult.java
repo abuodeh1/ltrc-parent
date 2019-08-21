@@ -14,6 +14,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "principal"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pointorderparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Boolean.class, name = "pointdirectionparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -31,6 +32,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "goingparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "returningparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),

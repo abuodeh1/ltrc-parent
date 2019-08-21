@@ -18,6 +18,7 @@ import java.sql.Time;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "permittypeenglishnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
 
@@ -53,6 +54,7 @@ import java.sql.Time;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "startpointparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "endpointparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
 
 
@@ -73,6 +75,7 @@ import java.sql.Time;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "activeparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
 

@@ -28,6 +28,7 @@ public class SaveOperatorBranchDataRequest {
     @ApiModelProperty("Certificate Registration Number Parameter") private String certificateregistrationnumberparm;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Principal Parameter") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getOperatorbranchidparm() {
         return operatorbranchidparm;
@@ -205,6 +206,14 @@ public class SaveOperatorBranchDataRequest {
         this.princepel = princepel;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveOperatorBranchDataRequest{" +
@@ -230,6 +239,7 @@ public class SaveOperatorBranchDataRequest {
                 ", certificateregistrationnumberparm=" + certificateregistrationnumberparm +
                 ", statusparm=" + statusparm +
                 ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

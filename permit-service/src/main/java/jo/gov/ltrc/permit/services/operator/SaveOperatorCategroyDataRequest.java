@@ -17,6 +17,7 @@ public class SaveOperatorCategroyDataRequest {
     @ApiModelProperty("Line Type Parameter ") private Long linetypeparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
     @ApiModelProperty("List of Field Settings ") private List<SaveOperatorCategoryFieldSettingDataRequest> field ;
 
     public Long getOperatorcategoryidparm() {
@@ -99,6 +100,14 @@ public class SaveOperatorCategroyDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     public List<SaveOperatorCategoryFieldSettingDataRequest> getField() {
         return field;
     }
@@ -120,6 +129,7 @@ public class SaveOperatorCategroyDataRequest {
                 ", linetypeparm=" + linetypeparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 ", field=" + field +
                 '}';
     }

@@ -18,6 +18,7 @@ public class SaveRouteDataRequest {
     @ApiModelProperty("Route ID Parameter") private Long routeidparm  ;
     @ApiModelProperty("Going Parameter") private String goingparm ;
     @ApiModelProperty("Return Ing Parameter") private String returningparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
     @ApiModelProperty("List of Points Object") private List<SaveRoutePointDataRequest> points ;
 
     public String getRoutenameparm() {
@@ -100,6 +101,14 @@ public class SaveRouteDataRequest {
         this.returningparm = returningparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     public List<SaveRoutePointDataRequest> getPoints() {
         return points;
     }
@@ -121,6 +130,7 @@ public class SaveRouteDataRequest {
                 ", routeidparm=" + routeidparm +
                 ", goingparm=" + goingparm +
                 ", returningparm=" + returningparm +
+                ", ipaddressparam=" + ipaddressparm +
                 ", points=" + points +
                 '}';
     }

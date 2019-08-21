@@ -75,7 +75,7 @@ public class LicenseService {
 
         StoredProcedureQuery storedProcedureQuery = null;
 
-//        saveOperatorLicenseDataRequest.setIP = request.getRemoteAddr();
+        saveOperatorLicenseDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

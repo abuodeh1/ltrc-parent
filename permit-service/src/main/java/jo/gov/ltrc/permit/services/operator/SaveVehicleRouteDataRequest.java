@@ -8,6 +8,8 @@ public class SaveVehicleRouteDataRequest {
     @ApiModelProperty("Vehicle Route ID Parameter") private Long vehiclerouteidparm ;
     @ApiModelProperty("Vehicle ID Parameter") private Long vehicleidparm ;
     @ApiModelProperty("Route ID Parameter") private Long routeidparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
+
 
     public Long getVehiclerouteidparm() {
         return vehiclerouteidparm;
@@ -33,12 +35,21 @@ public class SaveVehicleRouteDataRequest {
         this.routeidparm = routeidparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveVehicleRouteDataRequest{" +
                 "vehiclerouteidparm=" + vehiclerouteidparm +
                 ", vehicleidparm=" + vehicleidparm +
                 ", routeidparm=" + routeidparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

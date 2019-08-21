@@ -15,6 +15,7 @@ public class SaveInflationReferanceDataRequest {
     @ApiModelProperty("Start Data Parameter ") private Date startdateparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getInflationreferanceidparm() {
         return inflationreferanceidparm;
@@ -80,6 +81,14 @@ public class SaveInflationReferanceDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveInflationReferanceDataRequest{" +
@@ -91,6 +100,7 @@ public class SaveInflationReferanceDataRequest {
                 ", startdateparm=" + startdateparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparm= " + ipaddressparm +
                 '}';
     }
 }

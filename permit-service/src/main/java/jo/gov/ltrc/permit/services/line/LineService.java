@@ -155,7 +155,7 @@ public class LineService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveLineDataRequest.setIP = request.getRemoteAddr();
+        saveLineDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

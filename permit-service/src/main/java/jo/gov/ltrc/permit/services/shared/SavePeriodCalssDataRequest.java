@@ -9,6 +9,7 @@ public class SavePeriodCalssDataRequest {
     @ApiModelProperty("Territory Arabic Name Parameter ") private String periodnameparm;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getPeriodidparm() {
         return periodidparm;
@@ -42,6 +43,14 @@ public class SavePeriodCalssDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SavePeriodCalssDataRequest{" +
@@ -49,6 +58,7 @@ public class SavePeriodCalssDataRequest {
                 ", periodnameparm=" + periodnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

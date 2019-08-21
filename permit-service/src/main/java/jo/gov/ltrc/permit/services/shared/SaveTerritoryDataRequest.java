@@ -12,6 +12,7 @@ public class SaveTerritoryDataRequest {
     @ApiModelProperty("Municipality Parameter ") private Long municipalityparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getTerritoryidparm() {
         return territoryidparm;
@@ -69,6 +70,14 @@ public class SaveTerritoryDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveTerritoryDataRequest{" +
@@ -79,6 +88,7 @@ public class SaveTerritoryDataRequest {
                 ", municipalityparm=" + municipalityparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

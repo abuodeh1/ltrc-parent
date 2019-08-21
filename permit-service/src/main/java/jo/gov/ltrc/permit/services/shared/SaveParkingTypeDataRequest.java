@@ -10,6 +10,7 @@ public class SaveParkingTypeDataRequest {
     @ApiModelProperty("Parking Type English Name Parameter ") private String parkingtypeenglishnameparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getParkingtypeidparm() {
         return parkingtypeidparm;
@@ -51,6 +52,14 @@ public class SaveParkingTypeDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveParkingTypeDataRequest{" +
@@ -59,6 +68,7 @@ public class SaveParkingTypeDataRequest {
                 ", parkingtypeenglishnameparm=" + parkingtypeenglishnameparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

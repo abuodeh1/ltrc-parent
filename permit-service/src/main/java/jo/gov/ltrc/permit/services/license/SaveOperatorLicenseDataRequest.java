@@ -16,6 +16,7 @@ public class SaveOperatorLicenseDataRequest {
     @ApiModelProperty("Printing Date Parameter ") private Date printingdateparm ;
     @ApiModelProperty("Counter Parameter ") private Integer counterparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getOperatorlicenseidparm() {
         return operatorlicenseidparm;
@@ -89,6 +90,14 @@ public class SaveOperatorLicenseDataRequest {
         this.princepel = princepel;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveOperatorLicenseDataRequest{" +
@@ -101,6 +110,7 @@ public class SaveOperatorLicenseDataRequest {
                 ", printingdateparm=" + printingdateparm +
                 ", counterparm=" + counterparm +
                 ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

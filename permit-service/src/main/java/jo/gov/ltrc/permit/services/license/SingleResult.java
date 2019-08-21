@@ -21,6 +21,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class , name = "printingdateparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "counterparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
+//                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
 

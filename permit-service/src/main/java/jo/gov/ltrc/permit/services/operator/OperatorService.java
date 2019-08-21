@@ -47,7 +47,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveOperatorBranchDataRequest.setIP = request.getRemoteAddr();
+        saveOperatorBranchDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -72,7 +72,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveOperatorDataRequest.setIP = request.getRemoteAddr();
+        saveOperatorDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -97,7 +97,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveDecisionDataRequest.setIP = request.getRemoteAddr();
+        saveDecisionDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -120,7 +120,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveVehicleDataRequest.setIP = request.getRemoteAddr();
+        saveVehicleDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -145,7 +145,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveVehicleRouteDataRequest.setIP = request.getRemoteAddr();
+        saveVehicleRouteDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -168,7 +168,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        saveOperatorCategroyDataRequest.setIP = request.getRemoteAddr();
+        saveOperatorCategroyDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 
@@ -227,7 +227,7 @@ public class OperatorService {
 
     }
 
-//    End Add Methods
+//  End Add Methods
 
 
 //  Start  Retrieve Methods

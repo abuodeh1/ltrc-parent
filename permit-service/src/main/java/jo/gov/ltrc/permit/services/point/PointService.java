@@ -74,7 +74,7 @@ public class PointService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-//        savePointDataRequest.setIP = request.getRemoteAddr();
+        savePointDataRequest.setIpaddressparm(request.getRemoteAddr());
 
         try {
 

@@ -13,6 +13,7 @@ public class SavePermitTypeFieldSettingDataRequest {
     @ApiModelProperty("Active Parameter ") private Integer activeparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getPermittypefieldsettingidparm() {
         return permittypefieldsettingidparm;
@@ -78,6 +79,14 @@ public class SavePermitTypeFieldSettingDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SavePermitTypeFieldSettingDataRequest{" +
@@ -89,6 +98,7 @@ public class SavePermitTypeFieldSettingDataRequest {
                 ", activeparm=" + activeparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

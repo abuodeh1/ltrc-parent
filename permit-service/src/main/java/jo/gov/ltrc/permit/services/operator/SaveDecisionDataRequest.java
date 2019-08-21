@@ -20,6 +20,7 @@ public class SaveDecisionDataRequest {
     @ApiModelProperty("Decisions Term Number Parameter") private String decisionstremnumberparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getDecisionsidparm() {
         return decisionsidparm;
@@ -125,6 +126,14 @@ public class SaveDecisionDataRequest {
         this.statusparm = statusparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveDecisionDataRequest{" +
@@ -141,6 +150,7 @@ public class SaveDecisionDataRequest {
                 ", decisionstremnumberparm=" + decisionstremnumberparm +
                 ", princepel=" + princepel +
                 ", statusparm=" + statusparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

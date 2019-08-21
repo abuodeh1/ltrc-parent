@@ -23,6 +23,7 @@ public class SaveViolationDataRequest {
     @ApiModelProperty("Cancellation of Arrest Order Date Parameter ") private Date cancellationofarrestorderdateparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
     @ApiModelProperty("Operator Parameter ") private Long operatorparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getViolationidparm() {
         return violationidparm;
@@ -152,6 +153,14 @@ public class SaveViolationDataRequest {
         this.operatorparm = operatorparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveViolationDataRequest{" +
@@ -171,6 +180,7 @@ public class SaveViolationDataRequest {
                 ", cancellationofarrestorderdateparm=" + cancellationofarrestorderdateparm +
                 ", princepel=" + princepel +
                 ", operatorparm=" + operatorparm +
+                ", ipaddressparm= " + ipaddressparm +
                 '}';
     }
 }

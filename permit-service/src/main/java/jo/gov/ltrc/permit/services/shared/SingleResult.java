@@ -14,6 +14,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "characteristicenglishnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),
@@ -28,6 +29,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "countrycodeparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -56,6 +58,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -70,6 +73,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -84,6 +88,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -96,6 +101,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "parkingtypeenglishnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -107,6 +113,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "linetypenameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -129,6 +136,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "fueltypenameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -195,6 +203,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "plateclassificationnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -217,6 +226,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "transportationclassnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -228,6 +238,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "periodnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 
@@ -239,6 +250,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatorclassificationnameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
                 }
         ),
 

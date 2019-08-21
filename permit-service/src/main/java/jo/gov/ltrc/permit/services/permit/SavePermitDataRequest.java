@@ -34,6 +34,7 @@ public class SavePermitDataRequest {
     @ApiModelProperty("Start Point Parameter ") private Long startpointparm ;
     @ApiModelProperty("End Point Parameter ") private Long endpointparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getPermitidparm() {
         return permitidparm;
@@ -243,6 +244,14 @@ public class SavePermitDataRequest {
         this.princepel = princepel;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SavePermitDataRequest{" +
@@ -272,6 +281,7 @@ public class SavePermitDataRequest {
                 ", startpointparm=" + startpointparm +
                 ", endpointparm=" + endpointparm +
                 ", princepel=" + princepel +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }

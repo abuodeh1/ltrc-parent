@@ -13,6 +13,7 @@ public class SaveRoutePointDataRequest {
     @ApiModelProperty("Principal Parameter") private Long principal ;
     @ApiModelProperty("Point Order Parameter") private Integer pointorderparm ;
     @ApiModelProperty("Point Direction Parameter") private   Boolean pointdirectionparm ;
+    @ApiModelProperty("IP Address") private String ipaddressparm  ;
 
     public Long getRouteidparm() {
         return routeidparm;
@@ -54,6 +55,14 @@ public class SaveRoutePointDataRequest {
         this.pointdirectionparm = pointdirectionparm;
     }
 
+    public String getIpaddressparm() {
+        return ipaddressparm;
+    }
+
+    public void setIpaddressparm(String ipaddressparm) {
+        this.ipaddressparm = ipaddressparm;
+    }
+
     @Override
     public String toString() {
         return "SaveRoutePointDataRequest{" +
@@ -61,6 +70,7 @@ public class SaveRoutePointDataRequest {
                 ", principal=" + principal +
                 ", pointorderparm=" + pointorderparm +
                 ", pointdirectionparm=" + pointdirectionparm +
+                ", ipaddressparam=" + ipaddressparm +
                 '}';
     }
 }
