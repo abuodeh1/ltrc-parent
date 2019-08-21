@@ -250,7 +250,6 @@
                         <excludes>
                             <exclude>application.properties</exclude>
                             <exclude>registry.properties</exclude>
-                            <exclude>config.properties</exclude>
                         </excludes>
                     </resource>
                 </resources>
