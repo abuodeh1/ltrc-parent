@@ -9,8 +9,8 @@ public class ReturnOperatorBranchDataRequest {
 
     @ApiModelProperty("Minimum Operator Branch ID Parameter ") private Long minoperatorbranchidparm ;
     @ApiModelProperty("Maximum Operator Branch ID Parameter ") private Long maxoperatorbranchidparm ;
-    @ApiModelProperty("Maximum Operator ID Parameter ") private Long maxoperatoridparm ;
     @ApiModelProperty("Minimum Operator ID Parameter") private Long minoperatoridparm ;
+    @ApiModelProperty("Maximum Operator ID Parameter ") private Long maxoperatoridparm ;
     @ApiModelProperty("Operator Name Parameter ") private String operatornameparm ;
     @ApiModelProperty("Province Parameter ") private Long provinceparm ;
     @ApiModelProperty("Province Arabic Name Parameter ") private String provincearabicnameparm ;
@@ -34,11 +34,11 @@ public class ReturnOperatorBranchDataRequest {
     @ApiModelProperty("Minimum Vehicle Count Parameter ") private Integer minvehiclecountparm ;
     @ApiModelProperty("Maximum Vehicle Count Parameter ") private Integer maxvehiclecountparm ;
     @ApiModelProperty("Branch Name Parameter ") private String branchnameparm ;
+    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Page Size Parameter ") private Integer pagesize ;
     @ApiModelProperty("Page Index Parameter ") private Integer pageindex ;
     @ApiModelProperty("Sort Type Parameter ") private Integer sorttype ;
     @ApiModelProperty("Sort By Parameter ") private String sortby ;
-    @ApiModelProperty("Status Parameter ") private Integer statusparm ;
 
     public Long getMinoperatorbranchidparm() {
         return minoperatorbranchidparm;
@@ -56,20 +56,20 @@ public class ReturnOperatorBranchDataRequest {
         this.maxoperatorbranchidparm = maxoperatorbranchidparm;
     }
 
-    public Long getMaxoperatoridparm() {
-        return maxoperatoridparm;
-    }
-
-    public void setMaxoperatoridparm(Long maxoperatoridparm) {
-        this.maxoperatoridparm = maxoperatoridparm;
-    }
-
     public Long getMinoperatoridparm() {
         return minoperatoridparm;
     }
 
     public void setMinoperatoridparm(Long minoperatoridparm) {
         this.minoperatoridparm = minoperatoridparm;
+    }
+
+    public Long getMaxoperatoridparm() {
+        return maxoperatoridparm;
+    }
+
+    public void setMaxoperatoridparm(Long maxoperatoridparm) {
+        this.maxoperatoridparm = maxoperatoridparm;
     }
 
     public String getOperatornameparm() {
@@ -256,6 +256,14 @@ public class ReturnOperatorBranchDataRequest {
         this.branchnameparm = branchnameparm;
     }
 
+    public Integer getStatusparm() {
+        return statusparm;
+    }
+
+    public void setStatusparm(Integer statusparm) {
+        this.statusparm = statusparm;
+    }
+
     public Integer getPagesize() {
         return pagesize;
     }
@@ -288,49 +296,41 @@ public class ReturnOperatorBranchDataRequest {
         this.sortby = sortby;
     }
 
-    public Integer getStatusparm() {
-        return statusparm;
-    }
-
-    public void setStatusparm(Integer statusparm) {
-        this.statusparm = statusparm;
-    }
-
     @Override
     public String toString() {
         return "ReturnOperatorBranchDataRequest{" +
                 "minoperatorbranchidparm=" + minoperatorbranchidparm +
                 ", maxoperatorbranchidparm=" + maxoperatorbranchidparm +
-                ", maxoperatoridparm=" + maxoperatoridparm +
                 ", minoperatoridparm=" + minoperatoridparm +
-                ", operatornameparm=" + operatornameparm +
+                ", maxoperatoridparm=" + maxoperatoridparm +
+                ", operatornameparm= " + operatornameparm + 
                 ", provinceparm=" + provinceparm +
-                ", provincearabicnameparm=" + provincearabicnameparm +
+                ", provincearabicnameparm= " + provincearabicnameparm + 
                 ", governorateparm=" + governorateparm +
-                ", governoratearabicnameparm=" + governoratearabicnameparm +
+                ", governoratearabicnameparm= " + governoratearabicnameparm + 
                 ", municipalityparm=" + municipalityparm +
-                ", municipalityarabicnameparm=" + municipalityarabicnameparm +
+                ", municipalityarabicnameparm= " + municipalityarabicnameparm + 
                 ", territoryparm=" + territoryparm +
-                ", territoryarabicnameparm=" + territoryarabicnameparm +
-                ", neighborhoodparm=" + neighborhoodparm +
-                ", streetparm=" + streetparm +
-                ", basinparm=" + basinparm +
-                ", plotnoparm=" + plotnoparm +
-                ", poboxparm=" + poboxparm +
-                ", telephoneparm=" + telephoneparm +
-                ", faxparm=" + faxparm +
-                ", mobilephoneparm=" + mobilephoneparm +
-                ", emailparm=" + emailparm +
-                ", aggreementreferencenumberparm=" + aggreementreferencenumberparm +
+                ", territoryarabicnameparm= " + territoryarabicnameparm + 
+                ", neighborhoodparm= " + neighborhoodparm + 
+                ", streetparm= " + streetparm + 
+                ", basinparm= " + basinparm + 
+                ", plotnoparm= " + plotnoparm + 
+                ", poboxparm= " + poboxparm + 
+                ", telephoneparm= " + telephoneparm + 
+                ", faxparm= " + faxparm + 
+                ", mobilephoneparm= " + mobilephoneparm + 
+                ", emailparm= " + emailparm + 
+                ", aggreementreferencenumberparm= " + aggreementreferencenumberparm + 
                 ", aggreementreferencedateparm=" + aggreementreferencedateparm +
                 ", minvehiclecountparm=" + minvehiclecountparm +
                 ", maxvehiclecountparm=" + maxvehiclecountparm +
-                ", branchnameparm=" + branchnameparm +
+                ", branchnameparm= " + branchnameparm + 
+                ", statusparm=" + statusparm +
                 ", pagesize=" + pagesize +
                 ", pageindex=" + pageindex +
                 ", sorttype=" + sorttype +
-                ", sortby=" + sortby +
-                ", statusparm=" + statusparm +
+                ", sortby= " + sortby + 
                 '}';
     }
 }

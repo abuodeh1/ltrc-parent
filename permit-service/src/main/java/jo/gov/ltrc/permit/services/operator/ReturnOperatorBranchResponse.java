@@ -13,8 +13,8 @@ import java.sql.Date;
         parameters = {
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minoperatorbranchidparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatorbranchidparm"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatoridparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "minoperatoridparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "maxoperatoridparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "operatornameparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "provincearabicnameparm"),
@@ -38,11 +38,11 @@ import java.sql.Date;
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "minvehiclecountparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "maxvehiclecountparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "branchnameparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pagesize"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pageindex"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sorttype"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "sortby"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "statusparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "sortby"),
 
 
         },
