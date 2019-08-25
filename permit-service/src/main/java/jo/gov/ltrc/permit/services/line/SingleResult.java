@@ -21,7 +21,7 @@ import java.io.Serializable;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "remarksparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "linestatusparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
-//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
 
                 }
         ),
