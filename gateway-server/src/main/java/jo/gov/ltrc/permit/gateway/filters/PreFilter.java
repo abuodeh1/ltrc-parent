@@ -7,6 +7,7 @@ import jo.gov.ltrc.permit.gateway.util.JwtUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class PreFilter extends ZuulFilter {
@@ -42,24 +43,11 @@ public class PreFilter extends ZuulFilter {
 
             String username = JwtUtil.getSubject(request, jwtTokenCookieName, signingKey);
             if (username == null) {
-//                request = new HttpServletRequestWrapper(request){
-//
-//                    public final String red = "/login?redirectUrl=";
-//
-//                    @Override
-//                    public StringBuffer getRequestURL() {
-//                        return new StringBuffer( red + this.getRequestURI());
-//                    }
-//                };
-//
-//                System.out.println(
-//                        "Request Method : " + request.getMethod() + " Request URL : " + request.getRequestURL().toString());
-////                request.setAttribute("redirect", request.getRequestURL().toString());
                    response.sendRedirect("/login");
-
-            } else {
-                request.getSession().setAttribute("username", username);
             }
+            /*else {
+                request.setAttribute("username", username);
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
