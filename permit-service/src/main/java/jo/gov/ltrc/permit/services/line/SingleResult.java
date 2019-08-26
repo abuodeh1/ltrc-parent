@@ -31,9 +31,9 @@ import java.io.Serializable;
                 procedureName = "\"ChangeLineStatus\"",
                 parameters = {
 
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-//                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "linestatusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "lineidparm"),
+//                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "prencipal"),
 
 
                 }

@@ -46,9 +46,9 @@ import java.io.Serializable;
                 name = "ChangePointStatus",
                 procedureName = "\"ChangePointStatus\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class)
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "pointidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "pointstatusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "prencipal")
                 }
         ),
 })

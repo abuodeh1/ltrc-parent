@@ -92,17 +92,13 @@ public class RouteService {
 
             Long routeId = Long.valueOf(routeRs.substring(0, routeRs.indexOf("$")));
 
-            String deleteRs = deleteRoutePointData(saveRouteDataRequest.getRouteidparm() , 0L , saveRouteDataRequest.getPrincepal());
+            String deleteRs = deleteRoutePointData(saveRouteDataRequest.getRouteidparm() ,saveRouteDataRequest.getPrincepal());
 
             if(saveRouteDataRequest.getPoints() != null && deleteRs.equalsIgnoreCase("1$D")) {
 
-                if (saveRouteDataRequest.getRouteidparm() == 0) {
-                    saveRouteDataRequest.setRouteidparm(routeId);
-                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(point));
-                }else {
-                    saveRouteDataRequest.setRouteidparm(saveRouteDataRequest.getRouteidparm());
-                    saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(point));
-                }
+                saveRouteDataRequest.setRouteidparm(saveRouteDataRequest.getRouteidparm() == null || saveRouteDataRequest.getRouteidparm() == 0L ? routeId : saveRouteDataRequest.getRouteidparm());
+                saveRouteDataRequest.getPoints().forEach(point -> addRoutePoint(point));
+
             }
 
 
@@ -279,20 +275,49 @@ public class RouteService {
     @DeleteMapping("/{id}/principal/{principalid}")
     public String deleteRoute(@ApiParam("Route ID") @PathVariable(value = "id") Long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") Long principalid) {
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangeRouteStatus");
-        storedProcedureQuery.setParameter(1, 3);
-        storedProcedureQuery.setParameter(2, id);
-        storedProcedureQuery.setParameter(3, principalid);
+        ChangeRouteStatusData changeRouteStatusData = new ChangeRouteStatusData();
+        changeRouteStatusData.setStatusparm(3);
+        changeRouteStatusData.setRouteidparm(id);
+        changeRouteStatusData.setPrencipal(principalid);
+
+        log.debug(" ReturnRouteRequest : " + changeRouteStatusData.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ChangeRouteStatus", changeRouteStatusData);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
 
         return (String)storedProcedureQuery.getSingleResult();
     }
 
-    private String deleteRoutePointData(long id , Long pointId , Long prinsipal){
+    private String deleteRoutePointData(Long routeID , Long principal ){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("DeleteRoutePointData");
-        storedProcedureQuery.setParameter(1, id);
-        storedProcedureQuery.setParameter(2, pointId);
-        storedProcedureQuery.setParameter(3, prinsipal);
+        DeleteRoutePointData deleteRoutePointData = new DeleteRoutePointData();
+
+        log.debug(" ReturnRouteRequest : " + deleteRoutePointData.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+        deleteRoutePointData.setRouteidparm(routeID);
+        deleteRoutePointData.setPointidparm(0L);
+        deleteRoutePointData.setPointidparm(principal);
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "DeleteRoutePointData", deleteRoutePointData);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String) storedProcedureQuery.getSingleResult() ;
     }

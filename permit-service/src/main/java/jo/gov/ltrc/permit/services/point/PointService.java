@@ -178,10 +178,25 @@ public class PointService {
     @DeleteMapping("/{id}/principal/{principalid}")
     public String deletePoint(@ApiParam("Point ID") @PathVariable(value = "id") Long id,@ApiParam("Principal ID") @PathVariable(value = "principalid") Long principalid){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangePointStatus");
-        storedProcedureQuery.setParameter(1, id);
-        storedProcedureQuery.setParameter(2, 3);
-        storedProcedureQuery.setParameter(3, principalid);
+        ChangePointStatusData changePointStatusData = new ChangePointStatusData();
+        changePointStatusData.setPointidparm(id);
+        changePointStatusData.setPointstatusparm(3);
+        changePointStatusData.setPrencipal(principalid);
+
+        log.debug(" ChangePointStatusData : " + changePointStatusData.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ChangePointStatus", changePointStatusData);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
 
         return (String)storedProcedureQuery.getSingleResult();
     }
