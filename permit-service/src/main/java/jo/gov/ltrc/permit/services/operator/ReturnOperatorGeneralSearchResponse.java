@@ -122,8 +122,8 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
     @ApiModelProperty("Commercial Record Date ") private Date commercialrecorddate ;
     @ApiModelProperty("Employees Number ") private Integer employeesnumber ;
     @ApiModelProperty("Drivers Number ") private Integer driversnumber ;
-    @ApiModelProperty("Working Cars Number ") private Integer workingcarsnumber ;
-    @ApiModelProperty("Basic Cars Number ") private Integer basiccarsnumber ;
+    @ApiModelProperty("Working Cars Number ") private Long workingcarsnumber ;
+    @ApiModelProperty("Basic Cars Number ") private Long basiccarsnumber ;
     @ApiModelProperty("Office Closing Date ") private Date officeclosingdate ;
     @ApiModelProperty("Remarks ") private String remarks ;
     @ApiModelProperty("Fees Status ") private Integer feesstatus ;
@@ -444,19 +444,19 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
         this.driversnumber = driversnumber;
     }
 
-    public Integer getWorkingcarsnumber() {
+    public Long getWorkingcarsnumber() {
         return workingcarsnumber;
     }
 
-    public void setWorkingcarsnumber(Integer workingcarsnumber) {
+    public void setWorkingcarsnumber(Long workingcarsnumber) {
         this.workingcarsnumber = workingcarsnumber;
     }
 
-    public Integer getBasiccarsnumber() {
+    public Long getBasiccarsnumber() {
         return basiccarsnumber;
     }
 
-    public void setBasiccarsnumber(Integer basiccarsnumber) {
+    public void setBasiccarsnumber(Long basiccarsnumber) {
         this.basiccarsnumber = basiccarsnumber;
     }
 
