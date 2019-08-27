@@ -68,7 +68,7 @@ public class OperatorService {
     public String addOperator(@ApiParam(value = "\t") @RequestBody SaveOperatorDataRequest saveOperatorDataRequest, HttpServletRequest request){
 
 
-        log.debug(" SaveOperatorDataRequest : " + saveOperatorDataRequest.toString());
+//        log.debug(" SaveOperatorDataRequest : " + saveOperatorDataRequest.toString());
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
@@ -80,7 +80,7 @@ public class OperatorService {
 
         } catch (Exception e) {
 
-            log.error(e.getMessage());
+//            log.error(e.getMessage());
 
         }
 

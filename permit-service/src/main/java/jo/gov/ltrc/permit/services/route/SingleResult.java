@@ -42,9 +42,9 @@ import java.io.Serializable;
                 procedureName = "\"ChangeRouteStatus\"",
                 parameters = {
 
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "prencipal"),
 
 
                 }
@@ -55,9 +55,9 @@ import java.io.Serializable;
                 name = "DeleteRoutePointData",
                 procedureName = "\"DeleteRoutePointData\"",
                 parameters = {
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "routeidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "pointidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "principal"),
                 }
         )
 

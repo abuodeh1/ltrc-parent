@@ -151,7 +151,7 @@ public class LineService {
     @PostMapping
     public String addLine(@ApiParam(value = "\t") @RequestBody SaveLineDataRequest saveLineDataRequest, HttpServletRequest request){
 
-        log.debug("SaveLineDataRequest : " + saveLineDataRequest.toString());
+//        log.debug("SaveLineDataRequest : " + saveLineDataRequest.toString());
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
@@ -163,7 +163,7 @@ public class LineService {
 
         } catch (Exception e) {
 
-            log.error(e.getMessage());
+//            log.error(e.getMessage());
 
         }
 
@@ -192,10 +192,23 @@ public class LineService {
     @DeleteMapping("/{id}")
     public String deleteLine(@ApiParam("Line ID ") @PathVariable(value = "id") Long id){
 
-        StoredProcedureQuery storedProcedureQuery = entityManager.createNamedStoredProcedureQuery("ChangeLineStatus");
-        storedProcedureQuery.setParameter(1, 3);
-        storedProcedureQuery.setParameter(2, id);
-//        storedProcedureQuery.setParameter(3, principalid);
+        ChangeLineStatusData changeLineStatusData = new ChangeLineStatusData();
+        changeLineStatusData.setLinestatusparm(3);
+        changeLineStatusData.setLineidparm(id);
+
+        log.debug("ChangeLineStatusData : " + changeLineStatusData.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ChangeLineStatus", changeLineStatusData);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
 
         return (String)storedProcedureQuery.getSingleResult();
     }
@@ -210,6 +223,7 @@ public class LineService {
         try {
 
             storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnLineByLineData", returnLineByLineDataRequest);
+
         } catch (Exception e) {
 
             log.error(e.getMessage());
