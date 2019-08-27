@@ -1,7 +1,10 @@
 package jo.gov.ltrc.workflow.services;
 
 
-import io.swagger.annotations.*;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import jo.gov.ltrc.helper.DatabaseHelper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +13,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -1016,6 +1018,53 @@ public class WorkflowService {
         } catch (Exception e) {
 
             log.error(e.getMessage());
+        }
+
+        return (String) storedProcedureQuery.getSingleResult() ;
+    }
+
+    @ApiResponses(value = {
+
+            @ApiResponse(code = 200, message =
+                    "Number$N\n" +
+                            "----------\n" +
+                            "Number :  effected rows  \n" +
+                            "$ : Special character to split concatenated strings \n" +
+                            "N: Indicator for new record inserted successfully \n"+
+                            "-----------------------------------------------------\n" +
+                            "  \n"+
+                            "Number$U\n" +
+                            "----------\n" +
+                            "Number :  Effected rows  \n" +
+                            "$ : Special character to split concatenated strings \n" +
+                            "U: Indicator for update successfully \n"+
+                            "-----------------------------------------------------\n" +
+                            "  \n"+
+                            "E$Number$TEXT\n" +
+                            "----------\n" +
+                            "E : Indicator for Error\n"+
+                            "$ : Special character to split concatenated strings\n"+
+                            "Number : DataBase System Error Number\n"+
+                            "TEXT : DataBase system Error Message\n"
+            )
+    })
+    @ApiOperation("")
+    @PostMapping("/test")
+    public String test(@ApiParam("\t") @RequestBody SaveApplicationForPassengerTransportLicenseDataRequest saveApplicationForPassengerTransportLicenseDataRequest, HttpServletRequest request){
+
+        log.debug( " SaveApplicationForPassengerTransportLicenseDataRequest :" + saveApplicationForPassengerTransportLicenseDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+        saveApplicationForPassengerTransportLicenseDataRequest.setIpaddressparm(request.getRemoteAddr());
+
+        try{
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "SaveApplicationForPassengerTransportLicenseData", saveApplicationForPassengerTransportLicenseDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
         }
 
         return (String) storedProcedureQuery.getSingleResult() ;

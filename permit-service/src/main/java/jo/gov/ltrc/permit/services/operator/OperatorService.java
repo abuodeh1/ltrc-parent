@@ -364,7 +364,7 @@ public class OperatorService {
 
         try {
 
-            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnOperatorGeneralSearch", returnVehicleGeneralSearchDataRequest);
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnVehicleGeneralSearch", returnVehicleGeneralSearchDataRequest);
 
         } catch (Exception e) {
 
