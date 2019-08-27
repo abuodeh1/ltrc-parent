@@ -74,7 +74,7 @@ public class OperatorService {
 
         StoredProcedureQuery storedProcedureQuery = null ;
 
-        saveOperatorDataRequest.setIpaddressparm(request.getRemoteAddr());
+        saveOperatorDataRequest.setIpaddress(request.getRemoteAddr());
 
         try {
 

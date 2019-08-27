@@ -48,7 +48,7 @@ public class SaveOperatorDataRequest {
     @ApiModelProperty("Certification Registration Number Parameter ") private String certificateregistrationnumberparm ;
     @ApiModelProperty("Basin Parameter ") private String basinparm ;
     @ApiModelProperty("Principal Parameter ") private Long princepel ;
-    @ApiModelProperty("IP Address") private String ipaddressparm  ;
+    @ApiModelProperty("IP Address") private String ipaddress;
 
     public Long getOperatoridparm() {
         return operatoridparm;
@@ -386,12 +386,12 @@ public class SaveOperatorDataRequest {
         this.princepel = princepel;
     }
 
-    public String getIpaddressparm() {
-        return ipaddressparm;
+    public String getIpaddress() {
+        return ipaddress;
     }
 
-    public void setIpaddressparm(String ipaddressparm) {
-        this.ipaddressparm = ipaddressparm;
+    public void setIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
     }
 
     @Override
@@ -439,7 +439,7 @@ public class SaveOperatorDataRequest {
                 ", certificateregistrationnumberparm=" + certificateregistrationnumberparm +
                 ", basinparm=" + basinparm +
                 ", princepel=" + princepel +
-                ", ipaddressparam=" + ipaddressparm +
+                ", ipaddressparam=" + ipaddress +
                 '}';
     }
 }
