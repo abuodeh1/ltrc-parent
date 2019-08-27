@@ -60,6 +60,7 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
     @ApiModelProperty("Operator Classification Name ") private String operatorclassificationname ;
     @ApiModelProperty("Fees Status ") private Integer feesstatus ;
     @ApiModelProperty("License Expired ") private Date licenseexpiredate ;
+    @ApiModelProperty("Status ") private Integer status ;
 
     public Long getOperatorid() {
         return operatorid;
@@ -125,17 +126,26 @@ public class ReturnOperatorByOperatorBasicInformationResponse implements Seriali
         this.licenseexpiredate = licenseexpiredate;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "ReturnOperatorByOperatorBasicInformationResponse{" +
                 "operatorid=" + operatorid +
-                ", operatorname=" + operatorname +
+                ", operatorname= " + operatorname + 
                 ", operatorcategory=" + operatorcategory +
-                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorcategoryname= " + operatorcategoryname + 
                 ", operatorclassification=" + operatorclassification +
-                ", operatorclassificationname=" + operatorclassificationname +
+                ", operatorclassificationname= " + operatorclassificationname + 
                 ", feesstatus=" + feesstatus +
                 ", licenseexpiredate=" + licenseexpiredate +
+                ", status=" + status +
                 '}';
     }
 }

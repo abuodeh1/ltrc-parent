@@ -9,6 +9,7 @@ public class SaveVehicleDataRequest {
 
     @ApiModelProperty("Vehicle ID Parameter ") private Long vehicleidparm ;
     @ApiModelProperty("Registration Number Parameter ") private String registrationnumberparm ;
+    @ApiModelProperty("Car Chassis Number Parameter ") private String carchassisnumberparm ;
     @ApiModelProperty("Plate Number Parameter ") private String platenumberparm ;
     @ApiModelProperty("Owner Parameter ") private String ownerparm ;
     @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
@@ -17,7 +18,7 @@ public class SaveVehicleDataRequest {
     @ApiModelProperty("Remarks Parameter ") private String remarksparm ;
     @ApiModelProperty("Year of Manufacture Parameter ") private Integer yearofmanufactureparm ;
     @ApiModelProperty("Passengers Number Parameter ") private Integer passengersnumberparm ;
-    @ApiModelProperty("Manufacture Parameter ") private String manufacturerparm ;
+    @ApiModelProperty("Manufacture Parameter ") private Long manufacturerparm ;
     @ApiModelProperty("Owner Name Parameter ") private String ownernameparm ;
     @ApiModelProperty("License Expiration Parameter ") private Date licenseexpirationparm ;
     @ApiModelProperty("Additional Descriptions Parameter ") private String addtionaldescriptionsparm ;
@@ -47,6 +48,14 @@ public class SaveVehicleDataRequest {
 
     public void setRegistrationnumberparm(String registrationnumberparm) {
         this.registrationnumberparm = registrationnumberparm;
+    }
+
+    public String getCarchassisnumberparm() {
+        return carchassisnumberparm;
+    }
+
+    public void setCarchassisnumberparm(String carchassisnumberparm) {
+        this.carchassisnumberparm = carchassisnumberparm;
     }
 
     public String getPlatenumberparm() {
@@ -113,11 +122,11 @@ public class SaveVehicleDataRequest {
         this.passengersnumberparm = passengersnumberparm;
     }
 
-    public String getManufacturerparm() {
+    public Long getManufacturerparm() {
         return manufacturerparm;
     }
 
-    public void setManufacturerparm(String manufacturerparm) {
+    public void setManufacturerparm(Long manufacturerparm) {
         this.manufacturerparm = manufacturerparm;
     }
 
@@ -237,30 +246,31 @@ public class SaveVehicleDataRequest {
     public String toString() {
         return "SaveVehicleDataRequest{" +
                 "vehicleidparm=" + vehicleidparm +
-                ", registrationnumberparm=" + registrationnumberparm +
-                ", platenumberparm=" + platenumberparm +
-                ", ownerparm=" + ownerparm +
+                ", registrationnumberparm= " + registrationnumberparm +
+                ", carchassisnumberparm= " + carchassisnumberparm +
+                ", platenumberparm= " + platenumberparm +
+                ", ownerparm= " + ownerparm +
                 ", vehiclecategoryparm=" + vehiclecategoryparm +
-                ", operationparm=" + operationparm +
+                ", operationparm= " + operationparm +
                 ", statusparm=" + statusparm +
-                ", remarksparm=" + remarksparm +
+                ", remarksparm= " + remarksparm +
                 ", yearofmanufactureparm=" + yearofmanufactureparm +
                 ", passengersnumberparm=" + passengersnumberparm +
                 ", manufacturerparm=" + manufacturerparm +
-                ", ownernameparm=" + ownernameparm +
+                ", ownernameparm= " + ownernameparm +
                 ", licenseexpirationparm=" + licenseexpirationparm +
-                ", addtionaldescriptionsparm=" + addtionaldescriptionsparm +
-                ", platecodeparm=" + platecodeparm +
+                ", addtionaldescriptionsparm= " + addtionaldescriptionsparm +
+                ", platecodeparm= " + platecodeparm +
                 ", feesstatusparm=" + feesstatusparm +
                 ", officeidparm=" + officeidparm +
-                ", officenameparm=" + officenameparm +
+                ", officenameparm= " + officenameparm +
                 ", vehiclepermitparm=" + vehiclepermitparm +
                 ", fueltypeparm=" + fueltypeparm +
                 ", vehicleentrydateparm=" + vehicleentrydateparm +
                 ", operatorparm=" + operatorparm +
-                ", ownernationalidparm=" + ownernationalidparm +
+                ", ownernationalidparm= " + ownernationalidparm +
                 ", princepel=" + princepel +
-                ", ipaddressparam=" + ipaddressparm +
+                ", ipaddressparm= " + ipaddressparm +
                 '}';
     }
 }

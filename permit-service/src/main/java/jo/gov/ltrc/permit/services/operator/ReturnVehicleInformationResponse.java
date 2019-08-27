@@ -16,7 +16,7 @@ import java.sql.Date;
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "registrationnumberparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platecodeparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "manufacturerparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "officenameparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "vehiclestatusparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),

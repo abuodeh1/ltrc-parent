@@ -11,7 +11,7 @@ public class ReturnVehicleInformationDataRequest {
     @ApiModelProperty("Registration Number Parameter") private String registrationnumberparm ;
     @ApiModelProperty("Plate Code Parameter") private String platecodeparm ;
     @ApiModelProperty("Plate Number Parameter") private String platenumberparm ;
-    @ApiModelProperty("Manufacture Parameter") private String manufacturerparm ;
+    @ApiModelProperty("Manufacture Parameter") private Long manufacturerparm ;
     @ApiModelProperty("Office Name Parameter") private String officenameparm ;
     @ApiModelProperty("Vehicle Status Parameter") private Integer vehiclestatusparm ;
     @ApiModelProperty("Vehicle Category Parameter") private Long vehiclecategoryparm ;
@@ -46,11 +46,11 @@ public class ReturnVehicleInformationDataRequest {
         this.platenumberparm = platenumberparm;
     }
 
-    public String getManufacturerparm() {
+    public Long getManufacturerparm() {
         return manufacturerparm;
     }
 
-    public void setManufacturerparm(String manufacturerparm) {
+    public void setManufacturerparm(Long manufacturerparm) {
         this.manufacturerparm = manufacturerparm;
     }
 
