@@ -18,7 +18,7 @@ public class ReturnVehicleGeneralSearchDataRequest {
     @ApiModelProperty("Remarks Parameter ") private String remarksparm ;
     @ApiModelProperty("Year of Manufacture Parameter ") private Integer yearofmanufactureparm ;
     @ApiModelProperty("Passengers Number Parameter ") private Integer passengersnumberparm ;
-    @ApiModelProperty("Manufacture Parameter ") private String manufacturerparm ;
+    @ApiModelProperty("Manufacture Parameter ") private Long manufacturerparm ;
     @ApiModelProperty("Owner Name Parameter ") private String ownernameparm ;
     @ApiModelProperty("License Expiration Parameter ") private Date licenseexpirationparm ;
     @ApiModelProperty("Additional Descriptions Parameter ") private String addtionaldescriptionsparm ;
@@ -126,11 +126,11 @@ public class ReturnVehicleGeneralSearchDataRequest {
         this.passengersnumberparm = passengersnumberparm;
     }
 
-    public String getManufacturerparm() {
+    public Long getManufacturerparm() {
         return manufacturerparm;
     }
 
-    public void setManufacturerparm(String manufacturerparm) {
+    public void setManufacturerparm(Long manufacturerparm) {
         this.manufacturerparm = manufacturerparm;
     }
 

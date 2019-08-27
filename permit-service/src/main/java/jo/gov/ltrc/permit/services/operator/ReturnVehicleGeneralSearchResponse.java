@@ -22,7 +22,7 @@ import java.sql.Date;
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "remarksparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "yearofmanufactureparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "passengersnumberparm"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "manufacturerparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownernameparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "licenseexpirationparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "addtionaldescriptionsparm"),
@@ -62,6 +62,7 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
     @Id
     @ApiModelProperty("Vehicle ID ") private Long vehicleid ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
+    @ApiModelProperty("Car Chassis Number ") private String carchassisnumber ;
     @ApiModelProperty("Plate Number ") private String platenumber ;
     @ApiModelProperty("Vehicle Category ") private Long vehiclecategory ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
@@ -102,6 +103,14 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
 
     public void setRegistrationnumber(String registrationnumber) {
         this.registrationnumber = registrationnumber;
+    }
+
+    public String getCarchassisnumber() {
+        return carchassisnumber;
+    }
+
+    public void setCarchassisnumber(String carchassisnumber) {
+        this.carchassisnumber = carchassisnumber;
     }
 
     public String getPlatenumber() {
@@ -308,32 +317,33 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
     public String toString() {
         return "ReturnVehicleGeneralSearchResponse{" +
                 "vehicleid=" + vehicleid +
-                ", registrationnumber=" + registrationnumber +
-                ", platenumber=" + platenumber +
+                ", registrationnumber= " + registrationnumber + 
+                ", carchassisnumber= " + carchassisnumber + 
+                ", platenumber= " + platenumber + 
                 ", vehiclecategory=" + vehiclecategory +
-                ", vehiclecategoryname=" + vehiclecategoryname +
-                ", operation=" + operation +
+                ", vehiclecategoryname= " + vehiclecategoryname + 
+                ", operation= " + operation + 
                 ", status=" + status +
-                ", remarks=" + remarks +
+                ", remarks= " + remarks + 
                 ", yearofmanufacture=" + yearofmanufacture +
                 ", passengersnumber=" + passengersnumber +
-                ", manufacturer=" + manufacturer +
-                ", ownername=" + ownername +
+                ", manufacturer= " + manufacturer + 
+                ", ownername= " + ownername + 
                 ", licenseexpiration=" + licenseexpiration +
-                ", addtionaldescriptions=" + addtionaldescriptions +
-                ", platecode=" + platecode +
+                ", addtionaldescriptions= " + addtionaldescriptions + 
+                ", platecode= " + platecode + 
                 ", feesstatus=" + feesstatus +
                 ", officeid=" + officeid +
-                ", officename=" + officename +
+                ", officename= " + officename + 
                 ", fueltype=" + fueltype +
-                ", fueltypename=" + fueltypename +
+                ", fueltypename= " + fueltypename + 
                 ", vehicleentrydate=" + vehicleentrydate +
-                ", vehicleowner=" + vehicleowner +
+                ", vehicleowner= " + vehicleowner + 
                 ", vehicleoperator=" + vehicleoperator +
-                ", operatorname=" + operatorname +
+                ", operatorname= " + operatorname + 
                 ", permitstatus=" + permitstatus +
                 ", usagepurpose=" + usagepurpose +
-                ", usagepurposename=" + usagepurposename +
+                ", usagepurposename= " + usagepurposename + 
                 '}';
     }
 }

@@ -86,7 +86,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "certificateregistrationnumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "basinparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "princepel"),
-//                      @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddress"),
 
 
                 }
