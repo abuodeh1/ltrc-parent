@@ -122,6 +122,7 @@ import java.sql.Date;
                 parameters = {
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehicleidparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "registrationnumberparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "carchassisnumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "platenumberparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownerparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
@@ -130,7 +131,7 @@ import java.sql.Date;
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "remarksparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "yearofmanufactureparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "passengersnumberparm"),
-                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "manufacturerparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ownernameparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "licenseexpirationparm"),
                         @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "addtionaldescriptionsparm"),

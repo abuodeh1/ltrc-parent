@@ -4,10 +4,12 @@ import io.swagger.annotations.*;
 import jo.gov.ltrc.helper.DatabaseHelper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeanUtils;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.StoredProcedureQuery;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -362,7 +364,7 @@ public class OperatorService {
 
         try {
 
-            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnVehicleGeneralSearch", returnVehicleGeneralSearchDataRequest);
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnOperatorGeneralSearch", returnVehicleGeneralSearchDataRequest);
 
         } catch (Exception e) {
 
@@ -444,6 +446,29 @@ public class OperatorService {
         }
 
         List<ReturnVehicleRouteResponse> result = storedProcedureQuery.getResultList();
+
+        return result ;
+    }
+
+    @ApiOperation("Retrieve Vehicle Manufacture Data ")
+    @PostMapping("/find/vehicle-manufacture")
+    public List<ReturnVehicleManfacturerResponse> getVehicleManufacture(@ApiParam("\t") @RequestBody ReturnVehicleManfacturerDataRequest returnVehicleManfacturerDataRequest){
+
+        log.debug(" ReturnVehicleManfacturerDataRequest : " + returnVehicleManfacturerDataRequest.toString());
+
+        StoredProcedureQuery storedProcedureQuery = null ;
+
+        try {
+
+            storedProcedureQuery = DatabaseHelper.buildStoredProcedureQueryWithRequestParams(entityManager, "ReturnVehicleManfacturer", returnVehicleManfacturerDataRequest);
+
+        } catch (Exception e) {
+
+            log.error(e.getMessage());
+
+        }
+
+        List<ReturnVehicleManfacturerResponse> result = storedProcedureQuery.getResultList();
 
         return result ;
     }

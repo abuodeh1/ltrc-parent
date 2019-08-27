@@ -18,7 +18,7 @@ import java.sql.Date;
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "mindeliverydateparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "maxdeliverydateparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "vehiclecategoryparm"),
-                @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "manufacturerparm"),
+                @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "manufacturerparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "feesstatusparm"),
                 @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "usagepurposeparm"),
@@ -58,6 +58,7 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
     @ApiModelProperty("Operator ID ") private Long operatorid ;
     @ApiModelProperty("Operator Name ") private String operatorname ;
     @ApiModelProperty("Registration Number ") private String registrationnumber ;
+    @ApiModelProperty("Car Chassis Number ") private String carchassisnumber ;
     @ApiModelProperty("Plate Code ") private String platecode ;
     @ApiModelProperty("Plate Number ") private String platenumber ;
     @ApiModelProperty("Vehicle Category Name ") private String vehiclecategoryname ;
@@ -69,6 +70,7 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
     @ApiModelProperty("Additional Descriptions ") private String addtionaldescriptions ;
     @ApiModelProperty("Permit Status ") private Integer permitstatus ;
     @ApiModelProperty("Delivery Date ") private Date deliverydate ;
+    @ApiModelProperty("Vehicle Status ") private Integer vehiclestatus ;
     @ApiModelProperty("Status ") private Integer status ;
     @ApiModelProperty("Fees Status ") private Integer feesstatus ;
     @ApiModelProperty("License Expiration ") private Date licenseexpiration ;
@@ -109,6 +111,14 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
         this.registrationnumber = registrationnumber;
     }
 
+    public String getCarchassisnumber() {
+        return carchassisnumber;
+    }
+
+    public void setCarchassisnumber(String carchassisnumber) {
+        this.carchassisnumber = carchassisnumber;
+    }
+
     public String getPlatecode() {
         return platecode;
     }
@@ -131,6 +141,14 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
 
     public void setVehiclecategoryname(String vehiclecategoryname) {
         this.vehiclecategoryname = vehiclecategoryname;
+    }
+
+    public Integer getVehiclestatus() {
+        return vehiclestatus;
+    }
+
+    public void setVehiclestatus(Integer vehiclestatus) {
+        this.vehiclestatus = vehiclestatus;
     }
 
     public String getManufacturer() {
@@ -321,34 +339,36 @@ public class ReturnOperatorByVehicleInformationResponse implements Serializable 
     public String toString() {
         return "ReturnOperatorByVehicleInformationResponse{" +
                 "operatorid=" + operatorid +
-                ", operatorname=" + operatorname +
-                ", registrationnumber=" + registrationnumber +
-                ", platecode=" + platecode +
-                ", platenumber=" + platenumber +
-                ", vehiclecategoryname=" + vehiclecategoryname +
-                ", manufacturer=" + manufacturer +
-                ", usagepurposename=" + usagepurposename +
-                ", ownernationalid=" + ownernationalid +
-                ", ownername=" + ownername +
-                ", fueltypename=" + fueltypename +
-                ", addtionaldescriptions=" + addtionaldescriptions +
+                ", operatorname= " + operatorname + 
+                ", registrationnumber= " + registrationnumber + 
+                ", carchassisnumber= " + carchassisnumber + 
+                ", platecode= " + platecode + 
+                ", platenumber= " + platenumber + 
+                ", vehiclecategoryname= " + vehiclecategoryname + 
+                ", manufacturer= " + manufacturer + 
+                ", usagepurposename= " + usagepurposename + 
+                ", ownernationalid= " + ownernationalid + 
+                ", ownername= " + ownername + 
+                ", fueltypename= " + fueltypename + 
+                ", addtionaldescriptions= " + addtionaldescriptions + 
                 ", permitstatus=" + permitstatus +
                 ", deliverydate=" + deliverydate +
+                ", vehiclestatus=" + vehiclestatus +
                 ", status=" + status +
                 ", feesstatus=" + feesstatus +
                 ", licenseexpiration=" + licenseexpiration +
                 ", yearofmanufacture=" + yearofmanufacture +
                 ", passengersnumber=" + passengersnumber +
                 ", province=" + province +
-                ", provincearabicname=" + provincearabicname +
+                ", provincearabicname= " + provincearabicname + 
                 ", governorate=" + governorate +
-                ", governoratearabicname=" + governoratearabicname +
+                ", governoratearabicname= " + governoratearabicname + 
                 ", municipality=" + municipality +
-                ", municipalityarabicname=" + municipalityarabicname +
+                ", municipalityarabicname= " + municipalityarabicname + 
                 ", territory=" + territory +
-                ", territoryarabicname=" + territoryarabicname +
+                ", territoryarabicname= " + territoryarabicname + 
                 ", operatorcategory=" + operatorcategory +
-                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorcategoryname= " + operatorcategoryname + 
                 '}';
     }
 }

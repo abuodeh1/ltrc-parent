@@ -14,7 +14,7 @@ public class ReturnOperatorByVehicleInformationDataRequest {
     @ApiModelProperty("Minimum Delivery Date Parameter ") private Date mindeliverydateparm ;
     @ApiModelProperty("Maximum Delivery Date Parameter ") private Date maxdeliverydateparm ;
     @ApiModelProperty("Vehicle Category Parameter ") private Long vehiclecategoryparm ;
-    @ApiModelProperty("Manufacture Parameter ") private String manufacturerparm ;
+    @ApiModelProperty("Manufacture Parameter ") private Long manufacturerparm ;
     @ApiModelProperty("Status Parameter ") private Integer statusparm ;
     @ApiModelProperty("Fees Status Parameter ") private Integer feesstatusparm ;
     @ApiModelProperty("Usage Purpose Parameter ") private Long usagepurposeparm ;
@@ -90,11 +90,11 @@ public class ReturnOperatorByVehicleInformationDataRequest {
         this.vehiclecategoryparm = vehiclecategoryparm;
     }
 
-    public String getManufacturerparm() {
+    public Long getManufacturerparm() {
         return manufacturerparm;
     }
 
-    public void setManufacturerparm(String manufacturerparm) {
+    public void setManufacturerparm(Long manufacturerparm) {
         this.manufacturerparm = manufacturerparm;
     }
 

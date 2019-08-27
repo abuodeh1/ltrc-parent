@@ -115,7 +115,7 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
     @ApiModelProperty("Office Floor ") private String officefloor ;
     @ApiModelProperty("Service Scope ") private String servicescope ;
     @ApiModelProperty("Date of Contract Signing") private Date dateofcontractsigning ;
-    @ApiModelProperty("Contract Period ") private String contractperiod ;
+    @ApiModelProperty("Contract Period ") private Double contractperiod ;
     @ApiModelProperty("Commercial Name Record Number ") private String commercialnamerecordnumber ;
     @ApiModelProperty("Commercial Name") private String commercialname ;
     @ApiModelProperty("Commercial Record Number ") private String commercialrecordnumber ;
@@ -127,10 +127,10 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
     @ApiModelProperty("Office Closing Date ") private Date officeclosingdate ;
     @ApiModelProperty("Remarks ") private String remarks ;
     @ApiModelProperty("Fees Status ") private Integer feesstatus ;
-    @ApiModelProperty("License ") private Date licenseissuedate ;
-    @ApiModelProperty("License ") private Date licenseexpiredate ;
-    @ApiModelProperty("Certification Registration Number ") private String certificateregistrationnumber ;
-    @ApiModelProperty("Basin") private String basin ;
+    @ApiModelProperty("License Issue Date ") private Date licenseissuedate ;
+    @ApiModelProperty("license Expired Date ") private Date licenseexpiredate ;
+    @ApiModelProperty("Certificate Registration Number ") private String certificateregistrationnumber ;
+    @ApiModelProperty("Basin ") private String basin ;
 
     public Long getOperatorid() {
         return operatorid;
@@ -388,11 +388,11 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
         this.dateofcontractsigning = dateofcontractsigning;
     }
 
-    public String getContractperiod() {
+    public Double getContractperiod() {
         return contractperiod;
     }
 
-    public void setContractperiod(String contractperiod) {
+    public void setContractperiod(Double contractperiod) {
         this.contractperiod = contractperiod;
     }
 
@@ -520,53 +520,53 @@ public class ReturnOperatorGeneralSearchResponse implements Serializable {
     public String toString() {
         return "ReturnOperatorGeneralSearchResponse{" +
                 "operatorid=" + operatorid +
-                ", operatornationalid=" + operatornationalid +
-                ", operatorname=" + operatorname +
+                ", operatornationalid= " + operatornationalid + 
+                ", operatorname= " + operatorname + 
                 ", operatorclassification=" + operatorclassification +
-                ", operatorclassificationname=" + operatorclassificationname +
+                ", operatorclassificationname= " + operatorclassificationname + 
                 ", operatorcategory=" + operatorcategory +
-                ", operatorcategoryname=" + operatorcategoryname +
+                ", operatorcategoryname= " + operatorcategoryname + 
                 ", province=" + province +
-                ", provincearabicname=" + provincearabicname +
+                ", provincearabicname= " + provincearabicname + 
                 ", governorate=" + governorate +
-                ", governoratearabicname=" + governoratearabicname +
+                ", governoratearabicname= " + governoratearabicname + 
                 ", municipality=" + municipality +
-                ", municipalityarabicname=" + municipalityarabicname +
+                ", municipalityarabicname= " + municipalityarabicname + 
                 ", territory=" + territory +
-                ", territoryarabicname=" + territoryarabicname +
-                ", street=" + street +
-                ", neighborhood=" + neighborhood +
-                ", email=" + email +
-                ", pobox=" + pobox +
-                ", phonenumber=" + phonenumber +
-                ", mobilephonenumber=" + mobilephonenumber +
-                ", faxnumber=" + faxnumber +
+                ", territoryarabicname= " + territoryarabicname + 
+                ", street= " + street + 
+                ", neighborhood= " + neighborhood + 
+                ", email= " + email + 
+                ", pobox= " + pobox + 
+                ", phonenumber= " + phonenumber + 
+                ", mobilephonenumber= " + mobilephonenumber + 
+                ", faxnumber= " + faxnumber + 
                 ", licensepurpose=" + licensepurpose +
-                ", licensepurposename=" + licensepurposename +
+                ", licensepurposename= " + licensepurposename + 
                 ", status=" + status +
-                ", officepropertyowner=" + officepropertyowner +
-                ", plotno=" + plotno +
-                ", plotclassification=" + plotclassification +
+                ", officepropertyowner= " + officepropertyowner + 
+                ", plotno= " + plotno + 
+                ", plotclassification= " + plotclassification + 
                 ", officearea=" + officearea +
-                ", officefloor=" + officefloor +
-                ", servicescope=" + servicescope +
+                ", officefloor= " + officefloor + 
+                ", servicescope= " + servicescope + 
                 ", dateofcontractsigning=" + dateofcontractsigning +
                 ", contractperiod=" + contractperiod +
-                ", commercialnamerecordnumber=" + commercialnamerecordnumber +
-                ", commercialname=" + commercialname +
-                ", commercialrecordnumber=" + commercialrecordnumber +
+                ", commercialnamerecordnumber= " + commercialnamerecordnumber + 
+                ", commercialname= " + commercialname + 
+                ", commercialrecordnumber= " + commercialrecordnumber + 
                 ", commercialrecorddate=" + commercialrecorddate +
                 ", employeesnumber=" + employeesnumber +
                 ", driversnumber=" + driversnumber +
                 ", workingcarsnumber=" + workingcarsnumber +
                 ", basiccarsnumber=" + basiccarsnumber +
                 ", officeclosingdate=" + officeclosingdate +
-                ", remarks=" + remarks +
+                ", remarks= " + remarks + 
                 ", feesstatus=" + feesstatus +
                 ", licenseissuedate=" + licenseissuedate +
                 ", licenseexpiredate=" + licenseexpiredate +
-                ", certificateregistrationnumber=" + certificateregistrationnumber +
-                ", basin=" + basin +
+                ", certificateregistrationnumber= " + certificateregistrationnumber + 
+                ", basin= " + basin + 
                 '}';
     }
 }
