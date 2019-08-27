@@ -71,7 +71,7 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
     @ApiModelProperty("Remarks ") private String remarks  ;
     @ApiModelProperty("Year of Manufacture ") private Integer yearofmanufacture ;
     @ApiModelProperty("Passengers Number ") private Integer passengersnumber ;
-    @ApiModelProperty("Manufacturer ") private String manufacturer ;
+    @ApiModelProperty("Manufacturer ") private Long manufacturer ;
     @ApiModelProperty("Owner Name ") private String ownername ;
     @ApiModelProperty("License Expiration ") private Date licenseexpiration ;
     @ApiModelProperty("Additional Descriptions ") private String addtionaldescriptions ;
@@ -177,11 +177,11 @@ public class ReturnVehicleGeneralSearchResponse implements Serializable {
         this.passengersnumber = passengersnumber;
     }
 
-    public String getManufacturer() {
+    public Long getManufacturer() {
         return manufacturer;
     }
 
-    public void setManufacturer(String manufacturer) {
+    public void setManufacturer(Long manufacturer) {
         this.manufacturer = manufacturer;
     }
 
