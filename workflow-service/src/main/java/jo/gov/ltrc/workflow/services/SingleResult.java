@@ -553,6 +553,46 @@ import java.sql.Date;
 
         ),
 
+        @NamedStoredProcedureQuery(
+                name = "SaveApplicationForPassengerTransportLicenseData",
+                procedureName = "\"SaveApplicationForPassengerTransportLicenseData\"",
+                parameters = {
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "applicationforpassengertransportlicenseidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "applicantnationalidparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "applicantnameparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "mobilephoneparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "emailparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatoridparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provinceparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governorateparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalityparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territoryparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "licensetypeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "commercialrecordnumberparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "technicalstudyreferenceparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Date.class, name = "applicationdateparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "applicationsreceivingcommitteeexplanationparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "prencipal"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Integer.class, name = "statusparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "ipaddressparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "servicedepartmentparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "technicalstudyreferencecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "commercialrecordnumbercommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "licensetypecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "territorycommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "municipalitycommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "governoratecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "provincecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = Long.class, name = "operatoridcommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "emailcommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "mobilephonecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "applicantnamecommitteeparm"),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, type = String.class, name = "applicantnationalidcommitteeparm"),
+
+                }
+
+        ),
+
 
 })
 @Entity
