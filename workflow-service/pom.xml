@@ -4,12 +4,11 @@
     <parent>
         <artifactId>ltrc-parent</artifactId>
         <groupId>jo.gov.ltrc</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>jo.gov.ltrc</groupId>
     <artifactId>workflow-service</artifactId>
-    <version>0.0.20-SNAPSHOT</version>
     <name>workflow-service</name>
     <description />
 
@@ -35,7 +34,7 @@
         <asciidoctor.pdf.output.directory>${project.build.directory}/asciidoc/pdf</asciidoctor.pdf.output.directory>
 
         <!--<swagger.input>${swagger.output.dir}/swagger.json</swagger.input>-->
-        <swagger.input>http://192.168.60.243:9871/v2/api-docs</swagger.input>
+        <swagger.input>http://192.168.60.243:9872/v2/api-docs</swagger.input>
         <jackson.version>2.9.6</jackson.version>
         <springfox.version>2.9.2</springfox.version>
 

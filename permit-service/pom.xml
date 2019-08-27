@@ -4,12 +4,11 @@
     <parent>
         <artifactId>ltrc-parent</artifactId>
         <groupId>jo.gov.ltrc</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.etech</groupId>
+    <groupId>jo.gov.ltrc</groupId>
     <artifactId>permit-service</artifactId>
-    <version>0.0.22-SNAPSHOT</version>
     <name>permit-service</name>
     <description />
 
